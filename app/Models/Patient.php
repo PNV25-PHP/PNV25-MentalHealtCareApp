@@ -8,7 +8,6 @@ class Patient extends BaseModel
 
     /**
      * @param string $userid
-     * @throws \Exception
      */
     public function __construct(string $userid)
     {

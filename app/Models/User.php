@@ -4,30 +4,36 @@ namespace App\Models;
 
 class User extends BaseModel
 {
+    private Role $role;
     private string $email;
     private string $password;
     private string $fullName;
-    private string $address;
-    private string $phone;
-    private string $urlImage;
+    private string|null $address;
+    private string|null $phone;
+    private string|null $urlImage;
 
-    /**
-     * @param string $email
-     * @param string $password
-     * @param string $fullName
-     * @param string $address
-     * @param string $phone
-     * @param string $urlImage
-     */
-    public function __construct(string $email, string $password, string $fullName, string $address, string $phone, string $urlImage)
+    public function __construct(
+        Role $role,
+        string $email,
+        string $password,
+        string $fullName,
+        string|null $address = null,
+        string|null $phone = null,
+        string|null $urlImage = null)
     {
         parent::__construct();
+        $this->role = $role;
         $this->email = $email;
         $this->password = $password;
         $this->fullName = $fullName;
         $this->address = $address;
         $this->phone = $phone;
         $this->urlImage = $urlImage;
+    }
+
+    public function getRole(): Role
+    {
+        return $this->role;
     }
 
     public function getEmail(): string

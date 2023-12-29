@@ -20,3 +20,8 @@ $router->get('/', function () use ($router) {
 //Common Routers
 $router->get('/sign-in', 'Common\SignInController@index');
 $router->post('/api/sign-in', 'Common\SignInController@signIn');
+
+//Patient Routers
+$router->get('/patient/sign-up', 'Patient\SignUpController@index');
+$router->post('/api/patient/sign-up', 'Patient\SignUpController@signUp');
+$router->get('/patient/home', 'Patient\HomeController@index');
