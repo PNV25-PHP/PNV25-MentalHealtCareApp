@@ -17,4 +17,6 @@ $router->get('/', function () use ($router) {
     return $router->app->version();
 });
 
-$router->get('/test', 'Common\TestController@index');
+//Common Routers
+$router->get('/sign-in', 'Common\SignInController@index');
+$router->post('/api/sign-in', 'Common\SignInController@signIn');
