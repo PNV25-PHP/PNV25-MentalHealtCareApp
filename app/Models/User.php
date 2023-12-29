@@ -2,32 +2,92 @@
 
 namespace App\Models;
 
-use Illuminate\Auth\Authenticatable;
-use Illuminate\Contracts\Auth\Access\Authorizable as AuthorizableContract;
-use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
-use Laravel\Lumen\Auth\Authorizable;
-
-class User extends Model implements AuthenticatableContract, AuthorizableContract
+class User extends BaseModel
 {
-    use Authenticatable, Authorizable, HasFactory;
+    private Role $role;
+    private string $email;
+    private string $password;
+    private string $fullName;
+    private string|null $address;
+    private string|null $phone;
+    private string|null $urlImage;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var string[]
-     */
-    protected $fillable = [
-        'name', 'email',
-    ];
+    public function __construct(
+        Role $role,
+        string $email,
+        string $password,
+        string $fullName,
+        string|null $address = null,
+        string|null $phone = null,
+        string|null $urlImage = null)
+    {
+        parent::__construct();
+        $this->role = $role;
+        $this->email = $email;
+        $this->password = $password;
+        $this->fullName = $fullName;
+        $this->address = $address;
+        $this->phone = $phone;
+        $this->urlImage = $urlImage;
+    }
 
-    /**
-     * The attributes excluded from the model's JSON form.
-     *
-     * @var string[]
-     */
-    protected $hidden = [
-        'password',
-    ];
+    public function getRole(): Role
+    {
+        return $this->role;
+    }
+
+    public function getEmail(): string
+    {
+        return $this->email;
+    }
+
+    public function getPassword(): string
+    {
+        return $this->password;
+    }
+
+    public function setPassword(string $password): void
+    {
+        $this->password = $password;
+    }
+
+    public function getFullName(): string
+    {
+        return $this->fullName;
+    }
+
+    public function setFullName(string $fullName): void
+    {
+        $this->fullName = $fullName;
+    }
+
+    public function getAddress(): string
+    {
+        return $this->address;
+    }
+
+    public function setAddress(string $address): void
+    {
+        $this->address = $address;
+    }
+
+    public function getPhone(): string
+    {
+        return $this->phone;
+    }
+
+    public function setPhone(string $phone): void
+    {
+        $this->phone = $phone;
+    }
+
+    public function getUrlImage(): string
+    {
+        return $this->urlImage;
+    }
+
+    public function setUrlImage(string $urlImage): void
+    {
+        $this->urlImage = $urlImage;
+    }
 }
