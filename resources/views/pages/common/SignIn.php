@@ -78,7 +78,7 @@
                 }
             })
             .catch(error => {
-                if (error.response.status === 401) {
+                if (error.response.status === 404) {
                     document.getElementById("email-error").textContent = "email or password is invalid"
                     document.getElementById("password-error").textContent = "email or password is invalid"
                 }
