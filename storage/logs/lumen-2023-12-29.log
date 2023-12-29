@@ -1,0 +1,33 @@
+[2023-12-29 13:38:34] local.ERROR: Unable to resolve route handler. {"exception":"[object] (RuntimeException(code: 0): Unable to resolve route handler. at D:\\mentor\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:300)
+[stacktrace]
+#0 D:\\mentor\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(269): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute()
+#1 D:\\mentor\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(171): Laravel\\Lumen\\Application->handleFoundRoute()
+#2 D:\\mentor\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#3 D:\\mentor\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#4 D:\\mentor\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#5 D:\\mentor\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#6 {main}
+"} 
+[2023-12-29 13:39:22] local.ERROR: View [Test] not found. {"exception":"[object] (InvalidArgumentException(code: 0): View [Test] not found. at D:\\mentor\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\view\\FileViewFinder.php:137)
+[stacktrace]
+#0 D:\\mentor\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\view\\FileViewFinder.php(79): Illuminate\\View\\FileViewFinder->findInPaths()
+#1 D:\\mentor\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\view\\Factory.php(137): Illuminate\\View\\FileViewFinder->find()
+#2 D:\\mentor\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\helpers.php(433): Illuminate\\View\\Factory->make()
+#3 D:\\mentor\\PNV25-MentalHealtCareApp\\app\\Controllers\\Common\\TestController.php(11): view()
+#4 D:\\mentor\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(36): App\\Controllers\\Common\\TestController->index()
+#5 D:\\mentor\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#6 D:\\mentor\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#7 D:\\mentor\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#8 D:\\mentor\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#9 D:\\mentor\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(391): Illuminate\\Container\\Container->call()
+#10 D:\\mentor\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(356): Laravel\\Lumen\\Application->callControllerCallable()
+#11 D:\\mentor\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(331): Laravel\\Lumen\\Application->callLumenController()
+#12 D:\\mentor\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(284): Laravel\\Lumen\\Application->callControllerAction()
+#13 D:\\mentor\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(269): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute()
+#14 D:\\mentor\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(171): Laravel\\Lumen\\Application->handleFoundRoute()
+#15 D:\\mentor\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#16 D:\\mentor\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#17 D:\\mentor\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#18 D:\\mentor\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#19 {main}
+"} 
