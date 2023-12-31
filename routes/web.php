@@ -25,3 +25,6 @@ $router->post('/api/sign-in', 'Common\SignInController@signIn');
 $router->get('/patient/sign-up', 'Patient\SignUpController@index');
 $router->post('/api/patient/sign-up', 'Patient\SignUpController@signUp');
 $router->get('/patient/home', 'Patient\HomeController@index');
+
+$router->get('/Socal-Media', 'Patient\NewPostController@index');
+$router->post('/api/upload-image', 'Patient\NewPostController@uploadImage');
