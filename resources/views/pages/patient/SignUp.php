@@ -1,7 +1,7 @@
 <?php include_once dirname(__DIR__).'/../layouts/HtmlHead.php' ?>
 <section class="">
-    <div class=" items-center px-5 py-12 lg:px-20">
-        <div class="flex flex-col w-full max-w-md p-10 mx-auto my-6 transition duration-500 ease-in-out transform bg-white rounded-lg md:mt-0">
+    <div class="items-center lg:px-20">
+        <div class="flex flex-col w-full max-w-md mx-auto my-6 transition duration-500 ease-in-out transform bg-white rounded-lg md:mt-0">
             <div class="mt-8">
                 <div class="mt-6">
                     <form action="#" method="POST" class="space-y-6">

@@ -13,6 +13,24 @@
 |
 */
 
+// Kết nối cơ sở dữ liệu
+use Illuminate\Support\Facades\DB;
+use Illuminate\Database\Connection;
+
+try {
+    // Kiểm tra kết nối cơ sở dữ liệu
+    DB::Connection()->getPdo();
+
+    // Kiểm tra trạng thái kết nối
+    if (DB::Connection()->getDatabaseName()) {
+        echo 'Kết nối cơ sở dữ liệu thành công!';
+    } else {
+        echo 'Không thể kết nối đến cơ sở dữ liệu.';
+    }
+} catch (Exception $e) {
+    echo 'Lỗi kết nối cơ sở dữ liệu: ' . $e->getMessage();
+}
+
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
@@ -26,5 +44,5 @@ $router->get('/patient/sign-up', 'Patient\SignUpController@index');
 $router->post('/api/patient/sign-up', 'Patient\SignUpController@signUp');
 $router->get('/patient/home', 'Patient\HomeController@index');
 
-$router->get('/Socal-Media', 'Patient\NewPostController@index');
-$router->post('/api/upload-image', 'Patient\NewPostController@uploadImage');
+$router->get('/Posts', 'Patient\NewPostController@index');
+$router->post('/api/patient/Post/upload-image', 'Patient\NewPostController@uploadImage');
