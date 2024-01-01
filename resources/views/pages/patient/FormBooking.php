@@ -2,12 +2,6 @@
 <style>
     @import url('https://fonts.googleapis.com/css?family=Roboto:700');
 
-    body {
-        margin: 0px;
-        font-family: 'Roboto';
-        text-align: center;
-    }
-
     #container {
         color: white;
         text-transform: uppercase;
@@ -25,7 +19,7 @@
     }
 
     #flip>div>div {
-        color: #fff;
+        color: black;
         padding: 3px 12px;
         height: 45px;
         margin-bottom: 45px;
@@ -34,18 +28,6 @@
 
     #flip div:first-child {
         animation: show 5s linear infinite;
-    }
-
-    #flip div div {
-        background: #42c58a;
-    }
-
-    #flip div:first-child div {
-        background: #4ec7f3;
-    }
-
-    #flip div:last-child div {
-        background: #DC143C;
     }
 
     @keyframes show {
@@ -91,16 +73,16 @@
         margin-top: 200px;
     }
 </style>
-<div class="max-w-md mx-auto mt-10 bg-white shadow-lg rounded-lg overflow-hidden">
+<div class="max-w-md mx-auto mt-10 bg-white rounded-lg overflow-hidden">
     <div class="flex max-w-md w-full ">
         <div>
             <p class="text-center text-gray-500"> Tiến sĩ, Chuyên gia Tâm lý Lê Thị Huyền Trang (Tư vấn từ xa) </p>
         </div>
     </div>
-    <div class="text-2xl py-4 px-6 bg-blue-500 text-white text-center font-bold uppercase">
-        <div class="text-2xl py-4 px-6 bg-blue-500 text-white text-center font-bold uppercase">
-            <div id=container>
-                Đặt lịch
+    <div class="text-2xl mb-3 py-4 px-6 text-white text-center font-bold uppercase">
+        <div class="text-2xl py-4 px-6 text-white text-center font-bold uppercase">
+            <div id=container class="font-bold">
+                <div class="font-bold text-black">Đặt lịch</div>
                 <div id=flip>
                     <div>
                         <div>tiện.</div>
@@ -122,47 +104,48 @@
             </div>
         </div>
     </div>
-    <form class="py-4 px-6" action="" method="POST">
-        <div class="mb-4">
-            <label class="block text-gray-700 font-bold mb-2" for="name">
-                Name
-            </label>
-            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="name" type="text" placeholder="Enter your name">
+    <form action="" method="POST">
+        <div>
+            <label for="name" class="block text-sm font-medium text-neutral-600"> Name </label>
+            <div class="mt-1">
+                <input id="email" name="email" type="email" autocomplete="email" required="" placeholder="Your Name" class="block w-full px-5 py-3 text-base text-neutral-600 placeholder-gray-300 transition duration-500 ease-in-out transform border border-transparent rounded-lg bg-gray-50 focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-300" fdprocessedid="r8abrv">
+            </div>
         </div>
-        <div class="mb-4">
-            <label class="block text-gray-700 font-bold mb-2" for="email">
-                Email
-            </label>
-            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="email" placeholder="Enter your email">
+        <div>
+            <label for="email" class="block text-sm font-medium text-neutral-600"> Email address </label>
+            <div class="mt-1">
+                <input id="email" name="email" type="email" autocomplete="email" required="" placeholder="Your Email" class="block w-full px-5 py-3 text-base text-neutral-600 placeholder-gray-300 transition duration-500 ease-in-out transform border border-transparent rounded-lg bg-gray-50 focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-300" fdprocessedid="r8abrv">
+            </div>
         </div>
-        <div class="mb-4">
-            <label class="block text-gray-700 font-bold mb-2" for="phone">
-                Phone Number
-            </label>
-            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="phone" type="tel" placeholder="Enter your phone number">
+        <div>
+            <label for="email" class="block text-sm font-medium text-neutral-600"> Phone Number </label>
+            <div class="mt-1">
+                <input id="PhoneNumber" name="PhoneNumber" type="type" autocomplete="false" required="" placeholder="Your Phone Number" class="block w-full px-5 py-3 text-base text-neutral-600 placeholder-gray-300 transition duration-500 ease-in-out transform border border-transparent rounded-lg bg-gray-50 focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-300" fdprocessedid="r8abrv">
+            </div>
         </div>
-        <div class="mb-4">
-            <label class="block text-gray-700 font-bold mb-2" for="date">
-                Date
-            </label>
-            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="date" type="date" placeholder="Select a date">
+        <div>
+            <label for="email" class="block text-sm font-medium text-neutral-600"> Email address </label>
+            <div class="mt-1">
+                <!-- <input id="date" name="date" type="text" autocomplete="false" required="" placeholder="Your Date Booking" class="block w-full px-5 py-3 text-base text-neutral-600 placeholder-gray-300 transition duration-500 ease-in-out transform border border-transparent rounded-lg bg-gray-50 focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-300" fdprocessedid="r8abrv"> -->
+                <input class="block w-full px-5 py-3 text-base text-neutral-600 placeholder-gray-300 transition duration-500 ease-in-out transform border border-transparent rounded-lg bg-gray-50 focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-300" id="date" name="date" type="text" autocomplete="false" required="" placeholder="Select a date">
+            </div>
         </div>
-        <div class="mb-4">
-            <label class="block text-gray-700 font-bold mb-2" for="time">
+        <div>
+            <label class="block text-sm font-medium text-neutral-600" for="time">
                 Time
             </label>
-            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="time" type="time" placeholder="Select a time">
+            <input class="block w-full px-5 py-3 text-base text-neutral-600 placeholder-gray-300 transition duration-500 ease-in-out transform border border-transparent rounded-lg bg-gray-50 focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-300" id="time" type="time" placeholder="Select a time">
         </div>
         <div class="mb-4">
-            <label class="block text-gray-700 font-bold mb-2" for="message">
+            <label class="block text-gray-700 mb-2" for="message">
                 Message
             </label>
-            <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="message" rows="4" placeholder="Enter any additional information"></textarea>
+            <textarea class="block w-full px-5 py-3 text-base text-neutral-600 placeholder-gray-300 transition duration-500 ease-in-out transform border border-transparent rounded-lg bg-gray-50 focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-300" id="message" rows="4" placeholder="Enter any additional information"></textarea>
         </div>
         <div class="flex items-center justify-center mb-4">
-            <button class="bg-gray-900 text-white py-2 px-4 rounded hover:bg-gray-800 focus:outline-none focus:shadow-outline" type="submit">
-                Book Appointment
-            </button>
+            <div>
+                <button type="submit" class="flex items-center justify-center w-full px-10 py-4 text-base font-medium text-center text-white transition duration-500 ease-in-out transform bg-blue-600 rounded-xl hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500" fdprocessedid="awen2j">Book Appointment</button>
+            </div>
         </div>
 
     </form>

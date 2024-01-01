@@ -140,7 +140,7 @@
     }
 
     function navigationFormBooking() {
-        window.location.href = "patient/FormBooking"
+        window.location.href = "FormBooking"
     }
 </script>
 <?php include_once dirname(__DIR__) . '/../layouts/HtmlTail.php' ?>
