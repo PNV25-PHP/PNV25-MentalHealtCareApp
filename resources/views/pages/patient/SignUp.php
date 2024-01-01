@@ -6,7 +6,7 @@
                 <div class="mt-6">
                     <form action="#" method="POST" class="space-y-6">
                         <div>
-                            <label for="email" class="block text-sm font-medium text-neutral-600"> Email address </label>
+                            <label for="email" class="block text-sm font-medium text-neutral-600"> Email</label>
                             <div class="mt-1">
                                 <input id="email" name="email" type="email" required="" placeholder="Your Email" class="block w-full px-5 py-3 text-base text-neutral-600 placeholder-gray-300 transition duration-500 ease-in-out transform border border-transparent rounded-lg bg-gray-50 focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-300">
                                 <p id="email-error" class="text-[13px] text-red-600"></p>
@@ -14,7 +14,7 @@
                         </div>
 
                         <div>
-                            <label for="full-name" class="block text-sm font-medium text-neutral-600"> Full name </label>
+                            <label for="full-name" class="block text-sm font-medium text-neutral-600">Full name</label>
                             <div class="mt-1">
                                 <input id="full-name" name="full-name" required="" placeholder="Your Full Name" class="block w-full px-5 py-3 text-base text-neutral-600 placeholder-gray-300 transition duration-500 ease-in-out transform border border-transparent rounded-lg bg-gray-50 focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-300">
                                 <p id="full-name-error" class="text-[13px] text-red-600"></p>
@@ -26,6 +26,22 @@
                             <div class="mt-1">
                                 <input id="password" name="password" type="password" required="" placeholder="Your Password" class="block w-full px-5 py-3 text-base text-neutral-600 placeholder-gray-300 transition duration-500 ease-in-out transform border border-transparent rounded-lg bg-gray-50 focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-300">
                                 <p id="password-error" class="text-[13px] text-red-600"></p>
+                            </div>
+                        </div>
+
+                        <div class="space-y-1">
+                            <label for="phone" class="block text-sm font-medium text-neutral-600">Phone Number </label>
+                            <div class="mt-1">
+                                <input id="phone" name="phone" type="number" required="" placeholder="Your Password" class="block w-full px-5 py-3 text-base text-neutral-600 placeholder-gray-300 transition duration-500 ease-in-out transform border border-transparent rounded-lg bg-gray-50 focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-300">
+                                <p id="phone-error" class="text-[13px] text-red-600"></p>
+                            </div>
+                        </div>
+
+                        <div class="space-y-1">
+                            <label for="address" class="block text-sm font-medium text-neutral-600">Address</label>
+                            <div class="mt-1">
+                                <input id="address" name="address" type="text" required="" placeholder="Your Password" class="block w-full px-5 py-3 text-base text-neutral-600 placeholder-gray-300 transition duration-500 ease-in-out transform border border-transparent rounded-lg bg-gray-50 focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-300">
+                                <p id="address-error" class="text-[13px] text-red-600"></p>
                             </div>
                         </div>
 
@@ -59,8 +75,10 @@
         const email = document.getElementById("email").value
         const fullName = document.getElementById("full-name").value
         const password = document.getElementById("password").value
+        const phone = document.getElementById("phone").value
+        const address = document.getElementById("address").value
 
-        axios.post('/api/patient/sign-up', {email, fullName, password})
+        axios.post('/api/patient/sign-up', {email, fullName, password, phone, address})
             .then(res => {
                 const payload = res.data.payload
                 if (res.status === 201) {
@@ -74,7 +92,12 @@
                     document.getElementById("email-error").textContent = errorRes.email
                     document.getElementById("password-error").textContent = errorRes.password
                     document.getElementById("full-name-error").textContent = errorRes.fullName
+                    document.getElementById("phone-error").textContent = errorRes.phone
+                    document.getElementById("address-error").textContent = errorRes.address
+
+
                 }
+              
             })
     }
 

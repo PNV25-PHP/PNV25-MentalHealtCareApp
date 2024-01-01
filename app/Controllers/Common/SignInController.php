@@ -13,7 +13,7 @@ class SignInController extends Controller
 {
     public function index()
     {
-        return view("pages\Common\SignIn");
+        return view("pages\common\SignIn");
     }
 
     public function signIn(Request $req)
@@ -23,7 +23,7 @@ class SignInController extends Controller
         // TODO validate the request
 
         // TODO call to db find by email then check for password
-        $user = new User(Role::Patient, $signInRequest->email, "1", "vupham", "101B", "", "image");
+        $user = new User(Role::Patient, $signInRequest->email, $signInRequest->password,'' );
 
         if ($user == null || $user->getPassword() != $signInRequest->password) {
             return response()->json([

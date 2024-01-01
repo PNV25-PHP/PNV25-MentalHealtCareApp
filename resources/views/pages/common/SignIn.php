@@ -76,6 +76,10 @@
                         window.location.href = "/patient/home"
                     }
                 }
+                else if (res.status === 401){
+                    alert ("The user does not have the necessary access permissions to edit their profile.")
+                    window.location.href = "/sign-in"
+                }
             })
             .catch(error => {
                 if (error.response.status === 404) {
