@@ -5,14 +5,15 @@
 </form> -->
 
 <!-- component -->
-<?php foreach ($posts as $post) :
-  $user = $post->userofpost(); ?>
+<?php
+var_dump($posts);
+foreach ($posts as $post) :?>
   <div class="p-8 flex items-center justify-center w-screen h-100% z-1">
     <div class="px-5 py-4 bg-white dark:bg-gray-800 shadow rounded-lg max-w-lg w-1/2">
       <div class="flex mb-4">
-        <img class="w-12 h-12 rounded-full" src="<?php $user->urlImage;?>"/>
+        <img class="w-12 h-12 rounded-full" src="<?php //echo $post[] ?>"/>
         <div class="ml-2 mt-0.5">
-          <span class="block font-medium text-base leading-snug text-black dark:text-gray-100"><?php $user->fullName; ?></span>
+          <span class="block font-medium text-base leading-snug text-black dark:text-gray-100"><?php //$user->fullName; ?></span>
           <span class="block text-sm text-gray-500 dark:text-gray-400 font-light leading-snug">16 December at 08:25</span>
         </div>
       </div>
