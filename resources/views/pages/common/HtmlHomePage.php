@@ -276,3 +276,12 @@
         </div>
     </section>
     <?php include_once dirname(__DIR__) . '../../layouts/HtmlTail.php' ?>
+<script>
+    var info_user = JSON.parse(localStorage.getItem("user-info"));
+var imagePath = info_user.image;
+
+var trimmedImagePath = imagePath.replace("http://localhost:8000/patient/", "");
+
+console.log(trimmedImagePath);
+document.getElementById('avatar').src = trimmedImagePath
+</script>

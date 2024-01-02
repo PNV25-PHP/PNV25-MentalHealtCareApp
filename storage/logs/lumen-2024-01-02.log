@@ -324,3 +324,75 @@
 #15 C:\\1day\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
 #16 {main}
 "} 
+[2024-01-02 04:58:28] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException(code: 0):  at E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:235)
+[stacktrace]
+#0 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-02 04:59:02] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException(code: 0):  at E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:235)
+[stacktrace]
+#0 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-02 05:00:05] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException(code: 0):  at E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:235)
+[stacktrace]
+#0 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-02 05:00:29] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException(code: 0):  at E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:235)
+[stacktrace]
+#0 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-02 05:02:09] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException(code: 0):  at E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:235)
+[stacktrace]
+#0 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-02 05:03:04] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException(code: 0):  at E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:235)
+[stacktrace]
+#0 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-02 08:40:22] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException(code: 0):  at E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:235)
+[stacktrace]
+#0 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-02 09:31:24] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException(code: 0):  at E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:235)
+[stacktrace]
+#0 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
