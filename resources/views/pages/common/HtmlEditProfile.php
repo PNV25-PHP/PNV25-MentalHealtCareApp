@@ -51,23 +51,41 @@
 <script>
     showInfo()
     function handleUpdateProfile() {
-        user_info_update = JSON.parse(localStorage.getItem('user-info'))
-        var img = document.getElementById('image')
-        var username = document.getElementById('username')
-        var phoneNumber = document.getElementById('phoneNumber')
-        var address = document.getElementById('address')
-        var image = document.getElementById('image')
-        
-        user_info_update.image = img.value 
-        user_info_update.fullName = username.value 
-        user_info_update.phone = phoneNumber.value 
-        user_info_update.address = address.value 
-        console.log(user_info_update)
-        localStorage.setItem("user-info", JSON.stringify(user_info_update))
-        window.location.href = "/view-profile"
-    }
+    var user_info_update = JSON.parse(localStorage.getItem('user-info'));
+    var img = document.getElementById('image').value;
+    var username = document.getElementById('username').value;
+    var email = document.getElementById('email').value;
+    var date = document.getElementById('date').value;
+    var phoneNumber = document.getElementById('phoneNumber').value;
+    var address = document.getElementById('address').value;
 
+    user_info_update.image = img;
+    user_info_update.fullName = username;
+    user_info_update.email = email;
+    user_info_update.date = date;
+    user_info_update.phone = phoneNumber;
+    user_info_update.address = address;
 
+    console.log(user_info_update);
+
+    // Gửi yêu cầu POST đến endpoint PHP
+    fetch('/api/edit-profile', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(user_info_update)
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log(data);
+        localStorage.setItem('user-info', JSON.stringify(user_info_update));
+        window.location.href = '/view-profile';
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+}
 
 //     function uploadImage() {
 //   const formData = new FormData();

@@ -32,6 +32,7 @@ $router->post('/api/patient/sign-up', 'Patient\SignUpController@signUp');
 $router->get('/patient/home', 'Patient\HomeController@index');
 $router->get('/header', '\resource\views\layouts\HtmlNavbar');
 
-$router->get('/view-profile', 'Common\ProfileController@viewProfile');
-$router->get('/edit-profile', 'Common\ProfileController@index');
+$router->get('/view-profile', 'Common\ProfileController@index');
+$router->get('/edit-profile', 'Common\ProfileController@editProfile');
+$router->post('/api/edit-profile', 'Common\ProfileController@updateInformationUser');
 // $router->post('/upload-image', )
