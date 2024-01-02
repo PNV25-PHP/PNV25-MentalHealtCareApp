@@ -7,7 +7,12 @@ class SignInRes
     public string $id;
     public string $role;
     public string $email;
+    public string $password;
     public string $fullName;
+    public string $address;
+    public string $phone;
+    public string $image;
+
 
     /**
      * @param string $id
@@ -15,11 +20,15 @@ class SignInRes
      * @param string $email
      * @param string $fullName
      */
-    public function __construct(string $id, string $role, string $email, string $fullName)
+    public function __construct(string $id, string $role, string $email, string $fullName, string $password, string $address, string $phone, string $image)
     {
         $this->id = $id;
         $this->role = $role;
         $this->email = $email;
+        $this->password = $password;
         $this->fullName = $fullName;
+        $this->address = $address;
+        $this->phone = $phone;
+        $this->image = $image;
     }
 }
