@@ -21,7 +21,7 @@ class UserRepository
     public function insert(User $user)
     {
         $sql = "INSERT INTO $this->tableName (ID, Role, FullName, Email, Password) VALUES (?, ?, ?, ?, ?)";
-    
+
         // Truyền các giá trị vào placeholder
         $success = DB::insert($sql, [
             $user->getId(),
@@ -30,17 +30,17 @@ class UserRepository
             $user->getEmail(),
             $user->getPassword(),
         ]);
-    
+
         if ($success) {
             // If the insertion was successful, return the user instance
             return $user;
         }
-    
+
         // If the insertion failed, you might want to handle it accordingly
         return null;
     }
-    
-    
+
+
 
     public function selectAll()
     {

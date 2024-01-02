@@ -22,12 +22,8 @@ class AddDoctorController extends Controller
     public function index()
     {
         $doctors = $this->adminRepository->getAllDoctor();
-    return response()->json($doctors);
+        return response()->json($doctors);
     }
-
- 
-
-
 
     public function addDoctor(Request $request)
     {
@@ -50,23 +46,33 @@ class AddDoctorController extends Controller
         $this->adminRepository->deleteDoctor($id);
     }
 
-    // public function updateDoctor(Request $request)
-    // {
-    //     $id = $request->input('id');
-    //     $data = $request->only(['email', 'password', 'fullName', 'phone', 'address', 'urlImage', 'specialization', 'hospital']);
+    public function updateDoctor(Request $request, $doctorId)
+    {
+        $email = $request->input('email');
+        $fullName = $request->input('fullName');
+        $phone = $request->input('phone');
+        $address = $request->input('address');
+        $urlImage = $request->input('urlImage');
+        $specialization = $request->input('specialization');
+        $hospital = $request->input('hospital');
 
-    //     $doctor = this->getDoctorById($id);
+        $user = (object) $this->adminRepository->getDoctorById($doctorId);
 
+        $this->userRepository->updateUser(
+            $user->getId(),
+            $email,
+            $fullName,
+            $phone,
+            $address,
+            $urlImage
+        );
 
-    //     if (!$doctor) {
-    //         return response()->json(['error' => 'Doctor not found'], 404);
-    //     }
+        $this->adminRepository->editDoctor(
+            $user->getId(),
+            $specialization,
+            $hospital
+        );
 
-    //     $doctor->fill($data);
-    //     $doctor->save();
-
-    //     return response()->json(['message' => 'Doctor updated successfully']);
-    // }
-
-    
+        return response()->json(['message' => 'Doctor information updated successfully']);
+    }
 }

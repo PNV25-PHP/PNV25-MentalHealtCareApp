@@ -1,10 +1,10 @@
-<link rel="shortcut icon" href="#">
+
 <?php
 
 /** @var \Laravel\Lumen\Routing\Router $router */
 use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Connection;
-
+use App\Http\Controllers\Admin\DoctorController;
 try {
     // Kiểm tra kết nối cơ sở dữ liệu
     DB::connection()->getPdo();
@@ -34,4 +34,8 @@ $router->get('/patient/home', 'Patient\HomeController@index');
 //Admin Routers
 $router->get('/admin/getDoctor', 'Admin\DoctorController@index');
 $router->get('/admin/addDoctor', 'Admin\DoctorController@addDoctor');
-$router->post('/api/admin/addDoctor', 'Admin\AddDoctorController@addDoctor');
+
+
+
+$router->get('/admin/doctors/{doctorId}/edit', [DoctorController::class, 'editDoctor']);
+

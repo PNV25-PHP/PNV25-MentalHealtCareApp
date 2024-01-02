@@ -12,27 +12,28 @@ use Illuminate\Support\Facades\DB;
 
 class AdminRepository
 {
-    
+
 
     public function getAllDoctor()
     {
-            $query = "SELECT  users.Id AS UserId,users.Email,users.FullName,users.Phone,
+        $query = "SELECT  users.Id AS UserId,users.Email,users.FullName,users.Phone,
                      users.Address,doctors.Specialization,doctors.Hospital
             FROM users
             JOIN doctors ON users.Id = doctors.UserId
             WHERE users.Role = 'doctor'    ";
-            $result = DB::select($query);
-            return $result;  
+        $result = DB::select($query);
+        return $result;
     }
 
-    public function getDoctorById(string $id){
+    public function getDoctorById(string $id)
+    {
         $query = "SELECT  users.Id AS UserId,users.Email,users.FullName,users.Phone,
                      users.Address,doctors.Specialization,doctors.Hospital
             FROM users
             JOIN doctors ON users.Id = doctors.UserId
             WHERE users.Role = 'doctor' AND users.Id = '$id'    ";
-            $result = DB::select($query);   
-            return $result;
+        $result = DB::select($query);
+        return $result;
     }
 
 
@@ -60,7 +61,7 @@ class AdminRepository
     {
         $userSql = "UPDATE users
                 SET Email = ?, FullName = ?, Phone = ?, Address = ?, Url_Image = ?
-                WHERE Id = (SELECT UserId FROM doctors WHERE Id = ?)";
+                WHERE Id = ?";
         DB::update($userSql, [
             $user->getEmail(),
             $user->getFullName(),
@@ -75,6 +76,7 @@ class AdminRepository
                   WHERE Id = ?";
         DB::update($doctorSql, [$specialization, $hospital, $user->getId()]);
     }
+
 
     public function deleteDoctor($doctorId)
     {

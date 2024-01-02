@@ -51,7 +51,6 @@ include_once dirname(__DIR__) . '../../layouts/HtmlHead.php';
                                         </button>
                                     </td>
                                 </tr>
-                          
                         </tbody>
                     </table>
                 </div>
