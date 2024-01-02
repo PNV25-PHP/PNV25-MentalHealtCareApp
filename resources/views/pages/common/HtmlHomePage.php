@@ -1,5 +1,5 @@
-<?php include_once '../../layouts/HtmlHead.php' ?>
-<?php include_once '../../layouts/HtmlNavbar.php' ?>
+<?php include_once  dirname(__DIR__) . '../../layouts/HtmlHead.php'?>
+<?php include_once dirname(__DIR__) . '../../layouts/HtmlNavbar.php'?>
 
 <body class="font-poppins ">
     <img src="../../assets/homepage.png" alt="">
@@ -271,4 +271,4 @@
 
         </div>
     </section>
-    <?php include_once '../../layouts/HtmlTail.php' ?>
+    <?php include_once dirname(__DIR__) . '../../layouts/HtmlTail.php' ?>
