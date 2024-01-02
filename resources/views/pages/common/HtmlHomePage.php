@@ -1,6 +1,10 @@
 <?php include_once  dirname(__DIR__) . '../../layouts/HtmlHead.php'?>
 <?php include_once dirname(__DIR__) . '../../layouts/HtmlNavbar.php'?>
-
+<style>
+    #menu-navigate {
+        display: none;
+    }
+</style>
 <body class="font-poppins ">
     <img src="../../assets/homepage.png" alt="">
     <div class="relative mt-10 mb-10 w-full h-full grid grid-cols-[40%,55%]">
