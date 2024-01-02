@@ -1,6 +1,5 @@
 <!-- This is an example component -->
-<?php include_once '../../layouts/HtmlHead.php' ?>
-
+<?php include_once dirname(__DIR__) .'../../layouts/HtmlHead.php'?>
 <div class="h-full">
 
     <div class="border-b-2 block md:flex">
@@ -41,3 +40,8 @@
         </div>
     </div>
 </div>
+<script>
+    function handleUpdateProfile(){
+        
+    }
+</script>
