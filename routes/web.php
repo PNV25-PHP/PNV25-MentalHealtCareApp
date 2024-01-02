@@ -25,7 +25,7 @@ $router->get('/', function () use ($router) {
 //Common Routers
 $router->get('/sign-in', 'Common\SignInController@index');
 $router->post('/api/sign-in', 'Common\SignInController@signIn');
-
+$router->post('/update/profile', 'Common\ProfileController@updateInformationUser');
 //Patient Routers
 $router->get('/patient/sign-up', 'Patient\SignUpController@index');
 $router->post('/api/patient/sign-up', 'Patient\SignUpController@signUp');
