@@ -20,10 +20,10 @@ class DoctorRepository
 
         ]);
     }
-    public function selectAll()
+
+    public function selectAllDoctors()
     {
         $doctors = DB::select("SELECT * FROM doctors");
         return $doctors;
     }
-    
 }
