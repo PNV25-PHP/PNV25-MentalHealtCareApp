@@ -26,10 +26,6 @@
                     </div>
                 </div>
                 <div class="pb-4">
-                    <label for="email" class="font-semibold text-gray-700 block pb-1">Email</label>
-                    <input id="email" class=" bg-gray-50 border-1  rounded-r px-4 py-2 w-full" type="email" placeholder="Army25@gmail.com" />
-                </div>
-                <div class="pb-4">
                     <label for="password" class="font-semibold text-gray-700 block pb-1">Password</label>
                     <input id="password" class="border-1  rounded-r px-4 py-2 w-full" type="password" placeholder="" />
                 </div>
