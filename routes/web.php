@@ -1,18 +1,23 @@
+<link rel="shortcut icon" href="#">
 <?php
 
 /** @var \Laravel\Lumen\Routing\Router $router */
+use Illuminate\Support\Facades\DB;
+use Illuminate\Database\Connection;
 
-/*
-|--------------------------------------------------------------------------
-| Application Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register all of the routes for an application.
-| It is a breeze. Simply tell Lumen the URIs it should respond to
-| and give it the Closure to call when that URI is requested.
-|
-*/
+try {
+    // Kiểm tra kết nối cơ sở dữ liệu
+    DB::connection()->getPdo();
 
+    // Kiểm tra trạng thái kết nối
+    if (DB::connection()->getDatabaseName()) {
+        echo 'Kết nối cơ sở dữ liệu thành công!';
+    } else {
+        echo 'Không thể kết nối đến cơ sở dữ liệu.';
+    }
+} catch (\Exception $e) {
+    echo 'Lỗi kết nối cơ sở dữ liệu: ' . $e->getMessage();
+} 
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
@@ -25,3 +30,9 @@ $router->post('/api/sign-in', 'Common\SignInController@signIn');
 $router->get('/patient/sign-up', 'Patient\SignUpController@index');
 $router->post('/api/patient/sign-up', 'Patient\SignUpController@signUp');
 $router->get('/patient/home', 'Patient\HomeController@index');
+
+//Admin Routers
+$router->get('/admin/addDoctor', 'Admin\AddDoctorController@index');
+
+$router->post('/api/admin/addDoctor', 'Admin\AddDoctorController@addDoctor');
+

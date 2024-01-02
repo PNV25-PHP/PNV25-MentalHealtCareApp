@@ -17,6 +17,7 @@ class SignInController extends Controller
     }
 
     public function signIn(Request $req)
+    
     {
         $signInRequest = new SignInReq($req);
 
