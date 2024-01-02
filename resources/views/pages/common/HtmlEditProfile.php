@@ -31,7 +31,7 @@
                 </div>
                 <div class="pb-4">
                     <label for="password" class="font-semibold text-gray-700 block pb-1">Password</label>
-                    <input id="password" class="border-1  rounded-r px-4 py-2 w-full" type="password " placeholder="" />
+                    <input id="password" class="border-1  rounded-r px-4 py-2 w-full" type="password" placeholder="" />
                 </div>
                 <div class="pb-4">
                     <label for="phoneNumber" class="font-semibold text-gray-700 block pb-1">Phone Number</label>
