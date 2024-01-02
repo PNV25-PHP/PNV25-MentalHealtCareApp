@@ -10,7 +10,7 @@ $adminRepository = new AdminRepository();
 
 $doctors = $adminRepository->getAllDoctor();  // Gọi hàm từ Repository
 print_r($doctors);
-?> 
+?>
 <div class="flex flex-wrap bg-gray-100 w-full h-screen">
     <?php include_once dirname(__DIR__) . '../../layouts/HtmlSidebarAdmin.php'   ?>
     <div class="w-9/12">
@@ -42,31 +42,24 @@ print_r($doctors);
                             </tr>
                         </thead>
                         <tbody>
-                            <?php
-
-                            foreach ($doctors as $doctor) : ?>
+                            <?php foreach ($doctors as $doctor) : ?>
                                 <tr class="border-b hover:bg-orange-100 bg-gray-100">
-                                    <td class="py-3 px-5"><input type="text" class="bg-transparent"> <?= $doctor->Id ?></td>
-                                    <td class="py-3 px-5 "><input type="text" class="bg-transparent"> <?= $doctor->FullName ?></td>
-                                    <td class="py-3 px-5  "><input type="text" class="bg-transparent"><?= $doctor->Specialization ?></td>
-                                    <td class="py-3 px-5 "><input type="text" class="bg-transparent"> <?= $doctor->Hospital ?></td>
+                                    <td class="py-3 px-5"><?= $doctor->UserId ?></td>
+                                    <td class="py-3 px-5"><?= $doctor->FullName ?></td>
+                                    <td class="py-3 px-5"><?= $doctor->Specialization ?></td>
+                                    <td class="py-3 px-5"><?= $doctor->Hospital ?></td>
                                     <td class="py-3 px-5 max-w-200 height-h-auto"><?= $doctor->Email ?></td>
-                                    <td class="py-3 px-5"><input type="text" class="bg-transparent"> <?= $doctor->Address ?> </td>
-                                    <td class="py-3 px-5"><input type="text" class="bg-transparent"> <?= $doctor->Url_Image ?> </td>
+                                    <!-- Các cột khác tương tự -->
                                     <td class="py-3 px-5 flex justify-end">
                                         <button id="updateButton" class="text-sm bg-blue-500 hover:bg-blue-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline cursor-pointer">
                                             Sửa
                                         </button>
-
                                         <button id="deleteButton" class="text-sm bg-red-500 hover:bg-red-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline">
                                             Xoá
                                         </button>
                                     </td>
-
-
-
                                 </tr>
-                            <?php endforeach  ?>
+                            <?php endforeach; ?>
                         </tbody>
                     </table>
                 </div>

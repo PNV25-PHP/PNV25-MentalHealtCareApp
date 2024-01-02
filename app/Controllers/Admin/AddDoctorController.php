@@ -21,10 +21,10 @@ class AddDoctorController extends Controller
 
     public function index()
     {
-      //  $doctors = $this->adminRepository->getAllDoctor();
-                          //, compact('doctors')
-        return view("pages\admin\doctor");
+        $doctors = $this->adminRepository->getAllDoctor();
+        return view("pages\admin\doctor", compact('doctors'));
     }
+
 
     public function addDoctor(Request $request)
     {
@@ -47,24 +47,23 @@ class AddDoctorController extends Controller
         $this->adminRepository->deleteDoctor($id);
     }
 
-    public function updateDoctor(Request $request)
-{
-    $id = $request->input('id');
-    $data = $request->only(['email', 'password', 'fullName', 'phone', 'address', 'urlImage', 'specialization', 'hospital']);
+    // public function updateDoctor(Request $request)
+    // {
+    //     $id = $request->input('id');
+    //     $data = $request->only(['email', 'password', 'fullName', 'phone', 'address', 'urlImage', 'specialization', 'hospital']);
 
-    // Sử dụng phương thức getDoctorById để lấy thông tin của bác sĩ
-    $doctor = Doctor::getDoctorById($id);
+    //     $doctor = this->getDoctorById($id);
 
-    if (!$doctor) {
-        return response()->json(['error' => 'Doctor not found'], 404);
-    }
 
-    // Sử dụng phương thức updateDoctorInfo để cập nhật thông tin của bác sĩ
-    $doctor->updateDoctorInfo($data);
+    //     if (!$doctor) {
+    //         return response()->json(['error' => 'Doctor not found'], 404);
+    //     }
 
-    return response()->json(['message' => 'Doctor updated successfully']);
-}
+    //     $doctor->fill($data);
+    //     $doctor->save();
 
+    //     return response()->json(['message' => 'Doctor updated successfully']);
+    // }
 
     
 }

@@ -35,4 +35,3 @@ $router->get('/patient/home', 'Patient\HomeController@index');
 $router->get('/admin/addDoctor', 'Admin\AddDoctorController@index');
 
 $router->post('/api/admin/addDoctor', 'Admin\AddDoctorController@addDoctor');
-
