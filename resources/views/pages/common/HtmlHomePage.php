@@ -1,14 +1,8 @@
-<?php include_once 'HtmlHead.php' ?>
+<?php include_once '../../layouts/HtmlHead.php' ?>
 
 <body class="font-poppins ">
 
-    <div class="text-center p-24" id="introduce" style="background-image: url('../assets/homepage.png'); 
-    background-size: cover; background-position: center; min-height:70vh">
-        <!-- <p class=" pb-12 text-left text-5xl font-bold">Chăm sóc cuộc sống</p>
-        <span class="text-left block pt-0  text-4xl">Tinh thần thoải mái, lạc quan và tích cực!</span> -->
-
-
-    </div>
+    <img src="../../assets/homepage.png" alt="">
 
     <div class="relative mt-10 mb-10 w-full h-full grid grid-cols-[40%,55%]">
         <div class="mt-20">
@@ -31,7 +25,7 @@
         </div>
         <div class="absolute left-582 top-149 w-109.83 h-22"></div>
     </div>
-    <img src="../assets/mainhomepage.png" class="object-contain mt-8 w-full px-24" alt="Background Image 2">
+    <img src="../../assets/mainhomepage.png" class="object-contain mt-8 w-full px-24" alt="Background Image 2">
 
     <section class="px-24 my-12 ">
         <div class=" mx-auto w-full ">
@@ -39,7 +33,7 @@
                 <div class="overflow-hidden relative h-56 rounded-lg sm:h-64 xl:h-80 2xl:h-96">
                     <div class="hidden duration-700 ease-in-out" data-carousel-item>
                         <div class="flex">
-                            <img src="../assets/avatardoctor.png" class="w-100 h-100 ml-20" alt="Image">
+                            <img src="../../assets/avatardoctor.png" class="w-100 h-100 ml-20" alt="Image">
                             <div class="ml-20 mt-20">
                                 <div class="text-black text-4xl font-poppins font-normal break-words">
                                     Mr.Tran Thanh Luan
@@ -54,7 +48,7 @@
 
                     <div class="hidden duration-700 ease-in-out" data-carousel-item>
                         <div class="flex">
-                            <img src="../assets/mrsArmy.png" class="w-100 h-100 ml-20    " alt="Image">
+                            <img src="../../assets/mrsArmy.png" class="w-100 h-100 ml-20    " alt="Image">
                             <div class="ml-20 mt-20">
                                 <div class="text-black text-4xl font-poppins font-normal break-words">
                                     Mrs.Army
@@ -70,7 +64,7 @@
 
                     <div class="hidden duration-700 ease-in-out" data-carousel-item>
                         <div class="flex">
-                            <img src="../assets/mrSinh.png" class="w-100 h-100 ml-20" alt="Image">
+                            <img src="../../assets/mrSinh.png" class="w-100 h-100 ml-20" alt="Image">
                             <div class="ml-20 mt-20">
                                 <div class="text-black text-4xl font-poppins font-normal break-words">
                                     Mr.Dang Van Sinh
@@ -85,7 +79,7 @@
 
                     <div class="hidden duration-700 ease-in-out" data-carousel-item>
                         <div class="flex">
-                            <img src="../assets/mrNghia.png" class="w-100 h-100 ml-20" alt="Image">
+                            <img src="../../assets/mrNghia.png" class="w-100 h-100 ml-20" alt="Image">
                             <div class="ml-20 mt-20">
                                 <div class="text-black text-4xl font-poppins font-normal break-words">
                                     Mr.Mai Xuan Nghia
@@ -140,7 +134,7 @@
         <div class="mt-5 block">
             <div class="grid grid-cols-[48%,48%] gap-1 ml-5 mb-5">
                 <div class="flex bg-gray-200 shadow-xl rounded-md">
-                    <img class="rounded-tl-lg rounded-tr-lg" src="../assets/takecare.png" />
+                    <img class="rounded-tl-lg rounded-tr-lg" src="../../assets/takecare.png" />
                     <div class="block ml-5 mt-10">
                         <div class="text-blue-500 text-sm font-poppins font-normal break-words">
                             Monday 05, August 2021 | By Nghia
@@ -166,7 +160,7 @@
                 </div>
                 <div class="w-full h-full relative ml-5">
                     <div class="flex bg-gray-200 shadow-xl rounded-md ">
-                        <img class="rounded-tl-lg rounded-tr-lg" src="../assets/takecare.png" />
+                        <img class="rounded-tl-lg rounded-tr-lg" src="../../assets/takecare.png" />
                         <div class="block ml-5 mt-10">
                             <div class="text-blue-500 text-sm font-poppins font-normal break-words">
                                 Monday 05, August 2021 | By Nghia
@@ -193,7 +187,7 @@
             </div>
             <div class="grid grid-cols-[48%,48%] gap-1 ml-5">
                 <div class="flex bg-gray-200 shadow-xl rounded-md ">
-                    <img class="rounded-tl-lg rounded-tr-lg" src="../assets/takecare.png" />
+                    <img class="rounded-tl-lg rounded-tr-lg" src="../../assets/takecare.png" />
                     <div class="block ml-5 mt-10">
                         <div class="text-blue-500 text-sm font-poppins font-normal break-words">
                             Monday 05, August 2021 | By Nghia
@@ -219,7 +213,7 @@
                 </div>
                 <div class="w-full h-full relative ml-5">
                     <div class="flex bg-gray-200 shadow-xl rounded-md ">
-                        <img class="rounded-tl-lg rounded-tr-lg" src="../assets/takecare.png" />
+                        <img class="rounded-tl-lg rounded-tr-lg" src="../../assets/takecare.png" />
                         <div class="block ml-5 mt-10">
                             <div class="text-blue-500 text-sm font-poppins font-normal break-words">
                                 Monday 05, August 2021 | By Nghia
@@ -279,6 +273,3 @@
 
         </div>
     </section>
-</body>
-
-</html>
