@@ -76,4 +76,18 @@ class UserRepository
 
         return null;
     }
+
+    function updateUser(User $user)
+    {
+        $id = $user->getId();
+        $role = $user->getRole()->getValue();
+        $email = $user->getEmail();
+        $password = $user->getPassword();
+        $fullname = $user->getFullname();
+        $phone = $user->getPhone();
+        $address = $user->getAddress();
+        $url_image = $user->getUrlImage();
+        $query = DB::update("UPDATE users SET role = ?, password = ?, fullname = ?, phone = ?, address = ?, url_image = ? WHERE email = ?", [$role, $password, $fullname, $phone, $address, $url_image, $email]);
+        return $query;
+    }
 }
