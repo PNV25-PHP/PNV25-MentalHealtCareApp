@@ -22,8 +22,11 @@ class AddDoctorController extends Controller
     public function index()
     {
         $doctors = $this->adminRepository->getAllDoctor();
-        return view("pages\admin\doctor", compact('doctors'));
+    return response()->json($doctors);
     }
+
+ 
+
 
 
     public function addDoctor(Request $request)

@@ -32,6 +32,6 @@ $router->post('/api/patient/sign-up', 'Patient\SignUpController@signUp');
 $router->get('/patient/home', 'Patient\HomeController@index');
 
 //Admin Routers
-$router->get('/admin/addDoctor', 'Admin\AddDoctorController@index');
-
+$router->get('/admin/getDoctor', 'Admin\DoctorController@index');
+$router->get('/admin/addDoctor', 'Admin\DoctorController@addDoctor');
 $router->post('/api/admin/addDoctor', 'Admin\AddDoctorController@addDoctor');

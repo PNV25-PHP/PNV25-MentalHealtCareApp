@@ -1,15 +1,6 @@
 <?php
-
-use App\Repositories\AdminRepository;
-
 include_once dirname(__DIR__) . '../../layouts/HtmlHead.php';
-include_once dirname(__DIR__) . '../../../../app/Controllers/Admin/AddDoctorController.php';
-include_once dirname(__DIR__) . '../../../../app/Repositories/AdminRepository.php';
 
-$adminRepository = new AdminRepository();
-
-$doctors = $adminRepository->getAllDoctor();  // Gọi hàm từ Repository
-print_r($doctors);
 ?>
 <div class="flex flex-wrap bg-gray-100 w-full h-screen">
     <?php include_once dirname(__DIR__) . '../../layouts/HtmlSidebarAdmin.php'   ?>
@@ -41,15 +32,16 @@ print_r($doctors);
                                 <th class="text-left py-3 px-5  ">Chức năng</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <?php foreach ($doctors as $doctor) : ?>
+                        <tbody id="doctorTableBody" >
+                            
                                 <tr class="border-b hover:bg-orange-100 bg-gray-100">
-                                    <td class="py-3 px-5"><?= $doctor->UserId ?></td>
-                                    <td class="py-3 px-5"><?= $doctor->FullName ?></td>
-                                    <td class="py-3 px-5"><?= $doctor->Specialization ?></td>
-                                    <td class="py-3 px-5"><?= $doctor->Hospital ?></td>
-                                    <td class="py-3 px-5 max-w-200 height-h-auto"><?= $doctor->Email ?></td>
-                                    <!-- Các cột khác tương tự -->
+                                    <td class="py-3 px-5">            </td>  //mãBS
+                                    <td class="py-3 px-5"></td>              //Họ tên       
+                                    <td class="py-3 px-5"></td>              //chuyên ngnahf
+                                    <td class="py-3 px-5">  </td>             // bệnh viện
+                                    <td class="py-3 px-5">  </td>             // email
+                                    <td class="py-3 px-5">  </td>             // số điện thoại
+                                    <td class="py-3 px-5">  </td>             // ảnh đại diện
                                     <td class="py-3 px-5 flex justify-end">
                                         <button id="updateButton" class="text-sm bg-blue-500 hover:bg-blue-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline cursor-pointer">
                                             Sửa
@@ -59,7 +51,7 @@ print_r($doctors);
                                         </button>
                                     </td>
                                 </tr>
-                            <?php endforeach; ?>
+                          
                         </tbody>
                     </table>
                 </div>
@@ -283,6 +275,87 @@ print_r($doctors);
 
 
 
+<script>
+
+document.addEventListener('DOMContentLoaded', function() {
+    fetchDoctorsData();
+});
+
+function fetchDoctorsData() {
+    fetch('/admin/getDoctor')
+        .then(response => response.json())
+        .then(data => {
+            displayDoctors(data);
+        })
+        .catch(error => console.error('Error:', error));
+
+}
+
+function displayDoctors(doctors) {
+    const tableBody = document.getElementById('doctorTableBody');
+
+    doctors.forEach(doctor => {
+        const row = document.createElement('tr');
+        
+        // Thêm dữ liệu vào từng ô td
+        const userIdCell = document.createElement('td');
+        userIdCell.textContent = doctor.UserId;
+        row.appendChild(userIdCell);
+
+        const fullNameCell = document.createElement('td');
+        fullNameCell.textContent = doctor.FullName;
+        row.appendChild(fullNameCell);
+
+        const specializationCell = document.createElement('td');
+        specializationCell.textContent = doctor.Specialization;
+        row.appendChild(specializationCell);
+
+        const hospitalCell = document.createElement('td');
+        hospitalCell.textContent = doctor.Hospital;
+        row.appendChild(hospitalCell);
+
+        const emailCell = document.createElement('td');
+        emailCell.textContent = doctor.Email;
+        row.appendChild(emailCell);
+
+        const phoneCell = document.createElement('td'); 
+        phoneCell.textContent = doctor.Phone;
+        row.appendChild(phoneCell);
+        
+        const addressCell = document.createElement('td');
+        addressCell.textContent = doctor.Address;
+        row.appendChild(addressCell);
+
+        const urlimageCell = document.createElement('td');
+        urlimageCell.textContent = doctor.Urlimage;
+        row.appendChild(urlimageCell);
 
 
+        // Tạo ô chứa nút Sửa và Xoá
+        const actionsCell = document.createElement('td');
+        actionsCell.className = 'py-3 px-5 flex justify-end';
+
+        const updateButton = document.createElement('button');
+        updateButton.id = 'updateButton';
+        updateButton.className = 'text-sm bg-blue-500 hover:bg-blue-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline cursor-pointer';
+        updateButton.textContent = 'Sửa';
+        actionsCell.appendChild(updateButton);
+
+        const deleteButton = document.createElement('button');
+        deleteButton.id = 'deleteButton';
+        deleteButton.className = 'text-sm bg-red-500 hover:bg-red-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline';
+        deleteButton.textContent = 'Xoá';
+        actionsCell.appendChild(deleteButton);
+
+        row.appendChild(actionsCell);
+
+        // Thêm dòng vào tbody
+        tableBody.appendChild(row);
+    });
+}
+
+
+
+
+</script>
 <?php include_once dirname(__DIR__) . '../../layouts/HtmlTail.php'   ?>
