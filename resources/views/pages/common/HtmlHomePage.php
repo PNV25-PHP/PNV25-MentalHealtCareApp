@@ -278,10 +278,10 @@
     <?php include_once dirname(__DIR__) . '../../layouts/HtmlTail.php' ?>
 <script>
     var user_info = JSON.parse(localStorage.getItem("user-info"));
-var imagePath = user_info.image;
+    var imagePath = user_info.image;
 
-var trimmedImagePath = imagePath.replace("http://localhost:8000/patient/", "");
+    var trimmedImagePath = imagePath.replace("http://localhost:8000/patient/", "");
 
-console.log(trimmedImagePath);
-document.getElementById('avatar').src = trimmedImagePath
+    console.log(trimmedImagePath);
+    document.getElementById('avatar').src = trimmedImagePath
 </script>

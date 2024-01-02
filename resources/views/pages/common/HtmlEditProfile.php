@@ -62,12 +62,8 @@
         user_info_update.fullName = username.value 
         user_info_update.phone = phoneNumber.value 
         user_info_update.address = address.value 
-
-        var trimmedImagePath = imagePath.replace("C:\\fakepath\\", "");
-
         console.log(user_info_update)
         localStorage.setItem("user-info", JSON.stringify(user_info_update))
-        console.log(user_info_update)
         window.location.href = "/view-profile"
     }
 
