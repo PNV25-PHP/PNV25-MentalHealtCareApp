@@ -47,6 +47,6 @@ class SignUpController extends Controller
                 $newUser->getAddress(),
                 $newUser->getUrlImage()
             )
-        ], 201);
+        ], 200);
     }
 }
