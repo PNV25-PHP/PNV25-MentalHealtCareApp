@@ -45,7 +45,7 @@ class ProFileController extends Controller
             } else {
                 $role = Role::Patient;
             }
-            return new User($role, $newUser->Email, $newUser->Password, $newUser->FullName, $newUser->Phone == null ? "" : $newUser->Phone, $newUser->Address == null ? "" : $newUser->Address, $newUser->Url_Image == null ? "" : $newUser->Url_Image);
+            return new User($role, $newUser->Email, $newUser->Password, $newUser->FullName, $newUser->Phone == null ? "Please update" : $newUser->Phone, $newUser->Address == null ? "Please update" : $newUser->Address, $newUser->Url_Image == null ? "Please update" : $newUser->Url_Image);
         }
 
         return null;
@@ -62,9 +62,11 @@ class ProFileController extends Controller
             $role = Role::Patient;
         }
         $change = new UserRepository();
-        $user = new User($role, $proFileRequest->email, $proFileRequest->password, $proFileRequest->fullname, $proFileRequest->address == null ? "" : $proFileRequest->address, $proFileRequest->phone == null ? "" : $proFileRequest->phone, $proFileRequest->url_image == null ? "" : $proFileRequest->url_image);
+
+        $user = new User($role, $proFileRequest->email, $proFileRequest->password, $proFileRequest->fullname, $proFileRequest->address == null ? "Please update" : $proFileRequest->address, $proFileRequest->phone == null ? "Please update" : $proFileRequest->phone, $proFileRequest->url_image == null ? "Please update" : $proFileRequest->url_image);
         $result =  $change->updateUser($user);
         $createUpdateUser = $change->findByEmail($proFileRequest->email);
+
         if ($result) {
             return response()->json([
                 'message' => 'Update user sucessful',
