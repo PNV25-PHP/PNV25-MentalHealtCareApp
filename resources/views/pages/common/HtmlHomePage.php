@@ -1,6 +1,10 @@
-<?php include_once '../../layouts/HtmlHead.php' ?>
-<?php include_once '../../layouts/HtmlNavbar.php' ?>
-
+<?php include_once  dirname(__DIR__) . '../../layouts/HtmlHead.php'?>
+<?php include_once dirname(__DIR__) . '../../layouts/HtmlNavbar.php'?>
+<style>
+    #menu-navigate {
+        display: none;
+    }
+</style>
 <body class="font-poppins ">
     <img src="../../assets/homepage.png" alt="">
     <div class="relative mt-10 mb-10 w-full h-full grid grid-cols-[40%,55%]">
@@ -271,4 +275,13 @@
 
         </div>
     </section>
-    <?php include_once '../../layouts/HtmlTail.php' ?>
+    <?php include_once dirname(__DIR__) . '../../layouts/HtmlTail.php' ?>
+<script>
+    var info_user = JSON.parse(localStorage.getItem("user-info"));
+var imagePath = info_user.image;
+
+var trimmedImagePath = imagePath.replace("http://localhost:8000/patient/", "");
+
+console.log(trimmedImagePath);
+document.getElementById('avatar').src = trimmedImagePath
+</script>
