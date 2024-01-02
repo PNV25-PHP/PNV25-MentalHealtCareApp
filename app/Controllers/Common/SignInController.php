@@ -4,8 +4,6 @@ namespace App\Controllers\Common;
 
 use App\Dtos\Common\SignInRes;
 use App\Dtos\Common\SignInReq;
-use App\Models\Role;
-use App\Models\User;
 use App\Repositories\UserRepository;
 use Illuminate\Http\Request;
 use Laravel\Lumen\Routing\Controller;
@@ -42,7 +40,11 @@ class SignInController extends Controller
                 $user->getId(),
                 $user->getRole()->getValue(),
                 $user->getEmail(),
-                $user->getFullname()
+                $user->getFullname(),
+                $user->getPassword(),
+                $user->getPhone(),
+                $user->getAddress(),
+                $user->getUrlImage()
             )
         ]);
     }

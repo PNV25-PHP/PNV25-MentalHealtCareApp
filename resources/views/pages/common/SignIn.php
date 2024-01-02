@@ -1,4 +1,4 @@
-<?php include_once dirname(__DIR__).'/../layouts/HtmlHead.php' ?>
+<?php include_once dirname(__DIR__) . '/../layouts/HtmlHead.php' ?>
 
 <section class="">
     <div class=" items-center px-5 py-12 lg:px-20">
@@ -63,9 +63,12 @@
         const email = document.getElementById("email").value
         const password = document.getElementById("password").value
 
-        axios.post('/api/sign-in', {email, password})
+        axios.post('/api/sign-in', {
+                email,
+                password
+            })
             .then(res => {
-                const payload = res.data.payload
+                const payload = res.data.payload;
                 if (res.status === 200) {
                     localStorage.setItem("user-info", JSON.stringify(payload))
                     if (payload.role === "Admin") {
@@ -78,7 +81,7 @@
                 }
             })
             .catch(error => {
-                if (error.response.status === 404) {
+                if (error.response.status === 401) {
                     document.getElementById("email-error").textContent = "email or password is invalid"
                     document.getElementById("password-error").textContent = "email or password is invalid"
                 }
@@ -90,4 +93,4 @@
     }
 </script>
 
-<?php include_once dirname(__DIR__).'/../layouts/HtmlTail.php' ?>
+<?php include_once dirname(__DIR__) . '/../layouts/HtmlTail.php' ?>
