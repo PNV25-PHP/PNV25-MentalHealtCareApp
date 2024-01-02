@@ -1,9 +1,8 @@
 <?php include_once '../../layouts/HtmlHead.php' ?>
+<?php include_once '../../layouts/HtmlNavbar.php' ?>
 
 <body class="font-poppins ">
-
     <img src="../../assets/homepage.png" alt="">
-
     <div class="relative mt-10 mb-10 w-full h-full grid grid-cols-[40%,55%]">
         <div class="mt-20">
             <div class=" text-center text-blue-500 text-2xl font-bold uppercase tracking-wide font-poppins">
@@ -12,7 +11,6 @@
             <div class=" text-center text-blue-900 text-3xl font-medium font-poppins">
                 Great place to place your trust
             </div>
-
         </div>
         <div class="text-gray-700 text-base font-normal  font-poppins">
             In a world that can often feel overwhelming, we are here to offer a place of peace and reflection for patients who are seeking to understand themselves better. We are a listening ear and a shoulder to cry on, and we are here to help you find the mental health experts you need to thrive.
@@ -273,3 +271,4 @@
 
         </div>
     </section>
+    <?php include_once '../../layouts/HtmlTail.php' ?>
