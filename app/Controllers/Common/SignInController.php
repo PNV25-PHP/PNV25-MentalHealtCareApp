@@ -6,6 +6,7 @@ use App\Dtos\Common\SignInRes;
 use App\Dtos\Common\SignInReq;
 use App\Models\Role;
 use App\Models\User;
+use App\Repositories\UserRepository;
 use Illuminate\Http\Request;
 use Laravel\Lumen\Routing\Controller;
 
@@ -20,10 +21,14 @@ class SignInController extends Controller
     {
         $signInRequest = new SignInReq($req);
 
-        // TODO validate the request
+        if ($signInRequest->email == null || $signInRequest->password == null) {
+            return response()->json([
+                'message' => 'Please enter complete information',
+            ], 401);
+        }
 
-        // TODO call to db find by email then check for password
-        $user = new User(Role::Patient, $signInRequest->email, "1", "vupham", "101B", "", "image");
+        $userRepository = new UserRepository();
+        $user = $userRepository->findByEmail($signInRequest->email);
 
         if ($user == null || $user->getPassword() != $signInRequest->password) {
             return response()->json([
@@ -37,7 +42,8 @@ class SignInController extends Controller
                 $user->getId(),
                 $user->getRole()->getValue(),
                 $user->getEmail(),
-                $user->getFullname())
+                $user->getFullname()
+            )
         ]);
     }
 }
