@@ -36,6 +36,8 @@ class AdminRepository
         return $result;
     }
 
+    
+
 
 
     public function addNewDoctor(User $user, string $specialization, string $hospital)
@@ -87,4 +89,7 @@ class AdminRepository
                   WHERE Id = ?";
         DB::delete($doctorSql, [$doctorId]);
     }
+
+
+    
 }

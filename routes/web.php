@@ -32,10 +32,13 @@ $router->post('/api/patient/sign-up', 'Patient\SignUpController@signUp');
 $router->get('/patient/home', 'Patient\HomeController@index');
 
 //Admin Routers
+//Admin Routers
 $router->get('/admin/getDoctor', 'Admin\DoctorController@index');
 $router->get('/admin/addDoctor', 'Admin\DoctorController@addDoctor');
 
+$router->get('/admin/getDoctorById/{doctorId}', 'AdminController@getDoctorById');
+$router->post('/admin/updateDoctor/{doctorId}', 'AdminController@updateDoctor');
 
 
-$router->get('/admin/doctors/{doctorId}/edit', [DoctorController::class, 'editDoctor']);
+
 

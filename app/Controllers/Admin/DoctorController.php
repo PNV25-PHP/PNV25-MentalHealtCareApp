@@ -25,6 +25,13 @@ class AddDoctorController extends Controller
         return response()->json($doctors);
     }
 
+    public function getDoctorById($doctorId)
+    {
+        $doctor = $this->adminRepository->getDoctorById($doctorId);
+        return response()->json($doctor);
+    }
+
+
     public function addDoctor(Request $request)
     {
         $email = $request->input('email');
@@ -41,10 +48,21 @@ class AddDoctorController extends Controller
         $this->adminRepository->addNewDoctor($user, $specialization, $hospital);
     }
 
-    public function deleteDoctor($id)
-    {
-        $this->adminRepository->deleteDoctor($id);
-    }
+    
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
 
     public function updateDoctor(Request $request, $doctorId)
     {
