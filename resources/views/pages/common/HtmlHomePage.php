@@ -6,7 +6,7 @@
     }
 </style>
 <body class="font-poppins ">
-    <img src="../../assets/homepage.png" alt="">
+   <img src="https://res.cloudinary.com/dkvvko14m/image/upload/v1704189316/MentalHealthCare/doz1asgf74flyrbpwibu.png" alt="homepage img">
     <div class="relative mt-10 mb-10 w-full h-full grid grid-cols-[40%,55%]">
         <div class="mt-20">
             <div class=" text-center text-blue-500 text-2xl font-bold uppercase tracking-wide font-poppins">
@@ -27,7 +27,7 @@
         </div>
         <div class="absolute left-582 top-149 w-109.83 h-22"></div>
     </div>
-    <img src="../../assets/mainhomepage.png" class="object-contain mt-8 w-full px-24" alt="Background Image 2">
+    <img src="https://res.cloudinary.com/dkvvko14m/image/upload/v1704189316/MentalHealthCare/whzri6npqnunsab24p5x.png" class="object-contain mt-8 w-full px-24" alt="Background Image 2">
 
     <section class="px-24 my-12 ">
         <div class=" mx-auto w-full ">
@@ -35,7 +35,7 @@
                 <div class="overflow-hidden relative h-56 rounded-lg sm:h-64 xl:h-80 2xl:h-96">
                     <div class="hidden duration-700 ease-in-out" data-carousel-item>
                         <div class="flex">
-                            <img src="../../assets/avatardoctor.png" class="w-100 h-100 ml-20" alt="Image">
+                            <img src="https://res.cloudinary.com/dkvvko14m/image/upload/v1704189315/MentalHealthCare/mpd95zsnue46dnrmskor.png" class="w-100 h-100 ml-20" alt="Image">
                             <div class="ml-20 mt-20">
                                 <div class="text-black text-4xl font-poppins font-normal break-words">
                                     Mr.Tran Thanh Luan
@@ -50,7 +50,7 @@
 
                     <div class="hidden duration-700 ease-in-out" data-carousel-item>
                         <div class="flex">
-                            <img src="../../assets/mrsArmy.png" class="w-100 h-100 ml-20    " alt="Image">
+                            <img src="https://res.cloudinary.com/dkvvko14m/image/upload/v1704189316/MentalHealthCare/etwuvq0dunwjhanrv6sd.png" class="w-100 h-100 ml-20    " alt="Image">
                             <div class="ml-20 mt-20">
                                 <div class="text-black text-4xl font-poppins font-normal break-words">
                                     Mrs.Army
@@ -66,7 +66,7 @@
 
                     <div class="hidden duration-700 ease-in-out" data-carousel-item>
                         <div class="flex">
-                            <img src="../../assets/mrSinh.png" class="w-100 h-100 ml-20" alt="Image">
+                            <img src="https://res.cloudinary.com/dkvvko14m/image/upload/v1704189316/MentalHealthCare/kwqntnjytn0wikbvku0l.png" class="w-100 h-100 ml-20" alt="Image">
                             <div class="ml-20 mt-20">
                                 <div class="text-black text-4xl font-poppins font-normal break-words">
                                     Mr.Dang Van Sinh
@@ -81,7 +81,7 @@
 
                     <div class="hidden duration-700 ease-in-out" data-carousel-item>
                         <div class="flex">
-                            <img src="../../assets/mrNghia.png" class="w-100 h-100 ml-20" alt="Image">
+                            <img src="https://res.cloudinary.com/dkvvko14m/image/upload/v1704189315/MentalHealthCare/ml7n4fbz3jdb8tks83hm.png" class="w-100 h-100 ml-20" alt="Image">
                             <div class="ml-20 mt-20">
                                 <div class="text-black text-4xl font-poppins font-normal break-words">
                                     Mr.Mai Xuan Nghia
@@ -136,7 +136,7 @@
         <div class="mt-5 block">
             <div class="grid grid-cols-[48%,48%] gap-1 ml-5 mb-5">
                 <div class="flex bg-gray-200 shadow-xl rounded-md">
-                    <img class="rounded-tl-lg rounded-tr-lg" src="../../assets/takecare.png" />
+                    <img class="rounded-tl-lg rounded-tr-lg" src="https://res.cloudinary.com/dkvvko14m/image/upload/v1704189316/MentalHealthCare/y8qnbw4chwk0flu9hiqx.png" />
                     <div class="block ml-5 mt-10">
                         <div class="text-blue-500 text-sm font-poppins font-normal break-words">
                             Monday 05, August 2021 | By Nghia
@@ -162,7 +162,7 @@
                 </div>
                 <div class="w-full h-full relative ml-5">
                     <div class="flex bg-gray-200 shadow-xl rounded-md ">
-                        <img class="rounded-tl-lg rounded-tr-lg" src="../../assets/takecare.png" />
+                        <img class="rounded-tl-lg rounded-tr-lg" src="https://res.cloudinary.com/dkvvko14m/image/upload/v1704189316/MentalHealthCare/y8qnbw4chwk0flu9hiqx.png" />
                         <div class="block ml-5 mt-10">
                             <div class="text-blue-500 text-sm font-poppins font-normal break-words">
                                 Monday 05, August 2021 | By Nghia
@@ -189,7 +189,7 @@
             </div>
             <div class="grid grid-cols-[48%,48%] gap-1 ml-5">
                 <div class="flex bg-gray-200 shadow-xl rounded-md ">
-                    <img class="rounded-tl-lg rounded-tr-lg" src="../../assets/takecare.png" />
+                    <img class="rounded-tl-lg rounded-tr-lg" src="https://res.cloudinary.com/dkvvko14m/image/upload/v1704189316/MentalHealthCare/y8qnbw4chwk0flu9hiqx.png" />
                     <div class="block ml-5 mt-10">
                         <div class="text-blue-500 text-sm font-poppins font-normal break-words">
                             Monday 05, August 2021 | By Nghia
@@ -215,7 +215,7 @@
                 </div>
                 <div class="w-full h-full relative ml-5">
                     <div class="flex bg-gray-200 shadow-xl rounded-md ">
-                        <img class="rounded-tl-lg rounded-tr-lg" src="../../assets/takecare.png" />
+                        <img class="rounded-tl-lg rounded-tr-lg" src="https://res.cloudinary.com/dkvvko14m/image/upload/v1704189316/MentalHealthCare/y8qnbw4chwk0flu9hiqx.png" />
                         <div class="block ml-5 mt-10">
                             <div class="text-blue-500 text-sm font-poppins font-normal break-words">
                                 Monday 05, August 2021 | By Nghia
@@ -277,8 +277,8 @@
     </section>
     <?php include_once dirname(__DIR__) . '../../layouts/HtmlTail.php' ?>
 <script>
-    var info_user = JSON.parse(localStorage.getItem("user-info"));
-var imagePath = info_user.image;
+    var user_info = JSON.parse(localStorage.getItem("user-info"));
+var imagePath = user_info.image;
 
 var trimmedImagePath = imagePath.replace("http://localhost:8000/patient/", "");
 

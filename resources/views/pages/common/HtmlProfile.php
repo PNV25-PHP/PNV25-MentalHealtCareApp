@@ -1,5 +1,5 @@
 <!-- This is an example component -->
-<?php include_once dirname(__DIR__) .'../../layouts/HtmlHead.php'?>
+<?php include_once dirname(__DIR__) . '../../layouts/HtmlHead.php' ?>
 
 <div class="h-full">
 
@@ -13,7 +13,7 @@
 
       <span class="text-gray-600">This information is secret so be careful</span>
       <div class="w-full p-8 mx-2 flex justify-center">
-        <img id="showImage" class="w-100 h-100 items-center border shadow-lg" src="../../assets/mrSinh.png" alt="">
+        <img id="showImage" class="w-100 h-100 items-center border shadow-lg" src="" alt="">
       </div>
     </div>
 
@@ -30,12 +30,12 @@
           <input disabled id="email" class="border-1  rounded-r px-4 py-2 w-full" type="email" value="" />
         </div>
         <div class="pb-4">
-          <label for="password" class="font-semibold text-gray-700 block pb-1">Password</label>
-          <input disabled id="password" class="border-1  rounded-r px-4 py-2 w-full" type="password" />
+          <label for="password" class="font-semibold text-gray-700 block pb-1">Date create account</label>
+          <input disabled id="date" class="border-1  rounded-r px-4 py-2 w-full" type="text" />
         </div>
         <div class="pb-4">
           <label for="phoneNumber" class="font-semibold text-gray-700 block pb-1">Phone Number</label>
-          <input disabled id="phoneNumber" class="border-1  rounded-r px-4 py-2 w-full" type="number" />
+          <input disabled id="phoneNumber" class="border-1  rounded-r px-4 py-2 w-full" type="tel" />
         </div>
         <div class="pb-4">
           <label for="address" class="font-semibold text-gray-700 block pb-1">Address</label>
@@ -45,3 +45,6 @@
     </div>
   </div>
 </div>
+<script>
+  showInfo()
+</script>
