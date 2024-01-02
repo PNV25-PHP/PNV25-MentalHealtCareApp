@@ -26,10 +26,12 @@ class ProFileController extends Controller
         $this->userRepository = new UserRepository();
         $this->patientRepository = new PatientRepository();
     }
-
+    public function viewProfile(){
+        return view('pages\common\HtmlProfile');
+    }
     public function index()
     {
-        return view('pages\common\EditProfile');
+        return view('pages\common\HtmlEditProfile');
     }
 
     public function findByEmail($email)

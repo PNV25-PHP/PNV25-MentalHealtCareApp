@@ -1,5 +1,5 @@
 <!-- This is an example component -->
-<?php include_once '../../layouts/HtmlHead.php' ?>
+<?php include_once dirname(__DIR__) .'../../layouts/HtmlHead.php'?>
 
 <div class="h-full">
 
@@ -8,7 +8,7 @@
     <div class="w-full md:w-2/5 p-4 sm:p-6 lg:p-8 bg-white shadow-md">
       <div class="flex justify-between">
         <span class="text-xl font-semibold block">Your Profile</span>
-        <a href="HtmlEditProfile.php" class="-mt-2 text-md font-bold text-white bg-gray-700 rounded-full px-5 py-2 hover:bg-gray-800">Edit</a>
+        <a href="/edit-profile" class="-mt-2 text-md font-bold text-white bg-gray-700 rounded-full px-5 py-2 hover:bg-gray-800">Edit</a>
       </div>
 
       <span class="text-gray-600">This information is secret so be careful</span>
