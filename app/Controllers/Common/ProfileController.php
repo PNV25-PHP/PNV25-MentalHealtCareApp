@@ -26,6 +26,10 @@ class ProFileController extends Controller
         $this->userRepository = new UserRepository();
         $this->patientRepository = new PatientRepository();
     }
+    public function viewHomePage()
+    {
+        return view('pages\common\HtmlHomePage');
+    }
     public function editProfile(){
         return view('pages\common\HtmlEditProfile');
     }

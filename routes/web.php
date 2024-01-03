@@ -23,6 +23,7 @@ $router->get('/', function () use ($router) {
 });
 
 //Common Routers
+$router->get('/homepage', 'Common\ProfileController@viewHomePage');
 $router->get('/sign-in', 'Common\SignInController@index');
 $router->post('/api/sign-in', 'Common\SignInController@signIn');
 $router->post('/api/update/profile', 'Common\ProfileController@updateInformationUser');

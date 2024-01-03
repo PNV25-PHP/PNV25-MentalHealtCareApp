@@ -4,17 +4,17 @@
 
     <div class="border-b-2 block md:flex">
 
-        <div class="w-full md:w-2/5 p-4 sm:p-6 lg:p-8 bg-white shadow-md">
-            <div class="flex justify-between">
-                <span class="text-xl font-semibold block">Edit Your Profile</span>
-                <button onclick="handleUpdateProfile()" class="-mt-2 text-md font-bold text-white bg-gray-700 rounded-full px-5 py-2 hover:bg-gray-800">Update</button>
-            </div>
-
-            <span class="text-gray-600">This information is secret so be careful</span>
-            <div class="w-full p-8 mx-2 flex justify-center">
-                <img id="showImage" class="w-100 h-100 items-center border shadow-lg" src="" alt="">
-            </div>
-        </div>
+    <div class="w-full md:w-1/5 p-4 sm:p-6 lg:p-8 bg-blue-900 text-white shadow-md">
+      <div class="flex justify-between">
+        <span class="text-xl font-semibold block">Your Profile</span>
+      </div>
+      <span class="text-white">This information is secret so be careful</span>
+      <div class="w-full p-8 mx-2 block justify-center">
+        <img id="showImage" class="w-50 h-50 items-center border shadow-lg" src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.earth.com%2Fnews%2Fbottlenose-dolphins-have-a-newly-discovered-super-sense%2F&psig=AOvVaw1tT2DO_xyF1DCweEuoyLhx&ust=1704356060767000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCJjQzq3jwIMDFQAAAAAdAAAAABAD" alt="">
+        <button type="button" class="w-[150px] text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"><a href="/edit-profile">Edit Profile</a></button>
+        <button type="button" onclick="historyBooking()" class=" w-[150px] text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">History Booking</button>
+      </div>
+    </div>
 
         <div class="w-full md:w-3/5 p-8 bg-white lg:ml-4 shadow-md">
             <div class="rounded  shadow p-6">
@@ -44,7 +44,9 @@
                     <label for="Image" class="font-semibold text-gray-700 block pb-1">Upload Image</label>
                     <input id="image" class="border-1  rounded-r px-4 py-2 w-full" type="file" />
                 </div>
+                <button onclick="handleUpdateProfile()" class=" -mt-2 text-md font-bold text-white bg-gray-700 rounded-full px-5 py-2 hover:bg-gray-800">Update</button>
             </div>
+            
         </div>
     </div>
 </div>
