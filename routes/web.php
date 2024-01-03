@@ -34,10 +34,13 @@ $router->get('/patient/home', 'Patient\HomeController@index');
 //Admin Routers
 //Admin Routers
 $router->get('/admin/getDoctor', 'Admin\DoctorController@index');
-$router->get('/admin/addDoctor', 'Admin\DoctorController@addDoctor');
+// $router->get('/admin/addDoctor', 'Admin\DoctorController@addDoctor');
 
-$router->get('/admin/getDoctorById/{doctorId}', 'AdminController@getDoctorById');
+// $router->get('/admin/getDoctorById/{doctorId}', 'AdminController@getInfoDoctorById');
 $router->post('/admin/updateDoctor/{doctorId}', 'AdminController@updateDoctor');
+
+// Trong file web.php hoặc routes.php
+// $router->get('/admin/doctor/{id}/edit', 'Admin\DoctorController@edit');
 
 
 

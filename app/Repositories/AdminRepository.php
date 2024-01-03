@@ -61,17 +61,17 @@ class AdminRepository
 
     public function editDoctor(User $user, string $specialization, string $hospital)
     {
-        $userSql = "UPDATE users
-                SET Email = ?, FullName = ?, Phone = ?, Address = ?, Url_Image = ?
-                WHERE Id = ?";
-        DB::update($userSql, [
-            $user->getEmail(),
-            $user->getFullName(),
-            $user->getPhone(),
-            $user->getAddress(),
-            $user->getUrlImage(),
-            $user->getId(),
-        ]);
+        // $userSql = "UPDATE doctor
+        //         SET Email = ?, FullName = ?, Phone = ?, Address = ?, Url_Image = ?
+        //         WHERE Id = ?";
+        // DB::update($userSql, [
+        //     $user->getEmail(),
+        //     $user->getFullName(),
+        //     $user->getPhone(),
+        //     $user->getAddress(),
+        //     $user->getUrlImage(),
+        //     $user->getId(),
+        // ]);
 
         $doctorSql = "UPDATE doctors
                   SET Specialization = ?, Hospital = ?

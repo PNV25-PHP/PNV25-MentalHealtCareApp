@@ -26,31 +26,38 @@ include_once dirname(__DIR__) . '../../layouts/HtmlHead.php';
                                 <th class="text-left py-3 px-5 ">Họ tên</th>
                                 <th class="text-left py-3 px-5  ">Chuyên ngành</th>
                                 <th class="text-left py-3 px-5  ">Bệnh viện</th>
+                                <th class="text-left py-3 px-5  ">Địa chỉ</th>
                                 <th class="text-left  py-3 px-5 ">Email</th>
                                 <th class="text-left py-3 px-5  ">Số điện thoại</th>
-                                <th class="text-left py-3 px-5  ">Ảnh đại diện</th>
                                 <th class="text-left py-3 px-5  ">Chức năng</th>
                             </tr>
                         </thead>
                         <tbody id="doctorTableBody">
-
-                            <tr class="border-b hover:bg-orange-100 bg-gray-100 "  data-doctor-id="<?= $doctor->UserId ?> ">
-                                <td class="py-3 px-5"><?= $doctor->UserId ?> </td> //mãBS
-                                <td class="py-3 px-5"></td> //Họ tên
-                                <td class="py-3 px-5"></td> //chuyên ngnahf
-                                <td class="py-3 px-5"> </td> // bệnh viện
-                                <td class="py-3 px-5"> </td> // email
-                                <td class="py-3 px-5"> </td> // số điện thoại
-                                <td class="py-3 px-5"> </td> // ảnh đại diện
-                                <td class="py-3 px-5 flex justify-end">
-                                    <button onclick="openEditModal('<?= $doctor->Id ?>')" id="updateButton" class="text-sm bg-blue-500 hover:bg-blue-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline cursor-pointer">
+                            <?php foreach ($doctors as $doctor) : ?>
+                                <tr class="border-b hover:bg-orange-100 bg-gray-100 " data-doctor-id="<?= $doctor->UserId ?> ">
+                                    <td class="py-3 px-5"><?= $doctor->UserId ?> </td>
+                                    <td class="py-3 px-5"><?= $doctor->FullName ?></td>
+                                    <td class="py-3 px-5"><?= $doctor->Specialization ?></td>
+                                    <td class="py-3 px-5"><?= $doctor->Hospital ?></td>
+                                    <td class="py-3 px-5"><?= $doctor->Address ?></td>
+                                    <td class="py-3 px-5"><?= $doctor->Email ?></td>
+                                    <td class="py-3 px-5"><?= $doctor->Phone ?></td>
+                                    <td class="py-3 px-5 flex justify-end">
+                                        <button id="updateButton" class="text-sm bg-blue-500 hover:bg-blue-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline cursor-pointer">
+                                            Sửa
+                                        </button>
+                                        <script>
+                                            var id1 = <?php echo $doctor->UserId ?>
+                                        </script>
+                                        <!-- <button onclick="openEditModal(' //$doctor->Id ?>')" id="updateButton" class="text-sm bg-blue-500 hover:bg-blue-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline cursor-pointer">
                                         Sửa
-                                    </button>
-                                    <button  id="deleteButton" class="text-sm bg-red-500 hover:bg-red-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline">
-                                        Xoá
-                                    </button>
-                                </td>
-                            </tr>
+                                    </button> -->
+                                        <button id="deleteButton" class="text-sm bg-red-500 hover:bg-red-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline">
+                                            Xoá
+                                        </button>
+                                    </td>
+                                </tr>
+                            <?php endforeach ?>
                         </tbody>
                     </table>
                 </div>
@@ -116,11 +123,11 @@ include_once dirname(__DIR__) . '../../layouts/HtmlHead.php';
 
             </div>
 
-            <div class="col-span-2 flex items-center justify-between">
+            <div class="col-span-2 flex items-center justify-between" id="cancelModalClose">
                 <button id="addSubmit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
                     Thêm mới
                 </button>
-                <button id="cancelModalClose" class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
+                <button class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
                     Hủy bỏ
                 </button>
             </div>
@@ -157,7 +164,7 @@ include_once dirname(__DIR__) . '../../layouts/HtmlHead.php';
 <div id="updateModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
     <div class="bg-white p-8 rounded">
         <span id="updateModalClose" class="absolute top-0 right-0 mt-4 mr-4 text-gray-500 cursor-pointer">&times;</span>
-        <form>
+        <form action="" method="post">
             <div class="grid grid-cols-1 gap-6 mt-4 sm:grid-cols-2">
                 <div>
                     <label for="editModalFullName" class="block text-sm font-medium text-neutral-600"> Họ tên </label>
@@ -201,22 +208,9 @@ include_once dirname(__DIR__) . '../../layouts/HtmlHead.php';
                         <input id="editModelAddress" name="address" type="text" required="" placeholder="Địa chỉ" class="block w-full px-5 py-3 text-base text-neutral-600 placeholder-gray-300 transition duration-500 ease-in-out transform border border-transparent rounded-lg bg-gray-50 focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-300">
                     </div>
                 </div>
-
-
-
-                <div class="mb-4">
-                    <label class="block text-sm font-medium text-neutral-600" for="editModelAvatar">
-                        Ảnh đại diện
-                    </label>
-                    <input type="file" id="editModelAvatar" name="avatar" class="block w-full px-5 py-3 text-base text-neutral-600 placeholder-gray-300 transition duration-500 ease-in-out transform border border-transparent rounded-lg bg-gray-50 focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-300">
-                </div>
-
-
-
-
             </div>
             <div class="col-span-2 flex items-center justify-between">
-                <button onclick="saveDoctorInfo()" id="updateSubmit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+                <button onclick="saveDoctorInfo(id1)" id="updateSubmit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
                     Lưu
                 </button>
                 <button id="cancelModalClose" class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
@@ -226,6 +220,7 @@ include_once dirname(__DIR__) . '../../layouts/HtmlHead.php';
         </form>
     </div>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
 <script>
     // Get the modals
@@ -258,9 +253,9 @@ include_once dirname(__DIR__) . '../../layouts/HtmlHead.php';
     var cancelModalClose = document.getElementById("cancelModalClose");
 
     cancelModalClose.onclick = function() {
-        updateModal.classList.add("hidden");
-        deleteModal.classList.add("hidden");
-        addModal.classList.add("hidden");
+        updateModal.style.display = "none";
+        deleteModal.style.display = "none";
+        addModal.style.display = "none";
     }
 
     // Function to close the modals when the user clicks outside the modal content
@@ -276,131 +271,40 @@ include_once dirname(__DIR__) . '../../layouts/HtmlHead.php';
             addModal.classList.add("hidden");
         }
     }
-</script>
 
 
-<!-- openmodel of add Doctor - update Doctor - delete Doctor -->
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        fetchDoctorsData();
-    });
-
-    function fetchDoctorsData() {
-        fetch('/admin/getDoctor')
-            .then(response => response.json())
-            .then(data => {
-                displayDoctors(data);
-            })
-            .catch(error => console.error('Error:', error));
-
-    }
-
-    function displayDoctors(doctors) {
-        const tableBody = document.getElementById('doctorTableBody');
-
-        doctors.forEach(doctor => {
-            const row = document.createElement('tr');
-
-            // Thêm dữ liệu vào từng ô td
-            const userIdCell = document.createElement('td');
-            userIdCell.textContent = doctor.UserId;
-            row.appendChild(userIdCell);
-
-            const fullNameCell = document.createElement('td');
-            fullNameCell.textContent = doctor.FullName;
-            row.appendChild(fullNameCell);
-
-            const specializationCell = document.createElement('td');
-            specializationCell.textContent = doctor.Specialization;
-            row.appendChild(specializationCell);
-
-            const hospitalCell = document.createElement('td');
-            hospitalCell.textContent = doctor.Hospital;
-            row.appendChild(hospitalCell);
-
-            const emailCell = document.createElement('td');
-            emailCell.textContent = doctor.Email;
-            row.appendChild(emailCell);
-
-            const phoneCell = document.createElement('td');
-            phoneCell.textContent = doctor.Phone;
-            row.appendChild(phoneCell);
-
-            const addressCell = document.createElement('td');
-            addressCell.textContent = doctor.Address;
-            row.appendChild(addressCell);
-
-            const urlimageCell = document.createElement('td');
-            urlimageCell.textContent = doctor.Urlimage;
-            row.appendChild(urlimageCell);
 
 
-            // Tạo ô chứa nút Sửa và Xoá
-            const actionsCell = document.createElement('td');
-            actionsCell.className = 'py-3 px-5 flex justify-end';
+    // function openEditModal(doctorId) {
+    //     // Gửi yêu cầu AJAX để lấy thông tin bác sĩ theo ID
+    //     axios.get('/admin/getDoctorById/' + doctorId)
+    //         .then(function(response) {
+    //             var data = response.data;
+    //             document.getElementById('editModalFullName').value = data.FullName;
+    //             document.getElementById('editModalEmail').value = data.Email;
+    //             document.getElementById('editModalPhone').value = data.Phone;
+    //             document.getElementById('editModalAddress').value = data.Address;
+    //             document.getElementById('editModelSpecilization').value = data.Specilization;
+    //             document.getElementById('editModalHospital').value = data.Hospital;
+    //             document.getElementById('editModalAvatar').value = data.Avatar;
 
-            const updateButton = document.createElement('button');
-            updateButton.id = 'updateButton';
-            updateButton.className = 'text-sm bg-blue-500 hover:bg-blue-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline cursor-pointer';
-            updateButton.textContent = 'Sửa';
-            actionsCell.appendChild(updateButton);
+    //             $('#updateModal').modal('show');
+    //         })
+    //         .catch(function(error) {
+    //             console.log('Error:', error);
+    //         });
+    // }
 
-            const deleteButton = document.createElement('button');
-            deleteButton.id = 'deleteButton';
-            deleteButton.className = 'text-sm bg-red-500 hover:bg-red-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline';
-            deleteButton.textContent = 'Xoá';
-            actionsCell.appendChild(deleteButton);
-
-            row.appendChild(actionsCell);
-
-            // Thêm dòng vào tbody
-            tableBody.appendChild(row);
-        });
-    }
-</script>
-
-<!-- open mode update, get data of doctor by ID, implement update in4 in db -->
-
-<!-- Đoạn JavaScript ở cuối trang -->
-<!-- Include Axios -->
-<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-
-<!-- Đoạn JavaScript -->
-<script>
-    function openEditModal(doctorId) {
-        // Gửi yêu cầu AJAX để lấy thông tin bác sĩ theo ID
-        axios.get('/admin/getDoctorById/' + doctorId)
-            .then(function(response) {
-                var data = response.data;
-                document.getElementById('editModalFullName').value = data.FullName;
-                document.getElementById('editModalEmail').value = data.Email;
-                document.getElementById('editModalPhone').value = data.Phone;
-                document.getElementById('editModalAddress').value = data.Address;
-                document.getElementById('editModelSpecilization').value = data.Specilization;
-                document.getElementById('editModalHospital').value = data.Hospital;
-                document.getElementById('editModalAvatar').value = data.Avatar;
-
-                $('#updateModal').modal('show');
-            })
-            .catch(function(error) {
-                console.log('Error:', error);
-            });
-    }
-
-    function saveDoctorInfo()
-     {
-        var fullName = document.getElementById('editModalFullName').value;
-        var doctorId = window.doctorId;
-
+    function saveDoctorInfo(id) {
+        console.log("ID:", id); // Kiểm tra giá trị id có đúng không
         var email = document.getElementById('editModalEmail').value;
         var phone = document.getElementById('editModalPhone').value;
         var address = document.getElementById('editModalAddress').value;
         var specialization = document.getElementById('editModelSpecilization').value;
         var hospital = document.getElementById('editModalHospital').value;
         var avatar = document.getElementById('editModalAvatar').value;
-
-        axios.post('/admin/updateDoctor/' + doctorId, {
-                fullName: fullName,
+        console.log("cập nhật đc")
+        axios.post('/admin/updateDoctor/' + id, {
                 email: email,
                 phone: phone,
                 address: address,
@@ -418,39 +322,23 @@ include_once dirname(__DIR__) . '../../layouts/HtmlHead.php';
                 console.log('Error:', error);
             });
     }
+
+    document.getElementById('deleteButton').addEventListener('click', function() {
+        // Lấy giá trị doctorId của bác sĩ cần xoá
+        var doctorId = this.closest('tr').getAttribute('data-doctor-id');
+
+        // Gọi Ajax để xoá thông tin bác sĩ
+        axios.delete('/admin/deleteDoctor/' + doctorId)
+            .then(function(response) {
+                // Xoá thành công, có thể làm các bước cần thiết khác
+                console.log(response.data);
+
+                // Đóng modal
+                $('#deleteModal').modal('hide');
+            })
+            .catch(function(error) {
+                console.log('Error:', error);
+            });
+    });
 </script>
-
-
-
-
-
-
-<script>
-   document.getElementById('deleteButton').addEventListener('click', function () {
-    // Lấy giá trị doctorId của bác sĩ cần xoá
-    var doctorId = this.closest('tr').getAttribute('data-doctor-id');
-
-    // Gọi Ajax để xoá thông tin bác sĩ
-    axios.delete('/admin/deleteDoctor/' + doctorId)
-        .then(function (response) {
-            // Xoá thành công, có thể làm các bước cần thiết khác
-            console.log(response.data);
-
-            // Đóng modal
-            $('#deleteModal').modal('hide');
-        })
-        .catch(function (error) {
-            console.log('Error:', error);
-        });
-});
-
-</script>
-
-
-
-
-
-
-
-
 <?php include_once dirname(__DIR__) . '../../layouts/HtmlTail.php'   ?>

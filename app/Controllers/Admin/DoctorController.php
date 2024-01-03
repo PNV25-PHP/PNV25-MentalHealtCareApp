@@ -9,7 +9,7 @@ use App\Repositories\UserRepository;
 use Illuminate\Http\Request;
 use Laravel\Lumen\Routing\Controller;
 
-class AddDoctorController extends Controller
+class DoctorController extends Controller
 {
     private $adminRepository;
     private $userRepository;
@@ -22,15 +22,9 @@ class AddDoctorController extends Controller
     public function index()
     {
         $doctors = $this->adminRepository->getAllDoctor();
-        return response()->json($doctors);
+        // return response()->json($doctors);
+        return view('pages/admin/doctor')->with('doctors', $doctors);
     }
-
-    public function getDoctorById($doctorId)
-    {
-        $doctor = $this->adminRepository->getDoctorById($doctorId);
-        return response()->json($doctor);
-    }
-
 
     public function addDoctor(Request $request)
     {
@@ -39,38 +33,21 @@ class AddDoctorController extends Controller
         $fullName = $request->input('fullName');
         $phone = $request->input('phone');
         $address = $request->input('address');
-        $urlImage = $request->input('urlImage');
         $specialization = $request->input('specialization');
         $hospital = $request->input('hospital');
 
-        $user = $this->userRepository->insert($email, $password, 'doctor', $fullName, $phone, $address, $urlImage);
+        $user = $this->userRepository->insert($email, $password, 'doctor', $fullName, $phone, $address);
 
         $this->adminRepository->addNewDoctor($user, $specialization, $hospital);
     }
 
-    
-
-   
-
-
-
-
-
-
-
-
-
-
-
-
-
     public function updateDoctor(Request $request, $doctorId)
     {
+        dd($doctorId); // In giá trị của doctorId để kiểm tra
         $email = $request->input('email');
         $fullName = $request->input('fullName');
         $phone = $request->input('phone');
         $address = $request->input('address');
-        $urlImage = $request->input('urlImage');
         $specialization = $request->input('specialization');
         $hospital = $request->input('hospital');
 
@@ -81,8 +58,7 @@ class AddDoctorController extends Controller
             $email,
             $fullName,
             $phone,
-            $address,
-            $urlImage
+            $address
         );
 
         $this->adminRepository->editDoctor(
@@ -91,6 +67,9 @@ class AddDoctorController extends Controller
             $hospital
         );
 
-        return response()->json(['message' => 'Doctor information updated successfully']);
+        return redirect()->route('pages.admin.doctor')->with('success', 'Cập nhật thông tin bác sĩ thành công!');
     }
+
+
+
 }

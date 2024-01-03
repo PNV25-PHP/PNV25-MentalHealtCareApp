@@ -87,8 +87,8 @@ class UserRepository
         $fullname = $user->getFullname();
         $phone = $user->getPhone();
         $address = $user->getAddress();
-        $url_image = $user->getUrlImage();
-        $query = DB::update("UPDATE users SET role = ?, password = ?, fullname = ?, phone = ?, address = ?, url_image = ? WHERE email = ?", [$role, $password, $fullname, $phone, $address, $url_image, $email]);
+        // $url_image = $user->getUrlImage();
+        $query = DB::update("UPDATE users SET role = ?, password = ?, fullname = ?, phone = ?, address = ? WHERE Id = ?", [$role, $password, $fullname, $phone, $address, $email, $id]);
         return $query;
     }
 }
