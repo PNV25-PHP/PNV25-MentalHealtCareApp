@@ -50,54 +50,87 @@
 </div>
 <script>
     showInfo()
+
     function handleUpdateProfile() {
-        user_info_update = JSON.parse(localStorage.getItem('user-info'))
-        var img = document.getElementById('image')
-        var username = document.getElementById('username')
-        var phoneNumber = document.getElementById('phoneNumber')
-        var address = document.getElementById('address')
-        var image = document.getElementById('image')
-        
-        user_info_update.image = img.value 
-        user_info_update.fullName = username.value 
-        user_info_update.phone = phoneNumber.value 
-        user_info_update.address = address.value 
-        console.log(user_info_update)
-        localStorage.setItem("user-info", JSON.stringify(user_info_update))
-        window.location.href = "/view-profile"
+        // Lấy dữ liệu đã được cập nhật
+        const user_info_update = JSON.parse(localStorage.getItem('user-info'));
+
+        // Tạo đối tượng ProfileRequest với các trường phù hợp với backend
+        const profileRequest = {
+            email: user_info_update.email,
+            fullName: user_info_update.fullName,
+            phone: user_info_update.phone,
+            address: user_info_update.address,
+            urlImage: user_info_update.image,
+        };
+
+        // Gửi yêu cầu cập nhật dữ liệu lên backend
+        axios.post('/api/update/profile', profileRequest)
+            .then(response => {
+                if (response.status === 200) {
+                    // Cập nhật dữ liệu trong localStorage
+                    localStorage.setItem('user-info', JSON.stringify(user_info_update));
+
+                    // Chuyển hướng đến trang view-profile
+                    window.location.href = '/view-profile';
+                } else {
+                    // Xử lý lỗi
+                    console.error('Cập nhật dữ liệu thất bại:', response.data);
+                }
+            })
+            .catch(error => {
+                // Xử lý lỗi
+                console.error('Lỗi khi gửi yêu cầu:', error);
+            });
     }
 
+    // function handleUpdateProfile() {
+    //     user_info_update = JSON.parse(localStorage.getItem('user-info'))
+    //     var img = document.getElementById('image')
+    //     var username = document.getElementById('username')
+    //     var phoneNumber = document.getElementById('phoneNumber')
+    //     var address = document.getElementById('address')
+    //     var image = document.getElementById('image')
+
+    //     user_info_update.image = img.value 
+    //     user_info_update.fullName = username.value 
+    //     user_info_update.phone = phoneNumber.value 
+    //     user_info_update.address = address.value 
+    //     console.log(user_info_update)
+    //     localStorage.setItem("user-info", JSON.stringify(user_info_update))
+    //     window.location.href = "/view-profile"
+    // }
 
 
-//     function uploadImage() {
-//   const formData = new FormData();
-//   formData.append('image', document.getElementById('image').files[0]);
 
-//   fetch('/upload-image', {
-//     method: 'POST',
-//     body: formData
-//   })
-//   .then(response => response.text())
-//   .then(result => {
-//     console.log(result);
-    
-//     if (result === 'success') {
-//       // Lưu thông tin người dùng vào localStorage
-//       const userInfo = {
-//         fname: document.getElementById('fname').value,
-//         lname: document.getElementById('lname').value,
-//         email: document.getElementById('email').value,
-//         password: document.getElementById('password').value
-//       };
-      
-//       localStorage.setItem('user-info', JSON.stringify(userInfo));
-      
-//       console.log('User info saved to localStorage.');
-//     }
-//   })
-//   .catch(error => {
-//     console.error('Error:', error);
-//   });
-// }
-    
+    //     function uploadImage() {
+    //   const formData = new FormData();
+    //   formData.append('image', document.getElementById('image').files[0]);
+
+    //   fetch('/upload-image', {
+    //     method: 'POST',
+    //     body: formData
+    //   })
+    //   .then(response => response.text())
+    //   .then(result => {
+    //     console.log(result);
+
+    //     if (result === 'success') {
+    //       // Lưu thông tin người dùng vào localStorage
+    //       const userInfo = {
+    //         fname: document.getElementById('fname').value,
+    //         lname: document.getElementById('lname').value,
+    //         email: document.getElementById('email').value,
+    //         password: document.getElementById('password').value
+    //       };
+
+    //       localStorage.setItem('user-info', JSON.stringify(userInfo));
+
+    //       console.log('User info saved to localStorage.');
+    //     }
+    //   })
+    //   .catch(error => {
+    //     console.error('Error:', error);
+    //   });
+    // }
 </script>
