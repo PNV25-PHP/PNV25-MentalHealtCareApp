@@ -2,94 +2,118 @@
 
 namespace App\Repositories;
 
-use PDO;
-use PDOException;
 use App\Models\User;
 use App\Models\Doctor;
+// use App\Repositories\Doctor;
 use Illuminate\Support\Facades\Hash;
-use App\Models\Admin;
 use Illuminate\Support\Facades\DB;
-
+use Illuminate\Support\Facades\Date;
 class AdminRepository
 {
-
-
-    public function getAllDoctor()
+    public function addNewDoctor(Doctor $doctor)
     {
-        $query = "SELECT  users.Id AS UserId,users.Email,users.FullName,users.Phone,
-                     users.Address,doctors.Specialization,doctors.Hospital
-            FROM users
-            JOIN doctors ON users.Id = doctors.UserId
-            WHERE users.Role = 'doctor'    ";
-        $result = DB::select($query);
-        return $result;
-    }
+        $currentDateTime = Date::now();
 
-    public function getDoctorById(string $id)
-    {
-        $query = "SELECT  users.Id AS UserId,users.Email,users.FullName,users.Phone,
-                     users.Address,doctors.Specialization,doctors.Hospital
-            FROM users
-            JOIN doctors ON users.Id = doctors.UserId
-            WHERE users.Role = 'doctor' AND users.Id = '$id'    ";
-        $result = DB::select($query);
-        return $result;
-    }
-
-    
-
-
-
-    public function addNewDoctor(User $user, string $specialization, string $hospital)
-    {
         $userSql = "INSERT INTO users (Id, Role, Email, Password, FullName, Phone, Address, Url_Image)
-                VALUES (UUID(), 'doctor', ?, ?, ?, ?, ?, ?)";
-        $hashedPassword = Hash::make($user->getPassword());
-        $userId = DB::insertGetId($userSql, [
-            $user->getEmail(),
-            $hashedPassword,
-            $user->getFullName(),
-            $user->getPhone(),
-            $user->getAddress(),
-            $user->getUrlImage(),
+                VALUES (?, 'doctor', ?, ?, ?, ?, ?, ?)";
+        $hashedPassword = Hash::make($doctor->getPassword());
+
+        $userId = DB::table('users')->insertGetId([
+            'Id' => $currentDateTime,
+            'Role' => 'doctor',
+            'Email' => $doctor->getEmail(),
+            'Password' => $hashedPassword,
+            'FullName' => $doctor->getFullName(),
+            'Phone' => $doctor->getPhone(),
+            'Address' => $doctor->getAddress(),
+            'Url_Image' => $doctor->getUrlImage(),
         ]);
 
         $doctorSql = "INSERT INTO doctors (Id, UserId, Specialization, Hospital)
                   VALUES (UUID(), ?, ?, ?)";
-        DB::insert($doctorSql, [$userId, $specialization, $hospital]);
+        DB::insert($doctorSql, [$userId, $doctor->specialization, $doctor->hospital]);
+
+        // Trả về đối tượng Doctor mới tạo
+        return new Doctor(
+            $doctor->getEmail(),
+            $doctor->getPassword(),
+            $doctor->getFullName(),
+            $doctor->getAddress(),
+            $doctor->getPhone(),
+            $doctor->getUrlImage(),
+            $doctor->specialization,
+            $doctor->hospital
+        );
     }
 
-    public function editDoctor(User $user, string $specialization, string $hospital)
+    // public function updateDoctor(Doctor $doctor, $doctorId)
+    // {
+    //     // Lấy đối tượng Doctor cần cập nhật từ cơ sở dữ liệu
+    //     $existingDoctor = DB::table('users')->where('Id', $doctorId)->first();
+
+    //     if (!$existingDoctor) {
+    //         // Xử lý khi không tìm thấy Doctor
+    //         return null;
+    //     }
+
+    //     // Cập nhật thông tin trong bảng users
+    //     DB::table('users')
+    //         ->where('Id', $existingDoctor->getUserId())
+    //         ->update([
+    //             'Email' => $doctor->getEmail(),
+    //             'Password' => Hash::make($doctor->getPassword()),
+    //             'FullName' => $doctor->getFullName(),
+    //             'Phone' => $doctor->getPhone(),
+    //             'Address' => $doctor->getAddress(),
+    //             'Url_Image' => $doctor->getUrlImage(),
+    //         ]);
+
+    //     // Cập nhật thông tin trong bảng doctors
+    //     $existingDoctor->update([
+    //         'email' => $doctor->getEmail(),
+    //         'password' => Hash::make($doctor->getPassword()),
+    //         'fullName' => $doctor->getFullName(),
+    //         'phone' => $doctor->getPhone(),
+    //         'address' => $doctor->getAddress(),
+    //         'urlImage' => $doctor->getUrlImage(),
+    //         'specialization' => $doctor->specialization,
+    //         'hospital' => $doctor->hospital,
+    //     ]);
+
+    //     // Trả về đối tượng Doctor sau khi cập nhật
+    //     return $existingDoctor;
+    // }
+
+    public function updateDoctor(Doctor $doctor)
     {
-        // $userSql = "UPDATE doctor
-        //         SET Email = ?, FullName = ?, Phone = ?, Address = ?, Url_Image = ?
-        //         WHERE Id = ?";
-        // DB::update($userSql, [
-        //     $user->getEmail(),
-        //     $user->getFullName(),
-        //     $user->getPhone(),
-        //     $user->getAddress(),
-        //     $user->getUrlImage(),
-        //     $user->getId(),
-        // ]);
+        $userSql = "UPDATE users
+                SET Email = ?, FullName = ?, Phone = ?, Address = ?, Url_Image = ?
+                WHERE Id = ?";
+        DB::update($userSql, [
+            $doctor->getEmail(),
+            $doctor->getFullName(),
+            $doctor->getPhone(),
+            $doctor->getAddress(),
+            $doctor->getUrlImage(),
+            $doctor->getId(),
+        ]);
 
         $doctorSql = "UPDATE doctors
                   SET Specialization = ?, Hospital = ?
                   WHERE Id = ?";
-        DB::update($doctorSql, [$specialization, $hospital, $user->getId()]);
+        DB::update($doctorSql, [
+            $doctor->specialization,
+            $doctor->hospital,
+            $doctor->getId(),
+        ]);
     }
-
-
+    
     public function deleteDoctor($doctorId)
     {
-        $userSql = "DELETE FROM users
-                WHERE Id = (SELECT UserId FROM doctors WHERE Id = ?)";
-        DB::delete($userSql, [$doctorId]);
-        $doctorSql = "DELETE FROM doctors
-                  WHERE Id = ?";
-        DB::delete($doctorSql, [$doctorId]);
+        DB::table('users')
+            ->where('Id', DB::table('doctors')->where('Id', $doctorId)->value('UserId'))
+            ->delete();
+
+        DB::table('doctors')->where('Id', $doctorId)->delete();
     }
-
-
-    
 }

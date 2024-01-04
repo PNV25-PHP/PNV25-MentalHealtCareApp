@@ -15,15 +15,8 @@ class DoctorRepository
 
         DB::insert($sql, [
             $doctor->getId(),
-            $doctor->getUserId(),
-
+            $doctor->getId(),
         ]);
-    }
-
-    public function selectAll()
-    {
-        $doctors = DB::select("SELECT * FROM doctors");
-        return $doctors;
     }
 
     public function getDoctorById($doctorId)
@@ -32,10 +25,36 @@ class DoctorRepository
             FROM doctors
             JOIN users ON doctors.UserId = users.Id
             WHERE doctors.Id = ?";
-        return DB::selectOne($sql, [$doctorId]);
+            $doctor = DB::selectOne($sql, [$doctorId]);
+            $result = DB::select($sql);
+
+        if (!empty($result)) {
+            // Lấy mảng đầu tiên từ kết quả
+            $data = $result[0];
+
+            // Tạo đối tượng Doctor từ mảng
+            $doctor = new Doctor(
+                $data->Email,
+                $data->Password,
+                $data->FullName,
+                $data->Address,
+                $data->Phone,
+                null, // Không có thông tin Url_Image trong kết quả
+                $data->Specialization,
+                $data->Hospital
+            );
+
+            // Đặt UserId bằng giá trị từ mảng
+            $doctor->setUserId($data->UserId);
+
+            return $doctor;
+        }
+
+        return null;
+        
     }
 
-    public function getAllDoctors()
+    public function getAllDoctor()
     {
         $sql = "SELECT doctors.*, users.Email, users.FullName, users.Phone, users.Address, users.Url_Image
             FROM doctors

@@ -1,9 +1,8 @@
-<?php
-include_once dirname(__DIR__) . '../../layouts/HtmlHead.php';
+<?php include_once dirname(__DIR__) . '../../layouts/HtmlHead.php';
 
 ?>
 <div class="flex flex-wrap bg-gray-100 w-full h-screen">
-    <?php include_once dirname(__DIR__) . '../../layouts/HtmlSidebarAdmin.php'   ?>
+    <?php include_once dirname(__DIR__) . '../../layouts/HtmlSidebarAdmin.php'?>
     <div class="w-9/12">
         <div class="text-gray-900 bg-blue-100">
             <div class="p-4 flex">
@@ -17,7 +16,7 @@ include_once dirname(__DIR__) . '../../layouts/HtmlHead.php';
                 <div class="overflow-x-auto  height: auto;">
 
                     <button id="addButton" class="text-sm bg-blue-500 hover:bg-blue-700 text-white m-1 py-1 px-2 rounded focus:outline-none focus:shadow-outline cursor-pointer">
-                        Thêm bác sỹ
+                        Thêm bác sỹ 
                     </button>
                     <table class="w-full text-md bg-white shadow-md rounded mb-4">
                         <thead>
@@ -33,31 +32,31 @@ include_once dirname(__DIR__) . '../../layouts/HtmlHead.php';
                             </tr>
                         </thead>
                         <tbody id="doctorTableBody">
-                            <?php foreach ($doctors as $doctor) : ?>
-                                <tr class="border-b hover:bg-orange-100 bg-gray-100 " data-doctor-id="<?= $doctor->UserId ?> ">
-                                    <td class="py-3 px-5"><?= $doctor->UserId ?> </td>
-                                    <td class="py-3 px-5"><?= $doctor->FullName ?></td>
-                                    <td class="py-3 px-5"><?= $doctor->Specialization ?></td>
-                                    <td class="py-3 px-5"><?= $doctor->Hospital ?></td>
-                                    <td class="py-3 px-5"><?= $doctor->Address ?></td>
-                                    <td class="py-3 px-5"><?= $doctor->Email ?></td>
-                                    <td class="py-3 px-5"><?= $doctor->Phone ?></td>
-                                    <td class="py-3 px-5 flex justify-end">
-                                        <button id="updateButton" class="text-sm bg-blue-500 hover:bg-blue-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline cursor-pointer">
-                                            Sửa
-                                        </button>
-                                        <script>
-                                            var id1 = <?php echo $doctor->UserId ?>
-                                        </script>
-                                        <!-- <button onclick="openEditModal(' //$doctor->Id ?>')" id="updateButton" class="text-sm bg-blue-500 hover:bg-blue-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline cursor-pointer">
+                        <script>
+                            const doctors = <?= json_encode($doctors) ?>;
+                            doctors.map((doctor) => {
+                                document.write(
+                            `<tr class="border-b hover:bg-orange-100 bg-gray-100" data-doctor-id="${doctor.UserId}">
+                                <td class="py-3 px-5">${ doctor.UserId } </td>
+                                <td class="py-3 px-5">${ doctor.FullName }</td>
+                                <td class="py-3 px-5">${ doctor.Specialization }</td>
+                                <td class="py-3 px-5">${ doctor.Hospital }</td>
+                                <td class="py-3 px-5">${ doctor.Address }</td>
+                                <td class="py-3 px-5">${ doctor.Email }</td>
+                                <td class="py-3 px-5">${ doctor.Phone }</td>
+                                <td class="py-3 px-5 flex justify-end">
+                                    <button id="updateButton" class="text-sm bg-blue-500 hover:bg-blue-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline cursor-pointer">
                                         Sửa
-                                    </button> -->
-                                        <button id="deleteButton" class="text-sm bg-red-500 hover:bg-red-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline">
-                                            Xoá
-                                        </button>
-                                    </td>
-                                </tr>
-                            <?php endforeach ?>
+                                    </button>
+                                    <!-- <button onclick="openEditModal(' //$doctor->Id ?>')" id="updateButton" class="text-sm bg-blue-500 hover:bg-blue-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline cursor-pointer">
+                                    Sửa
+                                </button> -->
+                                    <button id="deleteButton" class="text-sm bg-red-500 hover:bg-red-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline">
+                                        Xoá
+                                    </button>
+                                </td>
+                                </tr>`)
+                            }) </script>
                         </tbody>
                     </table>
                 </div>
@@ -65,7 +64,6 @@ include_once dirname(__DIR__) . '../../layouts/HtmlHead.php';
         </div>
     </div>
 </div>
-
 
 <div id="addModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
     <div class="bg-white p-8 rounded">

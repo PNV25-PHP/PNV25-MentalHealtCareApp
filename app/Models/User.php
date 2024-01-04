@@ -2,8 +2,10 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Model;
 class User extends BaseModel
 {
+    private string $userId;
     private Role $role;
     private string $email;
     private string $password;
@@ -89,5 +91,12 @@ class User extends BaseModel
     public function setUrlImage(string $urlImage): void
     {
         $this->urlImage = $urlImage;
+    }
+    public function setUserId(string $userId): void{
+        $this->userId = $userId;
+    }
+    public function setEmail(string $email): void
+    {
+        $this->email = $email;
     }
 }

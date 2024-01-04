@@ -34,7 +34,7 @@ $router->get('/patient/home', 'Patient\HomeController@index');
 //Admin Routers
 //Admin Routers
 $router->get('/admin/getDoctor', 'Admin\DoctorController@index');
-// $router->get('/admin/addDoctor', 'Admin\DoctorController@addDoctor');
+$router->post('/admin/addDoctor', 'Admin\DoctorController@addDoctor');
 
 // $router->get('/admin/getDoctorById/{doctorId}', 'AdminController@getInfoDoctorById');
 $router->post('/admin/updateDoctor/{doctorId}', 'AdminController@updateDoctor');

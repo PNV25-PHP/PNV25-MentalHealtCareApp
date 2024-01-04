@@ -13,16 +13,18 @@ class DoctorController extends Controller
 {
     private $adminRepository;
     private $userRepository;
-    public function __construct(AdminRepository $adminRepository, UserRepository $userRepository)
+    private $doctorRepository;
+
+    public function __construct(AdminRepository $adminRepository, UserRepository $userRepository, DoctorRepository $doctorRepository)
     {
         $this->adminRepository = $adminRepository;
         $this->userRepository = $userRepository;
+        $this->doctorRepository = $doctorRepository;
     }
 
     public function index()
     {
-        $doctors = $this->adminRepository->getAllDoctor();
-        // return response()->json($doctors);
+        $doctors = $this->doctorRepository->getAllDoctor();
         return view('pages/admin/doctor')->with('doctors', $doctors);
     }
 
@@ -41,9 +43,9 @@ class DoctorController extends Controller
         $this->adminRepository->addNewDoctor($user, $specialization, $hospital);
     }
 
-    public function updateDoctor(Request $request, $doctorId)
+    public function updateDoctor(Request $request)
     {
-        dd($doctorId); // In giá trị của doctorId để kiểm tra
+        $doctorId = $request->input('doctorId');
         $email = $request->input('email');
         $fullName = $request->input('fullName');
         $phone = $request->input('phone');
@@ -51,25 +53,31 @@ class DoctorController extends Controller
         $specialization = $request->input('specialization');
         $hospital = $request->input('hospital');
 
-        $user = (object) $this->adminRepository->getDoctorById($doctorId);
+        $doctor = $this->doctorRepository->getDoctorById($doctorId);
 
-        $this->userRepository->updateUser(
-            $user->getId(),
-            $email,
-            $fullName,
-            $phone,
-            $address
-        );
+        if ($doctor) {
+            $doctor->setEmail($email);
+            $doctor->setFullName($fullName);
+            $doctor->setPhone($phone);
+            $doctor->setAddress($address);
+            $doctor->specialization = $specialization;
+            $doctor->hospital = $hospital;
+            $this->adminRepository->updateDoctor($doctor);
 
-        $this->adminRepository->editDoctor(
-            $user->getId(),
-            $specialization,
-            $hospital
-        );
-
-        return redirect()->route('pages.admin.doctor')->with('success', 'Cập nhật thông tin bác sĩ thành công!');
+            return redirect()->route('pages.admin.doctor')->with('success', 'Cập nhật thông tin bác sĩ thành công!');
+        } else {
+            return redirect()->route('pages.admin.doctor')->with('error', 'Không tìm thấy bác sĩ.');
+        }
     }
 
 
+    public function deleteDoctor(Request $request)
+    {
+        $doctorId = $request->input('doctorId'); // Lấy giá trị doctorId từ request
 
+        // Xóa thông tin bác sĩ từ repository
+        $this->adminRepository->deleteDoctor($doctorId);
+
+        return redirect()->route('pages.admin.doctor')->with('success', 'Xóa bác sĩ thành công!');
+    }
 }
