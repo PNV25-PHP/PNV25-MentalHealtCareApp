@@ -21,9 +21,43 @@ class DoctorRepository
         ]);
     }
 
-    public function selectAllDoctors()
+    public function getAllTimeDoctor()
     {
-        $doctors = DB::select("SELECT * FROM doctors");
-        return $doctors;
+        $query = "SELECT time FROM listtimedoctor";
+        $result = DB::select($query);
+        return $result;
+    }
+
+    public function getAvailableTimesForBooking($selectedDate)
+    {
+        $query = "SELECT listtimedoctor.time,listtimedoctor.price
+              FROM listtimedoctor
+              LEFT JOIN booking ON listtimedoctor.time = booking.TimeBooking AND booking.DateBooking = ?
+              WHERE booking.TimeBooking IS NULL";
+        $result = DB::select($query, [$selectedDate]);
+        return $result;
+    }
+
+
+    public function getAllDoctor()
+    {
+        $query = "SELECT  users.Id AS UserId,users.Id,users.Email,users.FullName,users.Phone,
+                     users.Address, users.Url_Image,doctors.Specialization,doctors.Hospital
+            FROM users
+            JOIN doctors ON users.Id = doctors.UserId
+            WHERE users.Role = 'doctor'    ";
+        $result = DB::select($query);
+        return $result;
+    }
+
+    public function getDoctorById(string $id)
+    {
+        $query = "SELECT  users.Id AS UserId,users.Email,users.FullName,users.Phone,
+                     users.Address, users.Url_Image,doctors.Specialization,doctors.Hospital
+            FROM users
+            JOIN doctors ON users.Id = doctors.UserId
+            WHERE users.Role = 'doctor' AND users.Id = '$id'    ";
+        $result = DB::select($query);
+        return $result;
     }
 }

@@ -1,223 +1,389 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php include_once dirname(__DIR__) . '/../layouts/HtmlHead.php' ?>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Booking</title>
-    <link rel="stylesheet" href="../root/CSS/booking.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-    </style>
-    <script src="https://cdn.tailwindcss.com"></script>
-</head>
 <style>
-    * {
-        inset: 0px;
-        margin: 0px;
-        padding: 0px;
+    body {
+        background-color: beige;
+    }
+
+    a {
+        display: block;
+        width: 100%;
+        height: 40px;
+        line-height: 40px;
+        font-size: 18px;
+        font-family: sans-serif;
+        text-decoration: none;
+        color: #333;
+        border: 1px solid #333;
+        letter-spacing: 2px;
+        text-align: center;
+        position: relative;
+        transition: all .35s;
+    }
+
+    .date {
+        background: rgb(59 130 246);
+    }
+
+    a span {
+        position: relative;
+        z-index: 2;
+    }
+
+    a:after {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background: rgb(59 130 246);
+        transition: all .35s;
+    }
+
+    a:hover {
+        color: #fff;
+    }
+
+    a:hover:after {
+        width: 100%;
     }
 
     .container {
         width: 100%;
     }
 
-    .header {
-        width: 100%;
-    }
-
-    .imgDoctor {
-        position: relative;
-        width: 100%;
-    }
-
-    .title {
-        position: absolute;
-        font-size: 50px;
-        font-weight: bolder;
-        font-family: Georgia, "Times New Roman", Times, serif;
-        color: blue;
-        top: 50px;
-        left: 850px;
-    }
-
-    .sub_title {
-        position: absolute;
-        top: 150px;
-        left: 850px;
-        width: 520px;
-        font-size: 22px;
-    }
-
-    .title_lists {
-        padding: 100px 0px 100px 0px;
-        width: 100%;
-        text-align: center;
-    }
-
-    .lists_doctor {
-        font-weight: bolder;
-        font-size: 50px;
-    }
-
-    .lists_card {
-        width: 100%;
+    #timeContainer {
+        width: 1000px;
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
-        padding: 0px 24px 0px 24px;
+        margin-left: 40px;
     }
 
-    .max-w-sm {
-        width: calc(25% - 10px);
-        /* Đảm bảo khoảng cách giữa các card */
-        margin-bottom: 10px;
-        /* Đảm bảo khoảng cách dưới mỗi card */
+    .col-span-1 {
+        width: 200px;
     }
 
-    @media only screen and (max-width: 768px) {
-        .title {
-            position: absolute;
-            font-size: 30px;
-            font-weight: bolder;
-            font-family: Georgia, "Times New Roman", Times, serif;
-            color: blue;
-            top: 50px;
-            left: 350px;
+    .checkbox-selected {
+        background-color: rgb(59 130 246);
+    }
+
+
+    @keyframes fade-in {
+        0% {
+            opacity: 0;
+            transform: translate(-50%, -50%) scale(0.5);
         }
 
-        .sub_title {
-            position: absolute;
-            top: 110px;
-            left: 350px;
-            width: 360px;
-            font-size: 17px;
+        100% {
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1);
         }
+    }
 
-        .title_lists {
-            padding: 50px 0px 50px 0px;
-            width: 100%;
-            text-align: center;
-        }
+    .booking-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 9998;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.5s ease-in-out;
+    }
 
-        .lists_doctor {
-            font-weight: bolder;
-            font-size: 40px;
-        }
+    .booking-overlay-visible {
+        opacity: 1;
+        pointer-events: auto;
+    }
 
-        .max-w-sm {
-            width: calc(50% - 10px);
-            /* Đảm bảo khoảng cách giữa các card */
-            margin-bottom: 10px;
-            /* Đảm bảo khoảng cách dưới mỗi card */
-        }
+    .booking-success {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0.5);
+        opacity: 0;
+        background-color: #f0f0f0;
+        border: 2px solid #ccc;
+        padding: 20px;
+        z-index: 9999;
+        animation: fade-in 0.5s ease-in-out forwards;
+    }
+
+    .booking-success-hidden {
+        display: none;
+    }
+
+    .booking-success-visible {
+        opacity: 1;
+    }
+
+    .booking-success-text {
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    #container {
+        background-color: beige;
+    }
+
+    .paragrap {
+        margin-top: 20px;
+    }
+
+    .row {
+        padding: 5px 0px 5px 0px;
+    }
+
+    #header {
+        margin-top: 20px;
+    }
+
+    #timeContainer {
+        margin-top: 20px;
+    }
+
+    #price-booking {
+        margin-top: 50px;
+    }
+
+    #prices {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 30px;
+    }
+
+    #price {
+        padding: 0px 5px 0px 5px;
+    }
+
+    #name {
+        margin-top: 25px;
+    }
+
+    #fullname {
+        font-size: 20px;
+    }
+
+    #error {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 30px;
+        font-size: 20px;
+        color: red;
     }
 </style>
 
-<body>
-    <div class="container">
-        <div class="header">
-            <img class="imgDoctor" src="../images/Doctor.png" alt="doctor">
-            <h1 class="title">Mental Health Care</h1>
-            <p class="sub_title">
-                Chúng tôi xin gửi lời chào trân trọng và cảm ơn sự quan tâm của quý khách hàng đến với chúng tôi. Trang web này được tạo ra với mục đích mang đến cho quý khách những trải nghiệm tuyệt vời và dịch vụ chất lượng.
-            </p>
+<div id="container" class=" w-full px-5 py-24 mx-auto lg:px-32">
+    <div class="flex flex-col lg:flex-row lg:space-x-12">
+        <div class="order-last w-full max-w-screen-sm m-auto mt-12 lg:w-1/4 lg:order-first">
+            <div class="p-4 transition duration-500 ease-in-out transform bg-white border rounded-lg">
+                <div id="image-div" class="flex py-2 mb-4">
+                    <img src="<?php echo $doctor[0]->Url_Image ?>" class="w-16 h-16 rounded-full">
+                    <div id="name" class="ml-4">
+                        <p class="text-sm font-medium text-gray-900" id="fullname">Bs. <?php echo $doctor[0]->FullName ?></p>
+                    </div>
+                </div>
+                <div class="text-center">
+                </div>
+            </div>
         </div>
-        <div class="title_lists">
-            <h1 class="lists_doctor">Danh sách bác sĩ</h1>
-        </div>
-        <div class="lists_card">
-            <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                <a href="#">
-                    <img class="rounded-t-lg" src="/docs/images/blog/image-1.jpg" alt="" />
-                </a>
-                <div class="p-5">
-                    <a href="#">
-                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
-                    </a>
-                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-                    <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                        Read more
-                        <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
-                        </svg>
-                    </a>
+        <div class="w-full px-4 mt-12 prose lg:px-0 lg:w-3/4">
+            <div class="mb-5 border-b border-gray-200">
+                <div class="flex flex-wrap items-baseline mt-2">
+                    <h1 class="css-1jxf684 text-2xl font-bold leading-[20.8px] text-primary text-blue-600">Bác sĩ, Chuyên gia Tâm lý <?php echo $doctor[0]->FullName  ?> (Tư vấn từ xa)</h1>
+                    <div class="paragrap">
+                        <p class="row">Chuyên gia tư vấn giảm căng thẳng, khủng hoảng tâm lý, giúp ngủ ngon, ngủ sâu ở trẻ vị thành niên và người lớn.</p>
+                        <p class="row">Chuyên gia can thiệp tâm lý học đường, giúp cha mẹ và thầy cô quản lý hành vi chống đối, vi phạm kỷ luật của học sinh hoặc giúp học sinh xây dựng tình bạn lành mạnh</p>
+                        <p class="row">Chuyên gia tư vấn vượt qua mất mát, chia ly, lạm dụng và quấy rối tình dục, bạo lực gia đình, bạo lực công sở hoặc tai nạn, thảm họa hoặc căng thẳng về các vấn đề pháp luật.</p>
+                    </div>
                 </div>
-            </div>
-
-            <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                <a href="#">
-                    <img class="rounded-t-lg" src="/docs/images/blog/image-1.jpg" alt="" />
-                </a>
-                <div class="p-5">
-                    <a href="#">
-                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
-                    </a>
-                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-                    <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                        Read more
-                        <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
-                        </svg>
-                    </a>
+                <div id="header" class="w-full bg-blue-500 p-2 text-white text-center mt-2">
+                    <h1 class="text-2xl">Lịch Tư Vấn Của Bác Sĩ</h1>
+                    <input type="date" class="date" id="dateInput">
                 </div>
-            </div>
 
-            <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                <a href="#">
-                    <img class="rounded-t-lg" src="/docs/images/blog/image-1.jpg" alt="" />
-                </a>
-                <div class="p-5">
-                    <a href="#">
-                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
-                    </a>
-                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-                    <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                        Read more
-                        <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
-                        </svg>
-                    </a>
+                <div id="booking-overlay" class="booking-overlay booking-overlay-hidden"></div>
+
+                <div id="booking-success" class="booking-success booking-success-hidden">
+                    <span class="booking-success-text">Đặt lịch thành công</span>
                 </div>
-            </div>
-
-            <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                <a href="#">
-                    <img class="rounded-t-lg" src="/docs/images/blog/image-1.jpg" alt="" />
-                </a>
-                <div class="p-5">
-                    <a href="#">
-                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
-                    </a>
-                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-                    <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                        Read more
-                        <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
-                        </svg>
-                    </a>
-                </div>
-            </div>
-
-            <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                <a href="#">
-                    <img class="rounded-t-lg" src="/docs/images/blog/image-1.jpg" alt="" />
-                </a>
-                <div class="p-5">
-                    <a href="#">
-                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
-                    </a>
-                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-                    <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                        Read more
-                        <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
-                        </svg>
-                    </a>
+                <div id="timeContainer"></div>
+                <div id="price-booking" class="flex justify-end mt-5">
+                    <p id="error"></p>
+                    <div id="prices"> Giá tiền:
+                        <div id="price"></div>
+                        VND
+                    </div>
+                    <button type="submit" onclick="book()" class="px-6 py-3 text-lg font-semibold text-white transition duration-500 ease-in-out transform bg-blue-600 border border-current rounded hover:bg-blue-700 focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2">Đặt Lịch</button>
                 </div>
             </div>
         </div>
     </div>
-</body>
+</div>
 
-</html>
+<script>
+    var totalPrice = document.getElementById("price").innerHTML = 0
+
+    var currentDate = new Date().toISOString().split('T')[0];
+    document.getElementById('dateInput').value = currentDate;
+    var selectedDate = currentDate
+    axios.post('/patient/list-doctor/booking/time', {
+            selectedDate
+        })
+        .then(res => {
+            const listTimes = res.data.listTime
+            if (res.status === 201) {
+                console.log("Selected Date: " + selectedDate);
+                resultTime(listTimes)
+            }
+        })
+
+    dateInput.addEventListener('change', function() {
+        time = ""
+        var selectedDate = dateInput.value;
+        var totalPrice = document.getElementById("price").innerHTML = 0
+        console.log("Selected Date: " + selectedDate);
+        axios.post('/patient/list-doctor/booking/time', {
+                selectedDate
+            })
+            .then(res => {
+                const listTimes = res.data.listTime
+                if (res.status === 201) {
+                    console.log("Select: " + selectedDate);
+                    resultTime(listTimes)
+                }
+            })
+    });
+
+    function resultTime(listTime) {
+        var timeContainer = document.getElementById("timeContainer");
+        timeContainer.innerHTML = "";
+
+        for (var i = 0; i < listTime.length; i++) {
+            (function(index) {
+                var label = document.createElement("label");
+                label.className =
+                    "col-span-1 flex items-center bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded m-2";
+                var totalPrice = 0;
+
+                var radio = document.createElement("input");
+                radio.type = "radio";
+                radio.name = "selectedTime";
+                radio.className = "hidden";
+                radio.setAttribute("id", "hidden");
+                radio.value = index; // Lấy giá trị giờ từ listTime
+
+                var timeText = document.createElement("span");
+                var timeTextId = "timeText" + index;
+                timeText.setAttribute("id", timeTextId);
+                timeText.textContent = listTime[index].time; // Hiển thị giá trị giờ
+
+                label.appendChild(radio);
+                label.appendChild(timeText);
+
+                label.addEventListener("click", function() {
+                    var checkedRadio = document.querySelector('input[name="selectedTime"]:checked');
+                    if (checkedRadio) {
+                        checkedRadio.parentNode.classList.remove("checkbox-selected");
+                        var checkedTimeTextId = "timeText" + checkedRadio.value;
+                        var checkedTimeTextElement = document.getElementById(checkedTimeTextId);
+                        if (checkedTimeTextElement) {
+                            checkedTimeTextElement.style.color = "";
+                        }
+                    }
+                    radio.checked = true;
+                    this.classList.add("checkbox-selected");
+                    timeText.style.color = "#fff";
+                    totalPrice = calculateTotalPrice(listTime);
+                    price(totalPrice);
+                });
+
+                timeContainer.appendChild(label);
+            })(i);
+        }
+    }
+    var time = ""
+    var prices = ""
+    var doctorId = ""
+    var patientId = ""
+
+    function scheduleTime(listTime) {
+        console.log(time)
+        var checkedRadio = document.querySelector('input[name="selectedTime"]:checked');
+        if (checkedRadio) {
+            var index = parseInt(checkedRadio.value);
+            return listTime[index].time;
+        }
+        return 0;
+    }
+
+    function calculateTotalPrice(listTime) {
+        time = scheduleTime(listTime)
+        var checkedRadio = document.querySelector('input[name="selectedTime"]:checked');
+        if (checkedRadio) {
+            var index = parseInt(checkedRadio.value);
+            return parseFloat(listTime[index].price);
+        }
+        return 0;
+    }
+
+    function price(price) {
+        prices = price
+        console.log(price)
+        document.getElementById("price").textContent = price;
+    }
+
+    var url = window.location.href;
+    var idIndex = url.indexOf("id=");
+    if (idIndex !== -1) {
+        var idSubstring = url.substring(idIndex + 3);
+        var id = parseInt(idSubstring, 10);
+        if (!isNaN(id)) {
+            doctorId = id;
+        }
+    }
+    var data = localStorage.getItem("user-info");
+    if (data) {
+        var jsonData = JSON.parse(data);
+        var id = jsonData.roleId;
+        patientId = id
+        console.log(patientId)
+    }
+
+    function book() {
+        if (time != "") {
+            var selectedDate = dateInput.value;
+            axios.post('/patient/list-doctor/booking', {
+                    patientId: patientId,
+                    doctorId: doctorId,
+                    time: time,
+                    selectedDate: selectedDate,
+                    prices: prices
+                })
+                .then(res => {
+                    if (res.status === 200) {
+                        const bookingOverlay = document.getElementById('booking-overlay');
+                        const bookingSuccess = document.getElementById('booking-success');
+
+                        bookingOverlay.classList.add('booking-overlay-visible');
+                        bookingSuccess.classList.remove('booking-success-hidden');
+                        bookingSuccess.classList.add('booking-success-visible');
+                        setTimeout(() => {
+                            bookingOverlay.classList.remove('booking-overlay-visible');
+                            bookingSuccess.classList.remove('booking-success-visible');
+                            bookingSuccess.classList.add('booking-success-hidden');
+                        }, 4000);
+                        window.location.href = "/patient/list-doctor/booking?id=" + doctorId
+                    }
+                })
+        } else {
+            document.getElementById("error").innerHTML = "Hãy chọn giờ trước khi đặt lịch"
+        }
+
+    }
+</script>

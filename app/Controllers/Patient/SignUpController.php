@@ -48,9 +48,13 @@ class SignUpController extends Controller
         $this->userRepository->insert($newUser);
         $this->patientRepository->insert($newPatient);
 
+        $requestPatient = new PatientRepository();
+        $patientId = $requestPatient->findByEmail($signUpReq->email);
+
         return response()->json([
             'message' => 'Sign Up Successfully',
             'payload' => new SignInRes(
+                $patientId,
                 $newUser->getId(),
                 $newUser->getRole()->getValue(),
                 $newUser->getEmail(),

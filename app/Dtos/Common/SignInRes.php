@@ -5,6 +5,7 @@ namespace App\Dtos\Common;
 class SignInRes
 {
     public string $id;
+    public string $roleId;
     public string $role;
     public string $email;
     public string $password;
@@ -20,9 +21,10 @@ class SignInRes
      * @param string $email
      * @param string $fullName
      */
-    public function __construct(string $id, string $role, string $email, string $fullName, string $password, string $address, string $phone, string $image)
+    public function __construct(string $roleId, string $id, string $role, string $email, string $fullName, string $password, string $address, string $phone, string $image)
     {
         $this->id = $id;
+        $this->roleId = $roleId;
         $this->role = $role;
         $this->email = $email;
         $this->password = $password;

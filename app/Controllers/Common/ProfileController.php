@@ -7,8 +7,6 @@ use App\Dtos\Common\ProFileReq;
 use App\Models\User;
 use App\Dtos\Common\SignInRes;
 use App\Repositories\PatientRepository;
-use App\Repositories\AdminRepository;
-use App\Repositories\DoctorRepository;
 use App\Repositories\UserRepository;
 use Illuminate\Http\Request;
 use App\Models\Role;
@@ -18,15 +16,8 @@ use Illuminate\Support\Facades\DB;
 
 class ProFileController extends Controller
 {
-    private UserRepository $userRepository;
-    private PatientRepository $patientRepository;
-
-    public function __construct()
+    public function viewProfile()
     {
-        $this->userRepository = new UserRepository();
-        $this->patientRepository = new PatientRepository();
-    }
-    public function viewProfile(){
         return view('pages\common\HtmlProfile');
     }
     public function index()
@@ -68,11 +59,13 @@ class ProFileController extends Controller
         $user = new User($role, $proFileRequest->email, $proFileRequest->password, $proFileRequest->fullname, $proFileRequest->address == null ? "Please update" : $proFileRequest->address, $proFileRequest->phone == null ? "Please update" : $proFileRequest->phone, $proFileRequest->url_image == null ? "Please update" : $proFileRequest->url_image);
         $result =  $change->updateUser($user);
         $createUpdateUser = $change->findByEmail($proFileRequest->email);
-
+        $requestPatient = new PatientRepository();
+        $patientId = $requestPatient->findByEmail($proFileRequest->email);
         if ($result) {
             return response()->json([
                 'message' => 'Update user sucessful',
                 'payload' => new SignInRes(
+                    $patientId,
                     $createUpdateUser->getId(),
                     $createUpdateUser->getRole()->getValue(),
                     $createUpdateUser->getEmail(),

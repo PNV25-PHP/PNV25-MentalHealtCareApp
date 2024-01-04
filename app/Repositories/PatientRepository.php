@@ -27,4 +27,12 @@ class PatientRepository
 
         return $patients;
     }
+
+    public function findByEmail($email)
+    {
+        $result = DB::select("SELECT * FROM users
+        WHERE email = ? LIMIT 1", [$email]);
+        $newUser = $result[0];
+        return $newUser->Id;
+    }
 }

@@ -5,6 +5,7 @@ namespace App\Controllers\Common;
 use App\Dtos\Common\SignInRes;
 use App\Dtos\Common\SignInReq;
 use App\Repositories\UserRepository;
+use App\Repositories\PatientRepository;
 use Illuminate\Http\Request;
 use Laravel\Lumen\Routing\Controller;
 
@@ -34,9 +35,12 @@ class SignInController extends Controller
             ], 401);
         }
 
+        $requestPatient = new PatientRepository();
+        $patientId = $requestPatient->findByEmail($signInRequest->email);
         return response()->json([
             'message' => 'Sign in Successfully',
             'payload' => new SignInRes(
+                $patientId,
                 $user->getId(),
                 $user->getRole()->getValue(),
                 $user->getEmail(),
