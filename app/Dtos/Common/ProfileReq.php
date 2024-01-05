@@ -6,7 +6,6 @@ use Illuminate\Http\Request;
 
 class ProFileReq
 {
-    public string $id;
     public string $role;
     public string $email;
     public string $password;
@@ -18,7 +17,6 @@ class ProFileReq
     public function __construct(
         Request $request
     ) {
-        $this->id = $request->input("id");
         $this->role = $request->input("role");
         $this->email = $request->input("email");
         $this->password = $request->input("password");

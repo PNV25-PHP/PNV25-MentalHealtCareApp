@@ -25,16 +25,18 @@ $router->get('/', function () use ($router) {
 //Common Routers
 $router->get('/sign-in', 'Common\SignInController@index');
 $router->post('/api/sign-in', 'Common\SignInController@signIn');
-$router->post('/update/profile', 'Common\ProfileController@updateInformationUser');
+$router->post('/api/update/profile', 'Common\ProfileController@updateInformationUser');
 //Patient Routers
 $router->get('/patient/sign-up', 'Patient\SignUpController@index');
 $router->post('/api/patient/sign-up', 'Patient\SignUpController@signUp');
 $router->get('/patient/home', 'Patient\HomeController@index');
 $router->get('/header', '\resource\views\layouts\HtmlNavbar');
+//booking
 $router->get('/patient/list-doctor', 'Patient\ListDoctorController@index');
 $router->get('/patient/list-doctor/booking', 'Patient\BookingController@index');
 $router->post('/patient/list-doctor/booking/time', 'Patient\BookingController@checkTime');
-$router->get('/view-profile', 'Common\ProfileController@viewProfile');
-$router->get('/edit-profile', 'Common\ProfileController@index');
-$router->post('edit-profile', 'Common\ProfileController@updateInformationUser');
 $router->post('/patient/list-doctor/booking', 'Patient\BookingController@booking');
+//profile
+$router->get('/view-profile', 'Common\ProfileController@index');
+$router->get('/edit-profile', 'Common\ProfileController@editProfile');
+$router->post('/api/edit-profile', 'Common\ProfileController@updateInformationUser');
