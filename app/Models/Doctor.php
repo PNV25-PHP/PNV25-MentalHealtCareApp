@@ -2,27 +2,32 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
-class Doctor extends User
+class Doctor extends BaseModel
 {
+    public string $userid;
     public string $specialization;
     public string $hospital;
-
-    public function __construct(
-        string $email,
-        string $password,
-        string $fullName,
-        string|null $address = null,
-        string|null $phone = null,
-        string|null $urlImage = null,
-        string $specialization,
-        string $hospital)
+    /**
+     * @param string $userid
+     * @throws \Exception
+     */
+    public function __construct(string $userid, string $specialization, string $hospital)
     {
-        parent::__construct(new Role('doctor'), 
-        $email, $password, $fullName, $address, $phone, $urlImage);
-        
+        parent::__construct();
+        $this->userid = $userid;
         $this->specialization = $specialization;
         $this->hospital = $hospital;
     }
-
+    public function getUserId(): string
+    {
+        return $this->userid;
+    }
+    public function getHospital(): string
+    {
+        return $this->hospital;
+    }
+    public function getSpecialization(): string
+    {
+        return $this->specialization;
+    }
 }

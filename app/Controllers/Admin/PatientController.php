@@ -16,31 +16,19 @@ class DoctorController extends Controller
 {
     private $adminRepository;
     private $userRepository;
-    private $doctorRepository;
+    private $patientRepository;
 
-    public function __construct(AdminRepository $adminRepository, UserRepository $userRepository, DoctorRepository $doctorRepository)
+    public function __construct(AdminRepository $adminRepository, UserRepository $userRepository, DoctorRepository $patientRepository)
     {
         $this->adminRepository = $adminRepository;
         $this->userRepository = $userRepository;
-        $this->doctorRepository = $doctorRepository;
+        $this->doctorRepository = $patientRepository;
     }
 
     public function index()
     {
-        $doctors = $this->doctorRepository->getAllDoctor();
-        return view('pages/admin/doctor')->with('doctors', $doctors);
-    }
-    public function getBooking()
-    {
-        return view('pages/admin/booking');
-    }
-    public function getDashboard()
-    {
-        return view('pages/admin/dashboard');
-    }
-    public function getpatient()
-    {
-        return view('pages/admin/patient');
+        $patients = $this->patientRepository->getAllDoctor();
+        return view('pages/admin/patient')->with('patients', $patients);
     }
 
     public function addDoctor(Request $request)
