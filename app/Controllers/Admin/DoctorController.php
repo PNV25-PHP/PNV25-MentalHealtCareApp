@@ -28,19 +28,15 @@ class DoctorController extends Controller
     public function index()
     {
         $doctors = $this->doctorRepository->getAllDoctor();
-        return view('pages/admin/doctor')->with('doctors', $doctors);
+        return view('pages.admin.doctor')->with('doctors', $doctors);
     }
     public function getBooking()
     {
-        return view('pages/admin/booking');
+        return view('pages.admin.booking');
     }
     public function getDashboard()
     {
-        return view('pages/admin/dashboard');
-    }
-    public function getpatient()
-    {
-        return view('pages/admin/patient');
+        return view('pages.admin.dashboard');
     }
 
     public function addDoctor(Request $request)
@@ -58,7 +54,7 @@ class DoctorController extends Controller
         $doctor = $select->addNewDoctor($addDoctor);
         $newDoctor = new Doctor($addDoctor->getId(), $req->hospital, $req->specialization);
         $useInsert = new DoctorRepository();
-        $useInsert->insert($newDoctor);
+        $useInsert->insert_doctor($newDoctor);
 
         if ($doctor != null) {
             return response()->json([
@@ -72,23 +68,21 @@ class DoctorController extends Controller
     {
        $req = new DoctorReq($request);
        $select = new AdminRepository();
-       $newDoctor = new User(Role::Doctor,
+       $newUser = new User(Role::Doctor,
        $req->email, 
        $req->password,
        $req->fullName, 
        $req->address,
        $req->phone,
-       $req->imageurl,
-    );
-       $doctor = $select->updateDoctor($newDoctor);
+       $req->imageurl);
+        $newDoctor = new Doctor($req->id, $req->specialization, $req->hospital);
+       $doctor = $select->updateDoctor($newUser, $newDoctor);
         if ($doctor != null) {
             return response()->json([
-                "message" => "validation doctor",
-                "doctor" => $doctor->getFullName()
+                "message" => "update doctor complete",
             ], 200);
         }
     }
-
 
     public function deleteDoctor($doctorId)
     {

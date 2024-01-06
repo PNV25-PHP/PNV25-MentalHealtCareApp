@@ -12,17 +12,9 @@ class DoctorRes
     public string $address;
     public string $specialization;
     public string $hospital;
-    /**
-     * @param string $
-     * @param string $
-     * @param string $
-     * @param string $
-     * @param string $
-     * @param string $
-     * @param string $
-     * @param string $
-     */
-    public function __construct(string $fullName, string $email, string $password, string $phone, string $address, string $imageurl, string $specialization, string $hospital)
+    public string $id;
+
+    public function __construct(string $fullName, string $email, string $password, string $phone, string $address, string $imageurl, string $specialization, string $hospital, string $id)
     {
         $this->password = $password;
         $this->imageurl = $imageurl;
@@ -32,5 +24,6 @@ class DoctorRes
         $this->address = $address;
         $this->specialization = $specialization;
         $this->hospital = $hospital;
+        $this->id = $id;
     }
 }

@@ -3,39 +3,39 @@
 namespace App\Controllers\Admin;
 
 use App\Repositories\AdminRepository;
-use App\Repositories\DoctorRepository;
-use App\Models\Doctor;
 use App\Models\Role;
 use App\Models\User;
 use App\Repositories\UserRepository;
 use Illuminate\Http\Request;
-use App\Dtos\Admin\DoctorReq;
+use App\Dtos\Patient\PatientReq;
+use App\Models\Patient;
+use App\Repositories\PatientRepository;
 use Laravel\Lumen\Routing\Controller;
 
-class DoctorController extends Controller
+class PatientController extends Controller
 {
     private $adminRepository;
     private $userRepository;
     private $patientRepository;
 
-    public function __construct(AdminRepository $adminRepository, UserRepository $userRepository, DoctorRepository $patientRepository)
+    public function __construct(AdminRepository $adminRepository, UserRepository $userRepository, PatientRepository $patientRepository)
     {
         $this->adminRepository = $adminRepository;
         $this->userRepository = $userRepository;
-        $this->doctorRepository = $patientRepository;
+        $this->patientRepository = $patientRepository;
     }
 
     public function index()
     {
-        $patients = $this->patientRepository->getAllDoctor();
-        return view('pages/admin/patient')->with('patients', $patients);
+        $patients = $this->patientRepository->getAllPatients();
+        return view('pages.admin.patient')->with('patients', $patients);
     }
 
-    public function addDoctor(Request $request)
+    public function addPatient(Request $request)
     {
-       $req = new DoctorReq($request);
+       $req = new PatientReq($request);
        $select = new AdminRepository();
-       $addDoctor = new User(Role::Doctor,
+       $addPatient = new User(Role::Patient,
        $req->email, 
        $req->password,
        $req->fullName, 
@@ -43,24 +43,24 @@ class DoctorController extends Controller
        $req->phone,
        $req->imageurl,
     );
-        $doctor = $select->addNewDoctor($addDoctor);
-        $newDoctor = new Doctor($addDoctor->getId(), $req->hospital, $req->specialization);
-        $useInsert = new DoctorRepository();
-        $useInsert->insert($newDoctor);
+        $patient = $select->addNewPatient($addPatient);
+        $newPatient = new Patient($addPatient->getId());
+        $useInsert = new PatientRepository();
+        $useInsert->insert($newPatient);
 
-        if ($doctor != null) {
+        if ($patient != null) {
             return response()->json([
-                "message" => "add doctor",
-                "doctor" => $doctor
+                "message" => "add patient",
+                "patient" => $patient
             ], 200);
         }
     }
 
-    public function updateDoctor(Request $request)
+    public function updatePatient(Request $request)
     {
-       $req = new DoctorReq($request);
+       $req = new PatientReq($request);
        $select = new AdminRepository();
-       $newDoctor = new User(Role::Doctor,
+       $newPatient = new User(Role::Patient,
        $req->email, 
        $req->password,
        $req->fullName, 
@@ -68,24 +68,23 @@ class DoctorController extends Controller
        $req->phone,
        $req->imageurl,
     );
-       $doctor = $select->updateDoctor($newDoctor);
-        if ($doctor != null) {
+       $patient = $select->updatePatient($newPatient);
+        if ($patient != null) {
             return response()->json([
-                "message" => "validation doctor",
-                "doctor" => $doctor->getFullName()
+                "message" => "update patient complete",
+                "patient" => $patient
             ], 200);
         }
     }
 
-
-    public function deleteDoctor($doctorId)
+    public function deletePatient($patientID)
     {
         $admin = new AdminRepository();
-        $admin->deleteDoctor($doctorId);
-        
-        return response()->json([
-            "message" => "delete doctor complete"
-        ], 200);
-        
+        $admin->deletePatient($patientID);
+        if ($admin != null) {
+            return response()->json([
+                "message" => "delete patient complete"
+            ], 200);
+        }
     }
 }

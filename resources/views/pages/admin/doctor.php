@@ -24,14 +24,39 @@
                                 <th class="text-left py-3 px-5  ">Chuyên ngành</th>
                                 <th class="text-left py-3 px-5  ">Bệnh viện</th>
                                 <th class="text-left py-3 px-5  ">Địa chỉ</th>
-                                <th class="text-left  py-3 px-5 ">Email</th>
+                                <th class="text-left py-3 px-5 ">Email</th>
                                 <th class="text-left py-3 px-5  ">Số điện thoại</th>
                                 <th class="text-left py-3 px-5  ">Mật khẩu</th>
                                 <th class="text-left py-3 px-5  ">Chức năng</th>
                             </tr>
                         </thead>
                         <tbody id="doctorTableBody">
-
+                            <script>
+                            var tags = "";
+                            doctors.map((doctor) => {
+                                tag =
+                                `<tr class="border-b hover:bg-orange-100 bg-gray-100">
+                                <td class="py-3 px-5">${doctor.UserId} </td>
+                                <td class="py-3 px-5">${doctor.FullName}</td>
+                                <td class="py-3 px-5">${doctor.Specialization}</td>
+                                <td class="py-3 px-5">${doctor.Hospital}</td>
+                                <td class="py-3 px-5">${doctor.Address}</td>
+                                <td class="py-3 px-5">${doctor.Email}</td>
+                                <td class="py-3 px-5">${doctor.Phone}</td>
+                                <td class="py-3 px-5">${doctor.Password}</td>
+                                <td class="py-3 px-5 flex justify-end">
+                                <button id="updateButton" onclick="update_Info(${doctor.UserId})" class="text-sm bg-blue-500 hover:bg-blue-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline cursor-pointer">
+                                    Sửa
+                                </button>
+                                <button id="deleteButton" onclick="confirm_delete(${doctor.UserId})" class="text-sm bg-red-500 hover:bg-red-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline">
+                                    Xoá
+                                </button>
+                                </td>
+                                </tr>`;
+                                tags += tag;
+                                })
+                                document.getElementById("doctorTableBody").innerHTML = tags;
+                            </script>
                         </tbody>
                     </table>
                 </div>
@@ -43,7 +68,7 @@
 <div id="addModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
     <div class="bg-white p-8 rounded">
         <span id="addModalClose" class="absolute top-0 right-0 mt-4 mr-4 text-gray-500 cursor-pointer">&times;</span>
-        <form>
+        <form method="post">
             <div class="grid grid-cols-1 gap-6 mt-4 sm:grid-cols-2">
                 <div>
                     <label for="full-name" class="block text-sm font-medium text-neutral-600"> Họ tên </label>
@@ -137,7 +162,7 @@
                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 11V6m0 8h.01M19 10a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                 </svg>
                 <h3 class="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">Bạn có thực sự muốn xoá bác sỹ?</h3>
-                <button onclick="deleteDoctor(${doctor_id.UserId.toString()})" data-modal-hide="popup-modal" type="button" class="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center me-2">
+                <button onclick="deleteDoctor(${doctor_id.UserId})" data-modal-hide="popup-modal" class="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center me-2">
                     Vâng, chắc chắn !
                 </button>
                 <button id="cancelModalClose" data-modal-hide="popup-modal" type="button" class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600">
@@ -160,7 +185,6 @@
                 var updateModal = document.getElementById("updateModal");
                 updateModal.classList.remove("hidden");
                 var doctorModel1 = doctors.find((doctor) => doctor.UserId == id)
-                var image = doctorModel1.Url_Image
                 var form =
                     `<form >
                     <div class="grid grid-cols-1 gap-6 mt-4 sm:grid-cols-2">
@@ -213,9 +237,16 @@
                                 <input id="editModalAddress" value="${doctorModel1.Address}" name="address" type="text" required="" placeholder="Địa chỉ" class="block w-full px-5 py-3 text-base text-neutral-600 placeholder-gray-300 transition duration-500 ease-in-out transform border border-transparent rounded-lg bg-gray-50 focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-300" autocomplete="address">
                             </div>
                         </div>
+
+                        <div>
+                            <label for="editModalAddress" class="block text-sm font-medium text-neutral-600">Image Url</label>
+                            <div class="mt-1">
+                                <input id="editModalImage" value="${doctorModel1.Url_Image}" name="Image" type="text" required="" placeholder="Your Image" class="block w-full px-5 py-3 text-base text-neutral-600 placeholder-gray-300 transition duration-500 ease-in-out transform border border-transparent rounded-lg bg-gray-50 focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-300" autocomplete="address">
+                            </div>
+                        </div>
                     </div>
                     <div class="col-span-2 flex items-center justify-between">
-                        <button onclick="saveDoctorInfo()"  id="updateSubmit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" >
+                        <button onclick="saveDoctorInfo(${doctorModel1.UserId})"  id="updateSubmit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" >
                             Lưu
                         </button>
                         <button id="cancelModalClose" class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
@@ -228,35 +259,7 @@
         </script>
     </div>
 </div>
-
-<script>
-    var tags = "";
-    doctors.map((doctor) => {
-        tag =
-            `<tr class="border-b hover:bg-orange-100 bg-gray-100">
-    <td class="py-3 px-5">${ doctor.UserId } </td>
-    <td class="py-3 px-5">${ doctor.FullName }</td>
-    <td class="py-3 px-5">${ doctor.Specialization }</td>
-    <td class="py-3 px-5">${ doctor.Hospital }</td>
-    <td class="py-3 px-5">${ doctor.Address }</td>
-    <td class="py-3 px-5">${ doctor.Email }</td>
-    <td class="py-3 px-5">${ doctor.Phone }</td>
-    <td class="py-3 px-5">${ doctor.Password }</td>
-    <td class="py-3 px-5 flex justify-end">
-        <button id="updateButton" onclick="update_Info(${ doctor.UserId.toString()})" class="text-sm bg-blue-500 hover:bg-blue-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline cursor-pointer">
-            Sửa
-        </button>
-        <button id="deleteButton" onclick="confirm_delete(${ doctor.UserId.toString()})" class="text-sm bg-red-500 hover:bg-red-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline">
-            Xoá
-        </button>
-    </td>
-    </tr>`
-        tags += tag;
-    })
-    document.getElementById("doctorTableBody").innerHTML = tags;
-</script>
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-
 <script>
     // Get the modals
     var updateModal = document.getElementById("updateModal");
@@ -307,27 +310,29 @@
         var specialization = document.getElementById('specialization').value;
         var hospital = document.getElementById('hospital').value;
         var image = document.getElementById('avatarInput').value;
-
+        var id = "";
         axios.post('/admin/addDoctor', {
-                email: email,
-                password: password,
-                fullName: fullName,
-                phone: phone,
-                image: image,
-                address: address,
-                specialization: specialization,
-                hospital: hospital
-            })
-            .then(function(response) {
-                // Xử lý thành công (nếu cần)
-                console.log('Doctor added:', response.data.message);
-            })
-            .catch(function(error) {
-                console.log('Error:', error);
-            });
+            email: email,
+            password: password,
+            fullName: fullName,
+            phone: phone,
+            image: image,
+            address: address,
+            specialization: specialization,
+            hospital: hospital,
+            id: id
+        })
+        .then(function(response) {
+            console.log('Doctor added:', response.data.message);
+            window.location.href = '/admin/getDoctor';
+        })
+
+        .catch(function(error) {
+            console.log('Error:', error);
+        });
     }
 
-    function saveDoctorInfo() {
+    function saveDoctorInfo(id) {
         var name = document.getElementById('editModalFullName').value;
         var email = document.getElementById('editModalEmail').value;
         var phone = document.getElementById('editModalPhone').value;
@@ -335,23 +340,25 @@
         var password = document.getElementById('editModalPassword').value;
         var specialization = document.getElementById('editModalSpecilization').value;
         var hospital = document.getElementById('editModalHospital').value;
+        var image = document.getElementById('editModalImage').value;
 
         axios.post('/admin/updateDoctor', {
-            fullName: name,
-            email: email,
-            phone: phone,
-            address: address,
-            password: password,
-            specialization: specialization,
-            hospital: hospital,
-            image: image
-        })
-        .then(function(response) {
-            console.log('Update successful:', response.data.message);
-        })
-        .catch(function(error) {
-            console.log('Error:', error);
-        });
+                fullName: name,
+                email: email,
+                phone: phone,
+                address: address,
+                password: password,
+                specialization: specialization,
+                hospital: hospital,
+                image: image,
+                id: id
+            })
+            .then(function(response) {
+                console.log('Update successful:', response.data.message);
+            })
+            .catch(function(error) {
+                console.log('Error:', error);
+            });
     }
 
     function deleteDoctor(doctorId) {

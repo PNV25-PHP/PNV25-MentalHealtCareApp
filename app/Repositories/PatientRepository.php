@@ -18,7 +18,7 @@ class PatientRepository
         ]);
     }
 
-    public function getAllDoctor()
+    public function getAllPatients()
     {
         $sql = "SELECT patients.*, users.Email, users.FullName, users.Phone, users.Address,users.Url_Image, users.Password
             FROM patients

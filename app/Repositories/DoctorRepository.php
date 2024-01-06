@@ -9,7 +9,7 @@ class DoctorRepository
 {
     private string $tableName = "doctors";
 
-    public function insert(Doctor $doctor)
+    public function insert_doctor(Doctor $doctor)
     {
         $sql = "INSERT INTO $this->tableName (ID, UserId, Specialization, Hospital) VALUES (?, ?, ?, ?)";
         DB::insert($sql, [
