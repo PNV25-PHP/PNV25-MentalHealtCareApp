@@ -4,6 +4,7 @@
 namespace App\Controllers\Common;
 
 use App\Dtos\Common\ProFileReq;
+use App\Models\Booking;
 use App\Models\User;
 use App\Dtos\Common\SignInRes;
 use App\Repositories\PatientRepository;
@@ -40,7 +41,8 @@ class ProFileController extends Controller
     {
         return view('pages\common\HtmlProfile',);
     }
-    public function patientHistoryBooking(){
+    public function patientHistoryBooking()
+    {
         return view('pages\common\HtmlHistoryBooking');
     }
 
@@ -98,20 +100,10 @@ class ProFileController extends Controller
         ], 404);
     }
 
-    // public function showHistoryBooking($email)
-    // {
-    //     // $email = '<script>localStorage.getItem("email")</script>';
-    //     $bookings = $this->bookingRepository->get_patient_id($email);
-    //     return view(`pages\common\HtmlHistoryBooking`)->with('$bookings', $bookings);
-    // }
     public function processHistoryBooking(Request $request)
-{
-    $email = $request->input('email');
-    echo  "Day la emmail trong controller. ".$email;
-    if (!$email) {
-        return response()->json(['error' => 'Email is required'], 400);
+    {
+        $email = $request->input('email');
+        $booking = $this->bookingRepository->get_patient_id($email);
+        return $booking;
     }
-    $bookings = $this->bookingRepository->get_patient_id($email);
-    return $bookings;
-}
 }

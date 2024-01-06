@@ -39,23 +39,10 @@ class BookingRepository
     //     $newBooking = $bookings[0];
     //     return new Booking($newBooking->$name, $newBooking->$email, $newBooking->$phone, $newBooking->TimeBooking, $newBooking->DateBooking, $newBooking->TotalPrice);
     // }
-    // public function selectAll($patientId)
-    // {
-    //lấy user.id từ email đã có
-    //Link tới bảng patients và dựa vào đó lấy patient.id
-    //Lấy patientid
-    // $bookings = DB::select("SELECT b.*, u.email, u.fullname, u.phone
-    //     FROM booking b
-    //     INNER JOIN users u ON b.DoctorId = u.Id
-    //     WHERE b.PatientId = ?", [$patientId]);
-    // echo 
-    // return $bookings;
-    // }
 
-    function get_patient_id($email)
+    public function get_patient_id($email)
     {
-        dd($email);
-        $user = DB::select('SELECT Id FROM users WHERE Email = ?', [$email]);
+        $user = DB::select('SELECT Id FROM users WHERE Email = ? LIMIT 1', [$email]);
 
         if (!empty($user)) {
             $userId = $user[0]->Id;
@@ -68,7 +55,7 @@ class BookingRepository
                 // echo "Patient ID: " . $booking;
                 if (!empty($bookings)) {
                     $bookings = DB::select("SELECT b.*, u.email, u.fullname, u.phone
-                    FROM booking b
+                    FROM booking b  
                     INNER JOIN users u ON b.DoctorId = u.Id
                     WHERE b.PatientId = ?", [$patientId]);
                     return $bookings;

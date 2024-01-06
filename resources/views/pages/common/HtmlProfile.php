@@ -7,7 +7,7 @@
 
     <div class="w-full md:w-1/5 p-4 sm:p-6 lg:p-8 bg-blue-900 text-white shadow-md">
       <div class="flex justify-between">
-        <span class="text-xl font-semibold block">Your Profile</span>
+        <span id="name-profile" class="text-xl font-semibold block"></span>
       </div>
       <span class="text-white">This information is secret so be careful</span>
       <div class="w-full p-8 mx-2 block justify-center">
@@ -48,27 +48,8 @@
     </div>
   </div>
 </div>
-<!-- <script src="../../component/profile.js" ></script> -->
 <script>
   showInfo()
-
-  // function navigationToHistoryBooking() {
-  //   var email_by_localstore = JSON.parse(localStorage.getItem('user-info'));
-  //   var email = email_by_localstore.email;
-  //   console.log(email);
-
-  //   axios.post('/api/patient/processHistoryBooking', {
-  //       email: email
-  //     })
-  //     .then(function(response) {
-  //       console.log(response.data);
-  //       window.location.href = '/patient/history-booking';
-  //     })
-  //     .catch(function(error) {
-  //       console.error('Error:', error);
-  //     });
-  // }
-
   function handleUpdateProfile() {
 
     var user_info_update = JSON.parse(localStorage.getItem('user-info'));
@@ -86,6 +67,7 @@
     user_info_update.phone = phoneNumber;
     user_info_update.address = address;
     console.log(user_info_update);
+
 
     // Gửi yêu cầu POST đến endpoint PHP
     fetch('/api/edit-profile', {

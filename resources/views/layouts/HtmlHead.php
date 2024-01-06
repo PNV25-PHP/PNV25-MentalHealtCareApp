@@ -44,5 +44,8 @@
             date.value = user_info.id
             phoneNumber.value = user_info.phone
             address.value = user_info.address
+
+            document.getElementById('name-profile').innerHTML = username.value;
+
         }
     </script>
