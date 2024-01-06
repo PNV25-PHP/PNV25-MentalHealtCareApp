@@ -19,5 +19,4 @@ class Patient extends BaseModel
     {
         return $this->userid;
     }
-
 }

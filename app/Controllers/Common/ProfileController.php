@@ -12,6 +12,7 @@ use App\Repositories\DoctorRepository;
 use App\Repositories\UserRepository;
 use Illuminate\Http\Request;
 use App\Models\Role;
+use App\Repositories\BookingRepository;
 use Laravel\Lumen\Routing\Controller;
 use Illuminate\Support\Facades\DB;
 
@@ -20,22 +21,27 @@ class ProFileController extends Controller
 {
     private UserRepository $userRepository;
     private PatientRepository $patientRepository;
-
+    private BookingRepository $bookingRepository;
     public function __construct()
     {
         $this->userRepository = new UserRepository();
         $this->patientRepository = new PatientRepository();
+        $this->bookingRepository = new BookingRepository();
     }
     public function viewHomePage()
     {
         return view('pages\common\HtmlHomePage');
     }
-    public function editProfile(){
+    public function editProfile()
+    {
         return view('pages\common\HtmlEditProfile');
     }
     public function index()
     {
-        return view('pages\common\HtmlProfile');
+        return view('pages\common\HtmlProfile',);
+    }
+    public function patientHistoryBooking(){
+        return view('pages\common\HtmlHistoryBooking');
     }
 
     public function findByEmail($email)
@@ -53,7 +59,6 @@ class ProFileController extends Controller
             }
             return new User($role, $newUser->Email, $newUser->Password, $newUser->FullName, $newUser->Phone == null ? "Please update" : $newUser->Phone, $newUser->Address == null ? "Please update" : $newUser->Address, $newUser->Url_Image == null ? "Please update" : $newUser->Url_Image);
         }
-
         return null;
     }
 
@@ -92,4 +97,21 @@ class ProFileController extends Controller
             'message' => 'Update user not sucessful',
         ], 404);
     }
+
+    // public function showHistoryBooking($email)
+    // {
+    //     // $email = '<script>localStorage.getItem("email")</script>';
+    //     $bookings = $this->bookingRepository->get_patient_id($email);
+    //     return view(`pages\common\HtmlHistoryBooking`)->with('$bookings', $bookings);
+    // }
+    public function processHistoryBooking(Request $request)
+{
+    $email = $request->input('email');
+    echo  "Day la emmail trong controller. ".$email;
+    if (!$email) {
+        return response()->json(['error' => 'Email is required'], 400);
+    }
+    $bookings = $this->bookingRepository->get_patient_id($email);
+    return $bookings;
+}
 }

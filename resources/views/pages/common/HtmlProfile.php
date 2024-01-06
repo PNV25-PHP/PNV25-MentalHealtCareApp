@@ -11,10 +11,11 @@
       </div>
       <span class="text-white">This information is secret so be careful</span>
       <div class="w-full p-8 mx-2 block justify-center">
-        <img id="showImage" class="w-50 h-50 items-center border shadow-lg" src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.earth.com%2Fnews%2Fbottlenose-dolphins-have-a-newly-discovered-super-sense%2F&psig=AOvVaw1tT2DO_xyF1DCweEuoyLhx&ust=1704356060767000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCJjQzq3jwIMDFQAAAAAdAAAAABAD" alt="">
+        <img id="showImage" class="w-[200px] h-[150px] mb-10 items-center border-2 shadow-lg" src="https://cff2.earth.com/uploads/2023/11/30185539/bottlenose-dolphin_1medium-960x640.jpg" alt="">
         <button type="button" class="w-[150px] text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"><a href="/edit-profile">Edit Profile</a></button>
-        <button type="button" onclick="historyBooking()" class=" w-[150px] text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">History Booking</button>
-        <button type="button" class=" w-[150px] text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"><a href="/homepage"><<< Back </a></button>
+        <button type="button" class=" w-[150px] text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"><a href="/patient/history-booking">History booking</a></button>
+        <button type="button" class=" w-[150px] text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"><a href="/homepage">
+            <<< Back </a></button>
 
       </div>
     </div>
@@ -51,43 +52,22 @@
 <script>
   showInfo()
 
-  function historyBooking() {
-    const profileInfo = document.querySelector("#profileInfo");
-    profileInfo.innerHTML = `
-    <div class="container mx-auto p-4 rounded-lg shadow-md bg-white">
-    <div class="flex items-center justify-between mb-4">
-      <h2 class="text-xl font-semibold">All booking </h2>
-    </div>
-  
-    <div class="grid grid-cols-6 gap-4">
-      <div class="col-span-6">
-      </div>
-  
-      <div class="col-span-6 bg-gray-100 rounded-lg">
-        <div class="grid grid-cols-6 py-4 px-6">
-          <div class="col-span-1 font-medium">Doctor</div>
-          <div class="col-span-1 font-medium">Specialization</div>
-          <div class="col-span-1 font-medium">Hospital</div>
-          <div class="col-span-1 font-medium">DateTime</div>
-          <div class="col-span-1 font-medium">Quantity</div>
-          <div class="col-span-1 font-medium text-center">Status</div>
-        </div>
-  
-        <div class="grid grid-cols-6 py-2 px-6 gap-4 items-center" v-for="customer in customers">
-          <div class="col-span-1">Show từ data</div>
-          <div class="col-span-1">Show từ data</div>
-          <div class="col-span-1">Show từ data</div>
-          <div class="col-span-1">Show từ data</div>
-          <div class="col-span-1">Show từ data</div>
-          <div class="col-span-1 flex items-center justify-center rounded-full px-3 py-1 text-sm font-medium">
-            <span :class="{ 'bg-green-100 text-green-800': customer.status === 'active', 'bg-red-100 text-red-800': customer.status === 'inactive' }">{{ customer.status }}</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  `;
-  }
+  // function navigationToHistoryBooking() {
+  //   var email_by_localstore = JSON.parse(localStorage.getItem('user-info'));
+  //   var email = email_by_localstore.email;
+  //   console.log(email);
+
+  //   axios.post('/api/patient/processHistoryBooking', {
+  //       email: email
+  //     })
+  //     .then(function(response) {
+  //       console.log(response.data);
+  //       window.location.href = '/patient/history-booking';
+  //     })
+  //     .catch(function(error) {
+  //       console.error('Error:', error);
+  //     });
+  // }
 
   function handleUpdateProfile() {
 

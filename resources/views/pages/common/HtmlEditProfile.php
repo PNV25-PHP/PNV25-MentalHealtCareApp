@@ -10,7 +10,7 @@
       </div>
       <span class="text-white">This information is secret so be careful</span>
       <div class="w-full p-8 mx-2 block justify-center">
-        <img id="showImage" class="w-50 h-50 items-center border shadow-lg" src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.earth.com%2Fnews%2Fbottlenose-dolphins-have-a-newly-discovered-super-sense%2F&psig=AOvVaw1tT2DO_xyF1DCweEuoyLhx&ust=1704356060767000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCJjQzq3jwIMDFQAAAAAdAAAAABAD" alt="">
+        <img id="showImage" class="w-[200px] h-[150px] mb-10 items-center border-2 shadow-lg" src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.earth.com%2Fnews%2Fbottlenose-dolphins-have-a-newly-discovered-super-sense%2F&psig=AOvVaw1tT2DO_xyF1DCweEuoyLhx&ust=1704356060767000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCJjQzq3jwIMDFQAAAAAdAAAAABAD" alt="">
         <button type="button" class="w-[150px] text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"><a href="/edit-profile">Edit Profile</a></button>
         <button type="button" onclick="historyBooking()" class=" w-[150px] text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">History Booking</button>
       </div>
@@ -89,36 +89,4 @@
         console.error('Error:', error);
     });
 }
-
-
-    //     function uploadImage() {
-    //   const formData = new FormData();
-    //   formData.append('image', document.getElementById('image').files[0]);
-
-    //   fetch('/upload-image', {
-    //     method: 'POST',
-    //     body: formData
-    //   })
-    //   .then(response => response.text())
-    //   .then(result => {
-    //     console.log(result);
-
-    //     if (result === 'success') {
-    //       // Lưu thông tin người dùng vào localStorage
-    //       const userInfo = {
-    //         fname: document.getElementById('fname').value,
-    //         lname: document.getElementById('lname').value,
-    //         email: document.getElementById('email').value,
-    //         password: document.getElementById('password').value
-    //       };
-
-    //       localStorage.setItem('user-info', JSON.stringify(userInfo));
-
-    //       console.log('User info saved to localStorage.');
-    //     }
-    //   })
-    //   .catch(error => {
-    //     console.error('Error:', error);
-    //   });
-    // }
 </script>
