@@ -7,7 +7,7 @@
     display: block !important;
   }
 </style>
-<nav class="bg-gray-800">
+<nav class="bg-blue-900">
   <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
     <div class="relative flex h-16 items-center justify-between">
       <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -24,19 +24,19 @@
       </div>
       <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
         <div class="flex flex-shrink-0 items-center">
-          <img class="h-11 w-11" src="https://res.cloudinary.com/dkvvko14m/image/upload/v1704189315/MentalHealthCare/qbtgghz1acud1e8orfn5.png" alt="Your Company">
+          <img class="h-20 w-20" src="https://res.cloudinary.com/dkvvko14m/image/upload/v1704189315/MentalHealthCare/qbtgghz1acud1e8orfn5.png" alt="Your Company">
         </div>
-        <div class="hidden sm:ml-6 sm:block">
+        <div class="hidden sm:ml-10 sm:block">
           <div class="flex space-x-4">
-            <a href="#" class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page">Home </a>
-            <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Booking</a>
-            <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Contact Us</a>
-            <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">About Us </a>
+            <a href="#" class="text-gray-300 hover:bg-white hover:text-black rounded-md px-3 py-6 text-medium font-medium">Home </a>
+            <a href="#" class="text-gray-300 hover:bg-white hover:text-black rounded-md px-3 py-6 text-medium font-medium">Booking</a>
+            <a href="#" class="text-gray-300 hover:bg-white hover:text-black rounded-md px-3 py-6 text-medium font-medium">Contact Us</a>
+            <a href="#" class="text-gray-300 hover:bg-white hover:text-black rounded-md px-3 py-6 text-medium font-medium">About Us </a>
           </div>
         </div>
       </div>
       <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-        <button type="button" class="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+        <button type="button" class="relative rounded-full  p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
           <span class="absolute -inset-1.5"></span>
           <span class="sr-only">View notifications</span>
           <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">

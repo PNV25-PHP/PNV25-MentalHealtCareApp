@@ -90,4 +90,22 @@ class UserRepository
         $query = DB::update("UPDATE users SET role = ?, password = ?, fullname = ?, phone = ?, address = ?, url_image = ? WHERE email = ?", [$role, $password, $fullname, $phone, $address, $url_image, $email]);
         return $query;
     }
+
+    function validateEmail($email) {
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+          return false;
+        }
+        return true;
+      }
+
+    function validatePassword($password) {
+        if (strlen($password) < 6) {
+          return false;
+        }
+        if (!preg_match("/^(?=.*[!@#$%^&*])(?=.*[0-9])(?=.*[A-Z])(?=.*[a-z]).{6,}$/", $password)) {
+          return false;
+        }
+        return true;
+      }
+   
 }

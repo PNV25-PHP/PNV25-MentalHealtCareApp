@@ -26,28 +26,32 @@ class SignUpController extends Controller
     {
         return view("pages\patient\SignUp");
     }
-
     public function signUp(Request $req)
     {
         $signUpReq = new SignUpReq($req);
-
-        //        $error = $signUpReq->validate();
-        $error = null;
-        if ($error != null) {
+        $validation = new UserRepository();
+    
+        $checkMail = $validation->validateEmail($signUpReq->email);
+        $checkPassword = $validation->validatePassword($signUpReq->password);
+    
+        if (!$checkMail) {
             return response()->json([
-                "message" => "validation error",
-                "error" => $error
+                "message" => "Invalid email",
             ], 400);
         }
-
-        // TODO create new user and new patient
+    
+        if (!$checkPassword) {
+            return response()->json([
+                "message" => "Invalid password",
+            ], 400);
+        }
+    
         $newUser = new User(Role::Patient, $signUpReq->email, $signUpReq->password, $signUpReq->fullName);
         $newPatient = new Patient($newUser->getId());
-        // TODO insert to db
-
+    
         $this->userRepository->insert($newUser);
         $this->patientRepository->insert($newPatient);
-
+    
         return response()->json([
             'message' => 'Sign Up Successfully',
             'payload' => new SignInRes(

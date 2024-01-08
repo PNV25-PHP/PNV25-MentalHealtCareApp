@@ -30,7 +30,7 @@
                         </div>
 
                         <div>
-                            <button onclick="handleSubmitSignUp()" type="button" class="flex items-center justify-center w-full px-10 py-4 text-base font-medium text-center text-white transition duration-500 ease-in-out transform bg-blue-600 rounded-xl hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                            <button onclick="handleSubmitSignUp()" type="submit" class="flex items-center justify-center w-full px-10 py-4 text-base font-medium text-center text-white transition duration-500 ease-in-out transform bg-blue-600 rounded-xl hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
                                 Sign Up
                             </button>
                         </div>
@@ -59,20 +59,25 @@
         const email = document.getElementById("email").value
         const fullName = document.getElementById("full-name").value
         const password = document.getElementById("password").value
+console.log ("Email " , email);
+console.log ("Fullname  " , fullName);
+console.log ("Psssword  " , password);
+
+
 
         axios.post('/api/patient/sign-up', {email, fullName, password})
             .then(res => {
                 const payload = res.data.payload
-                if (res.status === 201) {
+                if (res.status === 200) {
                     localStorage.setItem("user-info", JSON.stringify(payload))
+                    window.location.href = "/patient/home"
                 }
-                window.location.href = "/patient/home"
             })
             .catch(error => {
-                if (error.response.status === 400) {
-                    const errorRes = error.response.data.error
-                    document.getElementById("email-error").textContent = errorRes.email
-                    document.getElementById("password-error").textContent = errorRes.password
+                if (error.response.status === 401) {
+                    // const errorRes = error.response.data.error
+                    document.getElementById("email-error").textContent = "Email not validate. Should be containt @"
+                    document.getElementById("password-error").textContent = ""
                     document.getElementById("full-name-error").textContent = errorRes.fullName
                 }
             })

@@ -1,4 +1,5 @@
-<?php include_once dirname(__DIR__) . '/../layouts/HtmlHead.php' ?>
+<?php include_once dirname(__DIR__) . '../../layouts/HtmlHead.php' ?>
+<!-- <a href="../../layouts/HtmlHead.php"></a> -->
 
 <section class="">
     <div class=" items-center px-5 py-12 lg:px-20">
@@ -84,6 +85,9 @@
                 if (error.response.status === 401) {
                     document.getElementById("email-error").textContent = "email or password is invalid"
                     document.getElementById("password-error").textContent = "email or password is invalid"
+                }
+                else{
+                    console.log("Error: ",error)
                 }
             });
     }
