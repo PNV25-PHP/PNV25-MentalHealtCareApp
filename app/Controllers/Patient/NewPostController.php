@@ -6,6 +6,7 @@ namespace App\Controllers\Patient;
 use Laravel\Lumen\Routing\Controller;
 use Illuminate\Support\Facades\DB;
 use App\Models\Post;
+use Illuminate\Http\Client\Request;
 
 class NewPostController extends Controller
 {
@@ -19,27 +20,25 @@ class NewPostController extends Controller
         return view('pages.patient.Post')->with('posts', $posts);
     }
 
-    // public function uploadImage(Request $Req)
-    // {
-    //     $NewPostRequest = new NewPostReq($Req);
-    // TODO validate the request
+    public function addPost(Request $req)
+{
+    $post = new Post($req->getUserId(), $req->getContent(), $req->getUrl_Image(), $req->getCreateAt());
 
-    // TODO call to db find by email then check for password
-    // $user = new User(Role::Patient, $NewPostRequest->conten, $NewPostRequest->image);
+    $sql = "INSERT INTO posts (Id, UserId, Content, Url_Image, CreatedAt) VALUES (?, ?, ?, ?, ?);";
+    $params = [
+        $post->getId(),
+        $post->getUserId(),
+        $post->getContent(),
+        $post->getUrl_Image(),
+        $post->getCreateAt(),
+    ];
 
-    // if ($user == null || $user->getPassword() != $NewPostRequest->password) {
-    //     return response()->json([
-    //         'message' => 'User not found or invalid credentials',
-    //     ], 401);
-    // }
+    $result = DB::insert($sql, $params);
 
-    // return response()->json([
-    //     'message' => 'Sign in Successfully',
-    //     'payload' => new NewPostRes(
-    //         $user->getimage(),
-    //         $user->getRole()->getValue(),
-    //         $user->getEmail(),
-    //         $user->getFullname())
-    // ]);
-    // }
+    if ($result) {
+        return "message cập nhật thành công";
+    } else {
+        return "message cập nhật không thành công";
+    }
+}
 }

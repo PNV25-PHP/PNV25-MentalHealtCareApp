@@ -1,24 +1,4 @@
 <?php include_once dirname(__DIR__) . '/../layouts/HtmlHead.php' ?>
-<style>
-  body {
-    margin: 0;
-    overflow: hidden;
-  }
-  #sky {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #000;
-  }
-  .star {
-    position: absolute;
-    background-color: #FFF;
-    border-radius: 50%;
-    pointer-events: none;
-  }
-</style>
 <script>
   const posts = <?= json_encode($posts) ?>;
 </script>
@@ -80,7 +60,6 @@
     </div>
   </div>
 </div>
-<script src="../../assets/script.js"></script>
 <script>
   const form = document.getElementById("form-post")
   form.style.display = 'none'
@@ -91,6 +70,31 @@
 
   function Close() {
     form.style.display = 'none'
+  }
+
+  function addPost() {
+    const postData = {
+      userId: userId,
+      content: content,
+      urlImage: urlImage,
+    };
+
+    fetch('/api/patient/Post/Add-New-Post', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(postData),
+      })
+      .then(response => response.json())
+      .then(data => {
+        // Xử lý dữ liệu response từ server (nếu cần)
+        console.log(data);
+      })
+      .catch(error => {
+        // Xử lý lỗi (nếu có)
+        console.error(error);
+      });
   }
 </script>
 <?php include_once dirname(__DIR__) . '/../layouts/HtmlTail.php' ?>

@@ -11,10 +11,13 @@ class Post extends BaseModel
     /**
      * @param string $userid
      */
-    public function __construct(string $userid)
+    public function __construct(string $userid, string $Content, string $Url_Image, string $CreateAt)
     {
         parent::__construct();
         $this->userid = $userid;
+        $this->Content = $Content;
+        $this->Url_Image = $Url_Image;
+        $this->CreateAt = $CreateAt;
     }
 
     public function getUserId(): string
