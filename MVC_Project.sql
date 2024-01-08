@@ -33,15 +33,34 @@ CREATE TABLE admins (
 );
 
 CREATE TABLE booking (
-  Id varchar(255) Unique primary key,
+  Id varchar(255) PRIMARY KEY,
   PatientId varchar(255) NOT NULL,
   DoctorId varchar(255) NOT NULL,
-  Options ENUM('Tructiep', 'Zalo') NOT NULL,
-  StartAt DATETIME NOT NULL,
-  EndTimeOption ENUM('0.5', '1', '1.5') NOT NULL,
+  TimeBooking TIME NOT NULL,
+  DateBooking DATE NOT NULL,
+  TotalPrice DECIMAL(10, 2),
   FOREIGN KEY (PatientId) REFERENCES patients(Id),
   FOREIGN KEY (DoctorId) REFERENCES doctors(Id)
 );
+
+USE mvc_project;
+INSERT INTO booking(Id, PatientId, DoctorId, TimeBooking, DateBooking, TotalPrice)
+VALUES
+   ('11', '3', '2', '11:00:00', '2023-08-01', 500.00),
+   ('12', '3', '2', '11:00:00', '2023-08-01', 500.00),
+   ('10', '3', '2', '11:00:00', '2023-08-01', 500.00);
+
+INSERT INTO listTimeDoctor (time, price) VALUES 
+    ('08:00:00', 500.00),
+    ('09:00:00', 500.00),
+    ('10:00:00', 500.00),
+    ('11:00:00', 500.00),
+    ('12:00:00', 500.00),
+    ('13:00:00', 500.00),
+    ('14:00:00', 500.00),
+    ('15:00:00', 500.00),
+    ('16:00:00', 500.00),
+    ('17:00:00', 500.00);
 
 CREATE TABLE Messages (
  Id varchar(255) Unique primary key,

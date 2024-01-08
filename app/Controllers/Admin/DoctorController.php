@@ -32,11 +32,13 @@ class DoctorController extends Controller
     }
     public function getBooking()
     {
-        return view('pages.admin.booking');
+        $Bookings = $this->adminRepository->getAllBooking();
+        return view('pages.admin.booking')->with('Bookings', $Bookings);
     }
     public function getDashboard()
     {
-        return view('pages.admin.dashboard');
+        $GetNumberBooking = $this->adminRepository->getBookingCountByDoctor();
+        return view('pages.admin.dashboard')->with('GetNumberBooking', $GetNumberBooking);
     }
 
     public function addDoctor(Request $request)

@@ -27,5 +27,4 @@ class DoctorRepository
             JOIN users ON doctors.UserId = users.Id";
         return DB::select($sql);
     }
-    
 }

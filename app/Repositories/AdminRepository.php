@@ -110,4 +110,34 @@ class AdminRepository
     // Xóa hàng trong bảng users
     DB::table('users')->where('Id', $userId)->delete();
 }
+// manager booking
+
+public function getAllBooking()
+{
+    $sql = "SELECT booking.Id, booking.TimeBooking, booking.DateBooking, booking.TotalPrice,
+    patient_users.FullName AS PatientFullName, patient_users.Email AS PatientEmail, patient_users.Phone AS PatientPhone, patient_users.Address AS PatientAddress,
+    doctors.Specialization, doctors.Hospital,
+    doctor_users.FullName AS DoctorFullName, doctor_users.Email AS DoctorEmail, doctor_users.Phone AS DoctorPhone, doctor_users.Address AS DoctorAddress
+    FROM booking
+    JOIN patients ON booking.PatientId = patients.Id
+    JOIN users AS patient_users ON patients.UserId = patient_users.Id
+    JOIN doctors ON booking.DoctorId = doctors.Id
+    JOIN users AS doctor_users ON doctors.UserId = doctor_users.Id;
+    ";
+    return DB::select($sql);
+}
+// manager dashboard
+
+// Thêm hàm truy vấn số lượng đặt hàng cho từng bác sĩ
+function getBookingCountByDoctor()
+{
+    $sql = "SELECT doctors.Id, COUNT(booking.Id) AS BookingCount, doctor_users.FullName AS doctorFullName
+    FROM doctors
+    LEFT JOIN booking ON doctors.Id = booking.DoctorId
+    JOIN users AS doctor_users ON doctors.UserId = doctor_users.Id
+    GROUP BY doctors.Id;
+    ";
+
+    return DB::select($sql);
+}
 }

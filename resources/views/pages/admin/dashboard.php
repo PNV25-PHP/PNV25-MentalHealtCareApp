@@ -1,9 +1,11 @@
-<?php include_once dirname(__DIR__) . '../../layouts/HtmlHead.php'   ?>
+<?php
+include_once dirname(__DIR__) . '../../layouts/HtmlHead.php';
+?>
+
 <div class="flex flex-wrap bg-gray-100 w-full h-screen">
     <?php include_once dirname(__DIR__) . '../../layouts/HtmlSidebarAdmin.php'   ?>
 
     <div class="w-9/12">
-
         <div class="text-gray-900 bg-blue-100">
             <div class="p-4 flex">
                 <h1 class="text-3xl">
@@ -16,21 +18,21 @@
                 <canvas id="doctorChart" width="400" height="200"></canvas>
             </div>
         </div>
-
     </div>
-
-
-
 </div>
+
 <?php include_once dirname(__DIR__) . '../../layouts/HtmlTail.php'   ?>
 
 <script>
-    // Sample data (replace this with your actual data)
+    // Thực hiện truy vấn để lấy dữ liệu số lượng đặt hàng cho từng bác sĩ
+    const getBookingCountByDoctor = <?php echo json_encode($GetNumberBooking); ?>;
+    
+    // Xử lý dữ liệu để đưa vào biểu đồ
     const doctorData = {
-        labels: ["Bác sỹ A", "Bác sỹ B", "Bác sỹ C", "Bác sỹ D"],
+        labels: getBookingCountByDoctor.map(item => item.doctorFullName),
         datasets: [{
-            label: 'Số lượng bệnh nhân',
-            data: [10, 20, 15, 25], // Replace with the actual number of patients for each doctor
+            label: 'Số lượng đặt hàng',
+            data: getBookingCountByDoctor.map(item => item.BookingCount),
             backgroundColor: [
                 'rgba(255, 193, 7, 0.6)', // Bright Yellow
                 'rgba(33, 150, 243, 0.6)', // Bright Blue
