@@ -1,29 +1,51 @@
 <?php include_once dirname(__DIR__) . '/../layouts/HtmlHead.php' ?>
-<!-- <form action="/upload-image" method="POST" enctype="multipart/form-data">
-    <input type="file" name="image">
-    <input type="submit" value="Upload">
-</form> -->
-
-<!-- component -->
-<?php
-var_dump($posts);
-foreach ($posts as $post) :?>
-  <div class="p-8 flex items-center justify-center w-screen h-100% z-1">
-    <div class="px-5 py-4 bg-white dark:bg-gray-800 shadow rounded-lg max-w-lg w-1/2">
-      <div class="flex mb-4">
-        <img class="w-12 h-12 rounded-full" src="<?php //echo $post[] ?>"/>
-        <div class="ml-2 mt-0.5">
-          <span class="block font-medium text-base leading-snug text-black dark:text-gray-100"><?php //$user->fullName; ?></span>
-          <span class="block text-sm text-gray-500 dark:text-gray-400 font-light leading-snug">16 December at 08:25</span>
+<style>
+  body {
+    margin: 0;
+    overflow: hidden;
+  }
+  #sky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+  }
+  .star {
+    position: absolute;
+    background-color: #FFF;
+    border-radius: 50%;
+    pointer-events: none;
+  }
+</style>
+<script>
+  const posts = <?= json_encode($posts) ?>;
+</script>
+<div id="show_here" class="Grid"></div>
+<script>
+  var Show_posts = "";
+  posts.map((post) => {
+    var Show_post =
+      `<div class="p-8 flex items-center justify-center w-screen h-100%">
+        <div class="px-5 py-4 bg-white dark:bg-gray-800 shadow rounded-lg max-w-lg w-3/4">
+            <div class="flex mb-4">
+            <img class="w-12 h-12 rounded-full" src="${post.Url_Image}"/>
+            <div class="ml-2 mt-0.5">
+              <span class="block font-medium text-base leading-snug text-black dark:text-gray-100">${post.FullName}</span>
+              <span class="block text-sm text-gray-500 dark:text-gray-400 font-light leading-snug">${post.CreatedAt}</span>
+            </div>
+          </div>
+          <p class="text-gray-800 dark:text-gray-100 leading-snug md:leading-normal">${post.Content}</p>
+          <div class="mt-5">
+            <img src="${post.Image}" alt="" class="w-full h-41 object-cover object-center">
+          </div>
         </div>
-      </div>
-      <p class="text-gray-800 dark:text-gray-100 leading-snug md:leading-normal"><?= $post->Conten ?></p>
-      <div class="mt-5">
-        <img src="<?= $post->Url_Image ?>" alt="" class="w-full h-41 object-cover object-center">
-      </div>
-    </div>
-  </div>
-<?php endforeach ?>
+        </div>`
+    Show_posts += Show_post;
+  })
+  document.getElementById('show_here').innerHTML = Show_posts;
+</script>
 <!-- button create post -->
 <div class="fixed bottom-0 right-0 mb-9 mr-9" onclick="CreatePost()">
   <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
@@ -58,7 +80,7 @@ foreach ($posts as $post) :?>
     </div>
   </div>
 </div>
-
+<script src="../../assets/script.js"></script>
 <script>
   const form = document.getElementById("form-post")
   form.style.display = 'none'

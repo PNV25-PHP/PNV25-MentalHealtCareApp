@@ -2,26 +2,21 @@
 
 namespace App\Controllers\Patient;
 
-use App\Dtos\Patient\NewPostRes;
-use App\Dtos\Patient\NewPostReq;
-use App\Models\Role;
-use App\Models\User;
-use App\Models\Post;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
+// use App\Repositories\PostsRepository;
 use Laravel\Lumen\Routing\Controller;
+use Illuminate\Support\Facades\DB;
+use App\Models\Post;
 
 class NewPostController extends Controller
 {
+
     public function index()
-    {                                          //p.timepost,
-        $posts = DB::select('SELECT u.FullName, p.timepost, pst.Conten, pst.Url_Image, u.Url_Image
-        FROM posts pst
-        JOIN patients pt ON pst.UserId = pt.UserId
-        JOIN users u ON pt.UserId = u.Id
-        WHERE u.Role = "patient"');
-        // $users = DB::select('SELECT * FROM user ');
-        return view('pages.patient.Post', compact('posts'));
+    {
+        $sql = "SELECT p.Id, p.UserId, p.Content, p.Image, p.CreatedAt, u.Role, u.Email, u.FullName, u.Phone, u.Address, u.Url_Image
+        FROM posts p
+        JOIN users u ON p.UserId = u.Id;";
+        $posts = DB::select($sql);
+        return view('pages.patient.Post')->with('posts', $posts);
     }
 
     // public function uploadImage(Request $Req)

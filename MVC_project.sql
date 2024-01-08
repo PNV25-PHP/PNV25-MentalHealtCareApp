@@ -55,8 +55,9 @@ CREATE TABLE Messages (
 CREATE TABLE posts (
   Id varchar(255) Unique primary key,
   UserId varchar(255) NOT NULL,
-  Conten varchar(255) NOT NULL,
+  Content varchar(255) NOT NULL,
   Url_Image VARCHAR(200),
+  CreatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   FOREIGN KEY (UserId) REFERENCES users(Id)
 );
 
