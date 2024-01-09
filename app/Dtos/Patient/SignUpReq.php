@@ -16,5 +16,4 @@ class SignUpReq
         $this->fullName = $req->input("fullName");
         $this->password = $req->input("password");
     }
-    
 }

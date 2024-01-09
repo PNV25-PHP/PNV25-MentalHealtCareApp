@@ -1947,3 +1947,763 @@
 #4 D:\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
 #5 {main}
 "} 
+[2024-01-08 08:52:22] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\MethodNotAllowedHttpException(code: 0):  at D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:237)
+[stacktrace]
+#0 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 D:\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-08 08:53:31] local.ERROR: Cannot assign null to property App\Dtos\Patient\SignUpReq::$email of type string {"exception":"[object] (TypeError(code: 0): Cannot assign null to property App\\Dtos\\Patient\\SignUpReq::$email of type string at D:\\PNV25-MentalHealtCareApp\\app\\Dtos\\Patient\\SignUpReq.php:15)
+[stacktrace]
+#0 D:\\PNV25-MentalHealtCareApp\\app\\Controllers\\Patient\\SignUpController.php(31): App\\Dtos\\Patient\\SignUpReq->__construct()
+#1 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(36): App\\Controllers\\Patient\\SignUpController->signUp()
+#2 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#3 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#4 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#5 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#6 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(391): Illuminate\\Container\\Container->call()
+#7 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(356): Laravel\\Lumen\\Application->callControllerCallable()
+#8 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(331): Laravel\\Lumen\\Application->callLumenController()
+#9 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(284): Laravel\\Lumen\\Application->callControllerAction()
+#10 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(269): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute()
+#11 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(171): Laravel\\Lumen\\Application->handleFoundRoute()
+#12 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#13 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#14 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#15 D:\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#16 {main}
+"} 
+[2024-01-08 08:56:12] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\MethodNotAllowedHttpException(code: 0):  at D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:237)
+[stacktrace]
+#0 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 D:\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-08 08:56:31] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\MethodNotAllowedHttpException(code: 0):  at D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:237)
+[stacktrace]
+#0 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 D:\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-08 08:57:08] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\MethodNotAllowedHttpException(code: 0):  at D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:237)
+[stacktrace]
+#0 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 D:\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-08 08:57:16] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\MethodNotAllowedHttpException(code: 0):  at D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:237)
+[stacktrace]
+#0 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 D:\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-08 08:58:05] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\MethodNotAllowedHttpException(code: 0):  at D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:237)
+[stacktrace]
+#0 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 D:\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-08 09:03:48] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\MethodNotAllowedHttpException(code: 0):  at D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:237)
+[stacktrace]
+#0 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 D:\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-08 09:07:03] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\MethodNotAllowedHttpException(code: 0):  at D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:237)
+[stacktrace]
+#0 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 D:\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-08 09:10:08] local.ERROR: Cannot assign null to property App\Dtos\Patient\SignUpReq::$email of type string {"exception":"[object] (TypeError(code: 0): Cannot assign null to property App\\Dtos\\Patient\\SignUpReq::$email of type string at D:\\PNV25-MentalHealtCareApp\\app\\Dtos\\Patient\\SignUpReq.php:15)
+[stacktrace]
+#0 D:\\PNV25-MentalHealtCareApp\\app\\Controllers\\Patient\\SignUpController.php(31): App\\Dtos\\Patient\\SignUpReq->__construct()
+#1 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(36): App\\Controllers\\Patient\\SignUpController->signUp()
+#2 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#3 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#4 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#5 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#6 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(391): Illuminate\\Container\\Container->call()
+#7 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(356): Laravel\\Lumen\\Application->callControllerCallable()
+#8 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(331): Laravel\\Lumen\\Application->callLumenController()
+#9 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(284): Laravel\\Lumen\\Application->callControllerAction()
+#10 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(269): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute()
+#11 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(171): Laravel\\Lumen\\Application->handleFoundRoute()
+#12 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#13 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#14 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#15 D:\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#16 {main}
+"} 
+[2024-01-08 09:11:39] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\MethodNotAllowedHttpException(code: 0):  at D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:237)
+[stacktrace]
+#0 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 D:\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-08 09:14:10] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\MethodNotAllowedHttpException(code: 0):  at D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:237)
+[stacktrace]
+#0 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 D:\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-08 09:14:55] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\MethodNotAllowedHttpException(code: 0):  at D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:237)
+[stacktrace]
+#0 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 D:\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-08 09:28:12] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\MethodNotAllowedHttpException(code: 0):  at D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:237)
+[stacktrace]
+#0 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 D:\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-08 09:28:22] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\MethodNotAllowedHttpException(code: 0):  at D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:237)
+[stacktrace]
+#0 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 D:\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-08 09:28:51] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\MethodNotAllowedHttpException(code: 0):  at D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:237)
+[stacktrace]
+#0 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 D:\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-08 09:29:54] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\MethodNotAllowedHttpException(code: 0):  at D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:237)
+[stacktrace]
+#0 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 D:\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-08 09:30:36] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\MethodNotAllowedHttpException(code: 0):  at D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:237)
+[stacktrace]
+#0 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 D:\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-08 09:31:08] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\MethodNotAllowedHttpException(code: 0):  at D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:237)
+[stacktrace]
+#0 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 D:\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-08 09:32:54] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\MethodNotAllowedHttpException(code: 0):  at D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:237)
+[stacktrace]
+#0 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 D:\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-08 09:34:53] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\MethodNotAllowedHttpException(code: 0):  at D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:237)
+[stacktrace]
+#0 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 D:\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-08 09:39:51] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\MethodNotAllowedHttpException(code: 0):  at D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:237)
+[stacktrace]
+#0 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 D:\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-08 09:40:03] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\MethodNotAllowedHttpException(code: 0):  at D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:237)
+[stacktrace]
+#0 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 D:\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-08 09:40:16] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\MethodNotAllowedHttpException(code: 0):  at D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:237)
+[stacktrace]
+#0 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 D:\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-08 09:40:41] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\MethodNotAllowedHttpException(code: 0):  at D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:237)
+[stacktrace]
+#0 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 D:\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-08 09:45:33] local.ERROR: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'Âm hii' for key 'users.Email' (Connection: mysql, SQL: INSERT INTO users (ID, Role, FullName, Email, Password) VALUES (2024-01-08 09:45:33, Patient, yAm#18, Âm hii, anh.pham25@student.passerellesnumeriques.org)) {"exception":"[object] (Illuminate\\Database\\UniqueConstraintViolationException(code: 23000): SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'Âm hii' for key 'users.Email' (Connection: mysql, SQL: INSERT INTO users (ID, Role, FullName, Email, Password) VALUES (2024-01-08 09:45:33, Patient, yAm#18, Âm hii, anh.pham25@student.passerellesnumeriques.org)) at D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php:817)
+[stacktrace]
+#0 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(776): Illuminate\\Database\\Connection->runQueryCallback()
+#1 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(569): Illuminate\\Database\\Connection->run()
+#2 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(533): Illuminate\\Database\\Connection->statement()
+#3 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\DatabaseManager.php(469): Illuminate\\Database\\Connection->insert()
+#4 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\support\\Facades\\Facade.php(355): Illuminate\\Database\\DatabaseManager->__call()
+#5 D:\\PNV25-MentalHealtCareApp\\app\\Repositories\\UserRepository.php(26): Illuminate\\Support\\Facades\\Facade::__callStatic()
+#6 D:\\PNV25-MentalHealtCareApp\\app\\Controllers\\Patient\\SignUpController.php(52): App\\Repositories\\UserRepository->insert()
+#7 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(36): App\\Controllers\\Patient\\SignUpController->signUp()
+#8 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#9 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#10 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#11 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#12 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(391): Illuminate\\Container\\Container->call()
+#13 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(356): Laravel\\Lumen\\Application->callControllerCallable()
+#14 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(331): Laravel\\Lumen\\Application->callLumenController()
+#15 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(284): Laravel\\Lumen\\Application->callControllerAction()
+#16 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(269): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute()
+#17 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(171): Laravel\\Lumen\\Application->handleFoundRoute()
+#18 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#19 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#20 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#21 D:\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#22 {main}
+
+[previous exception] [object] (PDOException(code: 23000): SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'Âm hii' for key 'users.Email' at D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php:580)
+[stacktrace]
+#0 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(580): PDOStatement->execute()
+#1 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(809): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}()
+#2 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(776): Illuminate\\Database\\Connection->runQueryCallback()
+#3 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(569): Illuminate\\Database\\Connection->run()
+#4 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(533): Illuminate\\Database\\Connection->statement()
+#5 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\DatabaseManager.php(469): Illuminate\\Database\\Connection->insert()
+#6 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\support\\Facades\\Facade.php(355): Illuminate\\Database\\DatabaseManager->__call()
+#7 D:\\PNV25-MentalHealtCareApp\\app\\Repositories\\UserRepository.php(26): Illuminate\\Support\\Facades\\Facade::__callStatic()
+#8 D:\\PNV25-MentalHealtCareApp\\app\\Controllers\\Patient\\SignUpController.php(52): App\\Repositories\\UserRepository->insert()
+#9 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(36): App\\Controllers\\Patient\\SignUpController->signUp()
+#10 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#11 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#12 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#13 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#14 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(391): Illuminate\\Container\\Container->call()
+#15 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(356): Laravel\\Lumen\\Application->callControllerCallable()
+#16 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(331): Laravel\\Lumen\\Application->callLumenController()
+#17 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(284): Laravel\\Lumen\\Application->callControllerAction()
+#18 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(269): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute()
+#19 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(171): Laravel\\Lumen\\Application->handleFoundRoute()
+#20 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#21 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#22 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#23 D:\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#24 {main}
+"} 
+[2024-01-08 09:45:33] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\MethodNotAllowedHttpException(code: 0):  at D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:237)
+[stacktrace]
+#0 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 D:\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-08 09:45:59] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\MethodNotAllowedHttpException(code: 0):  at D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:237)
+[stacktrace]
+#0 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 D:\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-08 09:47:41] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\MethodNotAllowedHttpException(code: 0):  at D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:237)
+[stacktrace]
+#0 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 D:\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-08 09:47:46] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\MethodNotAllowedHttpException(code: 0):  at D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:237)
+[stacktrace]
+#0 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 D:\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-08 09:48:21] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\MethodNotAllowedHttpException(code: 0):  at D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:237)
+[stacktrace]
+#0 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 D:\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-08 09:48:39] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\MethodNotAllowedHttpException(code: 0):  at D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:237)
+[stacktrace]
+#0 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 D:\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-08 09:48:45] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\MethodNotAllowedHttpException(code: 0):  at D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:237)
+[stacktrace]
+#0 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 D:\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-08 09:48:53] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\MethodNotAllowedHttpException(code: 0):  at D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:237)
+[stacktrace]
+#0 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 D:\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-08 09:48:59] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\MethodNotAllowedHttpException(code: 0):  at D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:237)
+[stacktrace]
+#0 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 D:\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-08 09:49:35] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\MethodNotAllowedHttpException(code: 0):  at D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:237)
+[stacktrace]
+#0 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 D:\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-08 09:50:23] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\MethodNotAllowedHttpException(code: 0):  at D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:237)
+[stacktrace]
+#0 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 D:\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-08 09:52:11] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\MethodNotAllowedHttpException(code: 0):  at D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:237)
+[stacktrace]
+#0 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 D:\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-08 09:55:17] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\MethodNotAllowedHttpException(code: 0):  at D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:237)
+[stacktrace]
+#0 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 D:\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-08 10:00:55] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\MethodNotAllowedHttpException(code: 0):  at D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:237)
+[stacktrace]
+#0 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 D:\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-08 10:01:05] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\MethodNotAllowedHttpException(code: 0):  at D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:237)
+[stacktrace]
+#0 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 D:\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-08 10:02:08] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\MethodNotAllowedHttpException(code: 0):  at D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:237)
+[stacktrace]
+#0 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 D:\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-08 10:02:17] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\MethodNotAllowedHttpException(code: 0):  at D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:237)
+[stacktrace]
+#0 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 D:\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-08 10:04:15] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\MethodNotAllowedHttpException(code: 0):  at D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:237)
+[stacktrace]
+#0 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 D:\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-08 10:04:24] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\MethodNotAllowedHttpException(code: 0):  at D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:237)
+[stacktrace]
+#0 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 D:\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-08 10:04:28] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\MethodNotAllowedHttpException(code: 0):  at D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:237)
+[stacktrace]
+#0 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 D:\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-08 10:04:34] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\MethodNotAllowedHttpException(code: 0):  at D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:237)
+[stacktrace]
+#0 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 D:\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-08 10:13:26] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\MethodNotAllowedHttpException(code: 0):  at D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:237)
+[stacktrace]
+#0 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 D:\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-08 10:13:36] local.ERROR: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'Âm hii' for key 'users.Email' (Connection: mysql, SQL: INSERT INTO users (ID, Role, FullName, Email, Password) VALUES (2024-01-08 10:13:36, Patient, yAm#1029384756#, Âm hii, anh.pham25@student.passerellesnumeriques.org)) {"exception":"[object] (Illuminate\\Database\\UniqueConstraintViolationException(code: 23000): SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'Âm hii' for key 'users.Email' (Connection: mysql, SQL: INSERT INTO users (ID, Role, FullName, Email, Password) VALUES (2024-01-08 10:13:36, Patient, yAm#1029384756#, Âm hii, anh.pham25@student.passerellesnumeriques.org)) at D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php:817)
+[stacktrace]
+#0 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(776): Illuminate\\Database\\Connection->runQueryCallback()
+#1 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(569): Illuminate\\Database\\Connection->run()
+#2 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(533): Illuminate\\Database\\Connection->statement()
+#3 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\DatabaseManager.php(469): Illuminate\\Database\\Connection->insert()
+#4 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\support\\Facades\\Facade.php(355): Illuminate\\Database\\DatabaseManager->__call()
+#5 D:\\PNV25-MentalHealtCareApp\\app\\Repositories\\UserRepository.php(26): Illuminate\\Support\\Facades\\Facade::__callStatic()
+#6 D:\\PNV25-MentalHealtCareApp\\app\\Controllers\\Patient\\SignUpController.php(59): App\\Repositories\\UserRepository->insert()
+#7 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(36): App\\Controllers\\Patient\\SignUpController->signUp()
+#8 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#9 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#10 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#11 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#12 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(391): Illuminate\\Container\\Container->call()
+#13 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(356): Laravel\\Lumen\\Application->callControllerCallable()
+#14 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(331): Laravel\\Lumen\\Application->callLumenController()
+#15 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(284): Laravel\\Lumen\\Application->callControllerAction()
+#16 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(269): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute()
+#17 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(171): Laravel\\Lumen\\Application->handleFoundRoute()
+#18 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#19 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#20 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#21 D:\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#22 {main}
+
+[previous exception] [object] (PDOException(code: 23000): SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'Âm hii' for key 'users.Email' at D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php:580)
+[stacktrace]
+#0 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(580): PDOStatement->execute()
+#1 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(809): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}()
+#2 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(776): Illuminate\\Database\\Connection->runQueryCallback()
+#3 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(569): Illuminate\\Database\\Connection->run()
+#4 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(533): Illuminate\\Database\\Connection->statement()
+#5 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\DatabaseManager.php(469): Illuminate\\Database\\Connection->insert()
+#6 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\support\\Facades\\Facade.php(355): Illuminate\\Database\\DatabaseManager->__call()
+#7 D:\\PNV25-MentalHealtCareApp\\app\\Repositories\\UserRepository.php(26): Illuminate\\Support\\Facades\\Facade::__callStatic()
+#8 D:\\PNV25-MentalHealtCareApp\\app\\Controllers\\Patient\\SignUpController.php(59): App\\Repositories\\UserRepository->insert()
+#9 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(36): App\\Controllers\\Patient\\SignUpController->signUp()
+#10 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#11 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#12 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#13 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#14 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(391): Illuminate\\Container\\Container->call()
+#15 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(356): Laravel\\Lumen\\Application->callControllerCallable()
+#16 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(331): Laravel\\Lumen\\Application->callLumenController()
+#17 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(284): Laravel\\Lumen\\Application->callControllerAction()
+#18 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(269): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute()
+#19 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(171): Laravel\\Lumen\\Application->handleFoundRoute()
+#20 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#21 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#22 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#23 D:\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#24 {main}
+"} 
+[2024-01-08 10:13:36] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\MethodNotAllowedHttpException(code: 0):  at D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:237)
+[stacktrace]
+#0 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 D:\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-08 10:13:44] local.ERROR: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'Âm hii' for key 'users.Email' (Connection: mysql, SQL: INSERT INTO users (ID, Role, FullName, Email, Password) VALUES (2024-01-08 10:13:44, Patient, yAm31029384756#, Âm hii, anh.pham25@student.passerellesnumeriques.org)) {"exception":"[object] (Illuminate\\Database\\UniqueConstraintViolationException(code: 23000): SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'Âm hii' for key 'users.Email' (Connection: mysql, SQL: INSERT INTO users (ID, Role, FullName, Email, Password) VALUES (2024-01-08 10:13:44, Patient, yAm31029384756#, Âm hii, anh.pham25@student.passerellesnumeriques.org)) at D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php:817)
+[stacktrace]
+#0 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(776): Illuminate\\Database\\Connection->runQueryCallback()
+#1 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(569): Illuminate\\Database\\Connection->run()
+#2 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(533): Illuminate\\Database\\Connection->statement()
+#3 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\DatabaseManager.php(469): Illuminate\\Database\\Connection->insert()
+#4 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\support\\Facades\\Facade.php(355): Illuminate\\Database\\DatabaseManager->__call()
+#5 D:\\PNV25-MentalHealtCareApp\\app\\Repositories\\UserRepository.php(26): Illuminate\\Support\\Facades\\Facade::__callStatic()
+#6 D:\\PNV25-MentalHealtCareApp\\app\\Controllers\\Patient\\SignUpController.php(59): App\\Repositories\\UserRepository->insert()
+#7 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(36): App\\Controllers\\Patient\\SignUpController->signUp()
+#8 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#9 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#10 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#11 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#12 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(391): Illuminate\\Container\\Container->call()
+#13 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(356): Laravel\\Lumen\\Application->callControllerCallable()
+#14 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(331): Laravel\\Lumen\\Application->callLumenController()
+#15 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(284): Laravel\\Lumen\\Application->callControllerAction()
+#16 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(269): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute()
+#17 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(171): Laravel\\Lumen\\Application->handleFoundRoute()
+#18 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#19 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#20 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#21 D:\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#22 {main}
+
+[previous exception] [object] (PDOException(code: 23000): SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'Âm hii' for key 'users.Email' at D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php:580)
+[stacktrace]
+#0 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(580): PDOStatement->execute()
+#1 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(809): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}()
+#2 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(776): Illuminate\\Database\\Connection->runQueryCallback()
+#3 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(569): Illuminate\\Database\\Connection->run()
+#4 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(533): Illuminate\\Database\\Connection->statement()
+#5 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\DatabaseManager.php(469): Illuminate\\Database\\Connection->insert()
+#6 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\support\\Facades\\Facade.php(355): Illuminate\\Database\\DatabaseManager->__call()
+#7 D:\\PNV25-MentalHealtCareApp\\app\\Repositories\\UserRepository.php(26): Illuminate\\Support\\Facades\\Facade::__callStatic()
+#8 D:\\PNV25-MentalHealtCareApp\\app\\Controllers\\Patient\\SignUpController.php(59): App\\Repositories\\UserRepository->insert()
+#9 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(36): App\\Controllers\\Patient\\SignUpController->signUp()
+#10 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#11 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#12 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#13 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#14 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(391): Illuminate\\Container\\Container->call()
+#15 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(356): Laravel\\Lumen\\Application->callControllerCallable()
+#16 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(331): Laravel\\Lumen\\Application->callLumenController()
+#17 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(284): Laravel\\Lumen\\Application->callControllerAction()
+#18 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(269): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute()
+#19 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(171): Laravel\\Lumen\\Application->handleFoundRoute()
+#20 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#21 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#22 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#23 D:\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#24 {main}
+"} 
+[2024-01-08 10:13:44] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\MethodNotAllowedHttpException(code: 0):  at D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:237)
+[stacktrace]
+#0 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 D:\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-08 10:13:59] local.ERROR: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'Âm hii' for key 'users.Email' (Connection: mysql, SQL: INSERT INTO users (ID, Role, FullName, Email, Password) VALUES (2024-01-08 10:13:59, Patient, yAm31029384756#, Âm hii, anh.pham25@student.passerellesnumeriques.org)) {"exception":"[object] (Illuminate\\Database\\UniqueConstraintViolationException(code: 23000): SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'Âm hii' for key 'users.Email' (Connection: mysql, SQL: INSERT INTO users (ID, Role, FullName, Email, Password) VALUES (2024-01-08 10:13:59, Patient, yAm31029384756#, Âm hii, anh.pham25@student.passerellesnumeriques.org)) at D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php:817)
+[stacktrace]
+#0 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(776): Illuminate\\Database\\Connection->runQueryCallback()
+#1 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(569): Illuminate\\Database\\Connection->run()
+#2 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(533): Illuminate\\Database\\Connection->statement()
+#3 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\DatabaseManager.php(469): Illuminate\\Database\\Connection->insert()
+#4 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\support\\Facades\\Facade.php(355): Illuminate\\Database\\DatabaseManager->__call()
+#5 D:\\PNV25-MentalHealtCareApp\\app\\Repositories\\UserRepository.php(26): Illuminate\\Support\\Facades\\Facade::__callStatic()
+#6 D:\\PNV25-MentalHealtCareApp\\app\\Controllers\\Patient\\SignUpController.php(59): App\\Repositories\\UserRepository->insert()
+#7 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(36): App\\Controllers\\Patient\\SignUpController->signUp()
+#8 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#9 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#10 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#11 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#12 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(391): Illuminate\\Container\\Container->call()
+#13 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(356): Laravel\\Lumen\\Application->callControllerCallable()
+#14 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(331): Laravel\\Lumen\\Application->callLumenController()
+#15 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(284): Laravel\\Lumen\\Application->callControllerAction()
+#16 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(269): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute()
+#17 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(171): Laravel\\Lumen\\Application->handleFoundRoute()
+#18 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#19 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#20 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#21 D:\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#22 {main}
+
+[previous exception] [object] (PDOException(code: 23000): SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'Âm hii' for key 'users.Email' at D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php:580)
+[stacktrace]
+#0 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(580): PDOStatement->execute()
+#1 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(809): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}()
+#2 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(776): Illuminate\\Database\\Connection->runQueryCallback()
+#3 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(569): Illuminate\\Database\\Connection->run()
+#4 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(533): Illuminate\\Database\\Connection->statement()
+#5 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\DatabaseManager.php(469): Illuminate\\Database\\Connection->insert()
+#6 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\support\\Facades\\Facade.php(355): Illuminate\\Database\\DatabaseManager->__call()
+#7 D:\\PNV25-MentalHealtCareApp\\app\\Repositories\\UserRepository.php(26): Illuminate\\Support\\Facades\\Facade::__callStatic()
+#8 D:\\PNV25-MentalHealtCareApp\\app\\Controllers\\Patient\\SignUpController.php(59): App\\Repositories\\UserRepository->insert()
+#9 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(36): App\\Controllers\\Patient\\SignUpController->signUp()
+#10 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#11 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#12 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#13 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#14 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(391): Illuminate\\Container\\Container->call()
+#15 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(356): Laravel\\Lumen\\Application->callControllerCallable()
+#16 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(331): Laravel\\Lumen\\Application->callLumenController()
+#17 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(284): Laravel\\Lumen\\Application->callControllerAction()
+#18 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(269): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute()
+#19 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(171): Laravel\\Lumen\\Application->handleFoundRoute()
+#20 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#21 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#22 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#23 D:\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#24 {main}
+"} 
+[2024-01-08 10:13:59] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\MethodNotAllowedHttpException(code: 0):  at D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:237)
+[stacktrace]
+#0 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 D:\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-08 10:14:31] local.ERROR: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'Âm hii' for key 'users.Email' (Connection: mysql, SQL: INSERT INTO users (ID, Role, FullName, Email, Password) VALUES (2024-01-08 10:14:30, Patient, yAm$1029384756$, Âm hii, anh.pham25@student.passerellesnumeriques.org)) {"exception":"[object] (Illuminate\\Database\\UniqueConstraintViolationException(code: 23000): SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'Âm hii' for key 'users.Email' (Connection: mysql, SQL: INSERT INTO users (ID, Role, FullName, Email, Password) VALUES (2024-01-08 10:14:30, Patient, yAm$1029384756$, Âm hii, anh.pham25@student.passerellesnumeriques.org)) at D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php:817)
+[stacktrace]
+#0 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(776): Illuminate\\Database\\Connection->runQueryCallback()
+#1 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(569): Illuminate\\Database\\Connection->run()
+#2 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(533): Illuminate\\Database\\Connection->statement()
+#3 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\DatabaseManager.php(469): Illuminate\\Database\\Connection->insert()
+#4 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\support\\Facades\\Facade.php(355): Illuminate\\Database\\DatabaseManager->__call()
+#5 D:\\PNV25-MentalHealtCareApp\\app\\Repositories\\UserRepository.php(26): Illuminate\\Support\\Facades\\Facade::__callStatic()
+#6 D:\\PNV25-MentalHealtCareApp\\app\\Controllers\\Patient\\SignUpController.php(59): App\\Repositories\\UserRepository->insert()
+#7 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(36): App\\Controllers\\Patient\\SignUpController->signUp()
+#8 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#9 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#10 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#11 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#12 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(391): Illuminate\\Container\\Container->call()
+#13 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(356): Laravel\\Lumen\\Application->callControllerCallable()
+#14 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(331): Laravel\\Lumen\\Application->callLumenController()
+#15 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(284): Laravel\\Lumen\\Application->callControllerAction()
+#16 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(269): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute()
+#17 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(171): Laravel\\Lumen\\Application->handleFoundRoute()
+#18 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#19 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#20 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#21 D:\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#22 {main}
+
+[previous exception] [object] (PDOException(code: 23000): SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'Âm hii' for key 'users.Email' at D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php:580)
+[stacktrace]
+#0 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(580): PDOStatement->execute()
+#1 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(809): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}()
+#2 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(776): Illuminate\\Database\\Connection->runQueryCallback()
+#3 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(569): Illuminate\\Database\\Connection->run()
+#4 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(533): Illuminate\\Database\\Connection->statement()
+#5 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\DatabaseManager.php(469): Illuminate\\Database\\Connection->insert()
+#6 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\support\\Facades\\Facade.php(355): Illuminate\\Database\\DatabaseManager->__call()
+#7 D:\\PNV25-MentalHealtCareApp\\app\\Repositories\\UserRepository.php(26): Illuminate\\Support\\Facades\\Facade::__callStatic()
+#8 D:\\PNV25-MentalHealtCareApp\\app\\Controllers\\Patient\\SignUpController.php(59): App\\Repositories\\UserRepository->insert()
+#9 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(36): App\\Controllers\\Patient\\SignUpController->signUp()
+#10 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#11 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#12 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#13 D:\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#14 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(391): Illuminate\\Container\\Container->call()
+#15 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(356): Laravel\\Lumen\\Application->callControllerCallable()
+#16 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(331): Laravel\\Lumen\\Application->callLumenController()
+#17 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(284): Laravel\\Lumen\\Application->callControllerAction()
+#18 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(269): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute()
+#19 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(171): Laravel\\Lumen\\Application->handleFoundRoute()
+#20 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#21 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#22 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#23 D:\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#24 {main}
+"} 
+[2024-01-08 10:14:31] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\MethodNotAllowedHttpException(code: 0):  at D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:237)
+[stacktrace]
+#0 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 D:\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-08 10:15:22] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\MethodNotAllowedHttpException(code: 0):  at D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:237)
+[stacktrace]
+#0 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 D:\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 

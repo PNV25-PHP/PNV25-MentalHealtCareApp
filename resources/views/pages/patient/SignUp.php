@@ -1,10 +1,10 @@
-<?php include_once dirname(__DIR__).'/../layouts/HtmlHead.php' ?>
+<?php include_once dirname(__DIR__) . '/../layouts/HtmlHead.php' ?>
 <section class="">
     <div class=" items-center px-5 py-12 lg:px-20">
         <div class="flex flex-col w-full max-w-md p-10 mx-auto my-6 transition duration-500 ease-in-out transform bg-white rounded-lg md:mt-0">
             <div class="mt-8">
                 <div class="mt-6">
-                    <form action="#" method="POST" class="space-y-6">
+                    <form method="POST" class="space-y-6">
                         <div>
                             <label for="email" class="block text-sm font-medium text-neutral-600"> Email address </label>
                             <div class="mt-1">
@@ -30,7 +30,7 @@
                         </div>
 
                         <div>
-                            <button onclick="handleSubmitSignUp()" type="submit" class="flex items-center justify-center w-full px-10 py-4 text-base font-medium text-center text-white transition duration-500 ease-in-out transform bg-blue-600 rounded-xl hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                            <button onclick="handleSubmitSignUp()" type="button" class="flex items-center justify-center w-full px-10 py-4 text-base font-medium text-center text-white transition duration-500 ease-in-out transform bg-blue-600 rounded-xl hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
                                 Sign Up
                             </button>
                         </div>
@@ -56,31 +56,71 @@
 
 <script>
     function handleSubmitSignUp() {
-        const email = document.getElementById("email").value
-        const fullName = document.getElementById("full-name").value
-        const password = document.getElementById("password").value
-console.log ("Email " , email);
-console.log ("Fullname  " , fullName);
-console.log ("Psssword  " , password);
+        const email = document.getElementById("email").value;
+        const fullName = document.getElementById("full-name").value;
+        const password = document.getElementById("password").value;
 
+        console.log("Email: ", email);
+        console.log("Fullname: ", fullName);
+        console.log("Password: ", password);
 
+        if (!email) {
+            document.getElementById("email-error").textContent = "Email is required";
+            return;
+        } else {
+            document.getElementById("email-error").textContent = "";
+        }
 
-        axios.post('/api/patient/sign-up', {email, fullName, password})
+        if (!fullName) {
+            document.getElementById("full-name-error").textContent = "Full Name is required";
+            return;
+        } else {
+            document.getElementById("full-name-error").textContent = "";
+        }
+
+        if (!password) {
+            document.getElementById("password-error").textContent = "Password is required";
+            return;
+        } else {
+            document.getElementById("password-error").textContent = "";
+        }
+
+        axios
+            .post('/api/patient/sign-up', {
+                fullName,
+                email,
+                password
+            })
             .then(res => {
-                const payload = res.data.payload
+                const payload = res.data.payload;
                 if (res.status === 200) {
-                    localStorage.setItem("user-info", JSON.stringify(payload))
-                    window.location.href = "/patient/home"
+                    // localStorage.setItem("user-info", JSON.stringify(payload));
+                    window.location.href = "/patient/home";
                 }
             })
             .catch(error => {
-                if (error.response.status === 401) {
-                    // const errorRes = error.response.data.error
-                    document.getElementById("email-error").textContent = "Email not validate. Should be containt @"
-                    document.getElementById("password-error").textContent = ""
-                    document.getElementById("full-name-error").textContent = errorRes.fullName
+                if (error.response.status === 400) {
+                    const errors = error.response.data;
+                    if (errors.message == 'Invalid email') {
+                        document.getElementById("email-error").textContent = errors.message;
+                        console.log("Email: ", email);
+                        console.log("Fullname: ", fullName);
+                        console.log("Password: ", password);
+                    } else {
+                        document.getElementById("email-error").textContent = "";
+                    }
+                    if (errors.message == 'Invalid password') {
+                        document.getElementById("password-error").textContent = errors.message;
+                    } else {
+                        document.getElementById("password-error").textContent = "";
+                    }
+                    if (errors.message == 'Invalid Fulname') {
+                        document.getElementById("full-name-error").textContent = errors.message;
+                    } else {
+                        document.getElementById("full-name-error").textContent = "";
+                    }
                 }
-            })
+            });
     }
 
     function handleOnClickSignIn() {
@@ -88,4 +128,4 @@ console.log ("Psssword  " , password);
     }
 </script>
 
-<?php include_once dirname(__DIR__).'/../layouts/HtmlTail.php' ?>
+<?php include_once dirname(__DIR__) . '/../layouts/HtmlTail.php' ?>

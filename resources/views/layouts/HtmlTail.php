@@ -1,19 +1,19 @@
-<?php include 'HtmlHead.php'?>
+<?php include 'HtmlHead.php' ?>
 <footer class="bg-blue-900  lg:grid lg:grid-cols-5">
-    <div class="relative block h-32 lg:col-span-2 lg:h-full">
+    <div class="px-4 py-14 relative block h-32 lg:col-span-2 lg:h-full">
         <div class="footer-map ">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3835.3528764429834!2d107.99127304206594!3d15.995135745276437!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3141f7b5026661c9%3A0x847bab3e51ad7ea2!2zQsOgIE7DoCBIaWxscw!5e0!3m2!1svi!2s!4v1699332784043!5m2!1svi!2s" width="380" height="240" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </div>
 
-    <div class="px-4 py-16 sm:px-6 lg:col-span-3 lg:px-8">
+    <div class="px-4 py-14 sm:px-6 lg:col-span-3 lg:px-8">
         <div class="grid grid-cols-1 gap-8 sm:grid-cols-2">
             <div>
                 <p>
                     <span class="text-white text-xs uppercase tracking-wide text-gray-500"> Call us </span>
 
                     <a href="#" class="text-white block text-2xl font-medium text-white hover:opacity-75 sm:text-3xl">
-                        0123456789
+                       036 973 5240 
                     </a>
                 </p>
 
@@ -122,26 +122,5 @@
             </div>
         </div>
 
-        <div class="mt-12 border-t border-gray-100 pt-12">
-            <div class="sm:flex sm:items-center sm:justify-between">
-                <ul class="flex flex-wrap gap-4 text-xs">
-                    <li>
-                        <a href="#" class="text-gray-500 transition hover:opacity-75"> Terms & Conditions </a>
-                    </li>
-
-                    <li>
-                        <a href="#" class="text-gray-500 transition hover:opacity-75"> Privacy Policy </a>
-                    </li>
-
-                    <li>
-                        <a href="#" class="text-gray-500 transition hover:opacity-75"> Cookies </a>
-                    </li>
-                </ul>
-
-                <p class="mt-8 text-xs text-gray-500 sm:mt-0">
-                    &copy; 2022. Company Name. All rights reserved.
-                </p>
-            </div>
-        </div>
     </div>
 </footer>

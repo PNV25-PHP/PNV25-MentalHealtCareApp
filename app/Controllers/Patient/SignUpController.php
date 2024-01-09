@@ -33,6 +33,8 @@ class SignUpController extends Controller
     
         $checkMail = $validation->validateEmail($signUpReq->email);
         $checkPassword = $validation->validatePassword($signUpReq->password);
+        $checkFullName = $validation->validateFullName($signUpReq->fullName);
+
     
         if (!$checkMail) {
             return response()->json([
@@ -45,8 +47,13 @@ class SignUpController extends Controller
                 "message" => "Invalid password",
             ], 400);
         }
+        if (!$checkFullName) {
+            return response()->json([
+                "message" => "Invalid Fulname",
+            ], 400);
+        }
     
-        $newUser = new User(Role::Patient, $signUpReq->email, $signUpReq->password, $signUpReq->fullName);
+        $newUser = new User(Role::Patient,$signUpReq->email, $signUpReq->password,$signUpReq->fullName);
         $newPatient = new Patient($newUser->getId());
     
         $this->userRepository->insert($newUser);
