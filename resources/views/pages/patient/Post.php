@@ -15,12 +15,12 @@
   var user_currently = JSON.parse(localStorage.getItem("user-info"));
   var user_currentlyId = user_currently.Id;
 </script>
-<div id="show_here" class="Grid"></div>
+<div id="show_here" class="Grid bg-slate-700"></div>
 <script>
   var Show_posts = "";
   posts.map((post) => {
     var Show_post =
-      `<div class="p-8 flex items-center justify-center w-screen h-100%">
+      `<div class="flex items-center justify-center w-screen h-100%">
         <div class="px-5 py-4 bg-white dark:bg-gray-800 shadow rounded-lg max-w-lg w-3/4">
             <div class="flex mb-4">
             <img class="w-12 h-12 rounded-full" src="${post.Url_Image}"/>
@@ -34,7 +34,27 @@
             <img src="${post.Image}" alt="" class="w-full h-41 object-cover object-center">
           </div>
         </div>
-        </div>`
+        </div>
+        <section class="lg:py-16 antialiased bg-slate-700">
+          <div class="max-w-2xl mx-auto px-4">
+            <div class="flex justify-between items-center mb-6">
+            <h2 class="text-lg lg:text-2xl font-bold text-gray-900 dark:text-white">Discussion (0)</h2>
+            </div>
+            <form class="mb-6">
+                <div class="px-4 mb-4 bg-white rounded-lg rounded-t-lg border border-gray-200 dark:bg-gray-800 dark:border-gray-700">
+                    <label for="comment" class="sr-only">Your comment</label>
+                    <textarea id="comment" rows="6"
+                        class="px-0 w-full text-sm text-gray-900 border-0 focus:ring-0 focus:outline-none dark:text-white dark:placeholder-gray-400 dark:bg-gray-800"
+                        placeholder="Write a comment..." required></textarea>
+                </div>
+                <button onclick="addComment(${post.Id})"
+                    class="inline-flex items-center py-2.5 px-4 text-xs font-medium text-center text-white bg-primary-700 rounded-lg focus:ring-4 focus:ring-primary-200 dark:focus:ring-primary-900 hover:bg-primary-800">
+                    Post comment
+                </button>
+            </form>
+        </section>
+        <hr class="p-8">
+        `
     Show_posts += Show_post;
   })
   document.getElementById('show_here').innerHTML = Show_posts;
@@ -51,7 +71,6 @@
   <div class="mx-auto w-500 flex flex-col border border-gray-300 p-4 shadow-lg max-w-2xl bg-white">
     <input class="title border border-gray-300 p-2 mb-4 outline-none" spellcheck="false" placeholder="Enter your image Url (online)" type="text" id="image_of_post">
     <textarea class="description sec p-3 h-80 border border-gray-300 outline-none" spellcheck="false" placeholder="Describe everything about this post here" id="text_content"></textarea>
-
     <!-- icons -->
     <div class="icons flex text-gray-500 m-2">
       <svg class="mr-2 cursor-pointer hover:text-gray-700 border rounded-full p-1 h-7" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -83,6 +102,10 @@
 
   function Close() {
     form.style.display = 'none'
+  }
+
+  function addComment(id) {
+    
   }
 
   function addPost() {
