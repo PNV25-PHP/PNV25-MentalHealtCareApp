@@ -23,7 +23,7 @@ $router->get('/', function () use ($router) {
 });
 
 //Common Routers
-$router->get('/sign-in', 'Common\SignInController@index');
+$router->get('/', 'Common\SignInController@index');
 $router->post('/api/sign-in', 'Common\SignInController@signIn');
 $router->post('/api/update/profile', 'Common\ProfileController@updateInformationUser');
 //Patient Routers
@@ -40,3 +40,5 @@ $router->post('/patient/list-doctor/booking', 'Patient\BookingController@booking
 $router->get('/view-profile', 'Common\ProfileController@index');
 $router->get('/edit-profile', 'Common\ProfileController@editProfile');
 $router->post('/api/edit-profile', 'Common\ProfileController@updateInformationUser');
+//search
+$router->get('/patient/search', 'Patient\SearchController@index');

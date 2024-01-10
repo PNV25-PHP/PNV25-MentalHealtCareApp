@@ -1,4 +1,4 @@
-<?php include_once dirname(__DIR__).'/../layouts/HtmlHead.php' ?>
+<?php include_once dirname(__DIR__) . '/../layouts/HtmlHead.php' ?>
 <section class="">
     <div class=" items-center px-5 py-12 lg:px-20">
         <div class="flex flex-col w-full max-w-md p-10 mx-auto my-6 transition duration-500 ease-in-out transform bg-white rounded-lg md:mt-0">
@@ -60,7 +60,11 @@
         const fullName = document.getElementById("full-name").value
         const password = document.getElementById("password").value
 
-        axios.post('/api/patient/sign-up', {email, fullName, password})
+        axios.post('/api/patient/sign-up', {
+                email,
+                fullName,
+                password
+            })
             .then(res => {
                 const payload = res.data.payload
                 if (res.status === 201) {
@@ -79,8 +83,8 @@
     }
 
     function handleOnClickSignIn() {
-        window.location.href = "/sign-in"
+        window.location.href = "/"
     }
 </script>
 
-<?php include_once dirname(__DIR__).'/../layouts/HtmlTail.php' ?>
+<?php include_once dirname(__DIR__) . '/../layouts/HtmlTail.php' ?>

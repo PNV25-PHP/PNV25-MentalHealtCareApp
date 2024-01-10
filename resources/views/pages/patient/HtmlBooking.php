@@ -1,5 +1,5 @@
 <?php include_once dirname(__DIR__) . '/../layouts/HtmlHead.php' ?>
-
+<?php ?>
 <style>
     body {
         background-color: beige;
@@ -54,10 +54,10 @@
     }
 
     #timeContainer {
-        width: 1000px;
+        width: 100%;
         display: flex;
         flex-wrap: wrap;
-        margin-left: 40px;
+        margin: 20px 0px 0px 10px;
     }
 
     .col-span-1 {
@@ -99,6 +99,12 @@
         pointer-events: auto;
     }
 
+    .col-span-1 {
+        width: calc(25% - 20px);
+        margin-bottom: 20px;
+        box-sizing: border-box;
+    }
+
     .booking-success {
         position: fixed;
         top: 50%;
@@ -111,6 +117,7 @@
         z-index: 9999;
         animation: fade-in 0.5s ease-in-out forwards;
     }
+
 
     .booking-success-hidden {
         display: none;
@@ -139,11 +146,9 @@
 
     #header {
         margin-top: 20px;
+        width: 100%;
     }
 
-    #timeContainer {
-        margin-top: 20px;
-    }
 
     #price-booking {
         margin-top: 50px;
@@ -176,9 +181,16 @@
         font-size: 20px;
         color: red;
     }
+
+    #notification {
+        color: red;
+        margin: auto;
+        font-size: 30px;
+        font-weight: bolder;
+    }
 </style>
 
-<div id="container" class=" w-full px-5 py-24 mx-auto lg:px-32">
+<div id="container" class="w-full px-5 py-24 mx-auto ">
     <div class="flex flex-col lg:flex-row lg:space-x-12">
         <div class="order-last w-full max-w-screen-sm m-auto mt-12 lg:w-1/4 lg:order-first">
             <div class="p-4 transition duration-500 ease-in-out transform bg-white border rounded-lg">
@@ -195,42 +207,46 @@
         <div class="w-full px-4 mt-12 prose lg:px-0 lg:w-3/4">
             <div class="mb-5 border-b border-gray-200">
                 <div class="flex flex-wrap items-baseline mt-2">
-                    <h1 class="css-1jxf684 text-2xl font-bold leading-[20.8px] text-primary text-blue-600">Bác sĩ, Chuyên gia Tâm lý <?php echo $doctor[0]->FullName  ?> (Tư vấn từ xa)</h1>
+                    <h1 class="css-1jxf684 text-2xl font-bold leading-[20.8px] text-primary text-blue-600">Doctor, Psychologist <?php echo $doctor[0]->FullName  ?></h1>
                     <div class="paragrap">
-                        <p class="row">Chuyên gia tư vấn giảm căng thẳng, khủng hoảng tâm lý, giúp ngủ ngon, ngủ sâu ở trẻ vị thành niên và người lớn.</p>
-                        <p class="row">Chuyên gia can thiệp tâm lý học đường, giúp cha mẹ và thầy cô quản lý hành vi chống đối, vi phạm kỷ luật của học sinh hoặc giúp học sinh xây dựng tình bạn lành mạnh</p>
-                        <p class="row">Chuyên gia tư vấn vượt qua mất mát, chia ly, lạm dụng và quấy rối tình dục, bạo lực gia đình, bạo lực công sở hoặc tai nạn, thảm họa hoặc căng thẳng về các vấn đề pháp luật.</p>
+                        <p class="row">Expert in counseling for stress reduction, psychological crisis, improving sleep quality, and deep sleep in adolescents and adults.</p>
+                        <p class="row">Expert in school psychological intervention, assisting parents and teachers in managing oppositional behavior, disciplinary violations of students, or helping students build healthy friendships.</p>
+                        <p class="row">Expert in counseling to overcome loss, separation, sexual abuse and harassment, domestic violence, workplace violence, accidents, disasters, or stress related to legal issues.</p>
                     </div>
                 </div>
                 <div id="header" class="w-full bg-blue-500 p-2 text-white text-center mt-2">
-                    <h1 class="text-2xl">Lịch Tư Vấn Của Bác Sĩ</h1>
+                    <h1 class="text-2xl">Doctor's Consultation Schedule</h1>
                     <input type="date" class="date" id="dateInput">
+                </div>
+                <div id="timeContainer">
+                    <p id="notification"></p>
                 </div>
 
                 <div id="booking-overlay" class="booking-overlay booking-overlay-hidden"></div>
 
                 <div id="booking-success" class="booking-success booking-success-hidden">
-                    <span class="booking-success-text">Đặt lịch thành công</span>
+                    <span class="booking-success-text">Appointment successfully booked</span>
                 </div>
-                <div id="timeContainer"></div>
                 <div id="price-booking" class="flex justify-end mt-5">
                     <p id="error"></p>
-                    <div id="prices"> Giá tiền:
+                    <div id="prices" class="flex justify-center items-center mr-3"> Price:
                         <div id="price"></div>
                         VND
                     </div>
-                    <button type="submit" onclick="book()" class="px-6 py-3 text-lg font-semibold text-white transition duration-500 ease-in-out transform bg-blue-600 border border-current rounded hover:bg-blue-700 focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2">Đặt Lịch</button>
+                    <button type="submit" onclick="book()" class="px-6 py-3 text-lg font-semibold text-white transition duration-500 ease-in-out transform bg-blue-600 border border-current rounded hover:bg-blue-700 focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2">Make an appointment</button>
                 </div>
             </div>
         </div>
     </div>
 </div>
 
+
 <script>
     var totalPrice = document.getElementById("price").innerHTML = 0
 
     var currentDate = new Date().toISOString().split('T')[0];
     document.getElementById('dateInput').value = currentDate;
+    document.getElementById('dateInput').setAttribute('min', currentDate);
     var selectedDate = currentDate
     axios.post('/patient/list-doctor/booking/time', {
             selectedDate
@@ -239,7 +255,11 @@
             const listTimes = res.data.listTime
             if (res.status === 201) {
                 console.log("Selected Date: " + selectedDate);
-                resultTime(listTimes)
+                if (listTimes != 0) {
+                    resultTime(listTimes)
+                } else {
+                    document.getElementById("notification").innerHTML = "This day's schedule is fully booked"
+                }
             }
         })
 
@@ -255,7 +275,12 @@
                 const listTimes = res.data.listTime
                 if (res.status === 201) {
                     console.log("Select: " + selectedDate);
-                    resultTime(listTimes)
+                    if (listTimes != 0) {
+                        resultTime(listTimes)
+                    } else {
+                        document.getElementById("notification").innerHTML = "This day's schedule is fully booked"
+                    }
+
                 }
             })
     });
@@ -313,7 +338,6 @@
     var patientId = ""
 
     function scheduleTime(listTime) {
-        console.log(time)
         var checkedRadio = document.querySelector('input[name="selectedTime"]:checked');
         if (checkedRadio) {
             var index = parseInt(checkedRadio.value);
@@ -347,6 +371,7 @@
             doctorId = id;
         }
     }
+
     var data = localStorage.getItem("user-info");
     if (data) {
         var jsonData = JSON.parse(data);
@@ -382,7 +407,7 @@
                     }
                 })
         } else {
-            document.getElementById("error").innerHTML = "Hãy chọn giờ trước khi đặt lịch"
+            document.getElementById("error").innerHTML = "Please select a time before making an appointment"
         }
 
     }

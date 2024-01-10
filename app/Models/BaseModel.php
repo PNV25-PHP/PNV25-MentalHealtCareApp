@@ -15,7 +15,7 @@ abstract class BaseModel
      */
     public function __construct()
     {
-        $this->id = date('Y-m-d H:i:s');
+        $this->id = date('YmdHis');
         $this->createdAt = new DateTime('now', new DateTimeZone('Europe/London'));
     }
 

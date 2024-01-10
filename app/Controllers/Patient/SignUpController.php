@@ -31,7 +31,7 @@ class SignUpController extends Controller
     {
         $signUpReq = new SignUpReq($req);
 
-        //        $error = $signUpReq->validate();
+        //$error = $signUpReq->validate();
         $error = null;
         if ($error != null) {
             return response()->json([

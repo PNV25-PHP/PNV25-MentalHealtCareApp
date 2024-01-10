@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\DB;
 
 class BookingRepository
 {
-    private string $tableName = "booking";
+    private string $tableName = "booking"; 
 
     public function insert(Booking $booking)
     {
