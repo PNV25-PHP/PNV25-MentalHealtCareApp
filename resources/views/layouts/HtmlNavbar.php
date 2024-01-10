@@ -11,8 +11,12 @@
   .search {
     margin-right: 5px;
   }
+
+  .flex {
+    align-items: center;
+  }
 </style>
-<nav class="bg-gray-800">
+<nav class="bg-blue-900">
   <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
     <div class="relative flex h-16 items-center justify-between">
       <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -29,29 +33,20 @@
       </div>
       <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
         <div class="flex flex-shrink-0 items-center">
-          <img class="h-11 w-11" src="https://res.cloudinary.com/dkvvko14m/image/upload/v1704189315/MentalHealthCare/qbtgghz1acud1e8orfn5.png" alt="Your Company">
+          <a href="/patient/home">
+            <img class="h-20 w-20" src="https://res.cloudinary.com/dkvvko14m/image/upload/v1704189315/MentalHealthCare/qbtgghz1acud1e8orfn5.png" alt="Your Company">
+          </a>
         </div>
-        <div class="hidden sm:ml-6 sm:block">
-          <div class="flex space-x-4">
-            <a href="/patient/home" class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page">Home </a>
-            <a href="/patient/list-doctor" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Booking</a>
-            <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Contact Us</a>
-            <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">About Us </a>
+        <div class="hidden sm:ml-10 sm:block">
+          <div class="flex space-x-4 ">
+            <a href="/patient/home" onclick="cssNavbar()" id="home" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Home </a>
+            <a href="/patient/list-doctor" onclick="cssNavbar()" id="booking" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Booking</a>
+            <a href="/patient/post" onclick="cssNavbar()" id="post" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Posts</a>
           </div>
         </div>
       </div>
       <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-        <div class="search">
-          <button type="button" id="search" class="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
-            <span class="absolute -inset-1.5"></span>
-            <span class="sr-only">Search</span>
-            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="11" cy="11" r="8" />
-              <path d="M21 21l-4.35-4.35" />
-            </svg>
-          </button>
-        </div>
-        <button type="button" class="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+        <button type="button" class="relative rounded-full  p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
           <span class="absolute -inset-1.5"></span>
           <span class="sr-only">View notifications</span>
           <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
@@ -80,11 +75,6 @@
 </nav>
 
 <script>
-  const searchButton = document.getElementById('search');
-  searchButton.addEventListener('click', function() {
-    window.location.href = "/patient/search"
-  });
-
   function SignOut() {
     event.preventDefault();
     axios.post('/api/update/profile', {
@@ -99,4 +89,52 @@
         console.log(error);
       });
   };
+
+  var user_info = JSON.parse(localStorage.getItem("user-info"));
+  var imagePath = user_info.image;
+  if (imagePath == "") {
+    document.getElementById('avatar').src = "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+  } else {
+    document.getElementById('avatar').src = imagePath
+  }
+
+
+
+  var url = window.location.href;
+  var startIndex = url.indexOf("http://localhost:8000") + "http://localhost:8000".length;
+  if (startIndex !== -1) {
+    var substring = url.substring(startIndex);
+    if (substring == "/patient/home") {
+      var field = document.getElementById('home');
+      field.style.backgroundColor = 'black';
+      field.style.color = 'white';
+      var field = document.getElementById('booking');
+      field.style.backgroundColor = '';
+      var field = document.getElementById('post');
+      field.style.backgroundColor = '';
+    }
+    if (substring == "/patient/list-doctor") {
+      var field = document.getElementById('booking');
+      field.style.color = 'white';
+      field.style.backgroundColor = 'black';
+      var field = document.getElementById('post');
+      field.style.backgroundColor = '';
+      var field = document.getElementById('home');
+      field.style.backgroundColor = '';
+    }
+    if (substring == "/patient/post") {
+      var field = document.getElementById('post');
+      field.style.color = 'white';
+      field.style.backgroundColor = 'black';
+      var field = document.getElementById('booking');
+      field.style.backgroundColor = '';
+      var field = document.getElementById('home');
+      field.style.backgroundColor = '';
+    }
+  }
+
+  function SignOut() {
+    window.location.href = "/"
+    localStorage.clear();
+  }
 </script>

@@ -26,24 +26,49 @@ class SignUpController extends Controller
     {
         return view("pages\patient\SignUp");
     }
-
     public function signUp(Request $req)
     {
         $signUpReq = new SignUpReq($req);
+        $validation = new UserRepository();
 
-        //$error = $signUpReq->validate();
-        $error = null;
-        if ($error != null) {
+        $checkMail = $validation->validateEmail($signUpReq->email);
+        $checkPassword = $validation->validatePassword($signUpReq->password);
+        $checkFullName = $validation->validateFullName($signUpReq->fullName);
+
+        if ($signUpReq->email == null || $signUpReq->password == null || $signUpReq->fullName == null) {
             return response()->json([
-                "message" => "validation error",
-                "error" => $error
-            ], 400);
+                "message" => "Please enter complete information",
+                "error" => [
+                    "email" => $signUpReq->email,
+                    "password" => $signUpReq->password,
+                    "fullName" => $signUpReq->fullName
+                ]
+            ], 422);
         }
 
-        // TODO create new user and new patient
+
+        if (!$checkMail || !$checkPassword || !$checkFullName) {
+            return response()->json([
+                "message" => "Invalid",
+                "error" => [
+                    "email" => !$checkMail,
+                    "password" => !$checkPassword,
+                    "fullName" => !$checkFullName
+                ]
+            ], 400);
+        }
+        
+        $userRepository = new UserRepository();
+        $user = $userRepository->findByEmail($signUpReq->email);
+        if ($user != null) {
+            return response()->json([
+                "message" => "email already exists",
+                "error" => "email is error"
+            ], 401);
+        }
+
         $newUser = new User(Role::Patient, $signUpReq->email, $signUpReq->password, $signUpReq->fullName);
         $newPatient = new Patient($newUser->getId());
-        // TODO insert to db
 
         $this->userRepository->insert($newUser);
         $this->patientRepository->insert($newPatient);

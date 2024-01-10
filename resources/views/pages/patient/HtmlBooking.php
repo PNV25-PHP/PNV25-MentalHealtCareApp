@@ -264,6 +264,7 @@
         })
 
     dateInput.addEventListener('change', function() {
+        document.getElementById("error").innerHTML = ""
         time = ""
         var selectedDate = dateInput.value;
         var totalPrice = document.getElementById("price").innerHTML = 0
@@ -383,6 +384,11 @@
     function book() {
         if (time != "") {
             var selectedDate = dateInput.value;
+            console.log(patientId)
+            console.log(doctorId)
+            console.log(time)
+            console.log(selectedDate)
+            console.log(price)
             axios.post('/patient/list-doctor/booking', {
                     patientId: patientId,
                     doctorId: doctorId,

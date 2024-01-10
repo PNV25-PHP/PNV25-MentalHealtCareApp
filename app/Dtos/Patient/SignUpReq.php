@@ -16,13 +16,4 @@ class SignUpReq
         $this->fullName = $req->input("fullName");
         $this->password = $req->input("password");
     }
-
-    public function validate()
-    {
-        return [
-            "email" => "email already taken",
-            "fullName" => "full name is required",
-            "password" => "invalid password format"
-        ];
-    }
 }

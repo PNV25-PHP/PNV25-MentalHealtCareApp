@@ -13,7 +13,7 @@ class SignInController extends Controller
 {
     public function index()
     {
-        return view("pages\Common\SignIn");
+        return view("pages\common\SignIn");
     }
 
     public function signIn(Request $req)
@@ -23,7 +23,11 @@ class SignInController extends Controller
         if ($signInRequest->email == null || $signInRequest->password == null) {
             return response()->json([
                 'message' => 'Please enter complete information',
-            ], 401);
+                'error' => [
+                    "email" => $signInRequest->email,
+                    "password" => $signInRequest->password
+                ]
+            ], 422);
         }
 
         $userRepository = new UserRepository();

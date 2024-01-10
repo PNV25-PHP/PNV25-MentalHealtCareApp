@@ -10,13 +10,6 @@ class UserRepository
 {
     private string $tableName = "users";
 
-    // public function insert(User $user)
-    // {
-    //     DB::insert(
-    //         "insert into $this->tableName (ID, Role, Email, Password)",
-    //         [$user->id, $user->role, $user->email, $user->password]
-    //     );
-    // }
 
     public function insert(User $user)
     {
@@ -89,5 +82,32 @@ class UserRepository
         $url_image = $user->getUrlImage();
         $query = DB::update("UPDATE users SET role = ?, password = ?, fullname = ?, phone = ?, address = ?, url_image = ? WHERE email = ?", [$role, $password, $fullname, $phone, $address, $url_image, $email]);
         return $query;
+    }
+
+    function validateEmail($email)
+    {
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            return false;
+        }
+        return true;
+    }
+
+    function validatePassword($password)
+    {
+        if (strlen($password) < 6) {
+            return false;
+        }
+        if (!preg_match("/^(?=.*[!@#$%^&*])(?=.*[0-9])(?=.*[A-Z])(?=.*[a-z]).{6,}$/", $password)) {
+            return false;
+        }
+        return true;
+    }
+    
+    function validateFullName($fullName)
+    {
+        if (strlen($fullName) < 2) {
+            return false;
+        }
+        return true;
     }
 }

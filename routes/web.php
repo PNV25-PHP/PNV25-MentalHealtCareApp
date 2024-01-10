@@ -13,17 +13,19 @@
 |
 */
 
-use Illuminate\Support\Facades\DB;
-use Illuminate\Database\Connection;
+
 
 
 
 $router->get('/', function () use ($router) {
-    return $router->app->version();
+    if ($_SERVER['REQUEST_URI'] === '/') {
+        header('Location: /login');
+        exit;
+    }
 });
 
 //Common Routers
-$router->get('/', 'Common\SignInController@index');
+$router->get('/login', 'Common\SignInController@index');
 $router->post('/api/sign-in', 'Common\SignInController@signIn');
 $router->post('/api/update/profile', 'Common\ProfileController@updateInformationUser');
 //Patient Routers
