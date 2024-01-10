@@ -31,7 +31,7 @@ include_once dirname(__DIR__) . '../../layouts/HtmlHead.php';
     const doctorData = {
         labels: getBookingCountByDoctor.map(item => item.doctorFullName),
         datasets: [{
-            label: 'Số lượng đặt hàng',
+            label: 'Số lượng lượt booking',
             data: getBookingCountByDoctor.map(item => item.BookingCount),
             backgroundColor: [
                 'rgba(255, 193, 7, 0.6)', // Bright Yellow
