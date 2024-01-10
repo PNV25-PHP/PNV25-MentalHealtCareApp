@@ -24,7 +24,7 @@ include_once dirname(__DIR__) . '../../layouts/HtmlHead.php';
 <?php include_once dirname(__DIR__) . '../../layouts/HtmlTail.php'   ?>
 
 <script>
-    // Thực hiện truy vấn để lấy dữ liệu số lượng đặt hàng cho từng bác sĩ
+    // Thực hiện truy vấn để lấy dữ liệu số lượng đơn cho từng bác sĩ
     const getBookingCountByDoctor = <?php echo json_encode($GetNumberBooking); ?>;
     
     // Xử lý dữ liệu để đưa vào biểu đồ

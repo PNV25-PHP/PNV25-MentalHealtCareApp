@@ -139,8 +139,6 @@
         </form>
     </div>
 </div>
-
-
 <!-- Modal for Delete -->
 <div id="deleteModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
     <div class="bg-white p-8 rounded">
@@ -174,7 +172,6 @@
         </div>
     </div>
 </div>
-
 <!-- Modal for Update -->
 <div id="updateModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
     <div class="bg-white p-8 rounded">

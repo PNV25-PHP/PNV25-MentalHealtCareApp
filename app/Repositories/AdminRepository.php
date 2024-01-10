@@ -137,7 +137,6 @@ function getBookingCountByDoctor()
     JOIN users AS doctor_users ON doctors.UserId = doctor_users.Id
     GROUP BY doctors.Id;
     ";
-
     return DB::select($sql);
 }
 }

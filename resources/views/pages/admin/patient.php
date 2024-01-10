@@ -79,8 +79,7 @@
                         <input id="emaill" name="emaill" type="email" autocomplete="email" required="" placeholder="Your Email" class="block w-full px-5 py-3 text-base text-neutral-600 placeholder-gray-300 transition duration-500 ease-in-out transform border border-transparent rounded-lg bg-gray-50 focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-300">
                     </div>
                 </div>
-
-
+                
                 <div>
                     <label for="numberPhone" class="block text-sm font-medium text-neutral-600"> Số điện thoại</label>
                     <div class="mt-1">
@@ -121,8 +120,6 @@
         </form>
     </div>
 </div>
-
-
 <!-- Modal for Delete -->
 <div id="deleteModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
     <div class="bg-white p-8 rounded">
@@ -156,7 +153,6 @@
         </div>
     </div>
 </div>
-
 <!-- Modal for Update -->
 <div id="updateModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
     <div class="bg-white p-8 rounded">
