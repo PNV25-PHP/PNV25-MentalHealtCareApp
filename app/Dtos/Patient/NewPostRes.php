@@ -6,20 +6,19 @@ class NewPostRes
 {
     public string $id;
     public string $userid;
-    public string $conten;
+    public string $content;
     public string $image;
 
     /**
-     * @param string $id
      * @param string $userid
      * @param string $conten
      * @param string $image
      */
-    public function __construct(string $id, string $userid, string $conten, string $image)
+    public function __construct(string $userid, string $content, string $image)
     {
-        $this->id = $id;
+        // $this->id = $id;
         $this->userid = $userid;
-        $this->conten = $conten;
+        $this->content = $content;
         $this->image = $image;
     }
 }

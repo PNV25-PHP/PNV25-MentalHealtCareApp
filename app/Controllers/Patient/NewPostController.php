@@ -6,39 +6,55 @@ namespace App\Controllers\Patient;
 use Laravel\Lumen\Routing\Controller;
 use Illuminate\Support\Facades\DB;
 use App\Models\Post;
-use Illuminate\Http\Client\Request;
+use Illuminate\Http\Request;
+use App\Dtos\Patient\NewPostReq;
+use Carbon\Carbon;
 
 class NewPostController extends Controller
 {
 
     public function index()
     {
-        $sql = "SELECT p.Id, p.UserId, p.Content, p.Image, p.CreatedAt, u.Role, u.Email, u.FullName, u.Phone, u.Address, u.Url_Image
+        $sql = "SELECT p.Id, p.UserId, p.Content, p.Url_Image AS Image, p.CreatedAt, u.Role, u.Email, u.FullName, u.Phone, u.Address, u.Url_Image
         FROM posts p
-        JOIN users u ON p.UserId = u.Id;";
+        JOIN users u ON p.UserId = u.Id
+        ORDER BY p.CreatedAt DESC;
+        ";
         $posts = DB::select($sql);
         return view('pages.patient.Post')->with('posts', $posts);
     }
+    public function addPost(Request $request)
+    {
+        $req = new NewPostReq($request);
 
-    public function addPost(Request $req)
-{
-    $post = new Post($req->getUserId(), $req->getContent(), $req->getUrl_Image(), $req->getCreateAt());
+        // Kiểm tra xem Url_Image đã được gửi lên hay không
+        if ($req->image === null || $req->image === "") {
+            return response()->json(['error' => 'Hình ảnh không được bỏ trống'], 400);
+        }
 
-    $sql = "INSERT INTO posts (Id, UserId, Content, Url_Image, CreatedAt) VALUES (?, ?, ?, ?, ?);";
-    $params = [
-        $post->getId(),
-        $post->getUserId(),
-        $post->getContent(),
-        $post->getUrl_Image(),
-        $post->getCreateAt(),
-    ];
+        // // Kiểm tra số lượng bài viết trong ngày
+        // $userId = $req->userId;
+        // $todayPostsCount = DB::table('posts')
+        //     ->where('UserId', $userId)
+        //     ->whereRaw('DATE(CreatedAt) = CURDATE()')
+        //     ->count();
 
-    $result = DB::insert($sql, $params);
+        // // Nếu số lượng bài viết đã đạt đến giới hạn (trong trường hợp này là 3), từ chối thêm bài viết mới
+        // $maxPostsPerDay = 3;
+        // if ($todayPostsCount >= $maxPostsPerDay) {
+        //     return response()->json(['error' => 'Đã đạt đến số lượng bài viết tối đa trong ngày'], 400);
+        // }
 
-    if ($result) {
-        return "message cập nhật thành công";
-    } else {
-        return "message cập nhật không thành công";
+        // Thêm bài viết vào cơ sở dữ liệu
+        $sql = "INSERT INTO posts (UserId, Content, Url_Image) VALUES (?, ?, ?);";
+        $params = [
+            $req->userId,
+            $req->content,
+            $req->image,
+        ];
+
+        DB::insert($sql, $params);
+
+        return response()->json(['success' => 'Bài viết đã được thêm thành công'], 200);
     }
-}
 }

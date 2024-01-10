@@ -53,13 +53,14 @@ CREATE TABLE Messages (
 );
 
 CREATE TABLE posts (
-  Id varchar(255) Unique primary key,
+  Id INT AUTO_INCREMENT PRIMARY KEY,
   UserId varchar(255) NOT NULL,
   Content varchar(255) NOT NULL,
   Url_Image VARCHAR(200),
   CreatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   FOREIGN KEY (UserId) REFERENCES users(Id)
 );
+
 
 -- Chèn dữ liệu cho bác sĩ (doctors)
 INSERT INTO users (Id, Role, Email, Password, Fullname, Phone, Address, Url_Image)

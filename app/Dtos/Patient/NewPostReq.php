@@ -5,20 +5,15 @@ use Illuminate\Http\Request;
 
 class NewPostReq
 {
+    public string $userId;
+    public string $content;
     public string $image;
-    public string $conten;
 
     public function __construct(Request $req)
     {
-        $this->image = $req->input("image");
-        $this->conten = $req->input("conten");
+        $this->userId = $req->input("userId");
+        $this->image = $req->input("urlImage");
+        $this->content = $req->input("content");
     }
 
-    public function validate()
-    {
-        return [
-            "image" => "Dosen't has",
-            "conten" => "Too long",
-        ];
-    }
 }

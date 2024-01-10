@@ -1,6 +1,19 @@
 <?php include_once dirname(__DIR__) . '/../layouts/HtmlHead.php' ?>
 <script>
   const posts = <?= json_encode($posts) ?>;
+  var userObject = {
+    Id: 11,
+    FullName: "John Doe",
+    Email: "john@example.com",
+    password: "password",
+    Role: "Patient",
+    Phone: "097163727",
+    Address: "123 Đường A, Quận 1, Tp.Đà Nẵng",
+    Url_Image: "anh.png",
+  };
+  localStorage.setItem("user-info", JSON.stringify(userObject));
+  var user_currently = JSON.parse(localStorage.getItem("user-info"));
+  var user_currentlyId = user_currently.Id;
 </script>
 <div id="show_here" class="Grid"></div>
 <script>
@@ -36,8 +49,8 @@
 <div class="fixed z-0 flex top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-3/6" id="form-post">
   <div class="heading text-center font-bold text-2xl m-5 text-gray-800">New Post</div>
   <div class="mx-auto w-500 flex flex-col border border-gray-300 p-4 shadow-lg max-w-2xl bg-white">
-    <input class="title border border-gray-300 p-2 mb-4 outline-none" spellcheck="false" placeholder="Title" type="file">
-    <textarea class="description sec p-3 h-80 border border-gray-300 outline-none" spellcheck="false" placeholder="Describe everything about this post here"></textarea>
+    <input class="title border border-gray-300 p-2 mb-4 outline-none" spellcheck="false" placeholder="Enter your image Url (online)" type="text" id="image_of_post">
+    <textarea class="description sec p-3 h-80 border border-gray-300 outline-none" spellcheck="false" placeholder="Describe everything about this post here" id="text_content"></textarea>
 
     <!-- icons -->
     <div class="icons flex text-gray-500 m-2">
@@ -56,7 +69,7 @@
     <!-- buttons -->
     <div class="buttons flex">
       <div class="btn border border-gray-300 p-1 px-4 font-semibold cursor-pointer text-gray-500 ml-auto" onclick="Close()">Cancel</div>
-      <div class="btn border border-indigo-500 p-1 px-4 font-semibold cursor-pointer text-gray-200 ml-2 bg-indigo-500">Post</div>
+      <button class="btn border border-indigo-500 p-1 px-4 font-semibold cursor-pointer text-gray-200 ml-2 bg-indigo-500" onclick="addPost()">Post</button>
     </div>
   </div>
 </div>
@@ -73,13 +86,16 @@
   }
 
   function addPost() {
+    var urlImage = document.getElementById('image_of_post').value;
+    var content = document.getElementById('text_content').value;
+
     const postData = {
-      userId: userId,
+      userId: user_currentlyId,
       content: content,
       urlImage: urlImage,
     };
 
-    fetch('/api/patient/Post/Add-New-Post', {
+    fetch('/api/patient/Post/AddPost', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -88,12 +104,17 @@
       })
       .then(response => response.json())
       .then(data => {
-        // Xử lý dữ liệu response từ server (nếu cần)
-        console.log(data);
+        // Xử lý URL sau khi thêm bài viết thành công
+        if (data.success) {
+          // Redirect hoặc thực hiện các hành động khác với URL '/Posts'
+          window.location.href = '/Posts';
+        } else {
+          // Xử lý khi có lỗi nếu cần
+          console.error('Có lỗi khi thêm bài viết:', data.error);
+        }
       })
       .catch(error => {
-        // Xử lý lỗi (nếu có)
-        console.error(error);
+        console.error('Lỗi kết nối:', error);
       });
   }
 </script>

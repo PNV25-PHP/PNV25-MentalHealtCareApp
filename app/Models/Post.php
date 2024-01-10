@@ -6,18 +6,18 @@ class Post extends BaseModel
 {
     public string $userid;
     private string $Content;
-    private string $Url_Image;
-    private string $CreateAt;
+    private string $Image;
+    // private string $CreateAt;
     /**
      * @param string $userid
      */
-    public function __construct(string $userid, string $Content, string $Url_Image, string $CreateAt)
+    public function __construct(string $userid, string $Content, string $Image) //, string $CreateAt
     {
         parent::__construct();
         $this->userid = $userid;
         $this->Content = $Content;
-        $this->Url_Image = $Url_Image;
-        $this->CreateAt = $CreateAt;
+        $this->Image = $Image;
+        // $this->CreateAt = $CreateAt;
     }
 
     public function getUserId(): string
@@ -30,14 +30,8 @@ class Post extends BaseModel
         return $this->Content;
     }
 
-    public function getUrl_Image(): string
+    public function getImage(): string
     {
-        return $this->Url_Image;
+        return $this->Image;
     }
-    
-    public function getCreateAt(): string
-    {
-        return $this->CreateAt;
-    }
-
 }
