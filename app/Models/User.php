@@ -21,8 +21,8 @@ class User extends BaseModel
         string $fullName,
         string|null $address = null,
         string|null $phone = null,
-        string|null $urlImage = null)
-    {
+        string|null $urlImage = null
+    ) {
         parent::__construct();
         $this->role = $role;
         $this->email = $email;
@@ -65,7 +65,7 @@ class User extends BaseModel
 
     public function getAddress(): string
     {
-        return $this->address;
+        return $this->address == null ? "" : $this->address;
     }
 
     public function setAddress(string $address): void
@@ -75,7 +75,7 @@ class User extends BaseModel
 
     public function getPhone(): string
     {
-        return $this->phone;
+        return $this->phone == null ? "" : $this->phone;
     }
 
     public function setPhone(string $phone): void
@@ -85,7 +85,7 @@ class User extends BaseModel
 
     public function getUrlImage(): string
     {
-        return $this->urlImage;
+        return $this->urlImage == null ? "" : $this->urlImage;
     }
 
     public function setUrlImage(string $urlImage): void

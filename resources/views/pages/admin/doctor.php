@@ -1,6 +1,6 @@
 <?php include_once dirname(__DIR__) . '../../layouts/HtmlHead.php'; ?>
 <script>
-    const doctors = <?= json_encode($doctors) ?>;
+    const doctors = <?= json_encode($doctors);?>;
 </script>
 <div class="flex flex-wrap bg-gray-100 w-full h-screen">
     <?php include_once dirname(__DIR__) . '../../layouts/HtmlSidebarAdmin.php' ?>
@@ -370,4 +370,3 @@
             });
     };
 </script>
-<?php include_once dirname(__DIR__) . '../../layouts/HtmlTail.php'   ?>

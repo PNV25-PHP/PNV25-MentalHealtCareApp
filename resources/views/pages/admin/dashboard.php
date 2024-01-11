@@ -20,9 +20,6 @@ include_once dirname(__DIR__) . '../../layouts/HtmlHead.php';
         </div>
     </div>
 </div>
-
-<?php include_once dirname(__DIR__) . '../../layouts/HtmlTail.php'   ?>
-
 <script>
     // Thực hiện truy vấn để lấy dữ liệu số lượng đơn cho từng bác sĩ
     const getBookingCountByDoctor = <?php echo json_encode($GetNumberBooking); ?>;

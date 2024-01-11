@@ -43,6 +43,24 @@ CREATE TABLE booking (
   FOREIGN KEY (DoctorId) REFERENCES doctors(Id)
 );
 
+CREATE TABLE listTimeDoctor (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    time TIME NOT NULL,
+   price DECIMAL(10, 2)
+);
+
+INSERT INTO listTimeDoctor (time, price) VALUES 
+    ('08:00:00', 500.00),
+    ('09:00:00', 500.00),
+    ('10:00:00', 500.00),
+    ('11:00:00', 500.00),
+    ('12:00:00', 500.00),
+    ('13:00:00', 500.00),
+    ('14:00:00', 500.00),
+    ('15:00:00', 500.00),
+    ('16:00:00', 500.00),
+    ('17:00:00', 500.00);
+
 USE mvc_project;
 INSERT INTO booking(Id, PatientId, DoctorId, TimeBooking, DateBooking, TotalPrice)
 VALUES
