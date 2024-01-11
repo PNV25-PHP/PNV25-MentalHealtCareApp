@@ -60,13 +60,14 @@
     var date = document.getElementById('date').value;
     var phoneNumber = document.getElementById('phoneNumber').value;
     var address = document.getElementById('address').value;
-
+    
     user_info_update.image = img;
     user_info_update.fullName = username;
     user_info_update.email = email;
     user_info_update.date = date;
     user_info_update.phone = phoneNumber;
     user_info_update.address = address;
+    user_info_update.role;
     console.log(user_info_update);
 
     // Gửi yêu cầu POST đến endpoint PHP
@@ -87,36 +88,4 @@
         console.error('Error:', error);
     });
 }
-
-
-    //     function uploadImage() {
-    //   const formData = new FormData();
-    //   formData.append('image', document.getElementById('image').files[0]);
-
-    //   fetch('/upload-image', {
-    //     method: 'POST',
-    //     body: formData
-    //   })
-    //   .then(response => response.text())
-    //   .then(result => {
-    //     console.log(result);
-
-    //     if (result === 'success') {
-    //       // Lưu thông tin người dùng vào localStorage
-    //       const userInfo = {
-    //         fname: document.getElementById('fname').value,
-    //         lname: document.getElementById('lname').value,
-    //         email: document.getElementById('email').value,
-    //         password: document.getElementById('password').value
-    //       };
-
-    //       localStorage.setItem('user-info', JSON.stringify(userInfo));
-
-    //       console.log('User info saved to localStorage.');
-    //     }
-    //   })
-    //   .catch(error => {
-    //     console.error('Error:', error);
-    //   });
-    // }
 </script>

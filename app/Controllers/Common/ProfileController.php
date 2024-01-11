@@ -60,6 +60,7 @@ class ProFileController extends Controller
         $change = new UserRepository();
 
         $user = new User($role, $proFileRequest->email, $proFileRequest->password, $proFileRequest->fullname, $proFileRequest->address == null ? "Please update" : $proFileRequest->address, $proFileRequest->phone == null ? "Please update" : $proFileRequest->phone, $proFileRequest->url_image == null ? "Please update" : $proFileRequest->url_image);
+        
         $result =  $change->updateUser($user);
         $createUpdateUser = $change->findByEmail($proFileRequest->email);
         $requestPatient = new PatientRepository();
