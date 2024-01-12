@@ -61,6 +61,32 @@ CREATE TABLE posts (
   FOREIGN KEY (UserId) REFERENCES users(Id)
 );
 
+-- Thêm cột CommentId vào bảng posts
+ALTER TABLE posts
+ADD COLUMN CommentId INT;
+
+-- Tạo bảng comments
+CREATE TABLE comments (
+  CommentId INT AUTO_INCREMENT PRIMARY KEY,
+  PostId INT,
+  UserId VARCHAR(255) NOT NULL,
+  CommentContent VARCHAR(255) NOT NULL,
+  CreatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (PostId) REFERENCES posts(Id),
+  FOREIGN KEY (UserId) REFERENCES users(Id)
+);
+
+-- Cập nhật cột CommentId trong bảng posts để thể hiện mối quan hệ với bảng comments
+UPDATE posts
+SET CommentId = comments.CommentId
+FROM comments
+WHERE posts.Id = comments.PostId;
+
+-- Tạo khóa ngoại trên cột CommentId trong bảng posts
+ALTER TABLE posts
+ADD CONSTRAINT FK_CommentId
+FOREIGN KEY (CommentId) REFERENCES comments(CommentId);
+
 
 -- Chèn dữ liệu cho bác sĩ (doctors)
 INSERT INTO users (Id, Role, Email, Password, Fullname, Phone, Address, Url_Image)
@@ -76,9 +102,6 @@ VALUES
   ('9', 'doctor', 'doctor19@mental.health.care.hospital', 'password9', 'Phạm Văn T', '0921-123-456', '567 Đường T, Quận 19, TP.HCM', 'image19.jpg'),
   ('10', 'doctor', 'doctor20@mental.health.care.hospital', 'password10', 'Lê Thị U', '0921-234-567', '890 Đường U, Quận 20, TP.HCM', 'image20.jpg');
 
-
-
-
 INSERT INTO doctors (Id, UserId, Specialization, Hospital)
 VALUES
   ('1',  '1', 'Tâm lý học', 'Bệnh viện Tâm thần Trung ương'),
@@ -92,7 +115,6 @@ VALUES
   ('9','9', 'Y học giấc ngủ', 'Bệnh viện Tâm thần Bình Dương'),
   ('10','10', 'Tâm thần liên hệ', 'Bệnh viện Tâm thần Vũng Tàu');
 
-
 -- Chèn dữ liệu cho bệnh nhân (patients)
 INSERT INTO users (Id, Role, Email, Password, FullName, Phone, Address, Url_Image)
 VALUES
@@ -102,7 +124,6 @@ VALUES
   ('14','patient', 'benh_nhan4@example.com', 'password4', 'Lê Văn Tùng', '4444444444', '012 Đường D, Quận 4, TP.HCM', 'image4.jpg'),
   ('15','patient', 'benh_nhan5@example.com', 'password5', 'Nguyễn Thị Mỹ', '5555555555', '345 Đường E, Quận 5, TP.HCM', 'image5.jpg');
 
-
 INSERT INTO patients (Id, UserId)
 VALUES
   ('1','11'),
@@ -110,7 +131,6 @@ VALUES
    ('3','13'),
    ('4', '14'),
    ('5','15');
-
 
 -- Chèn dữ liệu cho quản trị viên (admins)
 INSERT INTO users (Id, Role, Email, Password, FullName, Phone, Url_Image)

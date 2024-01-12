@@ -30,3 +30,4 @@ $router->get('/patient/home', 'Patient\HomeController@index');
 $router->get('/Posts', 'Patient\NewPostController@index');
 $router->post('/api/patient/Post/AddPost', 'Patient\NewPostController@addPost');
 $router->post('/api/patient/Post/upload-image', 'Patient\NewPostController@uploadImage');
+$router->post('/api/comment/addComment', 'Patient\NewPostController@addComment');

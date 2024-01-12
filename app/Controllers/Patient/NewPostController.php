@@ -8,42 +8,48 @@ use Illuminate\Support\Facades\DB;
 use App\Models\Post;
 use Illuminate\Http\Request;
 use App\Dtos\Patient\NewPostReq;
-use Carbon\Carbon;
 
 class NewPostController extends Controller
 {
 
     public function index()
     {
-        $sql = "SELECT p.Id, p.UserId, p.Content, p.Url_Image AS Image, p.CreatedAt, u.Role, u.Email, u.FullName, u.Phone, u.Address, u.Url_Image
-        FROM posts p
-        JOIN users u ON p.UserId = u.Id
-        ORDER BY p.CreatedAt DESC;
-        ";
+        $sql = "SELECT 
+        p.Id AS PostId, 
+        p.UserId AS PostUserId, 
+        p.Content AS PostContent, 
+        p.Url_Image AS PostImage, 
+        p.CreatedAt AS PostCreatedAt, 
+        u.Role AS UserRole, 
+        u.Email AS UserEmail, 
+        u.FullName AS UserFullName, 
+        u.Phone AS UserPhone, 
+        u.Address AS UserAddress, 
+        u.Url_Image AS UserImageUrl,
+        c.CommentId AS CommentId,
+        c.UserId AS CommentUserId,
+        c.CommentContent AS CommentContent,
+        c.PostId AS CommentPostId,
+        c.CreatedAt AS CommentCreatedAt
+    FROM posts p
+    JOIN users u ON p.UserId = u.Id
+    LEFT JOIN comments c ON p.CommentId = c.CommentId
+    ORDER BY p.CreatedAt DESC;";
+    $sql2 = "SELECT c.*, u.Role AS UserRole, u.Email AS UserEmail, u.FullName AS UserFullName, u.Phone AS UserPhone, u.Address AS UserAddress, u.Url_Image AS UserImageUrl
+    FROM comments c
+    JOIN users u ON c.UserId = u.Id;
+    ";
         $posts = DB::select($sql);
-        return view('pages.patient.Post')->with('posts', $posts);
+        $comments = DB::select($sql2);
+        return view('pages.patient.Post')->with(['posts' => $posts, 'comments' => $comments]);
     }
     public function addPost(Request $request)
     {
         $req = new NewPostReq($request);
-
         // Kiểm tra xem Url_Image đã được gửi lên hay không
         if ($req->image === null || $req->image === "") {
             return response()->json(['error' => 'Hình ảnh không được bỏ trống'], 400);
         }
-
-        // // Kiểm tra số lượng bài viết trong ngày
-        // $userId = $req->userId;
-        // $todayPostsCount = DB::table('posts')
-        //     ->where('UserId', $userId)
-        //     ->whereRaw('DATE(CreatedAt) = CURDATE()')
-        //     ->count();
-
-        // // Nếu số lượng bài viết đã đạt đến giới hạn (trong trường hợp này là 3), từ chối thêm bài viết mới
-        // $maxPostsPerDay = 3;
-        // if ($todayPostsCount >= $maxPostsPerDay) {
-        //     return response()->json(['error' => 'Đã đạt đến số lượng bài viết tối đa trong ngày'], 400);
-        // }
 
         // Thêm bài viết vào cơ sở dữ liệu
         $sql = "INSERT INTO posts (UserId, Content, Url_Image) VALUES (?, ?, ?);";
