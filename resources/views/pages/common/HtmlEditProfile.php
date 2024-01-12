@@ -10,46 +10,51 @@
             </div>
             <span class="text-white">This information is secret so be careful</span>
             <div class="w-full p-8 mx-2 block justify-center">
-                <img id="showImage" class="w-[200px] h-[150px] mb-10 items-center border-2 shadow-lg" src="https://cff2.earth.com/uploads/2023/11/30185539/bottlenose-dolphin_1medium-960x640.jpg" alt="">
+                <img id="showImage" class="w-[150px] h-[150px] mb-10 items-center border-2 shadow-lg rounded-full" src="https://cff2.earth.com/uploads/2023/11/30185539/bottlenose-dolphin_1medium-960x640.jpg" alt="">
                 <button type="button" class="w-[150px] text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"><a href="/edit-profile">Edit Profile</a></button>
-                <button type="button" class=" w-[150px] text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"><a href="/view-profile">
-                        <<< Back </a></button>
+                <button type="button" class=" w-[150px] text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"><a href="/patient/history-booking">History booking</a></button>
+                <button type="button" class=" w-[150px] text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"><a href="#">Security</a></button>
+                <button type="button" class=" w-[150px] text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"><a href="/homepage">
+                        Back </a></button>
+
             </div>
         </div>
 
-        <div class="w-full md:w-3/5 p-8 bg-white lg:ml-4 shadow-md">
-            <div class="rounded  shadow p-6">
-                <div class="pb-6">
+        <div id="profileInfo" class="w-full md:w-4/5 p-8 bg-white lg:ml-4 shadow-md">
+            <div class="rounded shadow p-6 grid grid-cols-2 gap-4">
+                <div>
                     <label for="name" class="font-semibold text-gray-700 block pb-1">Name</label>
                     <div class="flex">
-                        <input id="username" class="border-1  rounded-r px-4 py-2 w-full" type="text" />
+                        <input id="username" class="border-1 rounded-r px-4 py-2 w-full" type="text" />
                     </div>
                 </div>
-                <div class="pb-4">
-                    <label for="email" class="font-semibold text-gray-700 block pb-1">Email</label>
-                    <input disabled id="email" class="border-1  rounded-r px-4 py-2 w-full" type="email" value="" />
-                </div>
-                <div class="pb-4">
-                    <label for="password" class="font-semibold text-gray-700 block pb-1">Date create account</label>
-                    <input disabled id="date" class="border-1  rounded-r px-4 py-2 w-full" type="text" />
-                </div>
-                <div class="pb-4">
+                <div>
                     <label for="phoneNumber" class="font-semibold text-gray-700 block pb-1">Phone Number</label>
-                    <input id="phoneNumber" class="border-1  rounded-r px-4 py-2 w-full" type="tel" />
+                    <input id="phoneNumber" class="border-1 rounded-r px-4 py-2 w-full" type="tel" />
                 </div>
-                <div class="pb-4">
+                <div>
+                    <label for="email" class="font-semibold text-gray-700 block pb-1">Email</label>
+                    <input disabled id="email" class="border-1 rounded-r px-4 py-2 w-full" type="email" value="" />
+                </div>
+                <div>
+                    <label for="password" class="font-semibold text-gray-700 block pb-1">Password</label>
+                    <input id="password" class="border-1 rounded-r px-4 py-2 w-full" type="password" />
+                </div>
+                <div >
                     <label for="address" class="font-semibold text-gray-700 block pb-1">Address</label>
-                    <input id="address" class="border-1  rounded-r px-4 py-2 w-full" type="text" />
+                    <input id="address" class="border-1 rounded-r px-4 py-2 w-full" type="text" />
                 </div>
-                <div class="pb-4">
-                    <label for="Image" class="font-semibold text-gray-700 block pb-1">Upload Image</label>
-                    <input id="image" class="border-1  rounded-r px-4 py-2 w-full" type="file" />
+                <div >
+                    <label for="image" class="font-semibold text-gray-700 block pb-1">Upload Image</label>
+                    <input id="image" class="border-1 rounded-r px-4 py-2 w-full" type="file" />
                 </div>
-                <button onclick="handleUpdateProfile()" class=" -mt-2 text-md font-bold text-white bg-gray-700 rounded-full px-5 py-2 hover:bg-gray-800">Update</button>
+                <button onclick="handleUpdateProfile()" class="w-[100px] -mt-2 text-md font-bold text-white bg-gray-700 rounded-full px-4 py-2 hover:bg-gray-800">Update</button>
             </div>
 
         </div>
     </div>
+</div>
+</div>
 </div>
 <script>
     showInfo()
@@ -60,14 +65,12 @@
         var img = document.getElementById('image').value;
         var username = document.getElementById('username').value;
         var email = document.getElementById('email').value;
-        var date = document.getElementById('date').value;
         var phoneNumber = document.getElementById('phoneNumber').value;
         var address = document.getElementById('address').value;
 
         user_info_update.image = img;
         user_info_update.fullName = username;
         user_info_update.email = email;
-        user_info_update.date = date;
         user_info_update.phone = phoneNumber;
         user_info_update.address = address;
         console.log(user_info_update);
