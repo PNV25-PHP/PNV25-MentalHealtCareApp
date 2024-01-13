@@ -54,7 +54,7 @@
             <img src="${post.PostImage}" alt="" class="w-full h-41 object-cover object-center">
           </div>
           <div class="flex items-center mt-4 space-x-4">
-        <button type="button" class="flex items-center text-sm text-gray-500 hover:underline dark:text-gray-400 font-medium" onclick="enterContent()">
+        <button type="button" class="flex items-center text-sm text-gray-500 hover:underline dark:text-gray-400 font-medium" onclick="enterContent(${post.PostId})">
             <svg class="mr-1.5 w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 18">
                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5h5M5 8h2m6-3h2m-5 3h6m2-7H2a1 1 0 0 0-1 1v9a1 1 0 0 0 1 1h3v5l5-5h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1Z" />
             </svg>
@@ -68,7 +68,7 @@
             <div class="flex justify-between items-center mb-6">
             <h2 class="text-lg lg:text-2xl font-bold text-gray-900 dark:text-white">Discussion (${post.CommentCount})</h2>
             </div>
-            
+            <div id="form_to_show_comment"></div>
             <div class="scroll-container">
               <div class="content">`
     comments.map((comment) => {
@@ -153,23 +153,25 @@
     form.style.display = 'none'
   }
 
-  function enterContent() 
+  function enterContent(postId) 
   {
-    var form_content = `<form class="mb-6">
-                <div class="px-4 mb-4 bg-white rounded-lg rounded-t-lg border border-gray-200 dark:bg-gray-800 dark:border-gray-700">
-                    <label for="comment" class="sr-only">Your comment</label>
-                    <textarea id="comment" rows="6"
-                        class="px-0 w-full text-sm text-gray-900 border-0 focus:ring-0 focus:outline-none dark:text-white dark:placeholder-gray-400 dark:bg-gray-800"
-                        placeholder="Write a comment..." required></textarea>
-                </div>
-                <button onclick="addComment(${post.PostId})"
-                    class="inline-flex items-center py-2.5 px-4 text-xs font-medium text-center text-white bg-primary-700 rounded-lg focus:ring-4 focus:ring-primary-200 dark:focus:ring-primary-900 hover:bg-primary-800">
-                    Post comment
-                </button>
-            </form>`
+    var form_content = `<form class="mb-6 fixed">
+        <div class="px-4 mb-4 bg-white rounded-lg rounded-t-lg border border-gray-200 dark:bg-gray-800 dark:border-gray-700">
+            <label for="comment" class="sr-only">Your comment</label>
+            <textarea id="comment" rows="6"
+                class="px-0 w-full text-sm text-gray-900 border-0 focus:ring-0 focus:outline-none dark:text-white dark:placeholder-gray-400 dark:bg-gray-800"
+                placeholder="Write a comment..." required></textarea>
+        </div>
+        <button onclick="addComment(${postId})"
+            class="inline-flex items-center py-2.5 px-4 text-xs font-medium text-center text-white bg-primary-700 rounded-lg focus:ring-4 focus:ring-primary-200 dark:focus:ring-primary-900 hover:bg-primary-800">
+            Post comment
+        </button>
+    </form>`
+    document.getElementById('form_to_show_comment').innerHTML = form_content;
   }
 
   function addComment(PostId) {
+    var content_comment = document.getElementById('comment').value;
       const post_comment = {
         PostId: PostId,
         UserId: user_currentlyId,
