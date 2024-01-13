@@ -1,10 +1,6 @@
-<!-- This is an example component -->
 <?php include_once dirname(__DIR__) . '../../layouts/HtmlHead.php' ?>
-
 <div class="h-full">
-
   <div class="border-b-2 block md:flex">
-
     <div class="w-full md:w-1/5 p-4 sm:p-6 lg:p-8 bg-blue-900 text-white shadow-md">
       <div class="flex justify-between">
         <span id="name-profile" class="text-xl font-semibold block"></span>
@@ -17,10 +13,8 @@
         <button type="button" class=" w-[150px] text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"><a href="#">Security</a></button>
         <button type="button" class=" w-[150px] text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"><a href="/homepage">
             Back </a></button>
-
       </div>
     </div>
-
     <div id="profileInfo" class="w-full md:w-4/5 p-8 bg-white lg:ml-4 shadow-md">
       <div class="rounded shadow p-6 grid grid-cols-2 gap-4">
         <div>
@@ -47,9 +41,9 @@
     </div>
   </div>
 </div>
-
 <script>
   showInfo()
+
   function handleUpdateProfile() {
     var user_info_update = JSON.parse(localStorage.getItem('user-info'));
     var img = document.getElementById('image').value;
@@ -65,7 +59,6 @@
     user_info_update.address = address;
     console.log(user_info_update);
 
-    // Gửi yêu cầu POST đến endpoint PHP
     fetch('/api/edit-profile', {
         method: 'POST',
         headers: {

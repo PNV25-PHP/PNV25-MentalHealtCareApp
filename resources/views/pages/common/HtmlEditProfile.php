@@ -1,9 +1,7 @@
 <!-- This is an example component -->
 <?php include_once dirname(__DIR__) . '../../layouts/HtmlHead.php' ?>
 <div class="h-full">
-
     <div class="border-b-2 block md:flex">
-
         <div class="w-full md:w-1/5 p-4 sm:p-6 lg:p-8 bg-blue-900 text-white shadow-md">
             <div class="flex justify-between">
                 <span id="name-profile" class="text-xl font-semibold block"></span>
@@ -16,10 +14,8 @@
                 <button type="button" class=" w-[150px] text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"><a href="#">Security</a></button>
                 <button type="button" class=" w-[150px] text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"><a href="/homepage">
                         Back </a></button>
-
             </div>
         </div>
-
         <div id="profileInfo" class="w-full md:w-4/5 p-8 bg-white lg:ml-4 shadow-md">
             <div class="rounded shadow p-6 grid grid-cols-2 gap-4">
                 <div>
@@ -40,17 +36,16 @@
                     <label for="password" class="font-semibold text-gray-700 block pb-1">Password</label>
                     <input id="password" class="border-1 rounded-r px-4 py-2 w-full" type="password" />
                 </div>
-                <div >
+                <div>
                     <label for="address" class="font-semibold text-gray-700 block pb-1">Address</label>
                     <input id="address" class="border-1 rounded-r px-4 py-2 w-full" type="text" />
                 </div>
-                <div >
+                <div>
                     <label for="image" class="font-semibold text-gray-700 block pb-1">Upload Image</label>
                     <input id="image" class="border-1 rounded-r px-4 py-2 w-full" type="file" />
                 </div>
                 <button onclick="handleUpdateProfile()" class="w-[100px] -mt-2 text-md font-bold text-white bg-gray-700 rounded-full px-4 py-2 hover:bg-gray-800">Update</button>
             </div>
-
         </div>
     </div>
 </div>
@@ -76,7 +71,6 @@
         console.log(user_info_update);
         document.getElementById('name-profile').innerHTML = user_info_update.fullName;
 
-        // Gửi yêu cầu POST đến endpoint PHP
         fetch('/api/edit-profile', {
                 method: 'POST',
                 headers: {

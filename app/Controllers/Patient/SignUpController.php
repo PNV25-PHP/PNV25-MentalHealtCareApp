@@ -31,19 +31,16 @@ class SignUpController extends Controller
     {
         $signUpReq = new SignUpReq($req);
 
-        //        $error = $signUpReq->validate();
         $error = null;
-        if ($error != null) {
-            return response()->json([
-                "message" => "validation error",
-                "error" => $error
-            ], 400);
-        }
+        // if ($error != null) {
+        //     return response()->json([
+        //         "message" => "validation error",
+        //         "error" => $error
+        //     ], 400);
+        // }
 
-        // TODO create new user and new patient
-        $newUser = new User(Role::Patient, $signUpReq->email, $signUpReq->password, $signUpReq->fullName);
+        $newUser = new User(Role::Patient, $signUpReq->email, $signUpReq->password, $signUpReq->fullName, $signUpReq->address, $signUpReq->phone);
         $newPatient = new Patient($newUser->getId());
-        // TODO insert to db
 
         $this->userRepository->insert($newUser);
         $this->patientRepository->insert($newPatient);

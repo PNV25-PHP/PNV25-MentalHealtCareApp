@@ -1,12 +1,13 @@
-<?php include_once  dirname(__DIR__) . '../../layouts/HtmlHead.php'?>
-<?php include_once dirname(__DIR__) . '../../layouts/HtmlNavbar.php'?>
+<?php include_once  dirname(__DIR__) . '../../layouts/HtmlHead.php' ?>
+<?php include_once dirname(__DIR__) . '../../layouts/HtmlNavbar.php' ?>
 <style>
     #menu-navigate {
         display: none;
     }
 </style>
+
 <body class="font-poppins ">
-   <img src="https://res.cloudinary.com/dkvvko14m/image/upload/v1704189316/MentalHealthCare/doz1asgf74flyrbpwibu.png" alt="homepage img">
+    <img src="https://res.cloudinary.com/dkvvko14m/image/upload/v1704189316/MentalHealthCare/doz1asgf74flyrbpwibu.png" alt="homepage img">
     <div class="relative mt-10 mb-10 w-full h-full grid grid-cols-[40%,55%]">
         <div class="mt-20">
             <div class=" text-center text-blue-500 text-2xl font-bold uppercase tracking-wide font-poppins">
@@ -28,7 +29,6 @@
         <div class="absolute left-582 top-149 w-109.83 h-22"></div>
     </div>
     <img src="https://res.cloudinary.com/dkvvko14m/image/upload/v1704189316/MentalHealthCare/whzri6npqnunsab24p5x.png" class="object-contain mt-8 w-full px-24" alt="Background Image 2">
-
     <section class="px-24 my-12 ">
         <div class=" mx-auto w-full ">
             <div id="default-carousel" class="relative  " data-carousel="static">
@@ -47,7 +47,6 @@
 
                         </div>
                     </div>
-
                     <div class="hidden duration-700 ease-in-out" data-carousel-item>
                         <div class="flex">
                             <img src="https://res.cloudinary.com/dkvvko14m/image/upload/v1704189316/MentalHealthCare/etwuvq0dunwjhanrv6sd.png" class="w-100 h-100 ml-20    " alt="Image">
@@ -62,8 +61,6 @@
 
                         </div>
                     </div>
-
-
                     <div class="hidden duration-700 ease-in-out" data-carousel-item>
                         <div class="flex">
                             <img src="https://res.cloudinary.com/dkvvko14m/image/upload/v1704189316/MentalHealthCare/kwqntnjytn0wikbvku0l.png" class="w-100 h-100 ml-20" alt="Image">
@@ -78,7 +75,6 @@
 
                         </div>
                     </div>
-
                     <div class="hidden duration-700 ease-in-out" data-carousel-item>
                         <div class="flex">
                             <img src="https://res.cloudinary.com/dkvvko14m/image/upload/v1704189315/MentalHealthCare/ml7n4fbz3jdb8tks83hm.png" class="w-100 h-100 ml-20" alt="Image">
@@ -90,18 +86,14 @@
                                     Department of Neurology, Hospital 199
                                 </div>
                             </div>
-
                         </div>
                     </div>
-
                 </div>
-
                 <div class="flex absolute bottom-5 left-1/2 z-30 space-x-3 -translate-x-1/2">
                     <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 1" data-carousel-slide-to="0"></button>
                     <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
                     <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
                 </div>
-
                 <button type="button" class="flex absolute top-0 left-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none" data-carousel-prev>
                     <span class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30  group-focus:ring-4 group-focus:ring-white  group-focus:outline-none">
                         <svg class="w-5 h-5 text-black sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -119,13 +111,9 @@
                     </span>
                 </button>
             </div>
-
-
             <script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script>
         </div>
-
     </section>
-
     <section>
         <div class=" text-center text-blue-500 text-2xl font-bold  tracking-wide font-poppins">
             Better Information, Better Health
@@ -144,7 +132,6 @@
                         <div class="text-black text-lg font-poppins font-normal leading-7 break-words">
                             Teenagers don't care to mental health
                         </div>
-
                         <div class="">
                             <div class="flex">
                                 <div class="">
@@ -197,7 +184,6 @@
                         <div class="text-black text-lg font-poppins font-normal leading-7 break-words">
                             Teenagers don't care to mental health
                         </div>
-
                         <div class="">
                             <div class="flex">
                                 <div class="">
@@ -242,7 +228,6 @@
             </div>
         </div>
     </section>
-
     <section>
         <div class="flex ml-20 pl-20 mt-20 mb-10">
             <div class=" mr-10 w-[220px] h-[80px] bg-blue-900 rounded-lg">
@@ -272,16 +257,13 @@
                     <div class="text-gray-300 text-sm font-medium font-poppins">Sunday Emergency only</div>
                 </div>
             </div>
-
         </div>
     </section>
     <?php include_once dirname(__DIR__) . '../../layouts/HtmlTail.php' ?>
-<script>
-    var user_info = JSON.parse(localStorage.getItem("user-info"));
-    var imagePath = user_info.image;
-
-    var trimmedImagePath = imagePath.replace("http://localhost:8000/patient/", "");
-
-    console.log(trimmedImagePath);
-    document.getElementById('avatar').src = trimmedImagePath
-</script>
+    <script>
+        var user_info = JSON.parse(localStorage.getItem("user-info"));
+        var imagePath = user_info.image;
+        var trimmedImagePath = imagePath.replace("http://localhost:8000/patient/", "");
+        console.log(trimmedImagePath);
+        document.getElementById('avatar').src = trimmedImagePath
+    </script>

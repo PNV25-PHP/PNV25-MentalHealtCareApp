@@ -21,9 +21,6 @@
     <!--Axios-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.3/axios.min.js" integrity="sha512-JWQFV6OCC2o2x8x46YrEeFEQtzoNV++r9im8O8stv91YwHNykzIS2TbvAlFdeH0GVlpnyd79W0ZGmffcRi++Bw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!---->
-    <!--profile -->
-    <!-- <script src="../../component/profile.js"></script> -->
-
 </head>
 
 <body>

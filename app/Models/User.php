@@ -17,8 +17,8 @@ class User extends BaseModel
         string $email,
         string $password,
         string $fullName,
-        string|null $address = null,
-        string|null $phone = null,
+        string $address,
+        string $phone,
         string|null $urlImage = null
     ) {
         parent::__construct();

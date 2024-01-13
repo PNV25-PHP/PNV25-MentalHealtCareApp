@@ -66,31 +66,17 @@
 
 <script>
   function SignOut() {
-  event.preventDefault(); // Ngăn chặn hành vi mặc định của liên kết
-
-  // Gửi đối tượng JSON thông qua phương thức POST của Axios
+  event.preventDefault(); 
   axios.post('/api/update/profile', {
     info_user: info_user
   })
   .then(function (response) {
-    // Nếu phương thức POST thành công, tiến hành xóa dữ liệu "info_user" và chuyển hướng trang
     var info_user = {};
     localStorage.setItem('user-info', JSON.stringify(info_user));
     window.location.href = '/sign-in';
   })
   .catch(function (error) {
-    // Xử lý lỗi nếu phương thức POST không thành công
     console.log(error);
   });
 };
-
-  // function showMenu() {
-  //   var menu = document.getElementById("avatar")
-
-  //   if (menu.style.display == "none") {
-  //     menu.style.display = "block"
-  //   } else {
-  //     menu.style.display = "none"
-  //   }
-  // }
 </script>
