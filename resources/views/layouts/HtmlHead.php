@@ -30,14 +30,16 @@
     var username = document.getElementById('username')
     var email = document.getElementById('email')
     var date = document.getElementById('date')
+    var password =document.getElementById('password')
     var phoneNumber = document.getElementById('phoneNumber')
     var address = document.getElementById('address')
 
     img.src = user_info.image
     username.value = user_info.fullName
     email.value = user_info.email
-    date.value = user_info.id
     phoneNumber.value = user_info.phone
     address.value = user_info.address
+    password.value =user_info.password
+    document.getElementById('name-profile').innerHTML =username.value
   }
 </script>

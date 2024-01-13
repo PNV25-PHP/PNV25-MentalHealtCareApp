@@ -1,6 +1,5 @@
 <?php
 
-// namespace App\Controllers\Patient;
 namespace App\Controllers\Common;
 
 use App\Dtos\Common\ProFileReq;
@@ -12,20 +11,35 @@ use Illuminate\Http\Request;
 use App\Models\Role;
 use Laravel\Lumen\Routing\Controller;
 use Illuminate\Support\Facades\DB;
+use App\Repositories\BookingRepository;
 
 
 class ProFileController extends Controller
 {
-    public function viewProfile()
+    private UserRepository $userRepository;
+    private PatientRepository $patientRepository;
+    private BookingRepository $bookingRepository;
+    public function __construct()
     {
-        return view('pages\common\HtmlProfile');
+        $this->userRepository = new UserRepository();
+        $this->patientRepository = new PatientRepository();
+        $this->bookingRepository = new BookingRepository();
     }
-    public function editProfile(){
+    public function viewHomepage()
+    {
+        return view('pages\common\HtmlHomepage');
+    }
+    public function editProfile()
+    {
         return view('pages\common\HtmlEditProfile');
     }
     public function index()
     {
         return view('pages\common\HtmlProfile');
+    }
+    public function patientHistoryBooking()
+    {
+        return view('pages\common\HtmlHistoryBooking');
     }
 
     public function findByEmail($email)
@@ -59,8 +73,7 @@ class ProFileController extends Controller
         }
         $change = new UserRepository();
 
-        $user = new User($role, $proFileRequest->email, $proFileRequest->password, $proFileRequest->fullname, $proFileRequest->address == null ? "Please update" : $proFileRequest->address, $proFileRequest->phone == null ? "Please update" : $proFileRequest->phone, $proFileRequest->url_image == null ? "Please update" : $proFileRequest->url_image);
-        
+        $user = new User($role, $proFileRequest->email, $proFileRequest->password, $proFileRequest->fullname, $proFileRequest->address, $proFileRequest->phone,  $proFileRequest->url_image == null ? "Please update" : $proFileRequest->url_image);
         $result =  $change->updateUser($user);
         $createUpdateUser = $change->findByEmail($proFileRequest->email);
         $requestPatient = new PatientRepository();
@@ -84,5 +97,12 @@ class ProFileController extends Controller
         return response()->json([
             'message' => 'Update user not sucessful',
         ], 404);
+    }
+
+    public function processHistoryBooking(Request $request)
+    {
+        $email = $request->input('email');
+        $booking = $this->bookingRepository->get_patient_id($email);
+        return $booking;
     }
 }

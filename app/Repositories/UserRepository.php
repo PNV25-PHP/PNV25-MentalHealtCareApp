@@ -13,15 +13,15 @@ class UserRepository
 
     public function insert(User $user)
     {
-        $sql = "INSERT INTO $this->tableName (ID, Role, FullName, Email, Password) VALUES (?, ?, ?, ?, ?)";
-
-        // Truyền các giá trị vào placeholder
+        $sql = "INSERT INTO $this->tableName (ID, Role, FullName, Email, Password, Address, Phone) VALUES (?, ?, ?, ?, ?, ?, ?)";
         DB::insert($sql, [
             $user->getId(),
             $user->getRole()->getValue(),
             $user->getFullname(),
             $user->getEmail(),
             $user->getPassword(),
+            $user->getAddress(),
+            $user->getPhone()
         ]);
     }
 
@@ -34,12 +34,10 @@ class UserRepository
 
     public function update(User $model)
     {
-        // TODO: Implement Update() method.
     }
 
     public function delete(string $id)
     {
-        // TODO: Implement Delete() method.
     }
 
     public function findByEmail($email)
@@ -66,7 +64,6 @@ class UserRepository
                 $newUser->Url_Image == null ? "" : $newUser->Url_Image
             );
         }
-
         return null;
     }
 

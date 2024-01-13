@@ -5,6 +5,7 @@ namespace App\Repositories;
 use App\Models\User;
 use App\Models\Doctor;
 use Illuminate\Support\Facades\Hash;
+use App\Models\Admin;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Date;
 use PharIo\Manifest\Url;
