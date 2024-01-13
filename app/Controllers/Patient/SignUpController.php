@@ -35,13 +35,15 @@ class SignUpController extends Controller
         $checkPassword = $validation->validatePassword($signUpReq->password);
         $checkFullName = $validation->validateFullName($signUpReq->fullName);
 
-        if ($signUpReq->email == null || $signUpReq->password == null || $signUpReq->fullName == null) {
+        if ($signUpReq->email == null || $signUpReq->password == null || $signUpReq->fullName == null || $signUpReq->phone == null || $signUpReq->address == null) {
             return response()->json([
                 "message" => "Please enter complete information",
                 "error" => [
                     "email" => $signUpReq->email,
                     "password" => $signUpReq->password,
-                    "fullName" => $signUpReq->fullName
+                    "fullName" => $signUpReq->fullName,
+                    "phone" => $signUpReq->phone,
+                    "address" => $signUpReq->address
                 ]
             ], 422);
         }
@@ -67,7 +69,7 @@ class SignUpController extends Controller
             ], 401);
         }
 
-        $newUser = new User(Role::Patient, $signUpReq->email, $signUpReq->password, $signUpReq->fullName);
+        $newUser = new User(Role::Patient, $signUpReq->email, $signUpReq->password, $signUpReq->fullName, $signUpReq->address, $signUpReq->phone);
         $newPatient = new Patient($newUser->getId());
 
         $this->userRepository->insert($newUser);
