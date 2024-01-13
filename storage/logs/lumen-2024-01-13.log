@@ -610,3 +610,93 @@
 #23 D:\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
 #24 {main}
 "} 
+[2024-01-13 09:14:38] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException(code: 0):  at D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:235)
+[stacktrace]
+#0 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 D:\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-13 09:14:40] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException(code: 0):  at D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:235)
+[stacktrace]
+#0 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 D:\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-13 09:14:50] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException(code: 0):  at D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:235)
+[stacktrace]
+#0 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 D:\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-13 09:15:14] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException(code: 0):  at D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:235)
+[stacktrace]
+#0 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 D:\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-13 09:15:45] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException(code: 0):  at D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:235)
+[stacktrace]
+#0 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 D:\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-13 09:17:44] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\MethodNotAllowedHttpException(code: 0):  at D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:237)
+[stacktrace]
+#0 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 D:\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-13 09:21:41] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException(code: 0):  at D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:235)
+[stacktrace]
+#0 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 D:\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-13 09:23:51] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException(code: 0):  at D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:235)
+[stacktrace]
+#0 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 D:\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-13 09:24:01] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException(code: 0):  at D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:235)
+[stacktrace]
+#0 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 D:\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-13 09:24:09] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException(code: 0):  at D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:235)
+[stacktrace]
+#0 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 D:\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 D:\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 

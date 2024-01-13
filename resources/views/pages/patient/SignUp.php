@@ -92,7 +92,7 @@
             .then(res => {
                 const payload = res.data.payload;
                 if (res.status === 200) {
-                    window.location.href = "/patient/home";
+                    window.location.href = "/login";
                 }
             })
             .catch(error => {
