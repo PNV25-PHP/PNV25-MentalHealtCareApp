@@ -1,4 +1,23 @@
 <?php include_once dirname(__DIR__) . '/../layouts/HtmlHead.php' ?>
+<style>
+  .scroll-container {
+    max-height: 300px;
+    /* Chiều cao tối đa của khu vực hiển thị */
+    overflow-y: auto;
+    /* Cho phép thanh trượt theo chiều dọc nếu nội dung vượt khỏi kích thước */
+  }
+
+  .content {
+    height: auto;
+    /* Chiều cao tự động theo nội dung */
+  }
+
+  .item {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    /* Đường viền giữa các mục */
+  }
+</style>
 <script>
   const posts = <?= json_encode($posts) ?>;
   const comments = <?= json_encode($comments) ?>;
@@ -34,29 +53,27 @@
           <div class="mt-5">
             <img src="${post.PostImage}" alt="" class="w-full h-41 object-cover object-center">
           </div>
+          <div class="flex items-center mt-4 space-x-4">
+        <button type="button" class="flex items-center text-sm text-gray-500 hover:underline dark:text-gray-400 font-medium" onclick="enterContent()">
+            <svg class="mr-1.5 w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 18">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5h5M5 8h2m6-3h2m-5 3h6m2-7H2a1 1 0 0 0-1 1v9a1 1 0 0 0 1 1h3v5l5-5h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1Z" />
+            </svg>
+            add a comment
+        </button>
+    </div>
         </div>
         </div>
         <section class="lg:py-16 antialiased bg-slate-700">
           <div class="max-w-2xl mx-auto px-4">
             <div class="flex justify-between items-center mb-6">
-            <h2 class="text-lg lg:text-2xl font-bold text-gray-900 dark:text-white">Discussion (0)</h2>
+            <h2 class="text-lg lg:text-2xl font-bold text-gray-900 dark:text-white">Discussion (${post.CommentCount})</h2>
             </div>
-            <form class="mb-6">
-                <div class="px-4 mb-4 bg-white rounded-lg rounded-t-lg border border-gray-200 dark:bg-gray-800 dark:border-gray-700">
-                    <label for="comment" class="sr-only">Your comment</label>
-                    <textarea id="comment" rows="6"
-                        class="px-0 w-full text-sm text-gray-900 border-0 focus:ring-0 focus:outline-none dark:text-white dark:placeholder-gray-400 dark:bg-gray-800"
-                        placeholder="Write a comment..." required></textarea>
-                </div>
-                <button onclick="addComment(${post.PostId})"
-                    class="inline-flex items-center py-2.5 px-4 text-xs font-medium text-center text-white bg-primary-700 rounded-lg focus:ring-4 focus:ring-primary-200 dark:focus:ring-primary-900 hover:bg-primary-800">
-                    Post comment
-                </button>
-            </form>`
-        comments.map((comment) => 
-        {
-          if(comment.PostId == post.PostId){
-            Show_post += `<article class="p-6 text-base bg-white rounded-lg dark:bg-gray-900">
+            
+            <div class="scroll-container">
+              <div class="content">`
+    comments.map((comment) => {
+      if (comment.PostId == post.PostId) {
+        Show_post += `<article class="p-4 m-2 text-base bg-white rounded-lg dark:bg-gray-900">
     <footer class="flex justify-between items-center mb-2">
         <div class="flex items-center">
             <p class="inline-flex items-center mr-3 text-sm text-gray-900 dark:text-white font-semibold"><img class="mr-2 w-6 h-6 rounded-full" src="${comment.UserImageUrl}" alt="${comment.UserFullName}">${comment.UserFullName}</p>
@@ -83,20 +100,11 @@
             </ul>
         </div>
     </footer>
-    <p class="text-gray-500 dark:text-gray-400">Very straight-to-point article. Really worth time reading. Thank you! But tools are just the
-        instruments for the UX designers. The knowledge of the design tools are as important as the
-        creation of the design strategy.</p>
-    <div class="flex items-center mt-4 space-x-4">
-        <button type="button" class="flex items-center text-sm text-gray-500 hover:underline dark:text-gray-400 font-medium">
-            <svg class="mr-1.5 w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 18">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5h5M5 8h2m6-3h2m-5 3h6m2-7H2a1 1 0 0 0-1 1v9a1 1 0 0 0 1 1h3v5l5-5h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1Z"/>
-            </svg>
-            Reply
-        </button>
-    </div>
+    <p class="text-gray-500 dark:text-gray-400">${comment.CommentContent}</p>
 </article>`
-        }})
-    Show_posts += Show_post + `</section> <hr class="p-8">`;
+      }
+    })
+    Show_posts += Show_post + `</div> </div> </section> <hr class="p-8">`;
   })
   document.getElementById('show_here').innerHTML = Show_posts;
 </script>
@@ -145,7 +153,45 @@
     form.style.display = 'none'
   }
 
-  function addComment(id) {
+  function enterContent() 
+  {
+    var form_content = `<form class="mb-6">
+                <div class="px-4 mb-4 bg-white rounded-lg rounded-t-lg border border-gray-200 dark:bg-gray-800 dark:border-gray-700">
+                    <label for="comment" class="sr-only">Your comment</label>
+                    <textarea id="comment" rows="6"
+                        class="px-0 w-full text-sm text-gray-900 border-0 focus:ring-0 focus:outline-none dark:text-white dark:placeholder-gray-400 dark:bg-gray-800"
+                        placeholder="Write a comment..." required></textarea>
+                </div>
+                <button onclick="addComment(${post.PostId})"
+                    class="inline-flex items-center py-2.5 px-4 text-xs font-medium text-center text-white bg-primary-700 rounded-lg focus:ring-4 focus:ring-primary-200 dark:focus:ring-primary-900 hover:bg-primary-800">
+                    Post comment
+                </button>
+            </form>`
+  }
+
+  function addComment(PostId) {
+      const post_comment = {
+        PostId: PostId,
+        UserId: user_currentlyId,
+        CommentContent: content_comment
+      }
+      fetch('/api/comment/addComment', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(post_comment)
+      }) .then(response => response.json())
+      .then(data => {
+        if (data.success) {
+          window.location.href = '/Posts';
+        } else {
+          console.error('Có lỗi khi thêm comment:', data.error);
+        }
+      })
+      .catch(error => {
+        console.error('Lỗi kết nối:', error);
+      });
     
   }
 
@@ -168,12 +214,9 @@
       })
       .then(response => response.json())
       .then(data => {
-        // Xử lý URL sau khi thêm bài viết thành công
         if (data.success) {
-          // Redirect hoặc thực hiện các hành động khác với URL '/Posts'
           window.location.href = '/Posts';
         } else {
-          // Xử lý khi có lỗi nếu cần
           console.error('Có lỗi khi thêm bài viết:', data.error);
         }
       })
