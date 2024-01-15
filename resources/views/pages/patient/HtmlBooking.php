@@ -388,7 +388,7 @@
             console.log(doctorId)
             console.log(time)
             console.log(selectedDate)
-            console.log(price)
+            console.log(prices)
             axios.post('/patient/list-doctor/booking', {
                     patientId: patientId,
                     doctorId: doctorId,

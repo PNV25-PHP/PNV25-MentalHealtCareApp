@@ -1,3 +1,4 @@
+
 <?php
 
 /** @var \Laravel\Lumen\Routing\Router $router */
@@ -32,6 +33,24 @@ $router->post('/api/update/profile', 'Common\ProfileController@updateInformation
 $router->get('/patient/sign-up', 'Patient\SignUpController@index');
 $router->post('/api/patient/sign-up', 'Patient\SignUpController@signUp');
 $router->get('/patient/home', 'Patient\HomeController@index');
+
+//Admin Routers Doctor
+$router->get('/admin/getDoctor', 'Admin\DoctorController@index');
+$router->post('/admin/addDoctor', 'Admin\DoctorController@addDoctor');
+$router->post('/admin/deleteDoctor/{doctorId}', 'Admin\DoctorController@deleteDoctor');
+$router->post('/admin/updateDoctor', 'Admin\DoctorController@updateDoctor');
+
+//Admin Routers Patient
+$router->get('/admin/getPatient', 'Admin\PatientController@index');
+$router->post('/admin/addPatient', 'Admin\PatientController@addPatient');
+$router->post('/admin/updatePatient', 'Admin\PatientController@updatePatient');
+$router->post('/admin/deletePatient/{patientID}', 'Admin\PatientController@deletePatient');
+
+// other
+$router->get('/admin/getBooking', 'Admin\DoctorController@getBooking');
+$router->get('/admin/getDashboard', 'Admin\DoctorController@getDashboard');
+
+
 $router->get('/header', '\resource\views\layouts\HtmlNavbar');
 //booking
 $router->get('/patient/list-doctor', 'Patient\ListDoctorController@index');
@@ -44,3 +63,6 @@ $router->get('/edit-profile', 'Common\ProfileController@editProfile');
 $router->post('/api/edit-profile', 'Common\ProfileController@updateInformationUser');
 //search
 $router->get('/patient/search', 'Patient\SearchController@index');
+//Patient_history_booking
+$router->post('/api/patient/processHistoryBooking', 'Common\ProfileController@processHistoryBooking');
+$router->get('/patient/history-booking', 'Common\ProfileController@patientHistoryBooking');

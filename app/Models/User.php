@@ -2,14 +2,16 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Model;
 class User extends BaseModel
 {
+    private string $userId;
     private Role $role;
     private string $email;
     private string $password;
     private string $fullName;
-    private string|null $address;
-    private string|null $phone;
+    private string $address;
+    private string $phone;
     private string|null $urlImage;
 
     public function __construct(
@@ -17,8 +19,8 @@ class User extends BaseModel
         string $email,
         string $password,
         string $fullName,
-        string|null $address = null,
-        string|null $phone = null,
+        string $address,
+        string $phone,
         string|null $urlImage = null
     ) {
         parent::__construct();
@@ -63,7 +65,7 @@ class User extends BaseModel
 
     public function getAddress(): string
     {
-        return $this->address == null ? "" : $this->address;
+        return $this->address;
     }
 
     public function setAddress(string $address): void
@@ -73,7 +75,7 @@ class User extends BaseModel
 
     public function getPhone(): string
     {
-        return $this->phone == null ? "" : $this->phone;
+        return $this->phone;
     }
 
     public function setPhone(string $phone): void
@@ -89,5 +91,12 @@ class User extends BaseModel
     public function setUrlImage(string $urlImage): void
     {
         $this->urlImage = $urlImage;
+    }
+    public function setUserId(string $userId): void{
+        $this->userId = $userId;
+    }
+    public function setEmail(string $email): void
+    {
+        $this->email = $email;
     }
 }

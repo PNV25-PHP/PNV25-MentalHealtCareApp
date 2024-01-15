@@ -50,7 +50,7 @@ $app->configure('app');
 // $app->register(App\Providers\AuthServiceProvider::class);
 // $app->register(App\Providers\EventServiceProvider::class);
 
-/*
+/*lả
 |--------------------------------------------------------------------------
 | Load The Application Routes
 |--------------------------------------------------------------------------
@@ -69,3 +69,21 @@ $app->router->group([
 });
 
 return $app;
+
+
+$app = new Laravel\Lumen\Application(
+    realpath(__DIR__.'/../')
+);
+
+// Load environment variables
+$app->configure('app');
+$app->configure('database');
+
+// ...
+
+(new Laravel\Lumen\Bootstrap\LoadEnvironmentVariables(
+    $app->basePath()
+))->bootstrap();
+
+$app->withFacades();
+$app->withEloquent();

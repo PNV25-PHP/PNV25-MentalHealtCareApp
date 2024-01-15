@@ -12,21 +12,26 @@ class PatientRepository
     public function insert(Patient $patient)
     {
         $sql = "INSERT INTO $this->tableName (ID, UserId) VALUES (?, ?)";
-
-        // Truyền các giá trị vào placeholder
         DB::insert($sql, [
             $patient->getId(),
-            $patient->getUserId(),
-
+            $patient->getId(),
         ]);
     }
 
-    public function selectAll()
+    public function getAllPatients()
     {
-        $patients = "SELECT * FROM patients";
-
-        return $patients;
+        $sql = "SELECT patients.*, users.Email, users.FullName, users.Phone, users.Address,users.Url_Image, users.Password
+            FROM patients
+            JOIN users ON patients.UserId = users.Id";
+        return DB::select($sql);
     }
+
+    // public function selectAll()
+    // {
+    //     $patients = "SELECT * FROM patients";
+
+    //     return $patients;
+    // }
 
     public function findByEmail($email)
     {
