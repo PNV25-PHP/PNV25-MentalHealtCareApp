@@ -5,10 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mental Health Care</title>
-    <!--Tailwind-->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!---->
-    <!--Google Font-->
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Beau+Rivage&family=Poppins&display=swap');
     </style>

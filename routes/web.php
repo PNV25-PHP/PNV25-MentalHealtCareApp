@@ -34,6 +34,11 @@ $router->get('/patient/sign-up', 'Patient\SignUpController@index');
 $router->post('/api/patient/sign-up', 'Patient\SignUpController@signUp');
 $router->get('/patient/home', 'Patient\HomeController@index');
 
+// Routers for Post 
+$router->get('/patient/post', 'Patient\NewPostController@index');// /patient/post
+$router->post('/api/patient/Post/AddPost', 'Patient\NewPostController@addPost');
+$router->post('/api/patient/Post/upload-image', 'Patient\NewPostController@uploadImage');
+$router->post('/api/comment/addComment', 'Patient\NewPostController@addComment');
 //Admin Routers Doctor
 $router->get('/admin/getDoctor', 'Admin\DoctorController@index');
 $router->post('/admin/addDoctor', 'Admin\DoctorController@addDoctor');
