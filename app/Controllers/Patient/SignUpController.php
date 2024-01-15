@@ -7,41 +7,90 @@ use App\Dtos\Patient\SignUpReq;
 use App\Models\Patient;
 use App\Models\Role;
 use App\Models\User;
+use App\Repositories\PatientRepository;
+use App\Repositories\UserRepository;
 use Illuminate\Http\Request;
 use Laravel\Lumen\Routing\Controller;
 
 class SignUpController extends Controller
 {
+    private UserRepository $userRepository;
+    private PatientRepository $patientRepository;
+
+    public function __construct()
+    {
+        $this->userRepository = new UserRepository();
+        $this->patientRepository = new PatientRepository();
+    }
     public function index()
     {
         return view("pages\patient\SignUp");
     }
-
     public function signUp(Request $req)
     {
         $signUpReq = new SignUpReq($req);
+        $validation = new UserRepository();
 
-//        $error = $signUpReq->validate();
-        $error = null;
-        if ($error != null) {
+        $checkMail = $validation->validateEmail($signUpReq->email);
+        $checkPassword = $validation->validatePassword($signUpReq->password);
+        $checkFullName = $validation->validateFullName($signUpReq->fullName);
+
+        if ($signUpReq->email == null || $signUpReq->password == null || $signUpReq->fullName == null || $signUpReq->phone == null || $signUpReq->address == null) {
             return response()->json([
-                "message" => "validation error",
-                "error" => $error
-            ], 400);
+                "message" => "Please enter complete information",
+                "error" => [
+                    "email" => $signUpReq->email,
+                    "password" => $signUpReq->password,
+                    "fullName" => $signUpReq->fullName,
+                    "phone" => $signUpReq->phone,
+                    "address" => $signUpReq->address
+                ]
+            ], 422);
         }
 
-        // TODO create new user and new patient
-        $newUser = new User(Role::Patient, $signUpReq->email, $signUpReq->password, $signUpReq->fullName);
+
+        if (!$checkMail || !$checkPassword || !$checkFullName) {
+            return response()->json([
+                "message" => "Invalid",
+                "error" => [
+                    "email" => !$checkMail,
+                    "password" => !$checkPassword,
+                    "fullName" => !$checkFullName
+                ]
+            ], 400);
+        }
+        
+        $userRepository = new UserRepository();
+        $user = $userRepository->findByEmail($signUpReq->email);
+        if ($user != null) {
+            return response()->json([
+                "message" => "email already exists",
+                "error" => "email is error"
+            ], 401);
+        }
+
+        $newUser = new User(Role::Patient, $signUpReq->email, $signUpReq->password, $signUpReq->fullName, $signUpReq->address, $signUpReq->phone);
         $newPatient = new Patient($newUser->getId());
-        // TODO insert to db
+
+        $this->userRepository->insert($newUser);
+        $this->patientRepository->insert($newPatient);
+
+        $requestPatient = new PatientRepository();
+        $patientId = $requestPatient->findByEmail($signUpReq->email);
 
         return response()->json([
             'message' => 'Sign Up Successfully',
             'payload' => new SignInRes(
+                $patientId,
                 $newUser->getId(),
                 $newUser->getRole()->getValue(),
                 $newUser->getEmail(),
-                $newUser->getFullname())
-        ], 201);
+                $newUser->getFullname(),
+                $newUser->getPassword(),
+                $newUser->getPhone(),
+                $newUser->getAddress(),
+                $newUser->getUrlImage()
+            )
+        ], 200);
     }
 }

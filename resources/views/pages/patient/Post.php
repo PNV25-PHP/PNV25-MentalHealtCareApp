@@ -1,4 +1,5 @@
-<?php include_once dirname(__DIR__) . '/../layouts/HtmlHead.php' ?>
+<?php include_once dirname(__DIR__) . '/../layouts/HtmlHead.php'; ?>
+<?php include_once dirname(__DIR__) . '/../layouts/HtmlNavbar.php'; ?>
 <style>
   .scroll-container {
     max-height: 300px;
@@ -18,11 +19,88 @@
     /* Đường viền giữa các mục */
   }
 </style>
+
+<style>
+  /* Style for the form container */
+  .comment-form {
+    position: fixed;
+    width: 50%;
+  }
+
+  /* Style for the comment input container */
+  .comment-container {
+    padding: 0 1rem;
+    margin-bottom: 1rem;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+  }
+
+  /* Style for the comment input */
+  #comment {
+    width: 100%;
+    font-size: 0.875rem; /* 14px */
+    color: #333;
+    border: none;
+    outline: none;
+    background-color: #fff;
+  }
+
+  /* Style for the buttons container */
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  /* Style for the Post Comment button */
+  #post-comment {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.625rem 1rem; /* 10px 16px */
+    font-size: 0.75rem; /* 12px */
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
+    color: #000;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  #post-comment:hover {
+    background-color: #1e4faa;
+    color: #fff;
+  }
+
+  /* Style for the Cancel button */
+  #cancel {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.625rem 1rem; /* 10px 16px */
+    font-size: 0.75rem; /* 12px */
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
+    color: #000;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  #cancel:hover {
+    background-color: #1e4faa;
+    color: #fff;
+  }
+</style>
 <script>
   const posts = <?= json_encode($posts) ?>;
   const comments = <?= json_encode($comments) ?>;
   var user_currently = JSON.parse(localStorage.getItem("user-info"));
-  var user_currentlyId = user_currently.Id;
+  var user_currentlyId = user_currently.roleId;
 </script>
 <div id="show_here" class="Grid bg-slate-700"></div>
 <script>
@@ -145,23 +223,15 @@
 
   function enterContent(postId) 
   {
-    var form_content = `<form class="fixed w-1/2" id="Cancale_comment">
-    <div class="px-4 mb-4 bg-white rounded-lg rounded-t-lg border border-gray-200 dark:bg-gray-800 dark:border-gray-700">
-        <label for="comment" class="sr-only">Your comment</label>
-        <textarea id="comment" rows="6"
-            class="px-0 w-full text-sm text-gray-900 border-0 focus:ring-0 focus:outline-none dark:text-white dark:placeholder-gray-400 dark:bg-gray-800"
-            placeholder="Write a comment..."></textarea>
-    </div>
-    <div class="flex justify-between">
-    <button onclick="addComment(${postId})"
-        class="inline-flex items-center py-2.5 px-4 text-xs font-medium text-center text-black bg-white rounded-lg focus:ring-4 focus:ring-primary-200 dark:focus:ring-primary-900 hover:bg-primary-800">
-        Post comment
-    </button>
-    <button onclick="Cancale_comment()"
-        class="inline-flex items-center py-2.5 px-4 text-xs font-medium text-center text-black bg-white rounded-lg focus:ring-4 focus:ring-primary-200 dark:focus:ring-primary-900 hover:bg-primary-800">
-        Cancale
-    </button>
-    </div>
+    var form_content = `<form class="comment-form" id="Cancale_comment">
+  <div class="comment-container">
+    <label for="comment" class="sr-only">Your comment</label>
+    <textarea id="comment" rows="6" placeholder="Write a comment..."></textarea>
+  </div>
+  <div class="button-container">
+    <button onclick="addComment(${postId})" id="post-comment">Post comment</button>
+    <button onclick="Cancale_comment()" id="cancel">Cancel</button>
+  </div>
 </form>
 `
     document.getElementById('form_to_show_comment').innerHTML = form_content;
@@ -187,7 +257,7 @@
       }) .then(response => response.json())
       .then(data => {
         if (data.success) {
-          window.location.href = '/Posts';
+          window.location.href = '/patient/post';
         } else {
           console.error('Có lỗi khi thêm comment:', data.error);
         }
@@ -218,7 +288,7 @@
       .then(response => response.json())
       .then(data => {
         if (data.success) {
-          window.location.href = '/Posts';
+          window.location.href = '/patient/post';
         } else {
           console.error('Có lỗi khi thêm bài viết:', data.error);
         }
