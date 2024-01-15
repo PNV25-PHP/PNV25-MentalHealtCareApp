@@ -21,17 +21,6 @@
 <script>
   const posts = <?= json_encode($posts) ?>;
   const comments = <?= json_encode($comments) ?>;
-  var userObject = {
-    Id: 11,
-    FullName: "John Doe",
-    Email: "john@example.com",
-    password: "password",
-    Role: "Patient",
-    Phone: "097163727",
-    Address: "123 Đường A, Quận 1, Tp.Đà Nẵng",
-    Url_Image: "anh.png",
-  };
-  localStorage.setItem("user-info", JSON.stringify(userObject));
   var user_currently = JSON.parse(localStorage.getItem("user-info"));
   var user_currentlyId = user_currently.Id;
 </script>
