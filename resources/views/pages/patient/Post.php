@@ -114,6 +114,7 @@
     Create Post
   </button>
 </div>
+
 <!-- component form post -->
 <div class="fixed z-0 flex top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-3/6" id="form-post">
   <div class="heading text-center font-bold text-2xl m-5 text-gray-800">New Post</div>
@@ -155,19 +156,30 @@
 
   function enterContent(postId) 
   {
-    var form_content = `<form class="mb-6 fixed">
-        <div class="px-4 mb-4 bg-white rounded-lg rounded-t-lg border border-gray-200 dark:bg-gray-800 dark:border-gray-700">
-            <label for="comment" class="sr-only">Your comment</label>
-            <textarea id="comment" rows="6"
-                class="px-0 w-full text-sm text-gray-900 border-0 focus:ring-0 focus:outline-none dark:text-white dark:placeholder-gray-400 dark:bg-gray-800"
-                placeholder="Write a comment..." required></textarea>
-        </div>
-        <button onclick="addComment(${postId})"
-            class="inline-flex items-center py-2.5 px-4 text-xs font-medium text-center text-white bg-primary-700 rounded-lg focus:ring-4 focus:ring-primary-200 dark:focus:ring-primary-900 hover:bg-primary-800">
-            Post comment
-        </button>
-    </form>`
+    var form_content = `<form class="fixed w-1/2" id="Cancale_comment">
+    <div class="px-4 mb-4 bg-white rounded-lg rounded-t-lg border border-gray-200 dark:bg-gray-800 dark:border-gray-700">
+        <label for="comment" class="sr-only">Your comment</label>
+        <textarea id="comment" rows="6"
+            class="px-0 w-full text-sm text-gray-900 border-0 focus:ring-0 focus:outline-none dark:text-white dark:placeholder-gray-400 dark:bg-gray-800"
+            placeholder="Write a comment..."></textarea>
+    </div>
+    <div class="flex justify-between">
+    <button onclick="addComment(${postId})"
+        class="inline-flex items-center py-2.5 px-4 text-xs font-medium text-center text-black bg-white rounded-lg focus:ring-4 focus:ring-primary-200 dark:focus:ring-primary-900 hover:bg-primary-800">
+        Post comment
+    </button>
+    <button onclick="Cancale_comment()"
+        class="inline-flex items-center py-2.5 px-4 text-xs font-medium text-center text-black bg-white rounded-lg focus:ring-4 focus:ring-primary-200 dark:focus:ring-primary-900 hover:bg-primary-800">
+        Cancale
+    </button>
+    </div>
+</form>
+`
     document.getElementById('form_to_show_comment').innerHTML = form_content;
+  }
+
+  function Cancale_comment(){
+    document.getElementById('Cancale_comment').style.display = "none";
   }
 
   function addComment(PostId) {
