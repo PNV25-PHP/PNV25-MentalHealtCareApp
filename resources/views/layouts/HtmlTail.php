@@ -2,7 +2,7 @@
 <footer class="bg-blue-900  lg:grid lg:grid-cols-5">
     <div class="px-4 py-14 relative block h-32 lg:col-span-2 lg:h-full">
         <div class="footer-map ">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3835.3528764429834!2d107.99127304206594!3d15.995135745276437!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3141f7b5026661c9%3A0x847bab3e51ad7ea2!2zQsOgIE7DoCBIaWxscw!5e0!3m2!1svi!2s!4v1699332784043!5m2!1svi!2s" width="380" height="240" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3833.9879528547967!2d108.23363027328159!3d16.066114939524983!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3142182a592ea333%3A0x4b9afc99cc59a06c!2zQuG7h25oIHZp4buHbiAxOTkgLSBC4buZIEPDtG5nIEFu!5e0!3m2!1svi!2s!4v1705547969271!5m2!1svi!2s" width="380" height="240" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </div>
 
@@ -13,7 +13,7 @@
                     <span class="text-white text-xs uppercase tracking-wide text-gray-500"> Call us </span>
 
                     <a href="#" class="text-white block text-2xl font-medium text-white hover:opacity-75 sm:text-3xl">
-                        036 973 5240
+                        190 098 6868
                     </a>
                 </p>
 
@@ -24,7 +24,7 @@
 
                 <ul class="mt-8 flex gap-6">
                     <li>
-                        <a href="/" rel="noreferrer" target="_blank" class="text-white transition hover:opacity-75">
+                        <a href="https://www.facebook.com/benhvien199/?locale=vi_VN" rel="noreferrer" target="_blank" class="text-white transition hover:opacity-75">
                             <span class=" sr-only">Facebook</span>
 
                             <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -34,7 +34,7 @@
                     </li>
 
                     <li>
-                        <a href="/" rel="noreferrer" target="_blank" class="text-white transition hover:opacity-75">
+                        <a href="https://www.instagram.com/explore/locations/183751401770975/benh-vien-199/" rel="noreferrer" target="_blank" class="text-white transition hover:opacity-75">
                             <span class="sr-only">Instagram</span>
 
                             <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -44,7 +44,7 @@
                     </li>
 
                     <li>
-                        <a href="/" rel="noreferrer" target="_blank" class="text-white transition hover:opacity-75">
+                        <a href="https://twitter.com/?lang=vi" rel="noreferrer" target="_blank" class="text-white transition hover:opacity-75">
                             <span class="sr-only">Twitter</span>
 
                             <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -54,7 +54,7 @@
                     </li>
 
                     <li>
-                        <a href="/" rel="noreferrer" target="_blank" class="text-white transition hover:opacity-75">
+                        <a href="https://github.com/PNV25-PHP/PNV25-MentalHealtCareApp" rel="noreferrer" target="_blank" class="text-white transition hover:opacity-75">
                             <span class="sr-only">GitHub</span>
 
                             <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -64,7 +64,7 @@
                     </li>
 
                     <li>
-                        <a href="/" rel="noreferrer" target="_blank" class="text-white transition hover:opacity-75">
+                        <a href="https://www.facebook.com/benhvien199/?locale=vi_VN" rel="noreferrer" target="_blank" class="text-white transition hover:opacity-75">
                             <span class="sr-only">Dribbble</span>
 
                             <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -81,22 +81,22 @@
 
                     <ul class="mt-6 space-y-4 text-sm">
                         <li>
-                            <a href="#" class="text-white transition hover:opacity-75"> 1on1 Coaching </a>
+                            <a href="https://www.facebook.com/benhvien199/?locale=vi_VN" class="text-white transition hover:opacity-75"> 1on1 Coaching </a>
                         </li>
 
                         <li>
-                            <a href="#" class="text-white transition hover:opacity-75"> Company Review </a>
+                            <a href="https://www.facebook.com/benhvien199/?locale=vi_VN" class="text-white transition hover:opacity-75"> Company Review </a>
                         </li>
 
                         <li>
-                            <a href="#" class="text-white transition hover:opacity-75"> Accounts Review </a>
+                            <a href="https://www.facebook.com/benhvien199/?locale=vi_VN" class="text-white transition hover:opacity-75"> Accounts Review </a>
                         </li>
                         <li>
-                            <a href="#" class="text-white transition hover:opacity-75"> HR Consulting </a>
+                            <a href="https://www.facebook.com/benhvien199/?locale=vi_VN" class="text-white transition hover:opacity-75"> HR Consulting </a>
                         </li>
 
                         <li>
-                            <a href="#" class="text-white transition hover:opacity-75"> SEO Optimisation </a>
+                            <a href="https://www.facebook.com/benhvien199/?locale=vi_VN" class="text-white transition hover:opacity-75"> SEO Optimisation </a>
                         </li>
                     </ul>
                 </div>
@@ -106,15 +106,15 @@
 
                     <ul class="mt-6 space-y-4 text-sm">
                         <li>
-                            <a href="#" class="text-white transition hover:opacity-75"> About </a>
+                            <a href="https://benhvien199.vn/" class="text-white transition hover:opacity-75"> About </a>
                         </li>
 
                         <li>
-                            <a href="#" class="text-white transition hover:opacity-75"> Meet the Team </a>
+                            <a href="https://benhvien199.vn/" class="text-white transition hover:opacity-75"> Meet the Team </a>
                         </li>
 
                         <li>
-                            <a href="#" class="text-white transition hover:opacity-75"> Accounts Review </a>
+                            <a href="https://benhvien199.vn/" class="text-white transition hover:opacity-75"> Accounts Review </a>
                         </li>
                     </ul>
                 </div>

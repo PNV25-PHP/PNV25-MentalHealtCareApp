@@ -25,30 +25,6 @@
         background: rgb(59 130 246);
     }
 
-    a span {
-        position: relative;
-        z-index: 2;
-    }
-
-    a:after {
-        position: absolute;
-        content: "";
-        top: 0;
-        left: 0;
-        width: 0;
-        height: 100%;
-        background: rgb(59 130 246);
-        transition: all .35s;
-    }
-
-    a:hover {
-        color: #fff;
-    }
-
-    a:hover:after {
-        width: 100%;
-    }
-
     .container {
         width: 100%;
     }
@@ -193,14 +169,12 @@
 <div id="container" class="w-full px-5 py-24 mx-auto ">
     <div class="flex flex-col lg:flex-row lg:space-x-12">
         <div class="order-last w-full max-w-screen-sm m-auto mt-12 lg:w-1/4 lg:order-first">
-            <div class="p-4 transition duration-500 ease-in-out transform bg-white border rounded-lg">
-                <div id="image-div" class="flex py-2 mb-4">
-                    <img src="<?php echo $doctor[0]->Url_Image ?>" class="w-16 h-16 rounded-full">
+            <div class="p-2 transition duration-500 ease-in-out transform bg-white border rounded-lg">
+                <div id="image-div" class="flex py-2">
+                    <img src="<?php echo $doctor[0]->Url_Image ?>" class="w-20 h-full rounded-full">
                     <div id="name" class="ml-4">
                         <p class="text-sm font-medium text-gray-900" id="fullname">Bs. <?php echo $doctor[0]->FullName ?></p>
                     </div>
-                </div>
-                <div class="text-center">
                 </div>
             </div>
         </div>
@@ -234,6 +208,7 @@
                         VND
                     </div>
                     <button type="submit" onclick="book()" class="px-6 py-3 text-lg font-semibold text-white transition duration-500 ease-in-out transform bg-blue-600 border border-current rounded hover:bg-blue-700 focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2">Make an appointment</button>
+                    <button class="px-6 py-3 text-lg font-semibold text-white transition duration-500 ease-in-out transform bg-blue-600 border border-current rounded hover:bg-blue-700 focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2"><a href="/patient/list-doctor" style="border: none;">Back</a></button>
                 </div>
             </div>
         </div>

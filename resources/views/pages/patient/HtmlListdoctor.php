@@ -120,9 +120,9 @@
 </style>
 
 <body>
+    <img class="imgDoctor" src="https://res.cloudinary.com/dkvvko14m/image/upload/v1705551758/MentalHealthCare/t9jikzp6ivnvqmtjfzp3.png" alt="doctor">
     <div class="container">
         <div class="header">
-            <img class="imgDoctor" src="https://res.cloudinary.com/dlmxi3lk0/image/upload/v1704254012/mental%20health%20care/szkg0o52ozdjsjpf2awz.png" alt="doctor">
             <h1 class="title">Mental Health Care</h1>
             <p class="sub_title">
                 We would like to extend our warm greetings and express our gratitude for your interest in our services. This website was created with the aim of providing you with excellent experiences and high-quality services.
