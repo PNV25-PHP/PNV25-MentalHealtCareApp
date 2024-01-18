@@ -11,6 +11,14 @@
   .search {
     margin-right: 5px;
   }
+  .flex.space-x-4 {
+    align-items: center;
+  }
+
+  .flex.flex-1.items-center.justify-center
+  {
+    align-items: center;
+  }
 </style>
 <nav class="bg-blue-900">
   <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
