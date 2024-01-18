@@ -101,6 +101,7 @@
                     <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 1" data-carousel-slide-to="0"></button>
                     <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
                     <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
+                    <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4" data-carousel-slide-to="3"></button>
                 </div>
 
                 <button type="button" class="flex absolute top-0 left-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none" data-carousel-prev>
@@ -227,21 +228,19 @@
             <div class=" mr-10 w-[220px] h-[80px] bg-blue-900 rounded-lg">
                 <div class="pt-2 pl-2 pr-2 pb-2">
                     <div class="ext-blue-900 text-lg font-semibold uppercase font-poppins text-white">Addres</div>
-                    <div class="text-gray-300 text-sm font-medium font-poppins">99 To Hien Thanh-Da Nang</div>
+                    <div class="text-gray-300 text-sm font-medium font-poppins">216 Nguyễn Công Trứ, Sơn Trà, Đà Nẵng 550000, Việt Nam</div>
                 </div>
             </div>
             <div class="mr-10 w-[220px] h-[80px] bg-blue-900 rounded-lg">
                 <div class="pt-2 pl-2 pr-2 pb-2">
                     <div class="ext-blue-900 text-lg font-semibold uppercase font-poppins text-white">URGENT</div>
-                    <div class="text-gray-300 text-sm font-medium font-poppins">Phone 1: (237) 681-812-255</div>
-                    <div class="text-gray-300 text-sm font-medium font-poppins">Phone 2: (237) 666-331-894</div>
+                    <div class="text-gray-300 text-sm font-medium font-poppins">Phone 1: (+84) 1900986868</div>
                 </div>
             </div>
             <div class="mr-10 w-[220px] h-[80px] bg-blue-900 rounded-lg">
                 <div class="pt-2 pl-2 pr-2 pb-2">
                     <div class="ext-blue-900 text-lg font-semibold uppercase font-poppins text-white">Email</div>
-                    <div class="text-gray-300 text-sm font-medium font-poppins">benhvien199@gmail.com</div>
-                    <div class="text-gray-300 text-sm font-medium font-poppins">bv199@gmail.com</div>
+                    <div class="text-gray-300 text-sm font-medium font-poppins">cskh@benhvien199.vn</div>
                 </div>
             </div>
             <div class="mr-10 w-[220px] h-[80px] bg-blue-900 rounded-lg">
@@ -254,5 +253,5 @@
 
         </div>
     </section>
-    
+
     <?php include_once dirname(__DIR__) . '../../layouts/HtmlTail.php' ?>

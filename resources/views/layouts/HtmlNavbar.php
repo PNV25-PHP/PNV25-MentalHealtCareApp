@@ -11,8 +11,12 @@
   .search {
     margin-right: 5px;
   }
+  .flex.space-x-4 {
+    align-items: center;
+  }
 
-  .flex {
+  .flex.flex-1.items-center.justify-center
+  {
     align-items: center;
   }
 </style>

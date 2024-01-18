@@ -64,6 +64,9 @@ class NewPostController extends Controller
     {
         $req = new CommentReq($request);
         // Thêm 1 row comment vào cơ sở dữ liệu
+        if($req->CommentContent === "" || $req->CommentContent === null){
+            return response()->json(['error' => 'Comment thêm không thành công'], 400);
+        }
         $sql = "INSERT INTO comments (PostId, UserId, CommentContent) VALUES (?, ?, ?);";
         $params = [
             $req->PostId,

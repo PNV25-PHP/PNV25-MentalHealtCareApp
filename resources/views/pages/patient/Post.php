@@ -95,6 +95,11 @@
     background-color: #1e4faa;
     color: #fff;
   }
+
+  #form_to_show_comment {
+    position: relative;
+    top: -500px;
+  }
 </style>
 <script>
   const posts = <?= json_encode($posts) ?>;
@@ -121,7 +126,7 @@
             <img src="${post.PostImage}" alt="" class="w-full h-41 object-cover object-center">
           </div>
           <div class="flex items-center mt-4 space-x-4">
-        <button type="button" class="flex items-center text-sm text-gray-500 hover:underline dark:text-gray-400 font-medium" onclick="enterContent(${post.PostId})">
+        <button class="flex items-center text-sm text-gray-500 hover:underline dark:text-gray-400 font-medium" onclick="enterContent(${post.PostId})">
             <svg class="mr-1.5 w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 18">
                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5h5M5 8h2m6-3h2m-5 3h6m2-7H2a1 1 0 0 0-1 1v9a1 1 0 0 0 1 1h3v5l5-5h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1Z" />
             </svg>
@@ -135,7 +140,7 @@
             <div class="flex justify-between items-center mb-6">
             <h2 class="text-lg lg:text-2xl font-bold text-gray-900 dark:text-white">Discussion (${post.CommentCount})</h2>
             </div>
-            <div id="form_to_show_comment"></div>
+            <div id="form_to_show_comment""></div>
             <div class="scroll-container">
               <div class="content">`
     comments.map((comment) => {
@@ -241,32 +246,37 @@
     document.getElementById('Cancale_comment').style.display = "none";
   }
 
-  function addComment(PostId) {
+  async function addComment(PostId) {
     var content_comment = document.getElementById('comment').value;
-      const post_comment = {
+    
+    const post_comment = {
         PostId: PostId,
         UserId: user_currentlyId,
         CommentContent: content_comment
-      }
-      fetch('/api/comment/addComment', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(post_comment)
-      }) .then(response => response.json())
-      .then(data => {
+    };
+
+    try {
+        const response = await fetch('/api/comment/addComment', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(post_comment)
+        });
+
+        const data = await response.json();
+
         if (data.success) {
-          window.location.href = '/patient/post';
+            window.location.href = '/patient/post';
         } else {
-          console.error('Có lỗi khi thêm comment:', data.error);
+            console.error('Có lỗi khi thêm comment:', data.error);
+            alert("you need to enter text");
         }
-      })
-      .catch(error => {
+    } catch (error) {
         console.error('Lỗi kết nối:', error);
-      });
-    
-  }
+    }
+}
+
 
   function addPost() {
     var urlImage = document.getElementById('image_of_post').value;
@@ -291,6 +301,7 @@
           window.location.href = '/patient/post';
         } else {
           console.error('Có lỗi khi thêm bài viết:', data.error);
+          alert("you need to enter text");
         }
       })
       .catch(error => {
