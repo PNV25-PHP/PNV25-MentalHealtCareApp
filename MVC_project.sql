@@ -1,55 +1,173 @@
 create DATABASE MVC_Project;
 USE MVC_Project;
 ALTER DATABASE MVC_Project CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-CREATE TABLE users (
-  Id varchar(255) Unique primary key,
-  Role ENUM('admin', 'doctor', 'patient') NOT NULL,
-  Email VARCHAR(255) UNIQUE NOT NULL,
-  Password VARCHAR(255) NOT NULL,
-  FullName VARCHAR(255) NOT NULL,
-  Phone VARCHAR(20),
-  Address varchar(255),
-  Url_Image VARCHAR(255)
-);
 
-CREATE TABLE doctors (
-  Id varchar(255) Unique primary key,
-  UserId varchar(255) NOT NULL,
-  Specialization VARCHAR(200),
-  Hospital VARCHAR(255),
-  FOREIGN KEY (UserId) REFERENCES users(Id)
-);
+CREATE TABLE `users` (
+	`Id` VARCHAR(255) NOT NULL COLLATE 'utf8mb4_unicode_ci',
+	`Role` ENUM('admin','doctor','patient') NOT NULL COLLATE 'utf8mb4_unicode_ci',
+	`Email` VARCHAR(255) NOT NULL COLLATE 'utf8mb4_unicode_ci',
+	`Password` VARCHAR(255) NOT NULL COLLATE 'utf8mb4_unicode_ci',
+	`FullName` VARCHAR(255) NOT NULL COLLATE 'utf8mb4_unicode_ci',
+	`Phone` VARCHAR(20) NULL DEFAULT NULL COLLATE 'utf8mb4_unicode_ci',
+	`Address` VARCHAR(255) NULL DEFAULT NULL COLLATE 'utf8mb4_unicode_ci',
+	`Url_Image` VARCHAR(255) NULL DEFAULT NULL COLLATE 'utf8mb4_unicode_ci',
+	PRIMARY KEY (`Id`) USING BTREE,
+	UNIQUE INDEX `Id` (`Id`) USING BTREE,
+	UNIQUE INDEX `Email` (`Email`) USING BTREE
+)
+COLLATE='utf8mb4_unicode_ci'
+ENGINE=InnoDB
+;
 
-CREATE TABLE patients (
-  Id varchar(255) Unique primary key,
-  UserId varchar(255) NOT NULL,
-  FOREIGN KEY (UserId) REFERENCES users(Id)
-);
+CREATE TABLE `doctors` (
+	`Id` VARCHAR(255) NOT NULL COLLATE 'utf8mb4_unicode_ci',
+	`UserId` VARCHAR(255) NOT NULL COLLATE 'utf8mb4_unicode_ci',
+	`Specialization` VARCHAR(200) NULL DEFAULT NULL COLLATE 'utf8mb4_unicode_ci',
+	`Hospital` VARCHAR(255) NULL DEFAULT NULL COLLATE 'utf8mb4_unicode_ci',
+	PRIMARY KEY (`Id`) USING BTREE,
+	UNIQUE INDEX `Id` (`Id`) USING BTREE,
+	INDEX `UserId` (`UserId`) USING BTREE,
+	CONSTRAINT `doctors_ibfk_1` FOREIGN KEY (`UserId`) REFERENCES `users` (`Id`) ON UPDATE NO ACTION ON DELETE NO ACTION
+)
+COLLATE='utf8mb4_unicode_ci'
+ENGINE=InnoDB
+;
 
-CREATE TABLE admins (
-  Id varchar(255) Unique primary key,
-  UserId varchar(255) NOT NULL,
-  FOREIGN KEY (UserId) REFERENCES users(Id)
-);
+CREATE TABLE `patients` (
+	`Id` VARCHAR(255) NOT NULL COLLATE 'utf8mb4_unicode_ci',
+	`UserId` VARCHAR(255) NOT NULL COLLATE 'utf8mb4_unicode_ci',
+	PRIMARY KEY (`Id`) USING BTREE,
+	UNIQUE INDEX `Id` (`Id`) USING BTREE,
+	INDEX `UserId` (`UserId`) USING BTREE,
+	CONSTRAINT `patients_ibfk_1` FOREIGN KEY (`UserId`) REFERENCES `users` (`Id`) ON UPDATE NO ACTION ON DELETE NO ACTION
+)
+COLLATE='utf8mb4_unicode_ci'
+ENGINE=InnoDB
+;
 
-CREATE TABLE booking (
-  Id varchar(255) PRIMARY KEY,
-  PatientId varchar(255) NOT NULL,
-  DoctorId varchar(255) NOT NULL,
-  TimeBooking TIME NOT NULL,
-  DateBooking DATE NOT NULL,
-  TotalPrice DECIMAL(10, 2),
-  FOREIGN KEY (PatientId) REFERENCES patients(Id),
-  FOREIGN KEY (DoctorId) REFERENCES doctors(Id)
-);
+CREATE TABLE `admins` (
+	`Id` VARCHAR(255) NOT NULL COLLATE 'utf8mb4_unicode_ci',
+	`UserId` VARCHAR(255) NOT NULL COLLATE 'utf8mb4_unicode_ci',
+	PRIMARY KEY (`Id`) USING BTREE,
+	UNIQUE INDEX `Id` (`Id`) USING BTREE,
+	INDEX `UserId` (`UserId`) USING BTREE,
+	CONSTRAINT `admins_ibfk_1` FOREIGN KEY (`UserId`) REFERENCES `users` (`Id`) ON UPDATE NO ACTION ON DELETE NO ACTION
+)
+COLLATE='utf8mb4_unicode_ci'
+ENGINE=InnoDB
+;
 
-CREATE TABLE listTimeDoctor (
-    id INT PRIMARY KEY AUTO_INCREMENT,
-    time TIME NOT NULL,
-   price DECIMAL(10, 2)
-);
+CREATE TABLE `booking` (
+	`Id` VARCHAR(255) NOT NULL COLLATE 'utf8mb4_unicode_ci',
+	`PatientId` VARCHAR(255) NOT NULL COLLATE 'utf8mb4_unicode_ci',
+	`DoctorId` VARCHAR(255) NOT NULL COLLATE 'utf8mb4_unicode_ci',
+	`TimeBooking` TIME NOT NULL,
+	`DateBooking` DATE NOT NULL,
+	`TotalPrice` DECIMAL(10,2) NULL DEFAULT NULL,
+	PRIMARY KEY (`Id`) USING BTREE,
+	INDEX `PatientId` (`PatientId`) USING BTREE,
+	INDEX `DoctorId` (`DoctorId`) USING BTREE,
+	CONSTRAINT `booking_ibfk_1` FOREIGN KEY (`PatientId`) REFERENCES `patients` (`Id`) ON UPDATE NO ACTION ON DELETE NO ACTION,
+	CONSTRAINT `booking_ibfk_2` FOREIGN KEY (`DoctorId`) REFERENCES `doctors` (`Id`) ON UPDATE NO ACTION ON DELETE NO ACTION
+)
+COLLATE='utf8mb4_unicode_ci'
+ENGINE=InnoDB
+;
+CREATE TABLE `listtimedoctor` (
+	`id` INT(10) NOT NULL AUTO_INCREMENT,
+	`time` TIME NOT NULL,
+	`price` DECIMAL(10,2) NULL DEFAULT NULL,
+	PRIMARY KEY (`id`) USING BTREE
+)
+COLLATE='utf8mb4_unicode_ci'
+ENGINE=InnoDB
+AUTO_INCREMENT=11
+;
 
-INSERT INTO listTimeDoctor (time, price) VALUES 
+CREATE TABLE `posts` (
+	`Id` INT(10) NOT NULL AUTO_INCREMENT,
+	`UserId` VARCHAR(255) NOT NULL COLLATE 'utf8mb4_unicode_ci',
+	`Content` VARCHAR(255) NOT NULL COLLATE 'utf8mb4_unicode_ci',
+	`Url_Image` VARCHAR(200) NULL DEFAULT NULL COLLATE 'utf8mb4_unicode_ci',
+	`CreatedAt` TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP,
+	PRIMARY KEY (`Id`) USING BTREE,
+	INDEX `UserId` (`UserId`) USING BTREE,
+	CONSTRAINT `posts_ibfk_1` FOREIGN KEY (`UserId`) REFERENCES `users` (`Id`) ON UPDATE NO ACTION ON DELETE NO ACTION
+)
+COLLATE='utf8mb4_unicode_ci'
+ENGINE=InnoDB
+AUTO_INCREMENT=21
+;
+
+CREATE TABLE `comments` (
+	`CommentId` INT(10) NOT NULL AUTO_INCREMENT,
+	`PostId` INT(10) NOT NULL,
+	`UserId` VARCHAR(255) NOT NULL COLLATE 'utf8mb4_unicode_ci',
+	`CommentContent` VARCHAR(255) NOT NULL COLLATE 'utf8mb4_unicode_ci',
+	`CreatedAt` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+	PRIMARY KEY (`CommentId`) USING BTREE,
+	INDEX `PostId` (`PostId`) USING BTREE,
+	INDEX `UserId` (`UserId`) USING BTREE,
+	CONSTRAINT `comments_ibfk_1` FOREIGN KEY (`PostId`) REFERENCES `posts` (`Id`) ON UPDATE NO ACTION ON DELETE NO ACTION,
+	CONSTRAINT `comments_ibfk_2` FOREIGN KEY (`UserId`) REFERENCES `users` (`Id`) ON UPDATE NO ACTION ON DELETE NO ACTION
+)
+COLLATE='utf8mb4_unicode_ci'
+ENGINE=InnoDB
+AUTO_INCREMENT=23
+;
+
+
+-- USE mvc_project_php;
+INSERT INTO `users` (Id, Role, Email, Password, Fullname, Phone, Address, Url_Image)
+VALUES
+  ('202401181038', 'admin', 'admin1@mentalheath.management', 'admin1', 'Nguyen Viet Chung', '0921237456', '123 Nguyen Quang Trung street, TP.HCM', 'https://cdn.bookingcare.vn/fo/w256/2021/05/20/172934-bs-nguyen-viet-chung.jpg'),
+  ('202401181049', 'doctor', 'nguyenkhanh@mental.health.care.hospital', 'nguyenkhanhMentalHealthCare#1234#', 'Nguyen Khanh', '0933586459', '456 Le Loi Street, District 5, HCM', 'https://cdn.bookingcare.vn/fo/w256/2022/06/14/103841-bs-tuan.png'),
+  ('202401181040', 'doctor', 'haanh@mental.health.care.hospital', 'haanhMentalHealthCare#1234#', 'Nguyen Ha Anh', '0993345459', '321 Nguyen Thi Minh Khai street, Distric 1, TP.HCM', 'https://cdn.bookingcare.vn/fo/w256/2022/08/05/170642-bs-hoa-lao-khoa.jpg'),
+  ('202401181041', 'doctor', 'tuantrong@mental.health.care.hospital', 'tuantrongMentalHealthCare#1234#', 'Nguyen Trong Tuan', '09667835240', '322 Nguyen Thi Minh Khai street, Distric 1, TP.HCM', 'https://cdn.bookingcare.vn/fo/w256/2022/06/14/103841-bs-tuan.png'),
+  ('202401181042', 'doctor', 'nguyenhoa@mental.health.care.hospital', 'nguyenhoaMentalHealthCare#1234#', 'Nguyen Thi Hoa', '0369725439', '125 Nguyen Thi Minh Khai street, Distric 1, TP.HCM', 'https://cdn.bookingcare.vn/fo/w256/2022/08/05/170642-bs-hoa-lao-khoa.jpg'),
+  ('202401181043', 'doctor', 'anhthu@mental.health.care.hospital', 'anhthuMentalHealthCare#1234#', 'Nguyen Ngoc Anh Thu', '0945673238', '321 Nguyen Thi Minh Khai street, Distric 1, TP.HCM', 'https://cdn.bookingcare.vn/fo/w256/2023/09/07/091402-bs-anh-thu1.jpg'),  
+  ('202401181044', 'patient', 'am.y25@student.passerellesnumeriques.org', 'amyMentalHealthCare#1234#', 'Am Army', '0369735240', '654 Nguyen Van B street, Distric 10, TP.HCM', 'https://res.cloudinary.com/dttfevbw6/image/upload/v1705565184/MentalHealthCare/urjaedqxuknbsqbvagwo.jpg'),
+  ('202401181045', 'patient', 'yam532004@gmail.com', 'halangamMentalHealthCare#1234#', 'Am hii', '0937682999', '321 Nguyen Van An street, Distric 2, TP.HCM', 'https://res.cloudinary.com/dttfevbw6/image/upload/v1705565184/MentalHealthCare/fcr21v5oqgmatlqypjop.jpgusers'),
+  ('202401181046', 'patient', 'nghiamai532004@gmail.com', 'nghiamaiMentalHealthCare#1234#', 'Mai Xuan Nghia', '0354031164', '101B Le Huu Trac street, Son Tra, Da Nang', 'https://res.cloudinary.com/dttfevbw6/image/upload/v1705566118/MentalHealthCare/nkzznnlgmaoerjomdfoz.jpg'),
+  ('202401181047', 'patient', 'sinhdang532004@gmail.com', 'sinhdangMentalHealthCare#1234#', 'Dang Van Sinh', '0937682999', 'Son Tra, Da Nang', 'https://res.cloudinary.com/dttfevbw6/image/upload/v1705566118/MentalHealthCare/csuh5vcjws61hespfnye.jpg'),
+  ('202401181048', 'patient', 'luantran532004@gmail.com', 'luantranMentalHealthCare#1234#', 'Tran Thanh Luan', '0369735240', 'Ly Thuong Kiet, Hai Chau, Da Nang', 'https://res.cloudinary.com/dttfevbw6/image/upload/v1705566118/MentalHealthCare/kqlbgvuqakrkpmevciix.jpg') 
+
+INSERT INTO `doctors` (Id, UserId, Specialization, Hospital)
+VALUES
+  ('202401181040','202401181040', 'Psychology', 'Central Psychiatric Hospital'),
+  ('202401181049','202401181049', 'Clinical psychiatry', 'Hue Psychiatric Hospital'),
+  ('202401181042','202401181042', 'Psychotherapy', 'Hanoi Psychiatric Hospital'),
+  ('202401181043','202401181043', 'Child and adolescent psychiatry', 'Ho Chi Minh City Psychiatric Hospital HCM'),
+  ('202401181041','202401181041', 'Brain psychiatry', 'Da Nang Psychiatric Hospital')
+
+INSERT INTO `patients` (Id, UserId)
+VALUES
+  ('202401181044','202401181044'),
+  ('202401181045','202401181045'),
+   ('202401181046','202401181046'),
+   ('202401181047', '202401181047'),
+   ('202401181048','202401181048');
+
+INSERT INTO `admins` (Id, UserId)
+VALUES
+  ('202401181038','202401181038'),
+
+INSERT INTO `comments` (`PostId`, `UserId`, `CommentContent`) VALUES 
+(1, '202401181044', 'This is a greate website'),
+(1, '202401181045', 'Great post!'),
+(2, '202401181046', 'I have a question. Can you explain further?'),
+(3, '202401181047', 'Thanks for sharing this information.'),
+(3, '202401181048', 'I disagree with your point of view.');
+
+INSERT INTO `posts` (`UserId`, `Content`, `Url_Image`) VALUES 
+('202401181044', 'I Want to say Thank you for the flatform. It make me an easy-to-find mental health doctor. Thanks', 'https://res.cloudinary.com/dttfevbw6/image/upload/v1705565184/MentalHealthCare/fcr21v5oqgmatlqypjop.jpg'),
+('202401181045', 'My Mental Heath is better', 'https://res.cloudinary.com/dttfevbw6/image/upload/v1705565184/MentalHealthCare/urjaedqxuknbsqbvagwo.jpg'),
+('202401181046', 'What should I do if my son don`t want to talk with any person?', 'https://res.cloudinary.com/dttfevbw6/image/upload/v1705566121/MentalHealthCare/pf07ekq7aa8lsudijkx1.png'),
+('202401181047', 'I just want to say thank you', Null),
+('202401181048', 'Hoping the website anh the hospital is better', NULL);
+
+
+INSERT INTO `listtimeDoctor` (time, price) VALUES 
     ('08:00:00', 500.00),
     ('09:00:00', 500.00),
     ('10:00:00', 500.00),
@@ -59,93 +177,12 @@ INSERT INTO listTimeDoctor (time, price) VALUES
     ('14:00:00', 500.00),
     ('15:00:00', 500.00),
     ('16:00:00', 500.00),
-    ('17:00:00', 500.00);
+    ('17:00:00', 500.00)
 
-USE mvc_project;
-INSERT INTO booking(Id, PatientId, DoctorId, TimeBooking, DateBooking, TotalPrice)
+INSERT INTO `booking`(Id, PatientId, DoctorId, TimeBooking, DateBooking, TotalPrice)
 VALUES
-   ('11', '3', '2', '11:00:00', '2023-08-01', 500.00),
-   ('12', '3', '2', '11:00:00', '2023-08-01', 500.00),
-   ('10', '3', '2', '11:00:00', '2023-08-01', 500.00);
-
-INSERT INTO listTimeDoctor (time, price) VALUES 
-    ('08:00:00', 500.00),
-    ('09:00:00', 500.00),
-    ('10:00:00', 500.00),
-    ('11:00:00', 500.00),
-    ('12:00:00', 500.00),
-    ('13:00:00', 500.00),
-    ('14:00:00', 500.00),
-    ('15:00:00', 500.00),
-    ('16:00:00', 500.00),
-    ('17:00:00', 500.00);
-
-CREATE TABLE Messages (
- Id varchar(255) Unique primary key,
-  SenderId varchar(255) NOT NULL,
-  ReceiverId varchar(255) NOT NULL,
-  MessageType VARCHAR(255) NOT NULL,
-  FOREIGN KEY (SenderId) REFERENCES Users(Id),
-  FOREIGN KEY (ReceiverId) REFERENCES Users(Id)
-);
-
--- Chèn dữ liệu cho bác sĩ (doctors)
-INSERT INTO users (Id, Role, Email, Password, Fullname, Phone, Address, Url_Image)
-VALUES
-  ('1', 'doctor', 'doctor1@mental.health.care.hospital', 'password1', 'Nguyễn Văn A', '0921-123-456', '123 Đường A, Quận 1, TP.HCM', 'image1.jpg'),
-  ('2', 'doctor', 'doctor2@mental.health.care.hospital', 'password2', 'Trần Thị B', '0921-234-567', '456 Đường B, Quận 2, TP.HCM', 'image2.jpg'),
-  ('3', 'doctor', 'doctor3@mental.health.care.hospital', 'password3', 'Phạm Văn C', '0921-345-678', '789 Đường C, Quận 3, TP.HCM', 'image3.jpg'),
-  ('4', 'doctor', 'doctor4@mental.health.care.hospital', 'password4', 'Lê Thị D', '0921-456-789', '012 Đường D, Quận 4, TP.HCM', 'image4.jpg'),
-  ('5', 'doctor', 'doctor5@mental.health.care.hospital', 'password5', 'Nguyễn Văn E', '0921-567-890', '345 Đường E, Quận 5, TP.HCM', 'image5.jpg'),
-  ('6', 'doctor', 'doctor16@mental.health.care.hospital', 'password6', 'Lê Thị Q', '0921-890-123', '678 Đường Q, Quận 16, TP.HCM', 'image16.jpg'),
-  ('7', 'doctor', 'doctor17@mental.health.care.hospital', 'password7', 'Nguyễn Văn R', '0921-901-234', '901 Đường R, Quận 17, TP.HCM', 'image17.jpg'),
-  ('8', 'doctor', 'doctor18@mental.health.care.hospital', 'password8', 'Trần Thị S', '0921-012-345', '234 Đường S, Quận 18, TP.HCM', 'image18.jpg'),
-  ('9', 'doctor', 'doctor19@mental.health.care.hospital', 'password9', 'Phạm Văn T', '0921-123-456', '567 Đường T, Quận 19, TP.HCM', 'image19.jpg'),
-  ('10', 'doctor', 'doctor20@mental.health.care.hospital', 'password10', 'Lê Thị U', '0921-234-567', '890 Đường U, Quận 20, TP.HCM', 'image20.jpg');
-
-
-
-
-INSERT INTO doctors (Id, UserId, Specialization, Hospital)
-VALUES
-  ('1',  '1', 'Tâm lý học', 'Bệnh viện Tâm thần Trung ương'),
-  ('2','2', 'Tâm thần học lâm sàng', 'Bệnh viện Tâm thần Huế'),
-  ('3','3', 'Tâm lý trị liệu', 'Bệnh viện Tâm thần Hà Nội'),
-  ('4','4', 'Tâm thần trẻ em và thanh thiếu niên', 'Bệnh viện Tâm thần TP.HCM'),
-  ('5','5', 'Tâm thần não', 'Bệnh viện Tâm thần Đà Nẵng'),
-  ('6','6', 'Tâm thần nghiện', 'Bệnh viện Tâm thần Cần Thơ'),
-  ('7', '7', 'Tâm thần lão khoa', 'Bệnh viện Tâm thần Đồng Nai'),
-  ('8','8', 'Tâm thần pháp y', 'Bệnh viện Tâm thần Bắc Giang'),
-  ('9','9', 'Y học giấc ngủ', 'Bệnh viện Tâm thần Bình Dương'),
-  ('10','10', 'Tâm thần liên hệ', 'Bệnh viện Tâm thần Vũng Tàu');
-
-
--- Chèn dữ liệu cho bệnh nhân (patients)
-INSERT INTO users (Id, Role, Email, Password, FullName, Phone, Address, Url_Image)
-VALUES
-  ('11','patient', 'benh_nhan1@example.com', 'password1', 'Nguyễn Thị Hương', '1111111111', '123 Đường A, Quận 1, TP.HCM', 'image1.jpg'),
-  ('12','patient', 'benh_nhan2@example.com', 'password2', 'Trần Văn Hải', '2222222222', '456 Đường B, Quận 2, TP.HCM', 'image2.jpg'),
-  ('13','patient', 'benh_nhan3@example.com', 'password3', 'Phạm Thị Trang', '3333333333', '789 Đường C, Quận 3, TP.HCM', 'image3.jpg'),
-  ('14','patient', 'benh_nhan4@example.com', 'password4', 'Lê Văn Tùng', '4444444444', '012 Đường D, Quận 4, TP.HCM', 'image4.jpg'),
-  ('15','patient', 'benh_nhan5@example.com', 'password5', 'Nguyễn Thị Mỹ', '5555555555', '345 Đường E, Quận 5, TP.HCM', 'image5.jpg');
-
-
-INSERT INTO patients (Id, UserId)
-VALUES
-  ('1','11'),
-  ('2','12'),
-   ('3','13'),
-   ('4', '14'),
-   ('5','15');
-
-
--- Chèn dữ liệu cho quản trị viên (admins)
-INSERT INTO users (Id, Role, Email, Password, FullName, Phone, Url_Image)
-VALUES
-  ('16', 'admin', 'admin1@mentalheath.management', 'admin1', 'Nguyễn Công', '0921-234-567', 'image5.jpg'),
-  ( '17', 'admin', 'admin2@mentalheath.management', 'admin2', 'Hospital Management', '0921-234-567', 'image6.jpg');
-
-INSERT INTO admins (Id, UserId)
-VALUES
-  ('1','16'),
-  ('2','17');
+   ('1', '202401181044', '202401181049', '11:00:00', '2023-08-01', 500.00),
+   ('2', '202401181044', '202401181040', '10:00:00', '2023-18-01', 00.00),
+   ('3', '202401181044', '202401181042', '09:00:00', '2023-25-01', 500.00),
+   ('4', '202401181044', '202401181043', '10:00:00', '2023-15-01', 500.00),
+   ('5', '202401181044', '202401181041', '09:00:00', '2023-20-01', 500.00)

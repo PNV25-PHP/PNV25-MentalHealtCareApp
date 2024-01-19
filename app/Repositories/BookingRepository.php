@@ -48,13 +48,13 @@ class BookingRepository
                     WHERE b.PatientId = ?", [$patientId]);
                     return $bookings;
                 } else {
-                    return "Không tìm thấy bản ghi trong bảng bookings";
+                    return "No record found in bookings table";
                 }
             } else {
-                return "Không tìm thấy bản ghi trong bảng patients";
+                return "No records found in patients table";
             }
         } else {
-            return "Không tìm thấy người dùng với email này";
+            return "No user found with this email";
         }
     }
 }

@@ -1,13 +1,13 @@
 <?php
 include_once dirname(__DIR__) . '../../layouts/HtmlHead.php' ?>
-<div class="border-b-2 block md:flex">
+<div class="border-b-2 block md:flex" style="height: 100vh">
   <div class="w-full md:w-1/5 p-4 sm:p-6 lg:p-8 bg-blue-900 text-white shadow-md">
     <div class="flex justify-between">
       <span id="name-profile" class="text-xl font-semibold block"></span>
     </div>
     <span class="text-white">This information is secret so be careful</span>
     <div class="w-full p-8 mx-2 block justify-center">
-      <img id="showImage" class="w-[150px] h-[150px] mb-10 items-center border-2 shadow-lg rounded-full" src="https://cff2.earth.com/uploads/2023/11/30185539/bottlenose-dolphin_1medium-960x640.jpg" alt="">
+      <img id="showImage" class="w-[170px] h-[170px] mb-10 items-center border-2 shadow-lg rounded-full" src="https://cff2.earth.com/uploads/2023/11/30185539/bottlenose-dolphin_1medium-960x640.jpg" alt="">
       <button type="button" class="w-[150px] text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"><a href="/edit-profile">Edit Profile</a></button>
       <button type="button" class=" w-[150px] text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"><a href="/patient/history-booking">History booking</a></button>
       <button type="button" class=" w-[150px] text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"><a href="#">Security</a></button>
@@ -39,14 +39,12 @@ include_once dirname(__DIR__) . '../../layouts/HtmlHead.php' ?>
 <script>
     var email_by_localstore = JSON.parse(localStorage.getItem('user-info'));
     var email = email_by_localstore.email;
-    console.log(email_by_localstore)
-    var fullname = email_by_localstore.fullName;
-    document.getElementById('name-profile').innerHTML = fullname;
     var formData = new FormData();
     formData.append('email', email);
     axios.post('/api/patient/processHistoryBooking', formData)
       .then(function(response) {
         const bookings = response.data
+        console.log("Booking nèe:  ", bookings)
         const tableBody = document.getElementById("history-booking");
         bookings.forEach((booking) => {
           const row = tableBody.insertRow();
@@ -81,6 +79,7 @@ include_once dirname(__DIR__) . '../../layouts/HtmlHead.php' ?>
           console.error('Error:', error.message);
         }
       })
+      //  showInfo()
   </script>
   </body>
   </html>
