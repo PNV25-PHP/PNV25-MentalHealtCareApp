@@ -10,11 +10,15 @@ use App\Repositories\BookingRepository;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Date;
 use Laravel\Lumen\Routing\Controller;
+use App\Repositories\UserRepository;
 
 class BookingController extends Controller
 {
+    private UserRepository $userRepository;
     public function index()
     {
+        $this->userRepository = new UserRepository();
+        $this->userRepository->checkLogin();
         $request = new DoctorRepository;
         return view("pages\patient\HtmlBooking", ['doctor' => $request->getDoctorById($_GET['id'])], ['times' => $request->getAllTimeDoctor()]);
     }

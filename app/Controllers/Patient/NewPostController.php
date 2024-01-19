@@ -7,10 +7,15 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\Dtos\Patient\NewPostReq;
 use App\Dtos\Common\CommentReq;
+use App\Repositories\UserRepository;
 class NewPostController extends Controller
 {
+    private UserRepository $userRepository;
+    
     public function index()
     {
+        $this->userRepository = new UserRepository();
+        $this->userRepository->checkLogin();
         $sql = "SELECT 
         p.Id AS PostId, 
         p.UserId AS PostUserId, 

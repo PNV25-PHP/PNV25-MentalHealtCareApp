@@ -27,6 +27,7 @@ class DoctorController extends Controller
 
     public function index()
     {
+        $this->userRepository->checkLogin();
         $doctors = $this->doctorRepository->getAllDoctor();
         return view('pages.admin.doctor')->with('doctors', $doctors);
     }

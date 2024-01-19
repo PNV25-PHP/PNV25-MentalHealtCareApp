@@ -107,4 +107,15 @@ class UserRepository
         }
         return true;
     }
+
+    function checkLogin()
+    {
+        echo '<script> 
+        var user_info = localStorage.getItem("user-info");
+        
+        if (!user_info) {
+            window.location.href = "/login"; 
+        }
+         </script>';
+    }
 }

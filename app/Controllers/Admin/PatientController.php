@@ -27,6 +27,7 @@ class PatientController extends Controller
 
     public function index()
     {
+        $this->userRepository->checkLogin();
         $patients = $this->patientRepository->getAllPatients();
         return view('pages.admin.patient')->with('patients', $patients);
     }

@@ -27,6 +27,7 @@ class ProFileController extends Controller
     }
     public function viewHomepage()
     {
+        $this->userRepository->checkLogin();
         return view('pages\common\HtmlHomepage');
     }
     public function editProfile()
