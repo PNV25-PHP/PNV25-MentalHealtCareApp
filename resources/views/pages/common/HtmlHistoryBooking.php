@@ -79,7 +79,7 @@ include_once dirname(__DIR__) . '../../layouts/HtmlHead.php' ?>
           console.error('Error:', error.message);
         }
       })
-      //  showInfo()
+       showInfo()
   </script>
   </body>
   </html>
