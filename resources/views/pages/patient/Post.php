@@ -39,7 +39,8 @@
   /* Style for the comment input */
   #comment {
     width: 100%;
-    font-size: 0.875rem; /* 14px */
+    font-size: 0.875rem;
+    /* 14px */
     color: #333;
     border: none;
     outline: none;
@@ -54,10 +55,12 @@
 
   /* Style for the Post Comment button */
   #post-comment {
-    display: inline-flex;
+    display: flex;
     align-items: center;
-    padding: 0.625rem 1rem; /* 10px 16px */
-    font-size: 0.75rem; /* 12px */
+    padding: 0.625rem 1rem;
+    /* 10px 16px */
+    font-size: 0.75rem;
+    /* 12px */
     font-weight: 500;
     text-align: center;
     text-decoration: none;
@@ -78,8 +81,10 @@
   #cancel {
     display: inline-flex;
     align-items: center;
-    padding: 0.625rem 1rem; /* 10px 16px */
-    font-size: 0.75rem; /* 12px */
+    padding: 0.625rem 1rem;
+    /* 10px 16px */
+    font-size: 0.75rem;
+    /* 12px */
     font-weight: 500;
     text-align: center;
     text-decoration: none;
@@ -98,7 +103,12 @@
 
   #form_to_show_comment {
     position: relative;
-    top: -500px;
+    top: 25%;
+    left: 25%;
+  }
+
+  #block_post {
+    margin-top: 10px;
   }
 </style>
 <script>
@@ -113,7 +123,7 @@
   posts.map((post) => {
     var Show_post =
       `<div class="flex items-center justify-center w-screen h-100%">
-        <div class="px-5 py-4 bg-white dark:bg-gray-800 shadow rounded-lg max-w-lg w-3/4">
+        <div class="px-5 py-4 bg-white dark:bg-gray-800 shadow rounded-lg max-w-lg w-3/4" id="block_post">
             <div class="flex mb-4">
             <img class="w-12 h-12 rounded-full" src="${post.UserImageUrl}"/>
             <div class="ml-2 mt-0.5">
@@ -140,7 +150,6 @@
             <div class="flex justify-between items-center mb-6">
             <h2 class="text-lg lg:text-2xl font-bold text-gray-900 dark:text-white">Discussion (${post.CommentCount})</h2>
             </div>
-            <div id="form_to_show_comment""></div>
             <div class="scroll-container">
               <div class="content">`
     comments.map((comment) => {
@@ -176,7 +185,7 @@
 </article>`
       }
     })
-    Show_posts += Show_post + `</div> </div> </section> <hr class="p-8">`;
+    Show_posts += Show_post + `</div> </div> </section> <p style="padding: 8px; color: #334155;"></p>`;
   })
   document.getElementById('show_here').innerHTML = Show_posts;
 </script>
@@ -214,6 +223,7 @@
     </div>
   </div>
 </div>
+<div id="form_to_show_comment" style="position: fixed;"></div>
 <script>
   const form = document.getElementById("form-post")
   form.style.display = 'none'
@@ -226,8 +236,7 @@
     form.style.display = 'none'
   }
 
-  function enterContent(postId) 
-  {
+  function enterContent(postId) {
     var form_content = `<form class="comment-form" id="Cancale_comment">
   <div class="comment-container">
     <label for="comment" class="sr-only">Your comment</label>
@@ -242,40 +251,40 @@
     document.getElementById('form_to_show_comment').innerHTML = form_content;
   }
 
-  function Cancale_comment(){
+  function Cancale_comment() {
     document.getElementById('Cancale_comment').style.display = "none";
   }
 
   async function addComment(PostId) {
     var content_comment = document.getElementById('comment').value;
-    
+
     const post_comment = {
-        PostId: PostId,
-        UserId: user_currentlyId,
-        CommentContent: content_comment
+      PostId: PostId,
+      UserId: user_currentlyId,
+      CommentContent: content_comment
     };
 
     try {
-        const response = await fetch('/api/comment/addComment', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(post_comment)
-        });
+      const response = await fetch('/api/comment/addComment', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(post_comment)
+      });
 
-        const data = await response.json();
+      const data = await response.json();
 
-        if (data.success) {
-            window.location.href = '/patient/post';
-        } else {
-            console.error('Có lỗi khi thêm comment:', data.error);
-            alert("you need to enter text");
-        }
+      if (data.success) {
+        window.location.href = '/patient/post';
+      } else {
+        console.error('Có lỗi khi thêm comment:', data.error);
+        alert("you need to enter text");
+      }
     } catch (error) {
-        console.error('Lỗi kết nối:', error);
+      console.error('Lỗi kết nối:', error);
     }
-}
+  }
 
 
   function addPost() {
