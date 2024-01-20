@@ -38,7 +38,7 @@
                 </div>
                 <div>
                     <label for="image" class="font-semibold text-gray-700 block pb-1">Upload Image</label>
-                    <input id="image" class="border-1 rounded-r px-4 py-2 w-full" type="file" />
+                    <input class="border-1 rounded-r px-4 py-2 w-full" type="file" id="fileInput" accept="image/*" />
                 </div>
                 <button onclick="handleUpdateProfile()" class="w-[100px] -mt-2 text-md font-bold text-white bg-gray-700 rounded-full px-4 py-2 hover:bg-gray-800">Update</button>
             </div>
@@ -48,40 +48,90 @@
 </div>
 </div>
 <script>
+    var user_info_update12 = JSON.parse(localStorage.getItem('user-info'));
+    // document.getElementById('fileInput').value = user_info_update.image;
     showInfo()
+    // Hàm uploadImage sử dụng Axios
+    function sendImageToServer(base64Image) {
+    return new Promise((resolve, reject) => {
+        axios.post('/upload_image', {
+                image: base64Image
+            })
+            .then(response => {
+                console.log('Image uploaded successfully');
+                const imageUrl = response.data.imageUrl;
+                console.log('Image URL:', imageUrl);
+                resolve(imageUrl);
+            })
+            .catch(error => {
+                console.error('Error uploading image', error);
+                reject(error);
+            });
+    });
+}
 
-    function handleUpdateProfile() {
+async function uploadImage() {
+    const fileInput = document.getElementById('fileInput');
+    const selectedFile = fileInput.files[0];
 
-        var user_info_update = JSON.parse(localStorage.getItem('user-info'));
-        var img = document.getElementById('image').value;
+    if (selectedFile) {
+        const reader = new FileReader();
+
+        return new Promise((resolve, reject) => {
+            reader.onload = function(e) {
+                const base64Image = e.target.result;
+                sendImageToServer(base64Image)
+                    .then(imageUrl => resolve(imageUrl))
+                    .catch(error => reject(error));
+            };
+
+            reader.readAsDataURL(selectedFile);
+        });
+    } else {
+        return Promise.reject('No file selected');
+    }
+}
+
+async function handleUpdateProfile() {
+    try {
+        var img = await uploadImage();
         var username = document.getElementById('username').value;
         var email = document.getElementById('email').value;
         var phoneNumber = document.getElementById('phoneNumber').value;
         var address = document.getElementById('address').value;
+        var password = document.getElementById('password').value;
+        var role = user_info_update12.role;
 
-        user_info_update.image = img;
-        user_info_update.fullName = username;
-        user_info_update.email = email;
-        user_info_update.phone = phoneNumber;
-        user_info_update.address = address;
+        // ... rest of the code ...
+
+        var user_info_update = {
+            image: img,
+            fullName: username,
+            email: email,
+            phone: phoneNumber,
+            address: address,
+            password: password,
+            role: role
+            // ... rest of the properties ...
+        };
+
         console.log(user_info_update);
-        document.getElementById('name-profile').innerHTML = user_info_update.fullName;
 
-        fetch('/api/edit-profile', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(user_info_update)
-            })
-            .then(response => response.json())
-            .then(data => {
-                console.log(data);
-                localStorage.setItem('user-info', JSON.stringify(user_info_update));
-                window.location.href = '/view-profile';
-            })
-            .catch(error => {
-                console.error('Error:', error);
-            });
+        axios.post('/api/edit-profile', user_info_update, {
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+        .then(response => {
+            console.log(response);
+            localStorage.setItem('user-info', JSON.stringify(user_info_update));
+            window.location.href = '/view-profile';
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+    } catch (error) {
+        console.error('Error:', error);
     }
+}
 </script>

@@ -14,10 +14,6 @@
 |
 */
 
-
-
-
-
 $router->get('/', function () use ($router) {
     if ($_SERVER['REQUEST_URI'] === '/') {
         header('Location: /login');
@@ -33,7 +29,6 @@ $router->post('/api/update/profile', 'Common\ProfileController@updateInformation
 $router->get('/patient/sign-up', 'Patient\SignUpController@index');
 $router->post('/api/patient/sign-up', 'Patient\SignUpController@signUp');
 $router->get('/patient/home', 'Patient\HomeController@index');
-
 // Routers for Post 
 $router->get('/patient/post', 'Patient\NewPostController@index');// /patient/post
 $router->post('/api/patient/Post/AddPost', 'Patient\NewPostController@addPost');
@@ -44,18 +39,14 @@ $router->get('/admin/getDoctor', 'Admin\DoctorController@index');
 $router->post('/admin/addDoctor', 'Admin\DoctorController@addDoctor');
 $router->post('/admin/deleteDoctor/{doctorId}', 'Admin\DoctorController@deleteDoctor');
 $router->post('/admin/updateDoctor', 'Admin\DoctorController@updateDoctor');
-
 //Admin Routers Patient
 $router->get('/admin/getPatient', 'Admin\PatientController@index');
 $router->post('/admin/addPatient', 'Admin\PatientController@addPatient');
 $router->post('/admin/updatePatient', 'Admin\PatientController@updatePatient');
 $router->post('/admin/deletePatient/{patientID}', 'Admin\PatientController@deletePatient');
-
 // other
 $router->get('/admin/getBooking', 'Admin\DoctorController@getBooking');
 $router->get('/admin/getDashboard', 'Admin\DoctorController@getDashboard');
-
-
 $router->get('/header', '\resource\views\layouts\HtmlNavbar');
 //booking
 $router->get('/patient/list-doctor', 'Patient\ListDoctorController@index');
@@ -72,5 +63,5 @@ $router->get('/patient/search', 'Patient\SearchController@index');
 $router->post('/api/patient/processHistoryBooking', 'Common\ProfileController@processHistoryBooking');
 $router->get('/patient/history-booking', 'Common\ProfileController@patientHistoryBooking');
 // upload image
-$router->post('/upload', 'Common\UploadController@uploadImage');
 $router->get('/patient/gettest', 'Common\UploadController@index');
+$router->post('/upload_image', 'Common\UploadController@uploadImage12');

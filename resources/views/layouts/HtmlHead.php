@@ -36,7 +36,7 @@
     email.value = user_info.email
     phoneNumber.value = user_info.phone
     address.value = user_info.address
-    password.value =user_info.password
+    password.value = user_info.password
     document.getElementById('name-profile').innerHTML =username.value
   }
 </script>
