@@ -9,7 +9,7 @@
                     <div class="grid grid-cols-2 gap-2">
                         <div>
                             <label for="full-name" class="font-semibold text-gray-700 block pb-1">Full name</label>
-                            <div class="flex">
+                            <div>
                                 <input id="full-name" name="full-name" required="" placeholder="Your Full Name" class="border-1 rounded-r px-4 py-2 w-full" type="text">
                                 <p id="full-name-error" class="text-[13px] text-red-600"></p>
                             </div>
@@ -17,7 +17,7 @@
 
                         <div>
                             <label for="phoneNumber" class="font-semibold text-gray-700 block pb-1">Phone Number</label>
-                            <div class="flex">
+                            <div>
                                 <input id="phoneNumber" name="phoneNumber" required="" placeholder="Your Phone Number" class="border-1 rounded-r px-4 py-2 w-full" type="text">
                                 <p id="phoneNumber-error" class="text-[13px] text-red-600"></p>
                             </div>
@@ -25,7 +25,7 @@
 
                         <div>
                             <label for="email" class="font-semibold text-gray-700 block pb-1">Email address</label>
-                            <div class="flex">
+                            <div>
                                 <input id="email" name="email" type="email" required="" placeholder="Your Email" class="border-1 rounded-r px-4 py-2 w-full" type="email">
                                 <p id="email-error" class="text-[13px] text-red-600"></p>
                             </div>
