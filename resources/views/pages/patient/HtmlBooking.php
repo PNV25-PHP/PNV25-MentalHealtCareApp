@@ -231,6 +231,7 @@
             if (res.status === 201) {
                 console.log("Selected Date: " + selectedDate);
                 if (listTimes != 0) {
+                    console.log(listTimes)
                     resultTime(listTimes)
                 } else {
                     document.getElementById("notification").innerHTML = "This day's schedule is fully booked"
@@ -260,10 +261,12 @@
                 }
             })
     });
+    var selectedTimeId = ""
 
     function resultTime(listTime) {
         var timeContainer = document.getElementById("timeContainer");
         timeContainer.innerHTML = "";
+
 
         for (var i = 0; i < listTime.length; i++) {
             (function(index) {
@@ -271,22 +274,18 @@
                 label.className =
                     "col-span-1 flex items-center bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded m-2";
                 var totalPrice = 0;
-
                 var radio = document.createElement("input");
                 radio.type = "radio";
                 radio.name = "selectedTime";
                 radio.className = "hidden";
                 radio.setAttribute("id", "hidden");
                 radio.value = index; // Lấy giá trị giờ từ listTime
-
                 var timeText = document.createElement("span");
                 var timeTextId = "timeText" + index;
                 timeText.setAttribute("id", timeTextId);
-                timeText.textContent = listTime[index].time; // Hiển thị giá trị giờ
-
+                timeText.textContent = listTime[index].time;
                 label.appendChild(radio);
                 label.appendChild(timeText);
-
                 label.addEventListener("click", function() {
                     var checkedRadio = document.querySelector('input[name="selectedTime"]:checked');
                     if (checkedRadio) {
@@ -300,43 +299,17 @@
                     radio.checked = true;
                     this.classList.add("checkbox-selected");
                     timeText.style.color = "#fff";
-                    totalPrice = calculateTotalPrice(listTime);
-                    price(totalPrice);
-                });
+                    selectedTimeId = listTime[index].id;
+                    price = listTime[index].price;
+                    document.getElementById("price").innerHTML = price
 
+                });
                 timeContainer.appendChild(label);
             })(i);
         }
     }
-    var time = ""
-    var prices = ""
     var doctorId = ""
     var patientId = ""
-
-    function scheduleTime(listTime) {
-        var checkedRadio = document.querySelector('input[name="selectedTime"]:checked');
-        if (checkedRadio) {
-            var index = parseInt(checkedRadio.value);
-            return listTime[index].time;
-        }
-        return 0;
-    }
-
-    function calculateTotalPrice(listTime) {
-        time = scheduleTime(listTime)
-        var checkedRadio = document.querySelector('input[name="selectedTime"]:checked');
-        if (checkedRadio) {
-            var index = parseInt(checkedRadio.value);
-            return parseFloat(listTime[index].price);
-        }
-        return 0;
-    }
-
-    function price(price) {
-        prices = price
-        console.log(price)
-        document.getElementById("price").textContent = price;
-    }
 
     var url = window.location.href;
     var idIndex = url.indexOf("id=");
@@ -357,19 +330,13 @@
     }
 
     function book() {
-        if (time != "") {
+        {
             var selectedDate = dateInput.value;
-            console.log(patientId)
-            console.log(doctorId)
-            console.log(time)
-            console.log(selectedDate)
-            console.log(prices)
             axios.post('/patient/list-doctor/booking', {
                     patientId: patientId,
                     doctorId: doctorId,
-                    time: time,
-                    selectedDate: selectedDate,
-                    prices: prices
+                    id: selectedTimeId,
+                    selectedDate: selectedDate
                 })
                 .then(res => {
                     if (res.status === 200) {
@@ -384,12 +351,14 @@
                             bookingSuccess.classList.remove('booking-success-visible');
                             bookingSuccess.classList.add('booking-success-hidden');
                         }, 4000);
-                        window.location.href = "/patient/list-doctor/booking?id=" + doctorId
+                        window.location.href = "/patient/history-booking"
+                    }
+
+                }).catch(error => {
+                    if (error.response.status === 404) {
+                        document.getElementById("error").innerHTML = "Please select a time before making an appointment"
                     }
                 })
-        } else {
-            document.getElementById("error").innerHTML = "Please select a time before making an appointment"
         }
-
     }
 </script>

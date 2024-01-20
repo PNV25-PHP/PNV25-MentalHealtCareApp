@@ -1,0 +1,1411 @@
+[2024-01-19 13:28:25] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException(code: 0):  at C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:235)
+[stacktrace]
+#0 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 C:\\figcode\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-19 13:28:29] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException(code: 0):  at C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:235)
+[stacktrace]
+#0 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 C:\\figcode\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-19 13:28:29] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException(code: 0):  at C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:235)
+[stacktrace]
+#0 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 C:\\figcode\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-19 13:28:29] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException(code: 0):  at C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:235)
+[stacktrace]
+#0 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 C:\\figcode\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-19 15:14:32] local.ERROR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'booking.TimeBooking' in 'where clause' (Connection: mysql, SQL: SELECT listtimedoctor.id,listtimedoctor.time,listtimedoctor.price
+              FROM listtimedoctor
+              LEFT JOIN booking ON listtimedoctor.time = booking.TimeBooking AND booking.DateBooking = 2024-01-19
+              WHERE booking.TimeBooking IS NULL) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42S22): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'booking.TimeBooking' in 'where clause' (Connection: mysql, SQL: SELECT listtimedoctor.id,listtimedoctor.time,listtimedoctor.price
+
+              FROM listtimedoctor
+
+              LEFT JOIN booking ON listtimedoctor.time = booking.TimeBooking AND booking.DateBooking = 2024-01-19
+
+              WHERE booking.TimeBooking IS NULL) at C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php:822)
+[stacktrace]
+#0 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(776): Illuminate\\Database\\Connection->runQueryCallback()
+#1 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(407): Illuminate\\Database\\Connection->run()
+#2 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\DatabaseManager.php(509): Illuminate\\Database\\Connection->select()
+#3 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\support\\Facades\\Facade.php(355): Illuminate\\Database\\DatabaseManager->__call()
+#4 C:\\figcode\\PNV25-MentalHealtCareApp\\app\\Repositories\\DoctorRepository.php(56): Illuminate\\Support\\Facades\\Facade::__callStatic()
+#5 C:\\figcode\\PNV25-MentalHealtCareApp\\app\\Controllers\\Patient\\BookingController.php(27): App\\Repositories\\DoctorRepository->getAvailableTimesForBooking()
+#6 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(36): App\\Controllers\\Patient\\BookingController->checkTime()
+#7 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#8 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#9 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#10 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#11 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(391): Illuminate\\Container\\Container->call()
+#12 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(356): Laravel\\Lumen\\Application->callControllerCallable()
+#13 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(331): Laravel\\Lumen\\Application->callLumenController()
+#14 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(284): Laravel\\Lumen\\Application->callControllerAction()
+#15 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(269): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute()
+#16 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(171): Laravel\\Lumen\\Application->handleFoundRoute()
+#17 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#18 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#19 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#20 C:\\figcode\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#21 {main}
+
+[previous exception] [object] (PDOException(code: 42S22): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'booking.TimeBooking' in 'where clause' at C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php:416)
+[stacktrace]
+#0 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(416): PDO->prepare()
+#1 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(809): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}()
+#2 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(776): Illuminate\\Database\\Connection->runQueryCallback()
+#3 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(407): Illuminate\\Database\\Connection->run()
+#4 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\DatabaseManager.php(509): Illuminate\\Database\\Connection->select()
+#5 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\support\\Facades\\Facade.php(355): Illuminate\\Database\\DatabaseManager->__call()
+#6 C:\\figcode\\PNV25-MentalHealtCareApp\\app\\Repositories\\DoctorRepository.php(56): Illuminate\\Support\\Facades\\Facade::__callStatic()
+#7 C:\\figcode\\PNV25-MentalHealtCareApp\\app\\Controllers\\Patient\\BookingController.php(27): App\\Repositories\\DoctorRepository->getAvailableTimesForBooking()
+#8 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(36): App\\Controllers\\Patient\\BookingController->checkTime()
+#9 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#10 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#11 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#12 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#13 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(391): Illuminate\\Container\\Container->call()
+#14 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(356): Laravel\\Lumen\\Application->callControllerCallable()
+#15 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(331): Laravel\\Lumen\\Application->callLumenController()
+#16 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(284): Laravel\\Lumen\\Application->callControllerAction()
+#17 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(269): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute()
+#18 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(171): Laravel\\Lumen\\Application->handleFoundRoute()
+#19 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#20 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#21 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#22 C:\\figcode\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#23 {main}
+"} 
+[2024-01-19 15:18:35] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException(code: 0):  at C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:235)
+[stacktrace]
+#0 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 C:\\figcode\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-19 15:18:36] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException(code: 0):  at C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:235)
+[stacktrace]
+#0 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 C:\\figcode\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-19 15:18:37] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException(code: 0):  at C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:235)
+[stacktrace]
+#0 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 C:\\figcode\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-19 15:18:45] local.ERROR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'TimeBooking' in 'field list' (Connection: mysql, SQL: INSERT INTO booking (Id,PatientId,DoctorId,TimeBooking,TimeId) VALUES (20240119151845, 2023-12-27 13:00:56, 10, 2024-01-19, 20240119151845)) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42S22): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'TimeBooking' in 'field list' (Connection: mysql, SQL: INSERT INTO booking (Id,PatientId,DoctorId,TimeBooking,TimeId) VALUES (20240119151845, 2023-12-27 13:00:56, 10, 2024-01-19, 20240119151845)) at C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php:822)
+[stacktrace]
+#0 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(776): Illuminate\\Database\\Connection->runQueryCallback()
+#1 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(569): Illuminate\\Database\\Connection->run()
+#2 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(533): Illuminate\\Database\\Connection->statement()
+#3 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\DatabaseManager.php(509): Illuminate\\Database\\Connection->insert()
+#4 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\support\\Facades\\Facade.php(355): Illuminate\\Database\\DatabaseManager->__call()
+#5 C:\\figcode\\PNV25-MentalHealtCareApp\\app\\Repositories\\BookingRepository.php(15): Illuminate\\Support\\Facades\\Facade::__callStatic()
+#6 C:\\figcode\\PNV25-MentalHealtCareApp\\app\\Controllers\\Patient\\BookingController.php(39): App\\Repositories\\BookingRepository->insert()
+#7 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(36): App\\Controllers\\Patient\\BookingController->booking()
+#8 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#9 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#10 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#11 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#12 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(391): Illuminate\\Container\\Container->call()
+#13 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(356): Laravel\\Lumen\\Application->callControllerCallable()
+#14 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(331): Laravel\\Lumen\\Application->callLumenController()
+#15 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(284): Laravel\\Lumen\\Application->callControllerAction()
+#16 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(269): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute()
+#17 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(171): Laravel\\Lumen\\Application->handleFoundRoute()
+#18 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#19 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#20 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#21 C:\\figcode\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#22 {main}
+
+[previous exception] [object] (PDOException(code: 42S22): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'TimeBooking' in 'field list' at C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php:574)
+[stacktrace]
+#0 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(574): PDO->prepare()
+#1 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(809): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}()
+#2 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(776): Illuminate\\Database\\Connection->runQueryCallback()
+#3 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(569): Illuminate\\Database\\Connection->run()
+#4 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(533): Illuminate\\Database\\Connection->statement()
+#5 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\DatabaseManager.php(509): Illuminate\\Database\\Connection->insert()
+#6 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\support\\Facades\\Facade.php(355): Illuminate\\Database\\DatabaseManager->__call()
+#7 C:\\figcode\\PNV25-MentalHealtCareApp\\app\\Repositories\\BookingRepository.php(15): Illuminate\\Support\\Facades\\Facade::__callStatic()
+#8 C:\\figcode\\PNV25-MentalHealtCareApp\\app\\Controllers\\Patient\\BookingController.php(39): App\\Repositories\\BookingRepository->insert()
+#9 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(36): App\\Controllers\\Patient\\BookingController->booking()
+#10 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#11 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#12 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#13 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#14 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(391): Illuminate\\Container\\Container->call()
+#15 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(356): Laravel\\Lumen\\Application->callControllerCallable()
+#16 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(331): Laravel\\Lumen\\Application->callLumenController()
+#17 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(284): Laravel\\Lumen\\Application->callControllerAction()
+#18 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(269): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute()
+#19 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(171): Laravel\\Lumen\\Application->handleFoundRoute()
+#20 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#21 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#22 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#23 C:\\figcode\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#24 {main}
+"} 
+[2024-01-19 15:19:19] local.ERROR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'TimeBooking' in 'field list' (Connection: mysql, SQL: INSERT INTO booking (Id,PatientId,DoctorId,TimeBooking,TimeId) VALUES (20240119151919, 2023-12-27 13:00:56, 10, 2024-01-24, 20240119151919)) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42S22): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'TimeBooking' in 'field list' (Connection: mysql, SQL: INSERT INTO booking (Id,PatientId,DoctorId,TimeBooking,TimeId) VALUES (20240119151919, 2023-12-27 13:00:56, 10, 2024-01-24, 20240119151919)) at C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php:822)
+[stacktrace]
+#0 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(776): Illuminate\\Database\\Connection->runQueryCallback()
+#1 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(569): Illuminate\\Database\\Connection->run()
+#2 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(533): Illuminate\\Database\\Connection->statement()
+#3 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\DatabaseManager.php(509): Illuminate\\Database\\Connection->insert()
+#4 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\support\\Facades\\Facade.php(355): Illuminate\\Database\\DatabaseManager->__call()
+#5 C:\\figcode\\PNV25-MentalHealtCareApp\\app\\Repositories\\BookingRepository.php(15): Illuminate\\Support\\Facades\\Facade::__callStatic()
+#6 C:\\figcode\\PNV25-MentalHealtCareApp\\app\\Controllers\\Patient\\BookingController.php(39): App\\Repositories\\BookingRepository->insert()
+#7 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(36): App\\Controllers\\Patient\\BookingController->booking()
+#8 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#9 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#10 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#11 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#12 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(391): Illuminate\\Container\\Container->call()
+#13 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(356): Laravel\\Lumen\\Application->callControllerCallable()
+#14 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(331): Laravel\\Lumen\\Application->callLumenController()
+#15 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(284): Laravel\\Lumen\\Application->callControllerAction()
+#16 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(269): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute()
+#17 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(171): Laravel\\Lumen\\Application->handleFoundRoute()
+#18 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#19 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#20 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#21 C:\\figcode\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#22 {main}
+
+[previous exception] [object] (PDOException(code: 42S22): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'TimeBooking' in 'field list' at C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php:574)
+[stacktrace]
+#0 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(574): PDO->prepare()
+#1 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(809): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}()
+#2 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(776): Illuminate\\Database\\Connection->runQueryCallback()
+#3 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(569): Illuminate\\Database\\Connection->run()
+#4 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(533): Illuminate\\Database\\Connection->statement()
+#5 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\DatabaseManager.php(509): Illuminate\\Database\\Connection->insert()
+#6 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\support\\Facades\\Facade.php(355): Illuminate\\Database\\DatabaseManager->__call()
+#7 C:\\figcode\\PNV25-MentalHealtCareApp\\app\\Repositories\\BookingRepository.php(15): Illuminate\\Support\\Facades\\Facade::__callStatic()
+#8 C:\\figcode\\PNV25-MentalHealtCareApp\\app\\Controllers\\Patient\\BookingController.php(39): App\\Repositories\\BookingRepository->insert()
+#9 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(36): App\\Controllers\\Patient\\BookingController->booking()
+#10 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#11 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#12 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#13 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#14 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(391): Illuminate\\Container\\Container->call()
+#15 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(356): Laravel\\Lumen\\Application->callControllerCallable()
+#16 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(331): Laravel\\Lumen\\Application->callLumenController()
+#17 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(284): Laravel\\Lumen\\Application->callControllerAction()
+#18 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(269): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute()
+#19 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(171): Laravel\\Lumen\\Application->handleFoundRoute()
+#20 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#21 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#22 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#23 C:\\figcode\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#24 {main}
+"} 
+[2024-01-19 15:21:28] local.ERROR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'TimeBooking' in 'field list' (Connection: mysql, SQL: INSERT INTO booking (Id,PatientId,DoctorId,TimeBooking,TimeId) VALUES (20240119152128, 20240119151834, 10, 2024-01-19, 20240119152128)) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42S22): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'TimeBooking' in 'field list' (Connection: mysql, SQL: INSERT INTO booking (Id,PatientId,DoctorId,TimeBooking,TimeId) VALUES (20240119152128, 20240119151834, 10, 2024-01-19, 20240119152128)) at C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php:822)
+[stacktrace]
+#0 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(776): Illuminate\\Database\\Connection->runQueryCallback()
+#1 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(569): Illuminate\\Database\\Connection->run()
+#2 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(533): Illuminate\\Database\\Connection->statement()
+#3 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\DatabaseManager.php(509): Illuminate\\Database\\Connection->insert()
+#4 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\support\\Facades\\Facade.php(355): Illuminate\\Database\\DatabaseManager->__call()
+#5 C:\\figcode\\PNV25-MentalHealtCareApp\\app\\Repositories\\BookingRepository.php(15): Illuminate\\Support\\Facades\\Facade::__callStatic()
+#6 C:\\figcode\\PNV25-MentalHealtCareApp\\app\\Controllers\\Patient\\BookingController.php(39): App\\Repositories\\BookingRepository->insert()
+#7 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(36): App\\Controllers\\Patient\\BookingController->booking()
+#8 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#9 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#10 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#11 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#12 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(391): Illuminate\\Container\\Container->call()
+#13 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(356): Laravel\\Lumen\\Application->callControllerCallable()
+#14 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(331): Laravel\\Lumen\\Application->callLumenController()
+#15 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(284): Laravel\\Lumen\\Application->callControllerAction()
+#16 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(269): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute()
+#17 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(171): Laravel\\Lumen\\Application->handleFoundRoute()
+#18 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#19 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#20 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#21 C:\\figcode\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#22 {main}
+
+[previous exception] [object] (PDOException(code: 42S22): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'TimeBooking' in 'field list' at C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php:574)
+[stacktrace]
+#0 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(574): PDO->prepare()
+#1 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(809): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}()
+#2 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(776): Illuminate\\Database\\Connection->runQueryCallback()
+#3 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(569): Illuminate\\Database\\Connection->run()
+#4 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(533): Illuminate\\Database\\Connection->statement()
+#5 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\DatabaseManager.php(509): Illuminate\\Database\\Connection->insert()
+#6 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\support\\Facades\\Facade.php(355): Illuminate\\Database\\DatabaseManager->__call()
+#7 C:\\figcode\\PNV25-MentalHealtCareApp\\app\\Repositories\\BookingRepository.php(15): Illuminate\\Support\\Facades\\Facade::__callStatic()
+#8 C:\\figcode\\PNV25-MentalHealtCareApp\\app\\Controllers\\Patient\\BookingController.php(39): App\\Repositories\\BookingRepository->insert()
+#9 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(36): App\\Controllers\\Patient\\BookingController->booking()
+#10 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#11 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#12 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#13 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#14 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(391): Illuminate\\Container\\Container->call()
+#15 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(356): Laravel\\Lumen\\Application->callControllerCallable()
+#16 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(331): Laravel\\Lumen\\Application->callLumenController()
+#17 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(284): Laravel\\Lumen\\Application->callControllerAction()
+#18 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(269): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute()
+#19 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(171): Laravel\\Lumen\\Application->handleFoundRoute()
+#20 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#21 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#22 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#23 C:\\figcode\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#24 {main}
+"} 
+[2024-01-19 15:22:41] local.ERROR: SQLSTATE[22003]: Numeric value out of range: 1264 Out of range value for column 'TimeId' at row 1 (Connection: mysql, SQL: INSERT INTO booking (Id,PatientId,DoctorId,DateBooking,TimeId) VALUES (20240119152240, 2023-12-27 13:00:56, 10, 2024-01-19, 20240119152240)) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 22003): SQLSTATE[22003]: Numeric value out of range: 1264 Out of range value for column 'TimeId' at row 1 (Connection: mysql, SQL: INSERT INTO booking (Id,PatientId,DoctorId,DateBooking,TimeId) VALUES (20240119152240, 2023-12-27 13:00:56, 10, 2024-01-19, 20240119152240)) at C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php:822)
+[stacktrace]
+#0 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(776): Illuminate\\Database\\Connection->runQueryCallback()
+#1 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(569): Illuminate\\Database\\Connection->run()
+#2 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(533): Illuminate\\Database\\Connection->statement()
+#3 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\DatabaseManager.php(509): Illuminate\\Database\\Connection->insert()
+#4 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\support\\Facades\\Facade.php(355): Illuminate\\Database\\DatabaseManager->__call()
+#5 C:\\figcode\\PNV25-MentalHealtCareApp\\app\\Repositories\\BookingRepository.php(15): Illuminate\\Support\\Facades\\Facade::__callStatic()
+#6 C:\\figcode\\PNV25-MentalHealtCareApp\\app\\Controllers\\Patient\\BookingController.php(39): App\\Repositories\\BookingRepository->insert()
+#7 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(36): App\\Controllers\\Patient\\BookingController->booking()
+#8 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#9 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#10 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#11 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#12 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(391): Illuminate\\Container\\Container->call()
+#13 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(356): Laravel\\Lumen\\Application->callControllerCallable()
+#14 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(331): Laravel\\Lumen\\Application->callLumenController()
+#15 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(284): Laravel\\Lumen\\Application->callControllerAction()
+#16 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(269): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute()
+#17 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(171): Laravel\\Lumen\\Application->handleFoundRoute()
+#18 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#19 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#20 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#21 C:\\figcode\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#22 {main}
+
+[previous exception] [object] (PDOException(code: 22003): SQLSTATE[22003]: Numeric value out of range: 1264 Out of range value for column 'TimeId' at row 1 at C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php:580)
+[stacktrace]
+#0 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(580): PDOStatement->execute()
+#1 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(809): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}()
+#2 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(776): Illuminate\\Database\\Connection->runQueryCallback()
+#3 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(569): Illuminate\\Database\\Connection->run()
+#4 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(533): Illuminate\\Database\\Connection->statement()
+#5 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\DatabaseManager.php(509): Illuminate\\Database\\Connection->insert()
+#6 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\support\\Facades\\Facade.php(355): Illuminate\\Database\\DatabaseManager->__call()
+#7 C:\\figcode\\PNV25-MentalHealtCareApp\\app\\Repositories\\BookingRepository.php(15): Illuminate\\Support\\Facades\\Facade::__callStatic()
+#8 C:\\figcode\\PNV25-MentalHealtCareApp\\app\\Controllers\\Patient\\BookingController.php(39): App\\Repositories\\BookingRepository->insert()
+#9 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(36): App\\Controllers\\Patient\\BookingController->booking()
+#10 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#11 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#12 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#13 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#14 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(391): Illuminate\\Container\\Container->call()
+#15 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(356): Laravel\\Lumen\\Application->callControllerCallable()
+#16 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(331): Laravel\\Lumen\\Application->callLumenController()
+#17 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(284): Laravel\\Lumen\\Application->callControllerAction()
+#18 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(269): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute()
+#19 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(171): Laravel\\Lumen\\Application->handleFoundRoute()
+#20 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#21 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#22 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#23 C:\\figcode\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#24 {main}
+"} 
+[2024-01-19 15:22:45] local.ERROR: SQLSTATE[22003]: Numeric value out of range: 1264 Out of range value for column 'TimeId' at row 1 (Connection: mysql, SQL: INSERT INTO booking (Id,PatientId,DoctorId,DateBooking,TimeId) VALUES (20240119152245, 20240119151834, 10, 2024-01-19, 20240119152245)) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 22003): SQLSTATE[22003]: Numeric value out of range: 1264 Out of range value for column 'TimeId' at row 1 (Connection: mysql, SQL: INSERT INTO booking (Id,PatientId,DoctorId,DateBooking,TimeId) VALUES (20240119152245, 20240119151834, 10, 2024-01-19, 20240119152245)) at C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php:822)
+[stacktrace]
+#0 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(776): Illuminate\\Database\\Connection->runQueryCallback()
+#1 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(569): Illuminate\\Database\\Connection->run()
+#2 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(533): Illuminate\\Database\\Connection->statement()
+#3 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\DatabaseManager.php(509): Illuminate\\Database\\Connection->insert()
+#4 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\support\\Facades\\Facade.php(355): Illuminate\\Database\\DatabaseManager->__call()
+#5 C:\\figcode\\PNV25-MentalHealtCareApp\\app\\Repositories\\BookingRepository.php(15): Illuminate\\Support\\Facades\\Facade::__callStatic()
+#6 C:\\figcode\\PNV25-MentalHealtCareApp\\app\\Controllers\\Patient\\BookingController.php(39): App\\Repositories\\BookingRepository->insert()
+#7 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(36): App\\Controllers\\Patient\\BookingController->booking()
+#8 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#9 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#10 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#11 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#12 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(391): Illuminate\\Container\\Container->call()
+#13 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(356): Laravel\\Lumen\\Application->callControllerCallable()
+#14 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(331): Laravel\\Lumen\\Application->callLumenController()
+#15 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(284): Laravel\\Lumen\\Application->callControllerAction()
+#16 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(269): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute()
+#17 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(171): Laravel\\Lumen\\Application->handleFoundRoute()
+#18 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#19 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#20 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#21 C:\\figcode\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#22 {main}
+
+[previous exception] [object] (PDOException(code: 22003): SQLSTATE[22003]: Numeric value out of range: 1264 Out of range value for column 'TimeId' at row 1 at C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php:580)
+[stacktrace]
+#0 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(580): PDOStatement->execute()
+#1 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(809): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}()
+#2 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(776): Illuminate\\Database\\Connection->runQueryCallback()
+#3 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(569): Illuminate\\Database\\Connection->run()
+#4 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(533): Illuminate\\Database\\Connection->statement()
+#5 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\DatabaseManager.php(509): Illuminate\\Database\\Connection->insert()
+#6 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\support\\Facades\\Facade.php(355): Illuminate\\Database\\DatabaseManager->__call()
+#7 C:\\figcode\\PNV25-MentalHealtCareApp\\app\\Repositories\\BookingRepository.php(15): Illuminate\\Support\\Facades\\Facade::__callStatic()
+#8 C:\\figcode\\PNV25-MentalHealtCareApp\\app\\Controllers\\Patient\\BookingController.php(39): App\\Repositories\\BookingRepository->insert()
+#9 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(36): App\\Controllers\\Patient\\BookingController->booking()
+#10 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#11 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#12 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#13 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#14 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(391): Illuminate\\Container\\Container->call()
+#15 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(356): Laravel\\Lumen\\Application->callControllerCallable()
+#16 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(331): Laravel\\Lumen\\Application->callLumenController()
+#17 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(284): Laravel\\Lumen\\Application->callControllerAction()
+#18 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(269): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute()
+#19 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(171): Laravel\\Lumen\\Application->handleFoundRoute()
+#20 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#21 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#22 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#23 C:\\figcode\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#24 {main}
+"} 
+[2024-01-19 15:24:55] local.ERROR: SQLSTATE[22003]: Numeric value out of range: 1264 Out of range value for column 'TimeId' at row 1 (Connection: mysql, SQL: INSERT INTO booking (Id,PatientId,DoctorId,DateBooking,TimeId) VALUES (20240119152455, 20240119151834, 10, 2024-01-19, 20240119152455)) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 22003): SQLSTATE[22003]: Numeric value out of range: 1264 Out of range value for column 'TimeId' at row 1 (Connection: mysql, SQL: INSERT INTO booking (Id,PatientId,DoctorId,DateBooking,TimeId) VALUES (20240119152455, 20240119151834, 10, 2024-01-19, 20240119152455)) at C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php:822)
+[stacktrace]
+#0 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(776): Illuminate\\Database\\Connection->runQueryCallback()
+#1 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(569): Illuminate\\Database\\Connection->run()
+#2 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(533): Illuminate\\Database\\Connection->statement()
+#3 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\DatabaseManager.php(509): Illuminate\\Database\\Connection->insert()
+#4 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\support\\Facades\\Facade.php(355): Illuminate\\Database\\DatabaseManager->__call()
+#5 C:\\figcode\\PNV25-MentalHealtCareApp\\app\\Repositories\\BookingRepository.php(15): Illuminate\\Support\\Facades\\Facade::__callStatic()
+#6 C:\\figcode\\PNV25-MentalHealtCareApp\\app\\Controllers\\Patient\\BookingController.php(39): App\\Repositories\\BookingRepository->insert()
+#7 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(36): App\\Controllers\\Patient\\BookingController->booking()
+#8 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#9 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#10 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#11 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#12 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(391): Illuminate\\Container\\Container->call()
+#13 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(356): Laravel\\Lumen\\Application->callControllerCallable()
+#14 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(331): Laravel\\Lumen\\Application->callLumenController()
+#15 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(284): Laravel\\Lumen\\Application->callControllerAction()
+#16 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(269): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute()
+#17 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(171): Laravel\\Lumen\\Application->handleFoundRoute()
+#18 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#19 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#20 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#21 C:\\figcode\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#22 {main}
+
+[previous exception] [object] (PDOException(code: 22003): SQLSTATE[22003]: Numeric value out of range: 1264 Out of range value for column 'TimeId' at row 1 at C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php:580)
+[stacktrace]
+#0 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(580): PDOStatement->execute()
+#1 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(809): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}()
+#2 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(776): Illuminate\\Database\\Connection->runQueryCallback()
+#3 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(569): Illuminate\\Database\\Connection->run()
+#4 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(533): Illuminate\\Database\\Connection->statement()
+#5 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\DatabaseManager.php(509): Illuminate\\Database\\Connection->insert()
+#6 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\support\\Facades\\Facade.php(355): Illuminate\\Database\\DatabaseManager->__call()
+#7 C:\\figcode\\PNV25-MentalHealtCareApp\\app\\Repositories\\BookingRepository.php(15): Illuminate\\Support\\Facades\\Facade::__callStatic()
+#8 C:\\figcode\\PNV25-MentalHealtCareApp\\app\\Controllers\\Patient\\BookingController.php(39): App\\Repositories\\BookingRepository->insert()
+#9 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(36): App\\Controllers\\Patient\\BookingController->booking()
+#10 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#11 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#12 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#13 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#14 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(391): Illuminate\\Container\\Container->call()
+#15 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(356): Laravel\\Lumen\\Application->callControllerCallable()
+#16 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(331): Laravel\\Lumen\\Application->callLumenController()
+#17 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(284): Laravel\\Lumen\\Application->callControllerAction()
+#18 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(269): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute()
+#19 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(171): Laravel\\Lumen\\Application->handleFoundRoute()
+#20 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#21 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#22 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#23 C:\\figcode\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#24 {main}
+"} 
+[2024-01-19 15:26:10] local.ERROR: Unclosed '{' on line 8 {"exception":"[object] (ParseError(code: 0): Unclosed '{' on line 8 at C:\\figcode\\PNV25-MentalHealtCareApp\\app\\Dtos\\Patient\\BookingReq.php:22)
+[stacktrace]
+#0 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\composer\\ClassLoader.php(427): Composer\\Autoload\\{closure}()
+#1 C:\\figcode\\PNV25-MentalHealtCareApp\\app\\Controllers\\Patient\\BookingController.php(36): Composer\\Autoload\\ClassLoader->loadClass()
+#2 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(36): App\\Controllers\\Patient\\BookingController->booking()
+#3 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#4 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#5 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#6 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#7 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(391): Illuminate\\Container\\Container->call()
+#8 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(356): Laravel\\Lumen\\Application->callControllerCallable()
+#9 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(331): Laravel\\Lumen\\Application->callLumenController()
+#10 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(284): Laravel\\Lumen\\Application->callControllerAction()
+#11 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(269): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute()
+#12 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(171): Laravel\\Lumen\\Application->handleFoundRoute()
+#13 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#14 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#15 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#16 C:\\figcode\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#17 {main}
+"} 
+[2024-01-19 15:26:21] local.ERROR: Unclosed '{' on line 8 {"exception":"[object] (ParseError(code: 0): Unclosed '{' on line 8 at C:\\figcode\\PNV25-MentalHealtCareApp\\app\\Dtos\\Patient\\BookingReq.php:22)
+[stacktrace]
+#0 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\composer\\ClassLoader.php(427): Composer\\Autoload\\{closure}()
+#1 C:\\figcode\\PNV25-MentalHealtCareApp\\app\\Controllers\\Patient\\BookingController.php(36): Composer\\Autoload\\ClassLoader->loadClass()
+#2 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(36): App\\Controllers\\Patient\\BookingController->booking()
+#3 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#4 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#5 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#6 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#7 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(391): Illuminate\\Container\\Container->call()
+#8 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(356): Laravel\\Lumen\\Application->callControllerCallable()
+#9 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(331): Laravel\\Lumen\\Application->callLumenController()
+#10 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(284): Laravel\\Lumen\\Application->callControllerAction()
+#11 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(269): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute()
+#12 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(171): Laravel\\Lumen\\Application->handleFoundRoute()
+#13 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#14 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#15 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#16 C:\\figcode\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#17 {main}
+"} 
+[2024-01-19 15:26:26] local.ERROR: Unclosed '{' on line 8 {"exception":"[object] (ParseError(code: 0): Unclosed '{' on line 8 at C:\\figcode\\PNV25-MentalHealtCareApp\\app\\Dtos\\Patient\\BookingReq.php:22)
+[stacktrace]
+#0 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\composer\\ClassLoader.php(427): Composer\\Autoload\\{closure}()
+#1 C:\\figcode\\PNV25-MentalHealtCareApp\\app\\Controllers\\Patient\\BookingController.php(36): Composer\\Autoload\\ClassLoader->loadClass()
+#2 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(36): App\\Controllers\\Patient\\BookingController->booking()
+#3 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#4 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#5 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#6 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#7 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(391): Illuminate\\Container\\Container->call()
+#8 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(356): Laravel\\Lumen\\Application->callControllerCallable()
+#9 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(331): Laravel\\Lumen\\Application->callLumenController()
+#10 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(284): Laravel\\Lumen\\Application->callControllerAction()
+#11 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(269): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute()
+#12 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(171): Laravel\\Lumen\\Application->handleFoundRoute()
+#13 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#14 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#15 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#16 C:\\figcode\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#17 {main}
+"} 
+[2024-01-19 15:27:22] local.ERROR: SQLSTATE[22003]: Numeric value out of range: 1264 Out of range value for column 'TimeId' at row 1 (Connection: mysql, SQL: INSERT INTO booking (Id,PatientId,DoctorId,DateBooking,TimeId) VALUES (20240119152722, 20240119151834, 10, 2024-01-19, 20240119152722)) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 22003): SQLSTATE[22003]: Numeric value out of range: 1264 Out of range value for column 'TimeId' at row 1 (Connection: mysql, SQL: INSERT INTO booking (Id,PatientId,DoctorId,DateBooking,TimeId) VALUES (20240119152722, 20240119151834, 10, 2024-01-19, 20240119152722)) at C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php:822)
+[stacktrace]
+#0 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(776): Illuminate\\Database\\Connection->runQueryCallback()
+#1 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(569): Illuminate\\Database\\Connection->run()
+#2 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(533): Illuminate\\Database\\Connection->statement()
+#3 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\DatabaseManager.php(509): Illuminate\\Database\\Connection->insert()
+#4 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\support\\Facades\\Facade.php(355): Illuminate\\Database\\DatabaseManager->__call()
+#5 C:\\figcode\\PNV25-MentalHealtCareApp\\app\\Repositories\\BookingRepository.php(15): Illuminate\\Support\\Facades\\Facade::__callStatic()
+#6 C:\\figcode\\PNV25-MentalHealtCareApp\\app\\Controllers\\Patient\\BookingController.php(39): App\\Repositories\\BookingRepository->insert()
+#7 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(36): App\\Controllers\\Patient\\BookingController->booking()
+#8 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#9 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#10 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#11 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#12 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(391): Illuminate\\Container\\Container->call()
+#13 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(356): Laravel\\Lumen\\Application->callControllerCallable()
+#14 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(331): Laravel\\Lumen\\Application->callLumenController()
+#15 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(284): Laravel\\Lumen\\Application->callControllerAction()
+#16 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(269): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute()
+#17 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(171): Laravel\\Lumen\\Application->handleFoundRoute()
+#18 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#19 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#20 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#21 C:\\figcode\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#22 {main}
+
+[previous exception] [object] (PDOException(code: 22003): SQLSTATE[22003]: Numeric value out of range: 1264 Out of range value for column 'TimeId' at row 1 at C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php:580)
+[stacktrace]
+#0 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(580): PDOStatement->execute()
+#1 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(809): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}()
+#2 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(776): Illuminate\\Database\\Connection->runQueryCallback()
+#3 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(569): Illuminate\\Database\\Connection->run()
+#4 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(533): Illuminate\\Database\\Connection->statement()
+#5 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\DatabaseManager.php(509): Illuminate\\Database\\Connection->insert()
+#6 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\support\\Facades\\Facade.php(355): Illuminate\\Database\\DatabaseManager->__call()
+#7 C:\\figcode\\PNV25-MentalHealtCareApp\\app\\Repositories\\BookingRepository.php(15): Illuminate\\Support\\Facades\\Facade::__callStatic()
+#8 C:\\figcode\\PNV25-MentalHealtCareApp\\app\\Controllers\\Patient\\BookingController.php(39): App\\Repositories\\BookingRepository->insert()
+#9 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(36): App\\Controllers\\Patient\\BookingController->booking()
+#10 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#11 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#12 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#13 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#14 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(391): Illuminate\\Container\\Container->call()
+#15 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(356): Laravel\\Lumen\\Application->callControllerCallable()
+#16 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(331): Laravel\\Lumen\\Application->callLumenController()
+#17 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(284): Laravel\\Lumen\\Application->callControllerAction()
+#18 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(269): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute()
+#19 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(171): Laravel\\Lumen\\Application->handleFoundRoute()
+#20 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#21 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#22 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#23 C:\\figcode\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#24 {main}
+"} 
+[2024-01-19 15:28:41] local.ERROR: SQLSTATE[22003]: Numeric value out of range: 1264 Out of range value for column 'TimeId' at row 1 (Connection: mysql, SQL: INSERT INTO booking (Id,PatientId,DoctorId,DateBooking,TimeId) VALUES (20240119152841, 20240119151834, 10, 2024-01-19, 20240119152841)) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 22003): SQLSTATE[22003]: Numeric value out of range: 1264 Out of range value for column 'TimeId' at row 1 (Connection: mysql, SQL: INSERT INTO booking (Id,PatientId,DoctorId,DateBooking,TimeId) VALUES (20240119152841, 20240119151834, 10, 2024-01-19, 20240119152841)) at C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php:822)
+[stacktrace]
+#0 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(776): Illuminate\\Database\\Connection->runQueryCallback()
+#1 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(569): Illuminate\\Database\\Connection->run()
+#2 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(533): Illuminate\\Database\\Connection->statement()
+#3 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\DatabaseManager.php(509): Illuminate\\Database\\Connection->insert()
+#4 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\support\\Facades\\Facade.php(355): Illuminate\\Database\\DatabaseManager->__call()
+#5 C:\\figcode\\PNV25-MentalHealtCareApp\\app\\Repositories\\BookingRepository.php(15): Illuminate\\Support\\Facades\\Facade::__callStatic()
+#6 C:\\figcode\\PNV25-MentalHealtCareApp\\app\\Controllers\\Patient\\BookingController.php(39): App\\Repositories\\BookingRepository->insert()
+#7 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(36): App\\Controllers\\Patient\\BookingController->booking()
+#8 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#9 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#10 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#11 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#12 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(391): Illuminate\\Container\\Container->call()
+#13 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(356): Laravel\\Lumen\\Application->callControllerCallable()
+#14 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(331): Laravel\\Lumen\\Application->callLumenController()
+#15 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(284): Laravel\\Lumen\\Application->callControllerAction()
+#16 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(269): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute()
+#17 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(171): Laravel\\Lumen\\Application->handleFoundRoute()
+#18 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#19 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#20 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#21 C:\\figcode\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#22 {main}
+
+[previous exception] [object] (PDOException(code: 22003): SQLSTATE[22003]: Numeric value out of range: 1264 Out of range value for column 'TimeId' at row 1 at C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php:580)
+[stacktrace]
+#0 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(580): PDOStatement->execute()
+#1 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(809): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}()
+#2 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(776): Illuminate\\Database\\Connection->runQueryCallback()
+#3 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(569): Illuminate\\Database\\Connection->run()
+#4 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(533): Illuminate\\Database\\Connection->statement()
+#5 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\DatabaseManager.php(509): Illuminate\\Database\\Connection->insert()
+#6 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\support\\Facades\\Facade.php(355): Illuminate\\Database\\DatabaseManager->__call()
+#7 C:\\figcode\\PNV25-MentalHealtCareApp\\app\\Repositories\\BookingRepository.php(15): Illuminate\\Support\\Facades\\Facade::__callStatic()
+#8 C:\\figcode\\PNV25-MentalHealtCareApp\\app\\Controllers\\Patient\\BookingController.php(39): App\\Repositories\\BookingRepository->insert()
+#9 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(36): App\\Controllers\\Patient\\BookingController->booking()
+#10 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#11 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#12 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#13 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#14 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(391): Illuminate\\Container\\Container->call()
+#15 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(356): Laravel\\Lumen\\Application->callControllerCallable()
+#16 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(331): Laravel\\Lumen\\Application->callLumenController()
+#17 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(284): Laravel\\Lumen\\Application->callControllerAction()
+#18 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(269): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute()
+#19 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(171): Laravel\\Lumen\\Application->handleFoundRoute()
+#20 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#21 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#22 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#23 C:\\figcode\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#24 {main}
+"} 
+[2024-01-19 15:28:45] local.ERROR: SQLSTATE[22003]: Numeric value out of range: 1264 Out of range value for column 'TimeId' at row 1 (Connection: mysql, SQL: INSERT INTO booking (Id,PatientId,DoctorId,DateBooking,TimeId) VALUES (20240119152845, 20240119151834, 10, 2024-01-19, 20240119152845)) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 22003): SQLSTATE[22003]: Numeric value out of range: 1264 Out of range value for column 'TimeId' at row 1 (Connection: mysql, SQL: INSERT INTO booking (Id,PatientId,DoctorId,DateBooking,TimeId) VALUES (20240119152845, 20240119151834, 10, 2024-01-19, 20240119152845)) at C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php:822)
+[stacktrace]
+#0 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(776): Illuminate\\Database\\Connection->runQueryCallback()
+#1 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(569): Illuminate\\Database\\Connection->run()
+#2 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(533): Illuminate\\Database\\Connection->statement()
+#3 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\DatabaseManager.php(509): Illuminate\\Database\\Connection->insert()
+#4 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\support\\Facades\\Facade.php(355): Illuminate\\Database\\DatabaseManager->__call()
+#5 C:\\figcode\\PNV25-MentalHealtCareApp\\app\\Repositories\\BookingRepository.php(15): Illuminate\\Support\\Facades\\Facade::__callStatic()
+#6 C:\\figcode\\PNV25-MentalHealtCareApp\\app\\Controllers\\Patient\\BookingController.php(39): App\\Repositories\\BookingRepository->insert()
+#7 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(36): App\\Controllers\\Patient\\BookingController->booking()
+#8 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#9 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#10 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#11 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#12 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(391): Illuminate\\Container\\Container->call()
+#13 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(356): Laravel\\Lumen\\Application->callControllerCallable()
+#14 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(331): Laravel\\Lumen\\Application->callLumenController()
+#15 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(284): Laravel\\Lumen\\Application->callControllerAction()
+#16 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(269): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute()
+#17 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(171): Laravel\\Lumen\\Application->handleFoundRoute()
+#18 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#19 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#20 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#21 C:\\figcode\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#22 {main}
+
+[previous exception] [object] (PDOException(code: 22003): SQLSTATE[22003]: Numeric value out of range: 1264 Out of range value for column 'TimeId' at row 1 at C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php:580)
+[stacktrace]
+#0 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(580): PDOStatement->execute()
+#1 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(809): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}()
+#2 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(776): Illuminate\\Database\\Connection->runQueryCallback()
+#3 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(569): Illuminate\\Database\\Connection->run()
+#4 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(533): Illuminate\\Database\\Connection->statement()
+#5 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\DatabaseManager.php(509): Illuminate\\Database\\Connection->insert()
+#6 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\support\\Facades\\Facade.php(355): Illuminate\\Database\\DatabaseManager->__call()
+#7 C:\\figcode\\PNV25-MentalHealtCareApp\\app\\Repositories\\BookingRepository.php(15): Illuminate\\Support\\Facades\\Facade::__callStatic()
+#8 C:\\figcode\\PNV25-MentalHealtCareApp\\app\\Controllers\\Patient\\BookingController.php(39): App\\Repositories\\BookingRepository->insert()
+#9 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(36): App\\Controllers\\Patient\\BookingController->booking()
+#10 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#11 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#12 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#13 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#14 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(391): Illuminate\\Container\\Container->call()
+#15 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(356): Laravel\\Lumen\\Application->callControllerCallable()
+#16 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(331): Laravel\\Lumen\\Application->callLumenController()
+#17 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(284): Laravel\\Lumen\\Application->callControllerAction()
+#18 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(269): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute()
+#19 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(171): Laravel\\Lumen\\Application->handleFoundRoute()
+#20 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#21 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#22 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#23 C:\\figcode\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#24 {main}
+"} 
+[2024-01-19 15:30:49] local.ERROR: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`mvc_project`.`booking`, CONSTRAINT `booking_ibfk_1` FOREIGN KEY (`PatientId`) REFERENCES `patients` (`Id`)) (Connection: mysql, SQL: INSERT INTO booking (Id,PatientId,DoctorId,DateBooking,TimeId) VALUES (1, 20240119151834, 10, 2024-01-19, 1)) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 23000): SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`mvc_project`.`booking`, CONSTRAINT `booking_ibfk_1` FOREIGN KEY (`PatientId`) REFERENCES `patients` (`Id`)) (Connection: mysql, SQL: INSERT INTO booking (Id,PatientId,DoctorId,DateBooking,TimeId) VALUES (1, 20240119151834, 10, 2024-01-19, 1)) at C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php:822)
+[stacktrace]
+#0 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(776): Illuminate\\Database\\Connection->runQueryCallback()
+#1 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(569): Illuminate\\Database\\Connection->run()
+#2 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(533): Illuminate\\Database\\Connection->statement()
+#3 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\DatabaseManager.php(509): Illuminate\\Database\\Connection->insert()
+#4 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\support\\Facades\\Facade.php(355): Illuminate\\Database\\DatabaseManager->__call()
+#5 C:\\figcode\\PNV25-MentalHealtCareApp\\app\\Repositories\\BookingRepository.php(15): Illuminate\\Support\\Facades\\Facade::__callStatic()
+#6 C:\\figcode\\PNV25-MentalHealtCareApp\\app\\Controllers\\Patient\\BookingController.php(39): App\\Repositories\\BookingRepository->insert()
+#7 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(36): App\\Controllers\\Patient\\BookingController->booking()
+#8 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#9 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#10 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#11 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#12 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(391): Illuminate\\Container\\Container->call()
+#13 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(356): Laravel\\Lumen\\Application->callControllerCallable()
+#14 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(331): Laravel\\Lumen\\Application->callLumenController()
+#15 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(284): Laravel\\Lumen\\Application->callControllerAction()
+#16 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(269): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute()
+#17 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(171): Laravel\\Lumen\\Application->handleFoundRoute()
+#18 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#19 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#20 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#21 C:\\figcode\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#22 {main}
+
+[previous exception] [object] (PDOException(code: 23000): SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`mvc_project`.`booking`, CONSTRAINT `booking_ibfk_1` FOREIGN KEY (`PatientId`) REFERENCES `patients` (`Id`)) at C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php:580)
+[stacktrace]
+#0 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(580): PDOStatement->execute()
+#1 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(809): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}()
+#2 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(776): Illuminate\\Database\\Connection->runQueryCallback()
+#3 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(569): Illuminate\\Database\\Connection->run()
+#4 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(533): Illuminate\\Database\\Connection->statement()
+#5 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\DatabaseManager.php(509): Illuminate\\Database\\Connection->insert()
+#6 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\support\\Facades\\Facade.php(355): Illuminate\\Database\\DatabaseManager->__call()
+#7 C:\\figcode\\PNV25-MentalHealtCareApp\\app\\Repositories\\BookingRepository.php(15): Illuminate\\Support\\Facades\\Facade::__callStatic()
+#8 C:\\figcode\\PNV25-MentalHealtCareApp\\app\\Controllers\\Patient\\BookingController.php(39): App\\Repositories\\BookingRepository->insert()
+#9 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(36): App\\Controllers\\Patient\\BookingController->booking()
+#10 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#11 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#12 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#13 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#14 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(391): Illuminate\\Container\\Container->call()
+#15 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(356): Laravel\\Lumen\\Application->callControllerCallable()
+#16 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(331): Laravel\\Lumen\\Application->callLumenController()
+#17 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(284): Laravel\\Lumen\\Application->callControllerAction()
+#18 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(269): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute()
+#19 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(171): Laravel\\Lumen\\Application->handleFoundRoute()
+#20 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#21 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#22 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#23 C:\\figcode\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#24 {main}
+"} 
+[2024-01-19 15:34:30] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException(code: 0):  at C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:235)
+[stacktrace]
+#0 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 C:\\figcode\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-19 15:34:37] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException(code: 0):  at C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:235)
+[stacktrace]
+#0 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 C:\\figcode\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-19 15:34:37] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException(code: 0):  at C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:235)
+[stacktrace]
+#0 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 C:\\figcode\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-19 15:57:25] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException(code: 0):  at C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:235)
+[stacktrace]
+#0 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 C:\\figcode\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-19 15:57:25] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException(code: 0):  at C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:235)
+[stacktrace]
+#0 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 C:\\figcode\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-19 15:57:25] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException(code: 0):  at C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:235)
+[stacktrace]
+#0 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 C:\\figcode\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-19 15:57:27] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException(code: 0):  at C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:235)
+[stacktrace]
+#0 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 C:\\figcode\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-19 15:57:27] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException(code: 0):  at C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:235)
+[stacktrace]
+#0 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 C:\\figcode\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-19 15:59:39] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException(code: 0):  at C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:235)
+[stacktrace]
+#0 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 C:\\figcode\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-19 15:59:48] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException(code: 0):  at C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:235)
+[stacktrace]
+#0 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 C:\\figcode\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-19 15:59:55] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException(code: 0):  at C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:235)
+[stacktrace]
+#0 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 C:\\figcode\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-19 15:59:57] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException(code: 0):  at C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:235)
+[stacktrace]
+#0 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 C:\\figcode\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-19 16:05:40] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException(code: 0):  at C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:235)
+[stacktrace]
+#0 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 C:\\figcode\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-19 16:05:42] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException(code: 0):  at C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:235)
+[stacktrace]
+#0 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 C:\\figcode\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-19 16:05:42] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException(code: 0):  at C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:235)
+[stacktrace]
+#0 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 C:\\figcode\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-19 16:05:48] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException(code: 0):  at C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:235)
+[stacktrace]
+#0 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 C:\\figcode\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-19 16:05:58] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException(code: 0):  at C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:235)
+[stacktrace]
+#0 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 C:\\figcode\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-19 16:06:00] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException(code: 0):  at C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:235)
+[stacktrace]
+#0 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 C:\\figcode\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-19 16:06:04] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException(code: 0):  at C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:235)
+[stacktrace]
+#0 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 C:\\figcode\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-19 16:07:29] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException(code: 0):  at C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:235)
+[stacktrace]
+#0 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 C:\\figcode\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-19 16:12:24] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException(code: 0):  at C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:235)
+[stacktrace]
+#0 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 C:\\figcode\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-19 16:12:24] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException(code: 0):  at C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:235)
+[stacktrace]
+#0 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 C:\\figcode\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-19 16:48:45] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException(code: 0):  at C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:235)
+[stacktrace]
+#0 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 C:\\figcode\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-19 16:48:45] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException(code: 0):  at C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:235)
+[stacktrace]
+#0 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 C:\\figcode\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-19 16:53:09] local.ERROR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'booking.TimeBooking' in 'field list' (Connection: mysql, SQL: SELECT booking.Id, booking.TimeBooking, booking.DateBooking, booking.TotalPrice,
+    patient_users.FullName AS PatientFullName, patient_users.Email AS PatientEmail, patient_users.Phone AS PatientPhone, patient_users.Address AS PatientAddress,
+    doctors.Specialization, doctors.Hospital,
+    doctor_users.FullName AS DoctorFullName, doctor_users.Email AS DoctorEmail, doctor_users.Phone AS DoctorPhone, doctor_users.Address AS DoctorAddress
+    FROM booking
+    JOIN patients ON booking.PatientId = patients.Id
+    JOIN users AS patient_users ON patients.UserId = patient_users.Id
+    JOIN doctors ON booking.DoctorId = doctors.Id
+    JOIN users AS doctor_users ON doctors.UserId = doctor_users.Id;
+    ) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42S22): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'booking.TimeBooking' in 'field list' (Connection: mysql, SQL: SELECT booking.Id, booking.TimeBooking, booking.DateBooking, booking.TotalPrice,
+
+    patient_users.FullName AS PatientFullName, patient_users.Email AS PatientEmail, patient_users.Phone AS PatientPhone, patient_users.Address AS PatientAddress,
+
+    doctors.Specialization, doctors.Hospital,
+
+    doctor_users.FullName AS DoctorFullName, doctor_users.Email AS DoctorEmail, doctor_users.Phone AS DoctorPhone, doctor_users.Address AS DoctorAddress
+
+    FROM booking
+
+    JOIN patients ON booking.PatientId = patients.Id
+
+    JOIN users AS patient_users ON patients.UserId = patient_users.Id
+
+    JOIN doctors ON booking.DoctorId = doctors.Id
+
+    JOIN users AS doctor_users ON doctors.UserId = doctor_users.Id;
+
+    ) at C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php:822)
+[stacktrace]
+#0 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(776): Illuminate\\Database\\Connection->runQueryCallback()
+#1 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(407): Illuminate\\Database\\Connection->run()
+#2 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\DatabaseManager.php(509): Illuminate\\Database\\Connection->select()
+#3 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\support\\Facades\\Facade.php(355): Illuminate\\Database\\DatabaseManager->__call()
+#4 C:\\figcode\\PNV25-MentalHealtCareApp\\app\\Repositories\\AdminRepository.php(128): Illuminate\\Support\\Facades\\Facade::__callStatic()
+#5 C:\\figcode\\PNV25-MentalHealtCareApp\\app\\Controllers\\Admin\\DoctorController.php(35): App\\Repositories\\AdminRepository->getAllBooking()
+#6 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(36): App\\Controllers\\Admin\\DoctorController->getBooking()
+#7 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#8 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#9 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#10 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#11 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(391): Illuminate\\Container\\Container->call()
+#12 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(356): Laravel\\Lumen\\Application->callControllerCallable()
+#13 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(331): Laravel\\Lumen\\Application->callLumenController()
+#14 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(284): Laravel\\Lumen\\Application->callControllerAction()
+#15 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(269): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute()
+#16 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(171): Laravel\\Lumen\\Application->handleFoundRoute()
+#17 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#18 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#19 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#20 C:\\figcode\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#21 {main}
+
+[previous exception] [object] (PDOException(code: 42S22): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'booking.TimeBooking' in 'field list' at C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php:416)
+[stacktrace]
+#0 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(416): PDO->prepare()
+#1 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(809): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}()
+#2 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(776): Illuminate\\Database\\Connection->runQueryCallback()
+#3 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(407): Illuminate\\Database\\Connection->run()
+#4 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\DatabaseManager.php(509): Illuminate\\Database\\Connection->select()
+#5 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\support\\Facades\\Facade.php(355): Illuminate\\Database\\DatabaseManager->__call()
+#6 C:\\figcode\\PNV25-MentalHealtCareApp\\app\\Repositories\\AdminRepository.php(128): Illuminate\\Support\\Facades\\Facade::__callStatic()
+#7 C:\\figcode\\PNV25-MentalHealtCareApp\\app\\Controllers\\Admin\\DoctorController.php(35): App\\Repositories\\AdminRepository->getAllBooking()
+#8 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(36): App\\Controllers\\Admin\\DoctorController->getBooking()
+#9 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#10 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#11 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#12 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#13 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(391): Illuminate\\Container\\Container->call()
+#14 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(356): Laravel\\Lumen\\Application->callControllerCallable()
+#15 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(331): Laravel\\Lumen\\Application->callLumenController()
+#16 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(284): Laravel\\Lumen\\Application->callControllerAction()
+#17 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(269): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute()
+#18 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(171): Laravel\\Lumen\\Application->handleFoundRoute()
+#19 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#20 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#21 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#22 C:\\figcode\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#23 {main}
+"} 
+[2024-01-19 16:55:08] local.ERROR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'booking.TimeBooking' in 'field list' (Connection: mysql, SQL: SELECT booking.Id, booking.TimeBooking, booking.DateBooking, booking.TotalPrice,
+    patient_users.FullName AS PatientFullName, patient_users.Email AS PatientEmail, patient_users.Phone AS PatientPhone, patient_users.Address AS PatientAddress,
+    doctors.Specialization, doctors.Hospital,
+    doctor_users.FullName AS DoctorFullName, doctor_users.Email AS DoctorEmail, doctor_users.Phone AS DoctorPhone, doctor_users.Address AS DoctorAddress
+    FROM booking
+    JOIN patients ON booking.PatientId = patients.Id
+    JOIN users AS patient_users ON patients.UserId = patient_users.Id
+    JOIN doctors ON booking.DoctorId = doctors.Id
+    JOIN users AS doctor_users ON doctors.UserId = doctor_users.Id;
+    ) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42S22): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'booking.TimeBooking' in 'field list' (Connection: mysql, SQL: SELECT booking.Id, booking.TimeBooking, booking.DateBooking, booking.TotalPrice,
+
+    patient_users.FullName AS PatientFullName, patient_users.Email AS PatientEmail, patient_users.Phone AS PatientPhone, patient_users.Address AS PatientAddress,
+
+    doctors.Specialization, doctors.Hospital,
+
+    doctor_users.FullName AS DoctorFullName, doctor_users.Email AS DoctorEmail, doctor_users.Phone AS DoctorPhone, doctor_users.Address AS DoctorAddress
+
+    FROM booking
+
+    JOIN patients ON booking.PatientId = patients.Id
+
+    JOIN users AS patient_users ON patients.UserId = patient_users.Id
+
+    JOIN doctors ON booking.DoctorId = doctors.Id
+
+    JOIN users AS doctor_users ON doctors.UserId = doctor_users.Id;
+
+    ) at C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php:822)
+[stacktrace]
+#0 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(776): Illuminate\\Database\\Connection->runQueryCallback()
+#1 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(407): Illuminate\\Database\\Connection->run()
+#2 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\DatabaseManager.php(509): Illuminate\\Database\\Connection->select()
+#3 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\support\\Facades\\Facade.php(355): Illuminate\\Database\\DatabaseManager->__call()
+#4 C:\\figcode\\PNV25-MentalHealtCareApp\\app\\Repositories\\AdminRepository.php(128): Illuminate\\Support\\Facades\\Facade::__callStatic()
+#5 C:\\figcode\\PNV25-MentalHealtCareApp\\app\\Controllers\\Admin\\DoctorController.php(35): App\\Repositories\\AdminRepository->getAllBooking()
+#6 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(36): App\\Controllers\\Admin\\DoctorController->getBooking()
+#7 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#8 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#9 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#10 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#11 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(391): Illuminate\\Container\\Container->call()
+#12 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(356): Laravel\\Lumen\\Application->callControllerCallable()
+#13 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(331): Laravel\\Lumen\\Application->callLumenController()
+#14 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(284): Laravel\\Lumen\\Application->callControllerAction()
+#15 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(269): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute()
+#16 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(171): Laravel\\Lumen\\Application->handleFoundRoute()
+#17 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#18 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#19 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#20 C:\\figcode\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#21 {main}
+
+[previous exception] [object] (PDOException(code: 42S22): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'booking.TimeBooking' in 'field list' at C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php:416)
+[stacktrace]
+#0 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(416): PDO->prepare()
+#1 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(809): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}()
+#2 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(776): Illuminate\\Database\\Connection->runQueryCallback()
+#3 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(407): Illuminate\\Database\\Connection->run()
+#4 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\DatabaseManager.php(509): Illuminate\\Database\\Connection->select()
+#5 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\support\\Facades\\Facade.php(355): Illuminate\\Database\\DatabaseManager->__call()
+#6 C:\\figcode\\PNV25-MentalHealtCareApp\\app\\Repositories\\AdminRepository.php(128): Illuminate\\Support\\Facades\\Facade::__callStatic()
+#7 C:\\figcode\\PNV25-MentalHealtCareApp\\app\\Controllers\\Admin\\DoctorController.php(35): App\\Repositories\\AdminRepository->getAllBooking()
+#8 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(36): App\\Controllers\\Admin\\DoctorController->getBooking()
+#9 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#10 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#11 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#12 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#13 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(391): Illuminate\\Container\\Container->call()
+#14 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(356): Laravel\\Lumen\\Application->callControllerCallable()
+#15 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(331): Laravel\\Lumen\\Application->callLumenController()
+#16 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(284): Laravel\\Lumen\\Application->callControllerAction()
+#17 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(269): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute()
+#18 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(171): Laravel\\Lumen\\Application->handleFoundRoute()
+#19 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#20 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#21 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#22 C:\\figcode\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#23 {main}
+"} 
+[2024-01-19 17:19:47] local.ERROR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'booking.TimeBooking' in 'field list' (Connection: mysql, SQL:  SELECT booking.Id, booking.TimeBooking, booking.DateBooking, booking.TotalPrice,
+    patient_users.FullName AS PatientFullName, patient_users.Email AS PatientEmail, patient_users.Phone AS PatientPhone, patient_users.Address AS PatientAddress,
+    doctors.Specialization, doctors.Hospital,
+    doctor_users.FullName AS DoctorFullName, doctor_users.Email AS DoctorEmail, doctor_users.Phone AS DoctorPhone, doctor_users.Address AS DoctorAddress
+FROM booking
+JOIN patients ON booking.PatientId = patients.Id
+JOIN users AS patient_users ON patients.UserId = patient_users.Id
+JOIN doctors ON booking.DoctorId = doctors.Id
+JOIN users AS doctor_users ON doctors.UserId = doctor_users.Id) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42S22): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'booking.TimeBooking' in 'field list' (Connection: mysql, SQL:  SELECT booking.Id, booking.TimeBooking, booking.DateBooking, booking.TotalPrice,
+
+    patient_users.FullName AS PatientFullName, patient_users.Email AS PatientEmail, patient_users.Phone AS PatientPhone, patient_users.Address AS PatientAddress,
+
+    doctors.Specialization, doctors.Hospital,
+
+    doctor_users.FullName AS DoctorFullName, doctor_users.Email AS DoctorEmail, doctor_users.Phone AS DoctorPhone, doctor_users.Address AS DoctorAddress
+
+FROM booking
+
+JOIN patients ON booking.PatientId = patients.Id
+
+JOIN users AS patient_users ON patients.UserId = patient_users.Id
+
+JOIN doctors ON booking.DoctorId = doctors.Id
+
+JOIN users AS doctor_users ON doctors.UserId = doctor_users.Id) at C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php:822)
+[stacktrace]
+#0 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(776): Illuminate\\Database\\Connection->runQueryCallback()
+#1 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(407): Illuminate\\Database\\Connection->run()
+#2 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\DatabaseManager.php(509): Illuminate\\Database\\Connection->select()
+#3 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\support\\Facades\\Facade.php(355): Illuminate\\Database\\DatabaseManager->__call()
+#4 C:\\figcode\\PNV25-MentalHealtCareApp\\app\\Repositories\\AdminRepository.php(137): Illuminate\\Support\\Facades\\Facade::__callStatic()
+#5 C:\\figcode\\PNV25-MentalHealtCareApp\\app\\Controllers\\Admin\\DoctorController.php(35): App\\Repositories\\AdminRepository->getAllBooking()
+#6 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(36): App\\Controllers\\Admin\\DoctorController->getBooking()
+#7 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#8 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#9 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#10 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#11 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(391): Illuminate\\Container\\Container->call()
+#12 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(356): Laravel\\Lumen\\Application->callControllerCallable()
+#13 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(331): Laravel\\Lumen\\Application->callLumenController()
+#14 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(284): Laravel\\Lumen\\Application->callControllerAction()
+#15 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(269): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute()
+#16 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(171): Laravel\\Lumen\\Application->handleFoundRoute()
+#17 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#18 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#19 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#20 C:\\figcode\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#21 {main}
+
+[previous exception] [object] (PDOException(code: 42S22): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'booking.TimeBooking' in 'field list' at C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php:416)
+[stacktrace]
+#0 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(416): PDO->prepare()
+#1 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(809): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}()
+#2 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(776): Illuminate\\Database\\Connection->runQueryCallback()
+#3 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(407): Illuminate\\Database\\Connection->run()
+#4 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\DatabaseManager.php(509): Illuminate\\Database\\Connection->select()
+#5 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\support\\Facades\\Facade.php(355): Illuminate\\Database\\DatabaseManager->__call()
+#6 C:\\figcode\\PNV25-MentalHealtCareApp\\app\\Repositories\\AdminRepository.php(137): Illuminate\\Support\\Facades\\Facade::__callStatic()
+#7 C:\\figcode\\PNV25-MentalHealtCareApp\\app\\Controllers\\Admin\\DoctorController.php(35): App\\Repositories\\AdminRepository->getAllBooking()
+#8 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(36): App\\Controllers\\Admin\\DoctorController->getBooking()
+#9 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#10 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#11 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#12 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#13 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(391): Illuminate\\Container\\Container->call()
+#14 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(356): Laravel\\Lumen\\Application->callControllerCallable()
+#15 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(331): Laravel\\Lumen\\Application->callLumenController()
+#16 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(284): Laravel\\Lumen\\Application->callControllerAction()
+#17 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(269): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute()
+#18 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(171): Laravel\\Lumen\\Application->handleFoundRoute()
+#19 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#20 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#21 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#22 C:\\figcode\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#23 {main}
+"} 
+[2024-01-19 17:19:50] local.ERROR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'booking.TimeBooking' in 'field list' (Connection: mysql, SQL:  SELECT booking.Id, booking.TimeBooking, booking.DateBooking, booking.TotalPrice,
+    patient_users.FullName AS PatientFullName, patient_users.Email AS PatientEmail, patient_users.Phone AS PatientPhone, patient_users.Address AS PatientAddress,
+    doctors.Specialization, doctors.Hospital,
+    doctor_users.FullName AS DoctorFullName, doctor_users.Email AS DoctorEmail, doctor_users.Phone AS DoctorPhone, doctor_users.Address AS DoctorAddress
+FROM booking
+JOIN patients ON booking.PatientId = patients.Id
+JOIN users AS patient_users ON patients.UserId = patient_users.Id
+JOIN doctors ON booking.DoctorId = doctors.Id
+JOIN users AS doctor_users ON doctors.UserId = doctor_users.Id) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42S22): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'booking.TimeBooking' in 'field list' (Connection: mysql, SQL:  SELECT booking.Id, booking.TimeBooking, booking.DateBooking, booking.TotalPrice,
+
+    patient_users.FullName AS PatientFullName, patient_users.Email AS PatientEmail, patient_users.Phone AS PatientPhone, patient_users.Address AS PatientAddress,
+
+    doctors.Specialization, doctors.Hospital,
+
+    doctor_users.FullName AS DoctorFullName, doctor_users.Email AS DoctorEmail, doctor_users.Phone AS DoctorPhone, doctor_users.Address AS DoctorAddress
+
+FROM booking
+
+JOIN patients ON booking.PatientId = patients.Id
+
+JOIN users AS patient_users ON patients.UserId = patient_users.Id
+
+JOIN doctors ON booking.DoctorId = doctors.Id
+
+JOIN users AS doctor_users ON doctors.UserId = doctor_users.Id) at C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php:822)
+[stacktrace]
+#0 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(776): Illuminate\\Database\\Connection->runQueryCallback()
+#1 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(407): Illuminate\\Database\\Connection->run()
+#2 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\DatabaseManager.php(509): Illuminate\\Database\\Connection->select()
+#3 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\support\\Facades\\Facade.php(355): Illuminate\\Database\\DatabaseManager->__call()
+#4 C:\\figcode\\PNV25-MentalHealtCareApp\\app\\Repositories\\AdminRepository.php(137): Illuminate\\Support\\Facades\\Facade::__callStatic()
+#5 C:\\figcode\\PNV25-MentalHealtCareApp\\app\\Controllers\\Admin\\DoctorController.php(35): App\\Repositories\\AdminRepository->getAllBooking()
+#6 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(36): App\\Controllers\\Admin\\DoctorController->getBooking()
+#7 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#8 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#9 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#10 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#11 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(391): Illuminate\\Container\\Container->call()
+#12 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(356): Laravel\\Lumen\\Application->callControllerCallable()
+#13 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(331): Laravel\\Lumen\\Application->callLumenController()
+#14 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(284): Laravel\\Lumen\\Application->callControllerAction()
+#15 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(269): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute()
+#16 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(171): Laravel\\Lumen\\Application->handleFoundRoute()
+#17 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#18 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#19 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#20 C:\\figcode\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#21 {main}
+
+[previous exception] [object] (PDOException(code: 42S22): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'booking.TimeBooking' in 'field list' at C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php:416)
+[stacktrace]
+#0 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(416): PDO->prepare()
+#1 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(809): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}()
+#2 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(776): Illuminate\\Database\\Connection->runQueryCallback()
+#3 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(407): Illuminate\\Database\\Connection->run()
+#4 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\DatabaseManager.php(509): Illuminate\\Database\\Connection->select()
+#5 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\support\\Facades\\Facade.php(355): Illuminate\\Database\\DatabaseManager->__call()
+#6 C:\\figcode\\PNV25-MentalHealtCareApp\\app\\Repositories\\AdminRepository.php(137): Illuminate\\Support\\Facades\\Facade::__callStatic()
+#7 C:\\figcode\\PNV25-MentalHealtCareApp\\app\\Controllers\\Admin\\DoctorController.php(35): App\\Repositories\\AdminRepository->getAllBooking()
+#8 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(36): App\\Controllers\\Admin\\DoctorController->getBooking()
+#9 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#10 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#11 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#12 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#13 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(391): Illuminate\\Container\\Container->call()
+#14 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(356): Laravel\\Lumen\\Application->callControllerCallable()
+#15 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(331): Laravel\\Lumen\\Application->callLumenController()
+#16 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(284): Laravel\\Lumen\\Application->callControllerAction()
+#17 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(269): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute()
+#18 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(171): Laravel\\Lumen\\Application->handleFoundRoute()
+#19 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#20 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#21 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#22 C:\\figcode\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#23 {main}
+"} 
+[2024-01-19 17:21:39] local.ERROR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'listtimedoctor.time' in 'field list' (Connection: mysql, SQL:  SELECT booking.Id, listtimedoctor.time, booking.DateBooking, booking.TotalPrice,
+    patient_users.FullName AS PatientFullName, patient_users.Email AS PatientEmail, patient_users.Phone AS PatientPhone, patient_users.Address AS PatientAddress,
+    doctors.Specialization, doctors.Hospital,
+    doctor_users.FullName AS DoctorFullName, doctor_users.Email AS DoctorEmail, doctor_users.Phone AS DoctorPhone, doctor_users.Address AS DoctorAddress
+FROM booking
+JOIN patients ON booking.PatientId = patients.Id
+JOIN users AS patient_users ON patients.UserId = patient_users.Id
+JOIN doctors ON booking.DoctorId = doctors.Id
+JOIN users AS doctor_users ON doctors.UserId = doctor_users.Id) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42S22): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'listtimedoctor.time' in 'field list' (Connection: mysql, SQL:  SELECT booking.Id, listtimedoctor.time, booking.DateBooking, booking.TotalPrice,
+
+    patient_users.FullName AS PatientFullName, patient_users.Email AS PatientEmail, patient_users.Phone AS PatientPhone, patient_users.Address AS PatientAddress,
+
+    doctors.Specialization, doctors.Hospital,
+
+    doctor_users.FullName AS DoctorFullName, doctor_users.Email AS DoctorEmail, doctor_users.Phone AS DoctorPhone, doctor_users.Address AS DoctorAddress
+
+FROM booking
+
+JOIN patients ON booking.PatientId = patients.Id
+
+JOIN users AS patient_users ON patients.UserId = patient_users.Id
+
+JOIN doctors ON booking.DoctorId = doctors.Id
+
+JOIN users AS doctor_users ON doctors.UserId = doctor_users.Id) at C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php:822)
+[stacktrace]
+#0 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(776): Illuminate\\Database\\Connection->runQueryCallback()
+#1 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(407): Illuminate\\Database\\Connection->run()
+#2 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\DatabaseManager.php(509): Illuminate\\Database\\Connection->select()
+#3 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\support\\Facades\\Facade.php(355): Illuminate\\Database\\DatabaseManager->__call()
+#4 C:\\figcode\\PNV25-MentalHealtCareApp\\app\\Repositories\\AdminRepository.php(137): Illuminate\\Support\\Facades\\Facade::__callStatic()
+#5 C:\\figcode\\PNV25-MentalHealtCareApp\\app\\Controllers\\Admin\\DoctorController.php(35): App\\Repositories\\AdminRepository->getAllBooking()
+#6 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(36): App\\Controllers\\Admin\\DoctorController->getBooking()
+#7 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#8 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#9 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#10 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#11 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(391): Illuminate\\Container\\Container->call()
+#12 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(356): Laravel\\Lumen\\Application->callControllerCallable()
+#13 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(331): Laravel\\Lumen\\Application->callLumenController()
+#14 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(284): Laravel\\Lumen\\Application->callControllerAction()
+#15 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(269): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute()
+#16 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(171): Laravel\\Lumen\\Application->handleFoundRoute()
+#17 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#18 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#19 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#20 C:\\figcode\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#21 {main}
+
+[previous exception] [object] (PDOException(code: 42S22): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'listtimedoctor.time' in 'field list' at C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php:416)
+[stacktrace]
+#0 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(416): PDO->prepare()
+#1 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(809): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}()
+#2 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(776): Illuminate\\Database\\Connection->runQueryCallback()
+#3 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(407): Illuminate\\Database\\Connection->run()
+#4 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\DatabaseManager.php(509): Illuminate\\Database\\Connection->select()
+#5 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\support\\Facades\\Facade.php(355): Illuminate\\Database\\DatabaseManager->__call()
+#6 C:\\figcode\\PNV25-MentalHealtCareApp\\app\\Repositories\\AdminRepository.php(137): Illuminate\\Support\\Facades\\Facade::__callStatic()
+#7 C:\\figcode\\PNV25-MentalHealtCareApp\\app\\Controllers\\Admin\\DoctorController.php(35): App\\Repositories\\AdminRepository->getAllBooking()
+#8 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(36): App\\Controllers\\Admin\\DoctorController->getBooking()
+#9 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#10 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#11 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#12 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#13 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(391): Illuminate\\Container\\Container->call()
+#14 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(356): Laravel\\Lumen\\Application->callControllerCallable()
+#15 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(331): Laravel\\Lumen\\Application->callLumenController()
+#16 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(284): Laravel\\Lumen\\Application->callControllerAction()
+#17 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(269): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute()
+#18 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(171): Laravel\\Lumen\\Application->handleFoundRoute()
+#19 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#20 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#21 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#22 C:\\figcode\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#23 {main}
+"} 
+[2024-01-19 17:23:22] local.ERROR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'booking.TotalPrice' in 'field list' (Connection: mysql, SQL:  SELECT booking.Id, listtimedoctor.time, booking.DateBooking, booking.TotalPrice,
+    patient_users.FullName AS PatientFullName, patient_users.Email AS PatientEmail, patient_users.Phone AS PatientPhone, patient_users.Address AS PatientAddress,
+    doctors.Specialization, doctors.Hospital,
+    doctor_users.FullName AS DoctorFullName, doctor_users.Email AS DoctorEmail, doctor_users.Phone AS DoctorPhone, doctor_users.Address AS DoctorAddress
+FROM booking
+JOIN patients ON booking.PatientId = patients.Id
+JOIN users AS patient_users ON patients.UserId = patient_users.Id
+JOIN doctors ON booking.DoctorId = doctors.Id
+JOIN users AS doctor_users ON doctors.UserId = doctor_users.Id
+JOIN listtimedoctor ON listtimedoctor.id= booking.TimeId
+) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42S22): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'booking.TotalPrice' in 'field list' (Connection: mysql, SQL:  SELECT booking.Id, listtimedoctor.time, booking.DateBooking, booking.TotalPrice,
+
+    patient_users.FullName AS PatientFullName, patient_users.Email AS PatientEmail, patient_users.Phone AS PatientPhone, patient_users.Address AS PatientAddress,
+
+    doctors.Specialization, doctors.Hospital,
+
+    doctor_users.FullName AS DoctorFullName, doctor_users.Email AS DoctorEmail, doctor_users.Phone AS DoctorPhone, doctor_users.Address AS DoctorAddress
+
+FROM booking
+
+JOIN patients ON booking.PatientId = patients.Id
+
+JOIN users AS patient_users ON patients.UserId = patient_users.Id
+
+JOIN doctors ON booking.DoctorId = doctors.Id
+
+JOIN users AS doctor_users ON doctors.UserId = doctor_users.Id
+
+JOIN listtimedoctor ON listtimedoctor.id= booking.TimeId
+
+) at C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php:822)
+[stacktrace]
+#0 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(776): Illuminate\\Database\\Connection->runQueryCallback()
+#1 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(407): Illuminate\\Database\\Connection->run()
+#2 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\DatabaseManager.php(509): Illuminate\\Database\\Connection->select()
+#3 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\support\\Facades\\Facade.php(355): Illuminate\\Database\\DatabaseManager->__call()
+#4 C:\\figcode\\PNV25-MentalHealtCareApp\\app\\Repositories\\AdminRepository.php(139): Illuminate\\Support\\Facades\\Facade::__callStatic()
+#5 C:\\figcode\\PNV25-MentalHealtCareApp\\app\\Controllers\\Admin\\DoctorController.php(35): App\\Repositories\\AdminRepository->getAllBooking()
+#6 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(36): App\\Controllers\\Admin\\DoctorController->getBooking()
+#7 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#8 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#9 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#10 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#11 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(391): Illuminate\\Container\\Container->call()
+#12 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(356): Laravel\\Lumen\\Application->callControllerCallable()
+#13 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(331): Laravel\\Lumen\\Application->callLumenController()
+#14 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(284): Laravel\\Lumen\\Application->callControllerAction()
+#15 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(269): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute()
+#16 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(171): Laravel\\Lumen\\Application->handleFoundRoute()
+#17 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#18 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#19 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#20 C:\\figcode\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#21 {main}
+
+[previous exception] [object] (PDOException(code: 42S22): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'booking.TotalPrice' in 'field list' at C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php:416)
+[stacktrace]
+#0 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(416): PDO->prepare()
+#1 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(809): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}()
+#2 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(776): Illuminate\\Database\\Connection->runQueryCallback()
+#3 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(407): Illuminate\\Database\\Connection->run()
+#4 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\DatabaseManager.php(509): Illuminate\\Database\\Connection->select()
+#5 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\support\\Facades\\Facade.php(355): Illuminate\\Database\\DatabaseManager->__call()
+#6 C:\\figcode\\PNV25-MentalHealtCareApp\\app\\Repositories\\AdminRepository.php(139): Illuminate\\Support\\Facades\\Facade::__callStatic()
+#7 C:\\figcode\\PNV25-MentalHealtCareApp\\app\\Controllers\\Admin\\DoctorController.php(35): App\\Repositories\\AdminRepository->getAllBooking()
+#8 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(36): App\\Controllers\\Admin\\DoctorController->getBooking()
+#9 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#10 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#11 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#12 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#13 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(391): Illuminate\\Container\\Container->call()
+#14 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(356): Laravel\\Lumen\\Application->callControllerCallable()
+#15 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(331): Laravel\\Lumen\\Application->callLumenController()
+#16 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(284): Laravel\\Lumen\\Application->callControllerAction()
+#17 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(269): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute()
+#18 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(171): Laravel\\Lumen\\Application->handleFoundRoute()
+#19 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#20 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#21 C:\\figcode\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#22 C:\\figcode\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#23 {main}
+"} 

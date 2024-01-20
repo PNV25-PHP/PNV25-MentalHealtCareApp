@@ -34,7 +34,12 @@ class BookingController extends Controller
     public function booking(Request $req)
     {
         $requestBooking = new BookingReq($req);
-        $newBooking = new Booking($requestBooking->patientId, $requestBooking->doctorId, $requestBooking->time, $requestBooking->date, $requestBooking->price);
+        if ($requestBooking->id == "") {
+            return response()->json([
+                'message' => 'Appointment failed',
+            ], 404);
+        }
+        $newBooking = new Booking($requestBooking->patientId, $requestBooking->doctorId, $requestBooking->date, $requestBooking->id);
         $booking = new BookingRepository();
         $result = $booking->insert($newBooking);
 

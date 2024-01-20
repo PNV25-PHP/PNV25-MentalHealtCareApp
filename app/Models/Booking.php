@@ -7,20 +7,18 @@ class Booking extends BaseModel
     public string $date;
     public string $patientId;
     public string $doctorId;
-    public string $time;
-    public string $price;
+    public string $timeId;
 
     /**
      * @param string $userid
      */
-    public function __construct(string $patientId, string $doctorId, string $time, string $date, string $price)
+    public function __construct(string $patientId, string $doctorId,  string $date, string $id)
     {
         parent::__construct();
         $this->patientId = $patientId;
         $this->doctorId = $doctorId;
-        $this->time = $time;
         $this->date = $date;
-        $this->price = $price;
+        $this->timeId = $id;
     }
 
     public function getPatientId(): string
@@ -33,18 +31,13 @@ class Booking extends BaseModel
         return $this->doctorId;
     }
 
-    public function getTime(): string
+    public function getTimeId(): string
     {
-        return $this->time;
+        return $this->timeId;
     }
 
     public function getDate(): string
     {
         return $this->date;
-    }
-
-    public function getPrice(): string
-    {
-        return $this->price;
     }
 }
