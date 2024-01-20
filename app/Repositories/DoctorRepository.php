@@ -49,10 +49,10 @@ class DoctorRepository
 
     public function getAvailableTimesForBooking($selectedDate)
     {
-        $query = "SELECT listtimedoctor.time,listtimedoctor.price
-              FROM listtimedoctor
-              LEFT JOIN booking ON listtimedoctor.time = booking.TimeBooking AND booking.DateBooking = ?
-              WHERE booking.TimeBooking IS NULL";
+        $query = "SELECT listtimedoctor.id, listtimedoctor.time, listtimedoctor.price
+                  FROM listtimedoctor
+                  LEFT JOIN booking ON listtimedoctor.id = booking.TimeId AND booking.DateBooking = ?
+                  WHERE booking.TimeId IS NULL";
         $result = DB::select($query, [$selectedDate]);
         return $result;
     }

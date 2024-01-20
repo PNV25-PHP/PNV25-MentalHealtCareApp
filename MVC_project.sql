@@ -36,9 +36,8 @@ CREATE TABLE booking (
   Id varchar(255) PRIMARY KEY,
   PatientId varchar(255) NOT NULL,
   DoctorId varchar(255) NOT NULL,
-  TimeBooking TIME NOT NULL,
-  DateBooking DATE NOT NULL,
-  TotalPrice DECIMAL(10, 2),
+  DateBooking DATE NOT NULL, 
+  TimeId INT NOT NULL,  FOREIGN KEY (TimeId) REFERENCES listTimeDoctor(id),
   FOREIGN KEY (PatientId) REFERENCES patients(Id),
   FOREIGN KEY (DoctorId) REFERENCES doctors(Id)
 );
@@ -48,6 +47,12 @@ CREATE TABLE listTimeDoctor (
     time TIME NOT NULL,
    price DECIMAL(10, 2)
 );
+
+
+
+
+
+
 
 INSERT INTO listTimeDoctor (time, price) VALUES 
     ('08:00:00', 500.00),

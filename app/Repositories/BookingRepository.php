@@ -7,18 +7,17 @@ use Illuminate\Support\Facades\DB;
 
 class BookingRepository
 {
-    private string $tableName = "booking"; 
+    private string $tableName = "booking";
 
     public function insert(Booking $booking)
     {
-        $sql = "INSERT INTO $this->tableName (Id,PatientId,DoctorId,TimeBooking,DateBooking,TotalPrice) VALUES (?, ?, ?, ?, ?, ?)";
+        $sql = "INSERT INTO $this->tableName (Id,PatientId,DoctorId,DateBooking,TimeId) VALUES (?, ?, ?, ?, ?)";
         DB::insert($sql, [
             $booking->getId(),
             $booking->getPatientId(),
             $booking->getDocterId(),
-            $booking->getTime(),
             $booking->getDate(),
-            $booking->getPrice()
+            $booking->getTimeId()
         ]);
     }
 
@@ -40,15 +39,18 @@ class BookingRepository
 
             if (!empty($patient)) {
                 $patientId = $patient[0]->Id;
-                $bookings = DB::select('SELECT * FROM booking WHERE PatientId = ?', [$patientId]);
+
+                $bookings = DB::select('SELECT b.Id, b.PatientId, b.DoctorId, b.DateBooking, b.TimeId, u.Email, u.Fullname, u.Phone, t.time, t.price
+                FROM booking b  
+                INNER JOIN doctors d ON b.DoctorId = d.Id
+                INNER JOIN users u ON d.UserId = u.Id
+                INNER JOIN listTimeDoctor t ON b.TimeId = t.id
+                WHERE b.PatientId = ?', [$patientId]);
+
                 if (!empty($bookings)) {
-                    $bookings = DB::select("SELECT b.*, u.email, u.fullname, u.phone
-                    FROM booking b  
-                    INNER JOIN users u ON b.DoctorId = u.Id
-                    WHERE b.PatientId = ?", [$patientId]);
                     return $bookings;
                 } else {
-                    return "Không tìm thấy bản ghi trong bảng bookings";
+                    return "Không tìm thấy bản ghi trong bảng booking";
                 }
             } else {
                 return "Không tìm thấy bản ghi trong bảng patients";

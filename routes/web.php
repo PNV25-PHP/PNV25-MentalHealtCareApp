@@ -71,3 +71,6 @@ $router->get('/patient/search', 'Patient\SearchController@index');
 //Patient_history_booking
 $router->post('/api/patient/processHistoryBooking', 'Common\ProfileController@processHistoryBooking');
 $router->get('/patient/history-booking', 'Common\ProfileController@patientHistoryBooking');
+// upload image
+$router->post('/upload', 'Common\UploadController@uploadImage');
+$router->get('/patient/gettest', 'Common\UploadController@index');
