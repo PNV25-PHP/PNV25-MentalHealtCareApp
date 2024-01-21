@@ -135,7 +135,7 @@
             <?php foreach ($doctors as $doctor) : ?>
                 <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700" onclick="redirectBooking('<?php echo $doctor->Id; ?>')">
                     <a href="#">
-                        <img class="rounded-t-lg" src="<?php echo $doctor->Url_Image ?>" alt="" />
+                        <img class="rounded-t-lg h-80 object-cover" src="<?php echo $doctor->Url_Image ?>" alt="" />
                     </a>
                     <div class="p-5">
                         <a href="#">

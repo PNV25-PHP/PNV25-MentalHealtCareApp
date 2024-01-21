@@ -167,14 +167,11 @@
 </style>
 
 <div id="container" class="w-full px-5 py-24 mx-auto ">
-    <div class="flex flex-col lg:flex-row lg:space-x-12">
-        <div class="order-last w-full max-w-screen-sm m-auto mt-12 lg:w-1/4 lg:order-first">
+    <div class="flex flex-col lg:flex-row lg:space-x-12 h-3/4">
+        <div class="w-full max-w-screen-sm m-auto mt-12 lg:w-1/4 lg:order-first">
             <div class="p-2 transition duration-500 ease-in-out transform bg-white border rounded-lg">
-                <div id="image-div" class="flex py-2">
-                    <img src="<?php echo $doctor[0]->Url_Image ?>" class="w-20 h-full rounded-full">
-                    <div id="name" class="ml-4">
-                        <p class="text-sm font-medium text-gray-900" id="fullname">Bs. <?php echo $doctor[0]->FullName ?></p>
-                    </div>
+                <div id="image-div" class="w-full h-3/4 object-cover">
+                    <img src="<?php echo $doctor[0]->Url_Image ?>" class="w-full h-full object-cover">
                 </div>
             </div>
         </div>

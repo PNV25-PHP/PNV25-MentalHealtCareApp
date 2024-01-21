@@ -24,7 +24,6 @@ class SignUpController extends Controller
     }
     public function index()
     {
-        $this->userRepository->checkLogin();
         return view("pages\patient\SignUp");
     }
     public function signUp(Request $req)
