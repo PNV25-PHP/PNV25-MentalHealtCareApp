@@ -59,6 +59,7 @@ $router->get('/edit-profile', 'Common\ProfileController@editProfile');
 $router->post('/api/edit-profile', 'Common\ProfileController@updateInformationUser');
 //search
 $router->get('/patient/search', 'Patient\SearchController@index');
+$router->post('/api/patient/search', 'Patient\SearchController@search');
 //Patient_history_booking
 $router->post('/api/patient/processHistoryBooking', 'Common\ProfileController@processHistoryBooking');
 $router->get('/patient/history-booking', 'Common\ProfileController@patientHistoryBooking');

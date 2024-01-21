@@ -27,7 +27,7 @@ class UploadController extends Controller
             $imageData = base64_decode(preg_replace('#^data:image/\w+;base64,#i', '', $base64Image));
 
             $imageName = uniqid() . '.png';
-            $imagePath = 'public/upload/user/' . $imageName;
+            $imagePath = 'asset/' . $imageName;
 
             // Lưu hình ảnh vào thư mục trên máy chủ
             file_put_contents($imagePath, $imageData);

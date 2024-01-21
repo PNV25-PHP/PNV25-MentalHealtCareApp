@@ -11,12 +11,12 @@
   .search {
     margin-right: 5px;
   }
+
   .flex.space-x-4 {
     align-items: center;
   }
 
-  .flex.flex-1.items-center.justify-center
-  {
+  .flex.flex-1.items-center.justify-center {
     align-items: center;
   }
 </style>
@@ -48,6 +48,16 @@
             <a href="/patient/post" onclick="cssNavbar()" id="post" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Posts</a>
           </div>
         </div>
+      </div>
+      <div class="search">
+        <button type="button" id="search" class="relative rounded-full p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+          <span class="absolute -inset-1.5"></span>
+          <span class="sr-only">Search</span>
+          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8" />
+            <path d="M21 21l-4.35-4.35" />
+          </svg>
+        </button>
       </div>
       <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
         <button type="button" class="relative rounded-full  p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
@@ -93,6 +103,11 @@
         console.log(error);
       });
   };
+
+  var searchButton = document.getElementById("search");
+  searchButton.addEventListener("click", function() {
+    window.location.href = "/patient/search"
+  });
 
   var user_info = JSON.parse(localStorage.getItem("user-info"));
   var imagePath = user_info.image;

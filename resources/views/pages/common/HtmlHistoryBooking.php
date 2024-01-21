@@ -1,6 +1,6 @@
 <?php
 include_once dirname(__DIR__) . '../../layouts/HtmlHead.php' ?>
-<div class="border-b-2 block md:flex">
+<div class="border-b-2 block md:flex" style="height: 100vh;">
   <div class="w-full md:w-1/5 p-4 sm:p-6 lg:p-8 bg-blue-900 text-white shadow-md">
     <div class="flex justify-between">
       <span id="name-profile" class="text-xl font-semibold block"></span>
@@ -20,11 +20,11 @@ include_once dirname(__DIR__) . '../../layouts/HtmlHead.php' ?>
       <table class="table-auto">
         <thead>
           <tr>
-            <th class="border-b-2 border-gray-300 px-4 py-2">Doctor's name</th>
-            <th class="border-b-2 border-gray-300 px-4 py-2">Doctor's email</th>
-            <th class="border-b-2 border-gray-300 px-4 py-2">Doctor's phone number</th>
-            <th class="border-b-2 border-gray-300 px-4 py-2">Time Booking</th>
-            <th class="border-b-2 border-gray-300 px-4 py-2">Date Booking</th>
+            <th class="border-b-2 border-gray-300 px-4 py-2" id="username">Doctor's name</th>
+            <th class="border-b-2 border-gray-300 px-4 py-2" id="email">Doctor's email</th>
+            <th class="border-b-2 border-gray-300 px-4 py-2" id="phoneNumber">Doctor's phone number</th>
+            <th class="border-b-2 border-gray-300 px-4 py-2" id="address">Time Booking</th>
+            <th class="border-b-2 border-gray-300 px-4 py-2" id="password">Date Booking</th>
             <th class="border-b-2 border-gray-300 px-4 py-2">Total Price</th>
           </tr>
         </thead>
@@ -78,7 +78,8 @@ include_once dirname(__DIR__) . '../../layouts/HtmlHead.php' ?>
           console.error('Error:', error.message);
         }
       })
+      showInfo()
   </script>
   </body>
-
+  s
   </html>

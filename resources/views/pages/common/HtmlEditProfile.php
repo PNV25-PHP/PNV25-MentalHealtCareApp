@@ -1,12 +1,12 @@
 <?php include_once dirname(__DIR__) . '../../layouts/HtmlHead.php' ?>
 <div class="h-full">
-    <div class="border-b-2 block md:flex">
+    <div class="border-b-2 block md:flex" style="height: 100vh;">
         <div class="w-full md:w-1/5 p-4 sm:p-6 lg:p-8 bg-blue-900 text-white shadow-md">
             <div class="flex justify-between">
                 <span id="name-profile" class="text-xl font-semibold block"></span>
             </div>
             <div class="w-full p-8 mx-2 block justify-center">
-                <img id="showImage" class="w-[150px] h-[150px] mb-10 items-center border-2 shadow-lg rounded-full" src="https://cff2.earth.com/uploads/2023/11/30185539/bottlenose-dolphin_1medium-960x640.jpg" alt="">
+                <img id="showImage" class="w-[150px] h-[150px] mb-10 items-center border-2 shadow-lg rounded-full" src="./../../../../asset/65ad3722bfd5b.png" alt="">
                 <button type="button" class="w-[150px] text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"><a href="/edit-profile">Edit Profile</a></button>
                 <button type="button" class=" w-[150px] text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"><a href="/patient/history-booking">History booking</a></button>
                 <button type="button" class=" w-[150px] text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"><a href="/patient/home">Back </a></button>
@@ -94,37 +94,23 @@ async function uploadImage() {
 
 async function handleUpdateProfile() {
     try {
-        var img = await uploadImage();
-        var username = document.getElementById('username').value;
-        var email = document.getElementById('email').value;
-        var phoneNumber = document.getElementById('phoneNumber').value;
-        var address = document.getElementById('address').value;
-        var password = document.getElementById('password').value;
-        var role = user_info_update12.role;
+        user_info_update12.image = await uploadImage();
+        user_info_update12.fullName = document.getElementById('username').value;
+        user_info_update12.email = document.getElementById('email').value;
+        user_info_update12.phone = document.getElementById('phoneNumber').value;
+        user_info_update12.address = document.getElementById('address').value;
+        user_info_update12.password = document.getElementById('password').value;
 
-        // ... rest of the code ...
+        console.log(user_info_update12);
 
-        var user_info_update = {
-            image: img,
-            fullName: username,
-            email: email,
-            phone: phoneNumber,
-            address: address,
-            password: password,
-            role: role
-            // ... rest of the properties ...
-        };
-
-        console.log(user_info_update);
-
-        axios.post('/api/edit-profile', user_info_update, {
+        axios.post('/api/edit-profile', user_info_update12, {
             headers: {
                 'Content-Type': 'application/json'
             }
         })
         .then(response => {
-            console.log(response);
-            localStorage.setItem('user-info', JSON.stringify(user_info_update));
+            console.log(response.data.payload);
+            localStorage.setItem('user-info', JSON.stringify(response.data.payload));
             window.location.href = '/view-profile';
         })
         .catch(error => {

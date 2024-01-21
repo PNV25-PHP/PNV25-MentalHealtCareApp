@@ -50,13 +50,13 @@ class BookingRepository
                 if (!empty($bookings)) {
                     return $bookings;
                 } else {
-                    return "Không tìm thấy bản ghi trong bảng booking";
+                    return "No record found in booking table";
                 }
             } else {
-                return "Không tìm thấy bản ghi trong bảng patients";
+                return "No records found in patients table";
             }
         } else {
-            return "Không tìm thấy người dùng với email này";
+            return "No user found with this email";
         }
     }
 }

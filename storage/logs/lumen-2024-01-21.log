@@ -1,0 +1,723 @@
+[2024-01-21 13:47:37] local.ERROR: Cannot assign null to property App\Dtos\Patient\BookingReq::$patientId of type string {"exception":"[object] (TypeError(code: 0): Cannot assign null to property App\\Dtos\\Patient\\BookingReq::$patientId of type string at E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\app\\Dtos\\Patient\\BookingReq.php:17)
+[stacktrace]
+#0 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\app\\Controllers\\Patient\\BookingController.php(40): App\\Dtos\\Patient\\BookingReq->__construct()
+#1 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(36): App\\Controllers\\Patient\\BookingController->booking()
+#2 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#3 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#4 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#5 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#6 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(391): Illuminate\\Container\\Container->call()
+#7 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(356): Laravel\\Lumen\\Application->callControllerCallable()
+#8 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(331): Laravel\\Lumen\\Application->callLumenController()
+#9 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(284): Laravel\\Lumen\\Application->callControllerAction()
+#10 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(269): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute()
+#11 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(171): Laravel\\Lumen\\Application->handleFoundRoute()
+#12 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#13 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#14 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#15 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#16 {main}
+"} 
+[2024-01-21 13:47:40] local.ERROR: Cannot assign null to property App\Dtos\Patient\BookingReq::$patientId of type string {"exception":"[object] (TypeError(code: 0): Cannot assign null to property App\\Dtos\\Patient\\BookingReq::$patientId of type string at E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\app\\Dtos\\Patient\\BookingReq.php:17)
+[stacktrace]
+#0 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\app\\Controllers\\Patient\\BookingController.php(40): App\\Dtos\\Patient\\BookingReq->__construct()
+#1 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(36): App\\Controllers\\Patient\\BookingController->booking()
+#2 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#3 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#4 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#5 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#6 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(391): Illuminate\\Container\\Container->call()
+#7 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(356): Laravel\\Lumen\\Application->callControllerCallable()
+#8 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(331): Laravel\\Lumen\\Application->callLumenController()
+#9 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(284): Laravel\\Lumen\\Application->callControllerAction()
+#10 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(269): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute()
+#11 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(171): Laravel\\Lumen\\Application->handleFoundRoute()
+#12 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#13 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#14 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#15 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#16 {main}
+"} 
+[2024-01-21 13:47:44] local.ERROR: Cannot assign null to property App\Dtos\Patient\BookingReq::$patientId of type string {"exception":"[object] (TypeError(code: 0): Cannot assign null to property App\\Dtos\\Patient\\BookingReq::$patientId of type string at E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\app\\Dtos\\Patient\\BookingReq.php:17)
+[stacktrace]
+#0 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\app\\Controllers\\Patient\\BookingController.php(40): App\\Dtos\\Patient\\BookingReq->__construct()
+#1 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(36): App\\Controllers\\Patient\\BookingController->booking()
+#2 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#3 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#4 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#5 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#6 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(391): Illuminate\\Container\\Container->call()
+#7 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(356): Laravel\\Lumen\\Application->callControllerCallable()
+#8 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(331): Laravel\\Lumen\\Application->callLumenController()
+#9 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(284): Laravel\\Lumen\\Application->callControllerAction()
+#10 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(269): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute()
+#11 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(171): Laravel\\Lumen\\Application->handleFoundRoute()
+#12 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#13 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#14 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#15 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#16 {main}
+"} 
+[2024-01-21 13:47:46] local.ERROR: Cannot assign null to property App\Dtos\Patient\BookingReq::$patientId of type string {"exception":"[object] (TypeError(code: 0): Cannot assign null to property App\\Dtos\\Patient\\BookingReq::$patientId of type string at E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\app\\Dtos\\Patient\\BookingReq.php:17)
+[stacktrace]
+#0 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\app\\Controllers\\Patient\\BookingController.php(40): App\\Dtos\\Patient\\BookingReq->__construct()
+#1 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(36): App\\Controllers\\Patient\\BookingController->booking()
+#2 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#3 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#4 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#5 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#6 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(391): Illuminate\\Container\\Container->call()
+#7 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(356): Laravel\\Lumen\\Application->callControllerCallable()
+#8 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(331): Laravel\\Lumen\\Application->callLumenController()
+#9 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(284): Laravel\\Lumen\\Application->callControllerAction()
+#10 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(269): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute()
+#11 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(171): Laravel\\Lumen\\Application->handleFoundRoute()
+#12 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#13 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#14 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#15 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#16 {main}
+"} 
+[2024-01-21 13:47:46] local.ERROR: Cannot assign null to property App\Dtos\Patient\BookingReq::$patientId of type string {"exception":"[object] (TypeError(code: 0): Cannot assign null to property App\\Dtos\\Patient\\BookingReq::$patientId of type string at E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\app\\Dtos\\Patient\\BookingReq.php:17)
+[stacktrace]
+#0 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\app\\Controllers\\Patient\\BookingController.php(40): App\\Dtos\\Patient\\BookingReq->__construct()
+#1 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(36): App\\Controllers\\Patient\\BookingController->booking()
+#2 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#3 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#4 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#5 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#6 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(391): Illuminate\\Container\\Container->call()
+#7 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(356): Laravel\\Lumen\\Application->callControllerCallable()
+#8 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(331): Laravel\\Lumen\\Application->callLumenController()
+#9 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(284): Laravel\\Lumen\\Application->callControllerAction()
+#10 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(269): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute()
+#11 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(171): Laravel\\Lumen\\Application->handleFoundRoute()
+#12 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#13 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#14 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#15 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#16 {main}
+"} 
+[2024-01-21 13:48:24] local.ERROR: Cannot assign null to property App\Dtos\Patient\BookingReq::$patientId of type string {"exception":"[object] (TypeError(code: 0): Cannot assign null to property App\\Dtos\\Patient\\BookingReq::$patientId of type string at E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\app\\Dtos\\Patient\\BookingReq.php:17)
+[stacktrace]
+#0 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\app\\Controllers\\Patient\\BookingController.php(40): App\\Dtos\\Patient\\BookingReq->__construct()
+#1 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(36): App\\Controllers\\Patient\\BookingController->booking()
+#2 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#3 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#4 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#5 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#6 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(391): Illuminate\\Container\\Container->call()
+#7 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(356): Laravel\\Lumen\\Application->callControllerCallable()
+#8 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(331): Laravel\\Lumen\\Application->callLumenController()
+#9 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(284): Laravel\\Lumen\\Application->callControllerAction()
+#10 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(269): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute()
+#11 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(171): Laravel\\Lumen\\Application->handleFoundRoute()
+#12 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#13 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#14 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#15 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#16 {main}
+"} 
+[2024-01-21 13:48:26] local.ERROR: Cannot assign null to property App\Dtos\Patient\BookingReq::$patientId of type string {"exception":"[object] (TypeError(code: 0): Cannot assign null to property App\\Dtos\\Patient\\BookingReq::$patientId of type string at E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\app\\Dtos\\Patient\\BookingReq.php:17)
+[stacktrace]
+#0 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\app\\Controllers\\Patient\\BookingController.php(40): App\\Dtos\\Patient\\BookingReq->__construct()
+#1 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(36): App\\Controllers\\Patient\\BookingController->booking()
+#2 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#3 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#4 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#5 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#6 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(391): Illuminate\\Container\\Container->call()
+#7 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(356): Laravel\\Lumen\\Application->callControllerCallable()
+#8 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(331): Laravel\\Lumen\\Application->callLumenController()
+#9 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(284): Laravel\\Lumen\\Application->callControllerAction()
+#10 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(269): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute()
+#11 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(171): Laravel\\Lumen\\Application->handleFoundRoute()
+#12 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#13 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#14 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#15 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#16 {main}
+"} 
+[2024-01-21 13:48:26] local.ERROR: Cannot assign null to property App\Dtos\Patient\BookingReq::$patientId of type string {"exception":"[object] (TypeError(code: 0): Cannot assign null to property App\\Dtos\\Patient\\BookingReq::$patientId of type string at E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\app\\Dtos\\Patient\\BookingReq.php:17)
+[stacktrace]
+#0 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\app\\Controllers\\Patient\\BookingController.php(40): App\\Dtos\\Patient\\BookingReq->__construct()
+#1 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(36): App\\Controllers\\Patient\\BookingController->booking()
+#2 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#3 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#4 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#5 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#6 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(391): Illuminate\\Container\\Container->call()
+#7 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(356): Laravel\\Lumen\\Application->callControllerCallable()
+#8 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(331): Laravel\\Lumen\\Application->callLumenController()
+#9 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(284): Laravel\\Lumen\\Application->callControllerAction()
+#10 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(269): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute()
+#11 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(171): Laravel\\Lumen\\Application->handleFoundRoute()
+#12 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#13 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#14 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#15 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#16 {main}
+"} 
+[2024-01-21 13:48:28] local.ERROR: Cannot assign null to property App\Dtos\Patient\BookingReq::$patientId of type string {"exception":"[object] (TypeError(code: 0): Cannot assign null to property App\\Dtos\\Patient\\BookingReq::$patientId of type string at E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\app\\Dtos\\Patient\\BookingReq.php:17)
+[stacktrace]
+#0 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\app\\Controllers\\Patient\\BookingController.php(40): App\\Dtos\\Patient\\BookingReq->__construct()
+#1 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(36): App\\Controllers\\Patient\\BookingController->booking()
+#2 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#3 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#4 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#5 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#6 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(391): Illuminate\\Container\\Container->call()
+#7 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(356): Laravel\\Lumen\\Application->callControllerCallable()
+#8 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(331): Laravel\\Lumen\\Application->callLumenController()
+#9 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(284): Laravel\\Lumen\\Application->callControllerAction()
+#10 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(269): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute()
+#11 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(171): Laravel\\Lumen\\Application->handleFoundRoute()
+#12 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#13 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#14 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#15 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#16 {main}
+"} 
+[2024-01-21 13:50:41] local.ERROR: Cannot assign null to property App\Dtos\Patient\BookingReq::$patientId of type string {"exception":"[object] (TypeError(code: 0): Cannot assign null to property App\\Dtos\\Patient\\BookingReq::$patientId of type string at E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\app\\Dtos\\Patient\\BookingReq.php:17)
+[stacktrace]
+#0 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\app\\Controllers\\Patient\\BookingController.php(40): App\\Dtos\\Patient\\BookingReq->__construct()
+#1 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(36): App\\Controllers\\Patient\\BookingController->booking()
+#2 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#3 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#4 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#5 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#6 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(391): Illuminate\\Container\\Container->call()
+#7 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(356): Laravel\\Lumen\\Application->callControllerCallable()
+#8 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(331): Laravel\\Lumen\\Application->callLumenController()
+#9 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(284): Laravel\\Lumen\\Application->callControllerAction()
+#10 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(269): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute()
+#11 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(171): Laravel\\Lumen\\Application->handleFoundRoute()
+#12 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#13 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#14 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#15 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#16 {main}
+"} 
+[2024-01-21 13:51:23] local.ERROR: Cannot assign null to property App\Dtos\Patient\BookingReq::$patientId of type string {"exception":"[object] (TypeError(code: 0): Cannot assign null to property App\\Dtos\\Patient\\BookingReq::$patientId of type string at E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\app\\Dtos\\Patient\\BookingReq.php:17)
+[stacktrace]
+#0 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\app\\Controllers\\Patient\\BookingController.php(40): App\\Dtos\\Patient\\BookingReq->__construct()
+#1 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(36): App\\Controllers\\Patient\\BookingController->booking()
+#2 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#3 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#4 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#5 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#6 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(391): Illuminate\\Container\\Container->call()
+#7 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(356): Laravel\\Lumen\\Application->callControllerCallable()
+#8 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(331): Laravel\\Lumen\\Application->callLumenController()
+#9 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(284): Laravel\\Lumen\\Application->callControllerAction()
+#10 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(269): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute()
+#11 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(171): Laravel\\Lumen\\Application->handleFoundRoute()
+#12 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#13 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#14 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#15 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#16 {main}
+"} 
+[2024-01-21 13:52:53] local.ERROR: Cannot assign null to property App\Dtos\Patient\BookingReq::$patientId of type string {"exception":"[object] (TypeError(code: 0): Cannot assign null to property App\\Dtos\\Patient\\BookingReq::$patientId of type string at E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\app\\Dtos\\Patient\\BookingReq.php:17)
+[stacktrace]
+#0 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\app\\Controllers\\Patient\\BookingController.php(40): App\\Dtos\\Patient\\BookingReq->__construct()
+#1 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(36): App\\Controllers\\Patient\\BookingController->booking()
+#2 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#3 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#4 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#5 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#6 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(391): Illuminate\\Container\\Container->call()
+#7 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(356): Laravel\\Lumen\\Application->callControllerCallable()
+#8 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(331): Laravel\\Lumen\\Application->callLumenController()
+#9 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(284): Laravel\\Lumen\\Application->callControllerAction()
+#10 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(269): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute()
+#11 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(171): Laravel\\Lumen\\Application->handleFoundRoute()
+#12 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#13 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#14 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#15 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#16 {main}
+"} 
+[2024-01-21 13:52:54] local.ERROR: Cannot assign null to property App\Dtos\Patient\BookingReq::$patientId of type string {"exception":"[object] (TypeError(code: 0): Cannot assign null to property App\\Dtos\\Patient\\BookingReq::$patientId of type string at E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\app\\Dtos\\Patient\\BookingReq.php:17)
+[stacktrace]
+#0 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\app\\Controllers\\Patient\\BookingController.php(40): App\\Dtos\\Patient\\BookingReq->__construct()
+#1 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(36): App\\Controllers\\Patient\\BookingController->booking()
+#2 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#3 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#4 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#5 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#6 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(391): Illuminate\\Container\\Container->call()
+#7 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(356): Laravel\\Lumen\\Application->callControllerCallable()
+#8 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(331): Laravel\\Lumen\\Application->callLumenController()
+#9 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(284): Laravel\\Lumen\\Application->callControllerAction()
+#10 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(269): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute()
+#11 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(171): Laravel\\Lumen\\Application->handleFoundRoute()
+#12 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#13 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#14 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#15 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#16 {main}
+"} 
+[2024-01-21 13:52:54] local.ERROR: Cannot assign null to property App\Dtos\Patient\BookingReq::$patientId of type string {"exception":"[object] (TypeError(code: 0): Cannot assign null to property App\\Dtos\\Patient\\BookingReq::$patientId of type string at E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\app\\Dtos\\Patient\\BookingReq.php:17)
+[stacktrace]
+#0 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\app\\Controllers\\Patient\\BookingController.php(40): App\\Dtos\\Patient\\BookingReq->__construct()
+#1 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(36): App\\Controllers\\Patient\\BookingController->booking()
+#2 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#3 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#4 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#5 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#6 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(391): Illuminate\\Container\\Container->call()
+#7 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(356): Laravel\\Lumen\\Application->callControllerCallable()
+#8 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(331): Laravel\\Lumen\\Application->callLumenController()
+#9 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(284): Laravel\\Lumen\\Application->callControllerAction()
+#10 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(269): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute()
+#11 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(171): Laravel\\Lumen\\Application->handleFoundRoute()
+#12 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#13 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#14 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#15 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#16 {main}
+"} 
+[2024-01-21 13:52:55] local.ERROR: Cannot assign null to property App\Dtos\Patient\BookingReq::$patientId of type string {"exception":"[object] (TypeError(code: 0): Cannot assign null to property App\\Dtos\\Patient\\BookingReq::$patientId of type string at E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\app\\Dtos\\Patient\\BookingReq.php:17)
+[stacktrace]
+#0 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\app\\Controllers\\Patient\\BookingController.php(40): App\\Dtos\\Patient\\BookingReq->__construct()
+#1 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(36): App\\Controllers\\Patient\\BookingController->booking()
+#2 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#3 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#4 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#5 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#6 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(391): Illuminate\\Container\\Container->call()
+#7 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(356): Laravel\\Lumen\\Application->callControllerCallable()
+#8 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(331): Laravel\\Lumen\\Application->callLumenController()
+#9 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(284): Laravel\\Lumen\\Application->callControllerAction()
+#10 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(269): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute()
+#11 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(171): Laravel\\Lumen\\Application->handleFoundRoute()
+#12 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#13 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#14 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#15 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#16 {main}
+"} 
+[2024-01-21 13:53:05] local.ERROR: Cannot assign null to property App\Dtos\Patient\BookingReq::$patientId of type string {"exception":"[object] (TypeError(code: 0): Cannot assign null to property App\\Dtos\\Patient\\BookingReq::$patientId of type string at E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\app\\Dtos\\Patient\\BookingReq.php:17)
+[stacktrace]
+#0 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\app\\Controllers\\Patient\\BookingController.php(40): App\\Dtos\\Patient\\BookingReq->__construct()
+#1 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(36): App\\Controllers\\Patient\\BookingController->booking()
+#2 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#3 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#4 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#5 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#6 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(391): Illuminate\\Container\\Container->call()
+#7 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(356): Laravel\\Lumen\\Application->callControllerCallable()
+#8 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(331): Laravel\\Lumen\\Application->callLumenController()
+#9 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(284): Laravel\\Lumen\\Application->callControllerAction()
+#10 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(269): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute()
+#11 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(171): Laravel\\Lumen\\Application->handleFoundRoute()
+#12 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#13 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#14 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#15 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#16 {main}
+"} 
+[2024-01-21 13:57:41] local.ERROR: SQLSTATE[01000]: Warning: 1265 Data truncated for column 'TimeId' at row 1 (Connection: mysql, SQL: INSERT INTO booking (Id,PatientId,DoctorId,DateBooking,TimeId) VALUES (20240121135741, 202401181044, 20240121085713, 2024-01-20, 09:00:00)) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 01000): SQLSTATE[01000]: Warning: 1265 Data truncated for column 'TimeId' at row 1 (Connection: mysql, SQL: INSERT INTO booking (Id,PatientId,DoctorId,DateBooking,TimeId) VALUES (20240121135741, 202401181044, 20240121085713, 2024-01-20, 09:00:00)) at E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php:822)
+[stacktrace]
+#0 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(776): Illuminate\\Database\\Connection->runQueryCallback()
+#1 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(569): Illuminate\\Database\\Connection->run()
+#2 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(533): Illuminate\\Database\\Connection->statement()
+#3 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\DatabaseManager.php(509): Illuminate\\Database\\Connection->insert()
+#4 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\support\\Facades\\Facade.php(355): Illuminate\\Database\\DatabaseManager->__call()
+#5 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\app\\Repositories\\BookingRepository.php(15): Illuminate\\Support\\Facades\\Facade::__callStatic()
+#6 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\app\\Controllers\\Patient\\BookingController.php(48): App\\Repositories\\BookingRepository->insert()
+#7 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(36): App\\Controllers\\Patient\\BookingController->booking()
+#8 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#9 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#10 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#11 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#12 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(391): Illuminate\\Container\\Container->call()
+#13 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(356): Laravel\\Lumen\\Application->callControllerCallable()
+#14 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(331): Laravel\\Lumen\\Application->callLumenController()
+#15 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(284): Laravel\\Lumen\\Application->callControllerAction()
+#16 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(269): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute()
+#17 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(171): Laravel\\Lumen\\Application->handleFoundRoute()
+#18 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#19 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#20 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#21 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#22 {main}
+
+[previous exception] [object] (PDOException(code: 01000): SQLSTATE[01000]: Warning: 1265 Data truncated for column 'TimeId' at row 1 at E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php:580)
+[stacktrace]
+#0 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(580): PDOStatement->execute()
+#1 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(809): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}()
+#2 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(776): Illuminate\\Database\\Connection->runQueryCallback()
+#3 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(569): Illuminate\\Database\\Connection->run()
+#4 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(533): Illuminate\\Database\\Connection->statement()
+#5 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\DatabaseManager.php(509): Illuminate\\Database\\Connection->insert()
+#6 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\support\\Facades\\Facade.php(355): Illuminate\\Database\\DatabaseManager->__call()
+#7 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\app\\Repositories\\BookingRepository.php(15): Illuminate\\Support\\Facades\\Facade::__callStatic()
+#8 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\app\\Controllers\\Patient\\BookingController.php(48): App\\Repositories\\BookingRepository->insert()
+#9 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(36): App\\Controllers\\Patient\\BookingController->booking()
+#10 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#11 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#12 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#13 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#14 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(391): Illuminate\\Container\\Container->call()
+#15 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(356): Laravel\\Lumen\\Application->callControllerCallable()
+#16 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(331): Laravel\\Lumen\\Application->callLumenController()
+#17 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(284): Laravel\\Lumen\\Application->callControllerAction()
+#18 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(269): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute()
+#19 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(171): Laravel\\Lumen\\Application->handleFoundRoute()
+#20 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#21 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#22 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#23 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#24 {main}
+"} 
+[2024-01-21 14:01:05] local.ERROR: SQLSTATE[22007]: Invalid datetime format: 1292 Incorrect date value: '12' for column 'DateBooking' at row 1 (Connection: mysql, SQL: INSERT INTO booking (Id,PatientId,DoctorId,DateBooking,TimeId) VALUES (20240121140105, 202401181044, 20240121085713, 12, 09:00:00)) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 22007): SQLSTATE[22007]: Invalid datetime format: 1292 Incorrect date value: '12' for column 'DateBooking' at row 1 (Connection: mysql, SQL: INSERT INTO booking (Id,PatientId,DoctorId,DateBooking,TimeId) VALUES (20240121140105, 202401181044, 20240121085713, 12, 09:00:00)) at E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php:822)
+[stacktrace]
+#0 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(776): Illuminate\\Database\\Connection->runQueryCallback()
+#1 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(569): Illuminate\\Database\\Connection->run()
+#2 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(533): Illuminate\\Database\\Connection->statement()
+#3 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\DatabaseManager.php(509): Illuminate\\Database\\Connection->insert()
+#4 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\support\\Facades\\Facade.php(355): Illuminate\\Database\\DatabaseManager->__call()
+#5 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\app\\Repositories\\BookingRepository.php(15): Illuminate\\Support\\Facades\\Facade::__callStatic()
+#6 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\app\\Controllers\\Patient\\BookingController.php(48): App\\Repositories\\BookingRepository->insert()
+#7 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(36): App\\Controllers\\Patient\\BookingController->booking()
+#8 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#9 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#10 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#11 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#12 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(391): Illuminate\\Container\\Container->call()
+#13 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(356): Laravel\\Lumen\\Application->callControllerCallable()
+#14 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(331): Laravel\\Lumen\\Application->callLumenController()
+#15 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(284): Laravel\\Lumen\\Application->callControllerAction()
+#16 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(269): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute()
+#17 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(171): Laravel\\Lumen\\Application->handleFoundRoute()
+#18 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#19 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#20 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#21 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#22 {main}
+
+[previous exception] [object] (PDOException(code: 22007): SQLSTATE[22007]: Invalid datetime format: 1292 Incorrect date value: '12' for column 'DateBooking' at row 1 at E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php:580)
+[stacktrace]
+#0 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(580): PDOStatement->execute()
+#1 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(809): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}()
+#2 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(776): Illuminate\\Database\\Connection->runQueryCallback()
+#3 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(569): Illuminate\\Database\\Connection->run()
+#4 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\Connection.php(533): Illuminate\\Database\\Connection->statement()
+#5 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\database\\DatabaseManager.php(509): Illuminate\\Database\\Connection->insert()
+#6 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\support\\Facades\\Facade.php(355): Illuminate\\Database\\DatabaseManager->__call()
+#7 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\app\\Repositories\\BookingRepository.php(15): Illuminate\\Support\\Facades\\Facade::__callStatic()
+#8 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\app\\Controllers\\Patient\\BookingController.php(48): App\\Repositories\\BookingRepository->insert()
+#9 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(36): App\\Controllers\\Patient\\BookingController->booking()
+#10 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#11 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#12 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#13 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#14 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(391): Illuminate\\Container\\Container->call()
+#15 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(356): Laravel\\Lumen\\Application->callControllerCallable()
+#16 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(331): Laravel\\Lumen\\Application->callLumenController()
+#17 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(284): Laravel\\Lumen\\Application->callControllerAction()
+#18 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(269): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute()
+#19 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(171): Laravel\\Lumen\\Application->handleFoundRoute()
+#20 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#21 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#22 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#23 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#24 {main}
+"} 
+[2024-01-21 14:03:41] local.ERROR: Cannot assign null to property App\Dtos\Patient\BookingReq::$patientId of type string {"exception":"[object] (TypeError(code: 0): Cannot assign null to property App\\Dtos\\Patient\\BookingReq::$patientId of type string at E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\app\\Dtos\\Patient\\BookingReq.php:17)
+[stacktrace]
+#0 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\app\\Controllers\\Patient\\BookingController.php(40): App\\Dtos\\Patient\\BookingReq->__construct()
+#1 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(36): App\\Controllers\\Patient\\BookingController->booking()
+#2 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#3 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#4 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#5 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#6 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(391): Illuminate\\Container\\Container->call()
+#7 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(356): Laravel\\Lumen\\Application->callControllerCallable()
+#8 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(331): Laravel\\Lumen\\Application->callLumenController()
+#9 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(284): Laravel\\Lumen\\Application->callControllerAction()
+#10 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(269): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute()
+#11 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(171): Laravel\\Lumen\\Application->handleFoundRoute()
+#12 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#13 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#14 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#15 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#16 {main}
+"} 
+[2024-01-21 14:04:52] local.ERROR: Cannot assign null to property App\Dtos\Patient\BookingReq::$patientId of type string {"exception":"[object] (TypeError(code: 0): Cannot assign null to property App\\Dtos\\Patient\\BookingReq::$patientId of type string at E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\app\\Dtos\\Patient\\BookingReq.php:17)
+[stacktrace]
+#0 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\app\\Controllers\\Patient\\BookingController.php(40): App\\Dtos\\Patient\\BookingReq->__construct()
+#1 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(36): App\\Controllers\\Patient\\BookingController->booking()
+#2 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#3 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#4 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#5 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#6 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(391): Illuminate\\Container\\Container->call()
+#7 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(356): Laravel\\Lumen\\Application->callControllerCallable()
+#8 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(331): Laravel\\Lumen\\Application->callLumenController()
+#9 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(284): Laravel\\Lumen\\Application->callControllerAction()
+#10 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(269): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute()
+#11 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(171): Laravel\\Lumen\\Application->handleFoundRoute()
+#12 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#13 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#14 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#15 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#16 {main}
+"} 
+[2024-01-21 14:08:16] local.ERROR: Cannot assign null to property App\Dtos\Patient\BookingReq::$patientId of type string {"exception":"[object] (TypeError(code: 0): Cannot assign null to property App\\Dtos\\Patient\\BookingReq::$patientId of type string at E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\app\\Dtos\\Patient\\BookingReq.php:17)
+[stacktrace]
+#0 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\app\\Controllers\\Patient\\BookingController.php(40): App\\Dtos\\Patient\\BookingReq->__construct()
+#1 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(36): App\\Controllers\\Patient\\BookingController->booking()
+#2 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#3 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#4 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#5 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#6 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(391): Illuminate\\Container\\Container->call()
+#7 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(356): Laravel\\Lumen\\Application->callControllerCallable()
+#8 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(331): Laravel\\Lumen\\Application->callLumenController()
+#9 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(284): Laravel\\Lumen\\Application->callControllerAction()
+#10 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(269): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute()
+#11 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(171): Laravel\\Lumen\\Application->handleFoundRoute()
+#12 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#13 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#14 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#15 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#16 {main}
+"} 
+[2024-01-21 14:43:32] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException(code: 0):  at E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:235)
+[stacktrace]
+#0 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-21 14:46:04] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException(code: 0):  at E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:235)
+[stacktrace]
+#0 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-21 14:51:23] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException(code: 0):  at E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:235)
+[stacktrace]
+#0 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-21 14:52:01] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException(code: 0):  at E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:235)
+[stacktrace]
+#0 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-21 14:52:05] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException(code: 0):  at E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:235)
+[stacktrace]
+#0 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-21 14:52:09] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException(code: 0):  at E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:235)
+[stacktrace]
+#0 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-21 14:53:33] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException(code: 0):  at E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:235)
+[stacktrace]
+#0 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-21 14:54:28] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException(code: 0):  at E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:235)
+[stacktrace]
+#0 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-21 14:56:59] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException(code: 0):  at E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:235)
+[stacktrace]
+#0 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-21 14:57:01] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException(code: 0):  at E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:235)
+[stacktrace]
+#0 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-21 14:57:14] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException(code: 0):  at E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:235)
+[stacktrace]
+#0 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-21 14:57:35] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException(code: 0):  at E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:235)
+[stacktrace]
+#0 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-21 14:58:21] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException(code: 0):  at E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:235)
+[stacktrace]
+#0 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-21 15:01:16] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException(code: 0):  at E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:235)
+[stacktrace]
+#0 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-21 15:01:22] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException(code: 0):  at E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:235)
+[stacktrace]
+#0 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-21 15:01:45] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException(code: 0):  at E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:235)
+[stacktrace]
+#0 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-21 15:01:51] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException(code: 0):  at E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:235)
+[stacktrace]
+#0 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-21 15:02:24] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException(code: 0):  at E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:235)
+[stacktrace]
+#0 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-21 15:03:13] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException(code: 0):  at E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:235)
+[stacktrace]
+#0 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-21 15:11:28] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException(code: 0):  at E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:235)
+[stacktrace]
+#0 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-21 15:12:58] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException(code: 0):  at E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:235)
+[stacktrace]
+#0 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-21 15:13:02] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException(code: 0):  at E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:235)
+[stacktrace]
+#0 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-21 15:13:49] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException(code: 0):  at E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:235)
+[stacktrace]
+#0 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-21 15:15:15] local.ERROR:  {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException(code: 0):  at E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php:235)
+[stacktrace]
+#0 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(174): Laravel\\Lumen\\Application->handleDispatcherResponse()
+#1 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#3 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#4 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#5 {main}
+"} 
+[2024-01-21 15:56:11] local.ERROR: Unsupported operand types: string + string {"exception":"[object] (TypeError(code: 0): Unsupported operand types: string + string at E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\app\\Controllers\\Common\\UploadController.php:36)
+[stacktrace]
+#0 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(36): App\\Controllers\\Common\\UploadController->uploadImage12()
+#1 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#2 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#3 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#4 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\illuminate\\container\\Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#5 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(391): Illuminate\\Container\\Container->call()
+#6 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(356): Laravel\\Lumen\\Application->callControllerCallable()
+#7 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(331): Laravel\\Lumen\\Application->callLumenController()
+#8 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(284): Laravel\\Lumen\\Application->callControllerAction()
+#9 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(269): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute()
+#10 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(171): Laravel\\Lumen\\Application->handleFoundRoute()
+#11 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#12 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(167): Laravel\\Lumen\\Application->sendThroughPipeline()
+#13 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch()
+#14 E:\\Workspace\\PHP\\dự án php mental health care năm 2\\PNV25-MentalHealtCareApp\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#15 {main}
+"} 

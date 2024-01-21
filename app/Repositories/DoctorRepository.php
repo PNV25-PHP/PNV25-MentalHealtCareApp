@@ -20,25 +20,20 @@ class DoctorRepository
         ]);
     }
 
-    // public function getAllDoctor()
-    // {
-    //     $sql = "SELECT doctors.*, users.Email, users.FullName, users.Phone, users.Address,users.Url_Image, users.Password
-    //         FROM doctors
-    //         JOIN users ON doctors.UserId = users.Id";
-    //     return DB::select($sql);
-    // private string $tableName = "patients";
+    public function searchDoctors($searchTerm)
+    {
+        $res = new DoctorRepository();
+        $doctors = $res->getAllDoctor();
+        $results = array();
 
-    // public function insert(Doctor $doctor)
-    // {
-    //     $sql = "INSERT INTO $this->tableName (ID, UserId) VALUES (?, ?)";
-
-    //     // Truyền các giá trị vào placeholder
-    //     DB::insert($sql, [
-    //         $doctor->getId(),
-    //         $doctor->getUserId(),
-
-    //     ]);
-    // }
+        foreach ($doctors as $doctor) {
+            $fullName = $doctor->FullName;
+            if (strpos($fullName, $searchTerm) !== false) {
+                $results[] = $doctor;
+            }
+        }
+        return $results;
+    }
 
     public function getAllTimeDoctor()
     {

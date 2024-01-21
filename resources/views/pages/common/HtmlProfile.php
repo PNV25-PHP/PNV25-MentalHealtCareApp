@@ -1,6 +1,6 @@
 <?php include_once dirname(__DIR__) . '../../layouts/HtmlHead.php' ?>
 <div class="h-full">
-  <div class="border-b-2 block md:flex">
+  <div class="border-b-2 block md:flex" style="height: 100vh;"style="height: 100vh;">
     <div class="w-full md:w-1/5 p-4 sm:p-6 lg:p-8 bg-blue-900 text-white shadow-md">
       <div class="flex justify-between">
         <span id="name-profile" class="text-xl font-semibold block"></span>
@@ -25,7 +25,7 @@
         </div>
         <div>
           <label for="email" class="font-semibold text-gray-700 block pb-1">Email</label>
-          <input disabled id="email" class="border-1 rounded-r px-4 py-2 w-full" type="email" />
+          <input disabled id="email" class="border-1 rounded-r px-4 py-2 w-full" type="email"/>
         </div>
         <div>
           <label for="password" class="font-semibold text-gray-700 block pb-1">Password</label>
@@ -41,37 +41,4 @@
 </div>
 <script>
   showInfo()
-
-  function handleUpdateProfile() {
-    var user_info_update = JSON.parse(localStorage.getItem('user-info'));
-    var img = document.getElementById('image').value;
-    var username = document.getElementById('username').value;
-    var email = document.getElementById('email').value;
-    var phoneNumber = document.getElementById('phoneNumber').value;
-    var address = document.getElementById('address').value;
-
-    user_info_update.image = img;
-    user_info_update.fullName = username;
-    user_info_update.email = email;
-    user_info_update.phone = phoneNumber;
-    user_info_update.address = address;
-    console.log(user_info_update);
-
-    fetch('/api/edit-profile', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(user_info_update)
-      })
-      .then(response => response.json())
-      .then(data => {
-        console.log(data);
-        localStorage.setItem('user-info', JSON.stringify(user_info_update));
-        window.location.href = '/view-profile';
-      })
-      .catch(error => {
-        console.error('Error:', error);
-      });
-  }
 </script>
