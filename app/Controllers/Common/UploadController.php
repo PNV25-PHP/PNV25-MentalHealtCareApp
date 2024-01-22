@@ -23,28 +23,28 @@ class UploadController extends Controller
             $imageData = base64_decode(preg_replace('#^data:image/\w+;base64,#i', '', $base64Image));
 
             $imageName = uniqid() . '.png';
-            $imagePath = 'public/' . $imageName;
+            $imagePath = 'public/upload/user/' . $imageName;
 
             // Lưu hình ảnh vào thư mục trên máy chủ
             file_put_contents($imagePath, $imageData);
 
             // URL của hình ảnh trên máy chủ
             $imageUrl = url($imagePath);
-            // $onlyImageName = basename($imageUrl);
+            $onlyImageName = basename($imageUrl);
 
-            function customTrim($imageUrl)
-            {
-                // Kiểm tra xem URL có chứa "/public" không
-                if (strpos($imageUrl, '/public') !== false) {
-                    // Nếu có, thực hiện loại bỏ
-                    $imageUrl = str_replace('/public', '', $imageUrl);
-                }
+            // function customTrim($imageUrl)
+            // {
+            //     // Kiểm tra xem URL có chứa "/public" không
+            //     if (strpos($imageUrl, '/public') !== false) {
+            //         // Nếu có, thực hiện loại bỏ
+            //         $imageUrl = str_replace('/public', '', $imageUrl);
+            //     }
 
-                return $imageUrl;
-            }
+            //     return $imageUrl;
+            // }
 
             // Phản hồi về client với URL của hình ảnh
-            return response()->json(['success' => true, 'imageUrl' => $imageUrl]);
+            return response()->json(['success' => true, 'imageUrl' => $onlyImageName]);
         } else {
             return response()->json(['success' => false, 'error' => 'Image data not provided']);
         }

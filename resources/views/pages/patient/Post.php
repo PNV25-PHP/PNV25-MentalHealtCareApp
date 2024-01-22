@@ -125,7 +125,7 @@
       `<div class="flex items-center justify-center w-screen h-100%">
         <div class="px-5 py-4 bg-white dark:bg-gray-800 shadow rounded-lg max-w-lg w-3/4" id="block_post">
             <div class="flex mb-4">
-            <img class="w-12 h-12 rounded-full" src="${post.UserImageUrl}"/>
+            <img class="w-12 h-12 rounded-full" src="${"http://localhost:8000/upload/user/" + post.UserImageUrl}"/>
             <div class="ml-2 mt-0.5">
               <span class="block font-medium text-base leading-snug text-black dark:text-gray-100">${post.UserFullName}</span>
               <span class="block text-sm text-gray-500 dark:text-gray-400 font-light leading-snug">${post.PostCreatedAt}</span>
@@ -133,7 +133,7 @@
           </div>
           <p class="text-gray-800 dark:text-gray-100 leading-snug md:leading-normal">${post.PostContent}</p>
           <div class="mt-5">
-            <img src="${post.PostImage}" alt="" class="w-full h-41 object-cover object-center">
+            <img src="${"http://localhost:8000/upload/user/" + post.PostImage}" alt="" class="w-full h-41 object-cover object-center">
           </div>
           <div class="flex items-center mt-4 space-x-4">
         <button class="flex items-center text-sm text-gray-500 hover:underline dark:text-gray-400 font-medium" onclick="enterContent(${post.PostId})">
@@ -157,7 +157,7 @@
         Show_post += `<article class="p-4 m-2 text-base bg-white rounded-lg dark:bg-gray-900">
     <footer class="flex justify-between items-center mb-2">
         <div class="flex items-center">
-            <p class="inline-flex items-center mr-3 text-sm text-gray-900 dark:text-white font-semibold"><img class="mr-2 w-6 h-6 rounded-full" src="${comment.UserImageUrl}" alt="${comment.UserFullName}">${comment.UserFullName}</p>
+            <p class="inline-flex items-center mr-3 text-sm text-gray-900 dark:text-white font-semibold"><img class="mr-2 w-6 h-6 rounded-full" src="${"http://localhost:8000/upload/user/" + comment.UserImageUrl}" alt="${comment.UserFullName}">${comment.UserFullName}</p>
             <p class="text-sm text-gray-600 dark:text-gray-400"><time pubdate datetime="${comment.CreatedAt}" title="${comment.CreatedAt}"></time>${comment.CreatedAt}</p>
         </div>
         <button id="dropdownComment1Button" data-dropdown-toggle="dropdownComment1" class="inline-flex items-center p-2 text-sm font-medium text-center text-gray-500 dark:text-gray-400 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-50 dark:bg-gray-900 dark:hover:bg-gray-700 dark:focus:ring-gray-600" type="button">
@@ -200,7 +200,7 @@
 <div class="fixed z-0 flex top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-3/6" id="form-post">
   <div class="heading text-center font-bold text-2xl m-5 text-gray-800">New Post</div>
   <div class="mx-auto w-500 flex flex-col border border-gray-300 p-4 shadow-lg max-w-2xl bg-white">
-    <input class="title border border-gray-300 p-2 mb-4 outline-none" spellcheck="false" placeholder="Enter your image Url (online)" type="text" id="image_of_post">
+    <input class="title border border-gray-300 p-2 mb-4 outline-none" type="file" id="image_of_post">
     <textarea class="description sec p-3 h-80 border border-gray-300 outline-none" spellcheck="false" placeholder="Describe everything about this post here" id="text_content"></textarea>
     <!-- icons -->
     <div class="icons flex text-gray-500 m-2">
@@ -287,8 +287,8 @@
   }
 
 
-  function addPost() {
-    var urlImage = document.getElementById('image_of_post').value;
+  async function addPost() {
+    var urlImage = await uploadImage();
     var content = document.getElementById('text_content').value;
 
     const postData = {
@@ -317,5 +317,47 @@
         console.error('Lỗi kết nối:', error);
       });
   }
+  // Hàm uploadImage sử dụng Axios
+  function sendImageToServer(base64Image) {
+    return new Promise((resolve, reject) => {
+      axios.post('/upload_image', {
+          image: base64Image
+        })
+        .then(response => {
+          console.log('Image uploaded successfully');
+          const imageUrl = response.data.imageUrl;
+          console.log('Image URL:', imageUrl);
+          resolve(imageUrl);
+        })
+        .catch(error => {
+          console.error('Error uploading image', error);
+          reject(error);
+        });
+    });
+  }
+
+  async function uploadImage() {
+    const fileInput = document.getElementById('image_of_post');
+    const selectedFile = fileInput.files[0];
+
+    if (selectedFile) {
+      const reader = new FileReader();
+
+      return new Promise((resolve, reject) => {
+        reader.onload = function(e) {
+          const base64Image = e.target.result;
+          sendImageToServer(base64Image)
+            .then(imageUrl => resolve(imageUrl))
+            .catch(error => reject(error));
+        };
+        reader.readAsDataURL(selectedFile);
+      });
+    } else {
+      return Promise.reject('No file selected');
+    }
+  }
 </script>
+
+
+
 <?php include_once dirname(__DIR__) . '/../layouts/HtmlTail.php' ?>

@@ -73,7 +73,7 @@
             <button type="button" class="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
               <span class="absolute -inset-1.5"></span>
               <span class="sr-only">Open user menu</span>
-              <img class="h-8 w-8 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="" id="avatar">
+              <img class="h-8 w-8 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="showImage" id="showImage">
             </button>
           </div>
 
@@ -89,6 +89,16 @@
 </nav>
 
 <script>
+  var searchButton = document.getElementById("search");
+  searchButton.addEventListener("click", function() {
+    window.location.href = "/patient/search"
+  });
+
+  // showInfo()
+  var user8 = JSON.parse(localStorage.getItem("user-info"))
+  var img = document.getElementById('showImage')
+  img.src = "http://localhost:8000/upload/user/" + user8.image
+
   function SignOut() {
     event.preventDefault();
     axios.post('/api/update/profile', {
@@ -103,21 +113,6 @@
         console.log(error);
       });
   };
-
-  var searchButton = document.getElementById("search");
-  searchButton.addEventListener("click", function() {
-    window.location.href = "/patient/search"
-  });
-
-  var user_info = JSON.parse(localStorage.getItem("user-info"));
-  var imagePath = user_info.image;
-  if (imagePath == "") {
-    document.getElementById('avatar').src = "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-  } else {
-    document.getElementById('avatar').src = imagePath
-  }
-
-
 
   var url = window.location.href;
   var startIndex = url.indexOf("http://localhost:8000") + "http://localhost:8000".length;
@@ -151,6 +146,14 @@
       field.style.backgroundColor = '';
     }
   }
+
+  document.addEventListener('error', function(e) {
+    if (e.target.tagName.toLowerCase() === 'img') {
+      var originalSrc = e.target.getAttribute('src');
+      var modifiedSrc = originalSrc.replace('http://localhost:8000/upload/user/', '');
+      e.target.setAttribute('src', modifiedSrc);
+    }
+  }, true);
 
   function SignOut() {
     window.location.href = "/"

@@ -25,5 +25,6 @@ class SearchController extends Controller
             'message' => 'Successfully',
             'ListDoctor' =>  $arrayUser,
         ], 200);
+        
     }
 }

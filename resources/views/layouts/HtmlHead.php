@@ -26,12 +26,10 @@
     var img = document.getElementById('showImage')
     var username = document.getElementById('username')
     var email = document.getElementById('email')
-    // var date = document.getElementById('date')
     var password =document.getElementById('password')
     var phoneNumber = document.getElementById('phoneNumber')
     var address = document.getElementById('address')
-    img.src = user_info.image
-    console.log(user_info.fullName);
+    img.src = "http://localhost:8000/upload/user/" + user_info.image
     username.value = user_info.fullName
     email.value = user_info.email
     phoneNumber.value = user_info.phone

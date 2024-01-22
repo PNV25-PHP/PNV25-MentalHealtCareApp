@@ -146,8 +146,8 @@
             <?php endforeach; ?>
         </div>
         <ul class="listPage"></ul>
-</body>
-<?php include_once dirname(__DIR__) . '../../layouts/HtmlTail.php' ?>
+        </div>
+        <?php include_once dirname(__DIR__) . '../../layouts/HtmlTail.php' ?>
 <script>
     function redirectBooking(doctorId) {
         window.location.href = "/patient/list-doctor/booking?id=" + doctorId;
@@ -205,4 +205,5 @@
     }
 </script>
 
+</body>
 </html>

@@ -6,7 +6,7 @@
                 <span id="name-profile" class="text-xl font-semibold block"></span>
             </div>
             <div class="w-full p-8 mx-2 block justify-center">
-                <img id="showImage" class="w-[150px] h-[150px] mb-10 items-center border-2 shadow-lg rounded-full" src="./../../../../public/" alt="">
+                <img id="showImage" class="w-[150px] h-[150px] mb-10 items-center border-2 shadow-lg rounded-full" src="" alt="">
                 <button type="button" class="w-[150px] text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"><a href="/edit-profile">Edit Profile</a></button>
                 <button type="button" class=" w-[150px] text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"><a href="/patient/history-booking">History booking</a></button>
                 <button type="button" class=" w-[150px] text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"><a href="/patient/home">Back </a></button>
@@ -53,70 +53,77 @@
     showInfo()
     // Hàm uploadImage sử dụng Axios
     function sendImageToServer(base64Image) {
-    return new Promise((resolve, reject) => {
-        axios.post('/upload_image', {
-                image: base64Image
-            })
-            .then(response => {
-                console.log('Image uploaded successfully');
-                const imageUrl = response.data.imageUrl;
-                console.log('Image URL:', imageUrl);
-                resolve(imageUrl);
-            })
-            .catch(error => {
-                console.error('Error uploading image', error);
-                reject(error);
-            });
-    });
-}
-
-async function uploadImage() {
-    const fileInput = document.getElementById('fileInput');
-    const selectedFile = fileInput.files[0];
-
-    if (selectedFile) {
-        const reader = new FileReader();
-
         return new Promise((resolve, reject) => {
-            reader.onload = function(e) {
-                const base64Image = e.target.result;
-                sendImageToServer(base64Image)
-                    .then(imageUrl => resolve(imageUrl))
-                    .catch(error => reject(error));
-            };
-            reader.readAsDataURL(selectedFile);
+            axios.post('/upload_image', {
+                    image: base64Image
+                })
+                .then(response => {
+                    console.log('Image uploaded successfully');
+                    const imageUrl = response.data.imageUrl;
+                    console.log('Image URL:', imageUrl);
+                    resolve(imageUrl);
+                })
+                .catch(error => {
+                    console.error('Error uploading image', error);
+                    reject(error);
+                });
         });
-    } else {
-        return Promise.reject('No file selected');
     }
-}
 
-async function handleUpdateProfile() {
-    try {
-        user_info_update12.image = await uploadImage();
-        user_info_update12.fullName = document.getElementById('username').value;
-        user_info_update12.email = document.getElementById('email').value;
-        user_info_update12.phone = document.getElementById('phoneNumber').value;
-        user_info_update12.address = document.getElementById('address').value;
-        user_info_update12.password = document.getElementById('password').value;
+    async function uploadImage() {
+        const fileInput = document.getElementById('fileInput');
+        const selectedFile = fileInput.files[0];
 
-        console.log(user_info_update12);
+        if (selectedFile) {
+            const reader = new FileReader();
 
-        axios.post('/api/edit-profile', user_info_update12, {
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        })
-        .then(response => {
-            console.log(response.data.payload);
-            localStorage.setItem('user-info', JSON.stringify(response.data.payload));
-            window.location.href = '/view-profile';
-        })
-        .catch(error => {
+            return new Promise((resolve, reject) => {
+                reader.onload = function(e) {
+                    const base64Image = e.target.result;
+                    sendImageToServer(base64Image)
+                        .then(imageUrl => resolve(imageUrl))
+                        .catch(error => reject(error));
+                };
+                reader.readAsDataURL(selectedFile);
+            });
+        } else {
+            return Promise.reject('No file selected');
+        }
+    }
+
+    async function handleUpdateProfile() {
+        try {
+            user_info_update12.image = await uploadImage();
+            user_info_update12.fullName = document.getElementById('username').value;
+            user_info_update12.email = document.getElementById('email').value;
+            user_info_update12.phone = document.getElementById('phoneNumber').value;
+            user_info_update12.address = document.getElementById('address').value;
+            user_info_update12.password = document.getElementById('password').value;
+
+            console.log(user_info_update12);
+
+            axios.post('/api/edit-profile', user_info_update12, {
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                })
+                .then(response => {
+                    console.log(response.data.payload);
+                    localStorage.setItem('user-info', JSON.stringify(response.data.payload));
+                    window.location.href = '/view-profile';
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+        } catch (error) {
             console.error('Error:', error);
-        });
-    } catch (error) {
-        console.error('Error:', error);
+        }
     }
-}
+    document.addEventListener('error', function(e) {
+        if (e.target.tagName.toLowerCase() === 'img') {
+            var originalSrc = e.target.getAttribute('src');
+            var modifiedSrc = originalSrc.replace('http://localhost:8000/upload/user/', '');
+            e.target.setAttribute('src', modifiedSrc);
+        }
+    }, true);
 </script>

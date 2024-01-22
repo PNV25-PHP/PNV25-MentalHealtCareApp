@@ -80,16 +80,13 @@ include_once dirname(__DIR__) . '../../layouts/HtmlHead.php' ?>
         }
       })
     showInfo()
-    
-    // function customTrim($url) {
-    //   // Kiểm tra xem URL có chứa "/patient" không
-    //   if (strpos($url, '/patient') !== false) {
-    //     // Nếu có, thực hiện loại bỏ
-    //     $url = str_replace('/patient', '', $url);
-    //   }
-
-    //   return $url;
-    // }
+    document.addEventListener('error', function(e) {
+      if (e.target.tagName.toLowerCase() === 'img') {
+        var originalSrc = e.target.getAttribute('src');
+        var modifiedSrc = originalSrc.replace('http://localhost:8000/upload/user/', '');
+        e.target.setAttribute('src', modifiedSrc);
+      }
+    }, true);
   </script>
   </body>
 
