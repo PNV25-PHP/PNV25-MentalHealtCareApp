@@ -64,5 +64,4 @@ $router->post('/api/patient/search', 'Patient\SearchController@search');
 $router->post('/api/patient/processHistoryBooking', 'Common\ProfileController@processHistoryBooking');
 $router->get('/patient/history-booking', 'Common\ProfileController@patientHistoryBooking');
 // upload image
-$router->get('/patient/gettest', 'Common\UploadController@index');
 $router->post('/upload_image', 'Common\UploadController@uploadImage12');

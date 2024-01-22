@@ -30,7 +30,6 @@
     var password =document.getElementById('password')
     var phoneNumber = document.getElementById('phoneNumber')
     var address = document.getElementById('address')
-    console.log(user_info.image);
     img.src = user_info.image
     console.log(user_info.fullName);
     username.value = user_info.fullName

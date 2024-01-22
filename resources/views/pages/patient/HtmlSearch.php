@@ -167,7 +167,7 @@
             </button>
         </div>
         <div class="content">
-            <h1 class="title">List of Doctors</h1>
+            <h1 class="title">Welcom to the search</h1>
             <div class="lists_card">
             <h1 id="notifi" style="display: none; font-size: 60px; color: red;">No one else</h1>
             </div>
